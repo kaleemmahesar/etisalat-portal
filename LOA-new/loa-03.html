@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sales Order Request :: Etisalat</title>
+    <!-- Bootstrap -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/bootstrap-select.min.css" />
+    <link href="../assets/css/CEP-automation-css/custom.css" rel="stylesheet" type="text/css">
+    <link href="css/loa.css" rel="stylesheet" type="text/css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="loading">
+    <div id="loaderM"></div>
+    <div class="etisalat">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header col-sm-2">
+                    <a class="navbar-brand" href="home.html">
+                        <img src="../assets/images/logo_white.png" alt="Etisalat">
+                    </a>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="page-container">
+                    <section class="page-content inner-page">
+                        <div class="clearfix"></div>
+                        <div class="smart-wizard">
+                            <!-- Tabs -->
+                            <div class="swMain">
+                                <div class="loa">
+                                    <div class="col-md-12  remove-padding-right text-right submit-button-container">
+                                        <button onclick="location.href = 'loa-04.html'">Create LOA</button>
+                                    </div>
+                                    <img class="unfilled" src="images/loa-03.jpg">
+                                    <img style="display:none;" class="filled" src="images/loa-filled-03.jpg">
+                                    <button data-target="#loginModal" data-toggle="modal" style="position: absolute; right:23px; bottom: 25px;" class="default-btn read-eid">Read EID</button>
+                                    <div class="modal" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel">
+                                        <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                            <div class="modal-body">
+                                                <div>
+                                                    <div class="login-wrap" style="border:none;padding:0">
+                                                        <div class="card-scan">
+                                                            <h5>Please Insert Emirates ID</h5>
+                                                            <img src="../assets/images/card-scan.gif" alt="">
+                                                            <div class="text-center mT-20">
+                                                                <button class="default-btn scan-btn">Scan</button>
+                                                            </div>                                                                                
+                                                        </div>
+                                                        <div class="finger-print" style="display: none;">
+                                                            <h5>Please place your right hand index finger</h5>
+                                                            <img src="../assets/images/hand-palm.gif" alt="">
+                                                            <div class="text-center mT-30">
+                                                                <button class="default-btn finger-btn" style="display:none;">Verify</button>
+                                                            </div>                                                                                
+                                                        </div>
+                                                        <div class="thank-you" style="display: none;">
+                                                            <h5 class="text-center">Your Figer Print Has Been Verified Successfully!</h5>
+                                                            <img src="../assets/images/thankyou.png" alt="">
+                                                            <div class="text-center mT-20">
+                                                                    <button type="button" class="default-btn login-btn" data-dismiss="modal">Close</button>
+                                                            </div>                                                                                
+                                                        </div>                                                                            
+                                                    </div>                                                             
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                
+                            </div>
+
+                            <div class="clearfix"></div>
+                            <!-- End SmartWizard Content -->
+                        </div>
+                        <div class="clearfix"></div>
+                    </section>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+
+    </div>
+    
+    <!-- /.etisalat -->
+    <!-- /.footer -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../assets/js/jquery-2.1.3.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../assets/js/bootstrap.js"></script>
+    <script src="../assets/js/bootstrap-select.js"></script>
+    <script src="../assets/js/dcalendar.picker.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery.matchHeight-min.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery.smartWizard.js"></script>
+    <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../assets/js/slick.min.js"></script>
+    <script src="../assets/js/scripts.js"></script>
+    <script>
+        $('.scan-btn').click(function(){
+            $(this).closest('.card-scan').hide();
+            $('.finger-print').show();
+
+            setTimeout(function() {
+                $(".finger-btn").trigger('click');
+            }, 5000);
+        });
+        $('.finger-btn').click(function(){
+            $(this).closest('.finger-print').hide();
+            $('.thank-you').show();
+        });
+        $('.login-btn').click(function(){
+            $('.unfilled').hide();
+            $('.read-eid').attr('disabled', 'disabled');
+            $('.filled').show();
+        });
+    </script>
+</body>
+
+</html>

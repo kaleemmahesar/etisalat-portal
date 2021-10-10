@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'neotech-light';
+  src: url('../fonts/neo-tech/neotech-light.eot');
+  src: url('../fonts/neo-tech/neotech-light.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/neo-tech/neotech-light.ttf') format('truetype'),
+       url('../fonts/neo-tech/neotech-light.svg#museo_sans700') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'neotech-medium';
+  src: url('../fonts/neo-tech/neotech-medium.eot');
+  src: url('../fonts/neo-tech/neotech-medium.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/neo-tech/neotech-medium.ttf') format('truetype'),
+       url('../fonts/neo-tech/neotech-medium.svg#museo_sans700') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'neotech-regular';
+  src: url('../fonts/neo-tech/neotech-regular.eot');
+  src: url('../fonts/neo-tech/neotech-regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/neo-tech/neotech-regular.ttf') format('truetype'),
+       url('../fonts/neo-tech/neotech-regular.svg#museo_sans700') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

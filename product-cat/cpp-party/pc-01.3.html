@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sales Order Request :: Etisalat</title>
+    <!-- Bootstrap -->
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="../../assets/css/font-awesome.min.css" />
+    <link href="../../assets/css/CEP-automation-css/custom.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.0/rangeslider.min.css" rel="stylesheet"
+        type="text/css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="loading">
+    <div id="loaderM"></div>
+    <div class="etisalat">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header col-sm-2">
+                    <a class="navbar-brand" href="home.html">
+                        <img src="../../assets/images/logo_white.png" alt="Etisalat">
+                    </a>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="col-sm-8">
+                    <div id="navbar" class="col-md-12 custom-container nav-container navbar-collapse collapse">
+                        <ul>
+                            <li>
+                                <a href="../../index.html">Product Catalogue</a>
+                            </li>
+              
+                        </ul>
+                    </div>
+                </div>
+                <!--/.nav-collapse -->
+                <div class="col-sm-2">
+                    <div class="navbar-right">
+                        <div class="dropdown">
+                            <a id="oSummary" class="summary-btn" data-target="#" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">
+                                Order Summary
+                                <span class="caret"></span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="oSummary">
+                                <div class="item-list">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Order ID</th>
+                                                <th>Customer Name</th>
+                                                <th>Party ID</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>ORD-212-2323</td>
+                                                <td>Aster Pharmacy</td>
+                                                <td>17567</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Order Status</th>
+                                                <th>Service Type</th>
+                                                <th>Sales Manager</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Draft</td>
+                                                <td>New Account</td>
+                                                <td>Jordan</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Authorized Contact Name</th>
+                                                <th>Authorized Contact Email</th>
+                                                <th>Authorized Contact Mobile</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Minal Doongarwal</td>
+                                                <td>mdoongarwal@etisalat.ae</td>
+                                                <td>971569629141</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="total collapsed">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <span id="breakDown" class="collapsed" data-toggle="collapse"
+                                                data-target="#collapseBreakdown" aria-expanded="false"
+                                                aria-controls="collapseBreakdown">
+                                                Break Down
+                                                <span>
+                                                    <img src="../../assets/images/down-arrow.png" alt="">
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <h4>Grand Total</h4>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <h5 class="price">
+                                                1,713 AED
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapseBreakdown" class="collapse" aria-labelledby="breakDown">
+                                        <div class="card-body">
+                                            <div id="packages" class="packages">
+                                                <div class="card">
+                                                    <div class="card-header" id="headingOne">
+                                                        <h5 class="mb-0 internet">
+                                                            <span class="icon">
+                                                                <img src="../../assets/images/icon-green/opt13.png" alt="">
+                                                            </span>
+                                                            Package Details
+                                                        </h5>                                
+                                                    </div>
+                                                    <div id="collapseOne" class="collapse in" aria-labelledby="headingOne"
+                                                        data-parent="#packages" aria-expanded="false">
+                                                        <div class="card-body">
+                                                            <table class="table review-grid">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th></th>
+                                                                        <th>QTY</th>
+                                                                        <th>Unit Price</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td style="width:70%;">
+                                                                            <span>Business First</span>
+                                                                            <h4>National 140+</h4>
+                                                                            <small>24 Month Contract</small>
+                                                                        </td>
+                                                                        <td>x 5</td>
+                                                                        <td>140 AED/Month</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-header" id="headingThree">
+                                                        <h5 class="mb-0 device">
+                                                            <span class="icon">
+                                                                <img src="../../assets/images/icon-green/device-icon.png"
+                                                                    alt="">
+                                                            </span>
+                                                            Device Details
+                                                        </h5>
+                                                    </div>
+                                                    <div id="collapseThree" class="collapse in" aria-labelledby="headingThree"
+                                                        data-parent="#packages" aria-expanded="false">
+                                                        <div class="card-body">
+                                                            <table class="table review-grid">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th></th>
+                                                                        <th>QTY</th>
+                                                                        <th>Unit Price</th>
+                                                                        <th></th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td style="width:70%;">
+                                                                            <h4>IPHONE XSMAX</h4>
+                                                                            <small>Apple</small>
+                                                                        </td>
+                                                                        <td>x 3</td>
+                                                                        <td>1600 AED</td>
+                                                                        <td><a class="removeBtn" href="javascript:void(0)">Remove</a></td>
+                                                                    </tr>                                                                                                                               
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-header" id="headingTwo">
+                                                        <h5 class="mb-0 internet">
+                                                            <span class="icon">
+                                                                <img src="../../assets/images/icon-green/addon-icon.png"
+                                                                    alt="">
+                                                            </span>
+                                                            Add-On Details
+                                                        </h5>
+                                                        <!-- <h5 class="mb-0 internet" data-toggle="collapse"
+                                                                            data-target="#collapseTwo" aria-expanded="false"
+                                                                            aria-controls="collapseTwo">
+                                                                            <span class="icon">
+                                                                                <img src="../../assets/images/icon-green/addon-icon.png"
+                                                                                    alt="">
+                                                                            </span>
+                                                                            Add-On Details
+                                                                            <span>
+                                                                                <img src="../../assets/images/down-arrow.png" alt="">
+                                                                            </span>
+                                                                        </h5> -->
+                                                    </div>
+                                                    <div id="collapseTwo" class="collapse in" aria-labelledby="headingTwo"
+                                                        data-parent="#packages" aria-expanded="false">
+                                                        <div class="card-body">
+                                                            <table class="table review-grid">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th></th>
+                                                                        <th>QTY</th>
+                                                                        <th>Unit Price</th>
+                                                                        <th></th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td style="width:70%;">
+                                                                            <h4>Internet Calling Plan</h4>
+                                                                            <small>Voice and Video Calls to Anyone Anywhere</small>
+                                                                        </td>
+                                                                        <td>x 3</td>
+                                                                        <td>50 AED</td>
+                                                                        <td><a class="removeBtn" href="javascript:void(0)">Remove</a></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td style="width:70%;">
+                                                                            <h4>Incoming Roaming</h4>
+                                                                            <small>Incoming Roaming 3000 Minutes (30 days)</small>
+                                                                        </td>
+                                                                        <td>x 3</td>
+                                                                        <td>95 AED</td>
+                                                                        <td><a class="removeBtn" href="javascript:void(0)">Remove</a></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td style="width:70%;">
+                                                                            <h4>Daily Roaming Combo</h4>
+                                                                            <small>1 GB Roaming Data (Throttled),15</small>
+                                                                        </td>
+                                                                        <td>x 5</td>
+                                                                        <td>60 AED</td>
+                                                                        <td><a class="removeBtn" href="javascript:void(0)">Remove</a></td>
+                                                                    </tr>                                                                
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>                                                
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="item-added alert alert-success" style="display:none;">
+                Add-On added to the cart Successfuly!
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="page-container">
+                    <section class="page-content inner-page">
+                        <div class="clearfix"></div>
+                        <div class="smart-wizard">
+                            <!-- Tabs -->
+                            <div class="swMain">
+                                <div class="col-md-12 item custom-container progress-container">
+                                    <ul class="item  slickslider">
+                                        <li>
+                                            <a href="pc-01.html" class="selected">
+                                                <span class="stepDesc">Package Selection</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>1
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="pc-01.1.html" class="selected">
+                                                <span class="stepDesc">Account Selection</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>2
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="pc-01.2.html" class="selected">
+                                                <span class="stepDesc">Devices</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>3
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="pc-01.3.html" class="selected">
+                                                <span class="stepDesc">Add-Ons</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>4
+                                                </div>
+                                            </a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="pc-01.4.html" class="">
+                                                <span class="stepDesc">Delivery & Billing</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>5
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="review.pc.4.html" class="">
+                                                <span class="stepDesc">Review</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>6
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="tandc-1.html" class="">
+                                                <span class="stepDesc">Terms & Conditions</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>7
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-12 custom-container corporate-accounts">
+                                     
+                                        <div class="row">
+                                            <div class="col-sm-3">
+                                                <div class="filter-col">
+                                                    <h3>
+                                                        <img src="../../assets/images/icon-green/opt07.png" alt=""> Filter
+                                                    </h3>
+                                                    <button class="custom-btn reset-btn">Reset</button>
+                                                    <h4>Package Code</h4>
+                                                    <input type="text" name="" id="">
+                                                    <div class="col-sm-12">
+                                                        <div class="row">
+                                                            <h4 for="">Category </h4>                                                      
+                                                            <form id="cat" action="car">
+                                                                <label class="container col-sm-12 small-check show-roaming">Roaming
+                                                                    <input value="all" checked name="cat" type="radio">
+                                                                    <span class="checkmark"></span>
+                                                                </label>
+                                                                <label class="container col-sm-12 small-check show-voice">Voice
+                                                                    <input value="osn" name="cat" type="radio">
+                                                                    <span class="checkmark"></span>
+                                                                </label>
+                                                              
+                                                                <label class="container col-sm-12 small-check show-sms">SMS
+                                                                    <input value="bein" name="cat" type="radio">
+                                                                    <span class="checkmark"></span>
+                                                                </label>
+                                                                <label class="container col-sm-12 small-check show-data">Data
+                                                                    <input value="bein" name="cat" type="radio">
+                                                                    <span class="checkmark"></span>
+                                                                </label>
+                                                                <label class="container col-sm-12 small-check show-internet">Internet
+                                                                    <input value="bein" name="cat" type="radio">
+                                                                    <span class="checkmark"></span>
+                                                                </label>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                    
+    
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-9">
+                                               <div class="addon-box roaming">
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <h4>Internet Calling Plan</h4>
+                                                            <small>Voice and Video Calls to Anyone Anywhere</small>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <div title="User Voice Line" class="input-group number-spinner">
+                                                                <span class="input-group-btn">
+                                                                    <button class="btn btn-default row-btn"
+                                                                        data-dir="dwn"><span
+                                                                            class="glyphicon glyphicon-minus"></span></button>
+                                                                </span>
+                                                                <input max="10" type="text" class="form-control text-center"
+                                                                    value="1">
+                                                                <span class="input-group-btn">
+                                                                    <button class="btn btn-default row-btn"
+                                                                        data-dir="up"><span
+                                                                            class="glyphicon glyphicon-plus"></span></button>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <div class="price-box">
+                                                                <strong>50</strong>
+                                                                AED / Month
+                                                                <br>
+                                                                <small>5% VAT Exc.</small>
+                                                            </div>
+                                                            <a title="Please Select Box No. first"
+                                                                class="default-btn cart-btn" href="javascript:void(0);">Add
+                                                                to Cart</a>
+                                                            <a style="display: none;" class="default-btn remove-btn"
+                                                                href="javascript:void(0);">Remove</a>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="addon-box roaming">
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <h4>Incoming Roaming</h4>
+                                                            <small>Incoming Roaming 3000 Minutes (30 days)</small>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <div title="User Voice Line" class="input-group number-spinner">
+                                                                <span class="input-group-btn">
+                                                                    <button class="btn btn-default row-btn"
+                                                                        data-dir="dwn"><span
+                                                                            class="glyphicon glyphicon-minus"></span></button>
+                                                                </span>
+                                                                <input max="10" type="text" class="form-control text-center"
+                                                                    value="1">
+                                                                <span class="input-group-btn">
+                                                                    <button class="btn btn-default row-btn"
+                                                                        data-dir="up"><span
+                                                                            class="glyphicon glyphicon-plus"></span></button>
+                                                                </span>
+                                                            </div>
+                                                        </div>                                                       
+                                                        <div class="col-sm-4">
+                                                            <div class="price-box">
+                                                                <strong>95</strong>
+                                                                AED / Month
+                                                                <br>
+                                                                <small>5% VAT Exc.</small>
+                                                            </div>
+                                                            <a title="Please Select Box No. first"
+                                                                class="default-btn cart-btn" href="javascript:void(0);">Add
+                                                                to Cart</a>
+                                                            <a style="display: none;" class="default-btn remove-btn"
+                                                                href="javascript:void(0);">Remove</a>
+                                                        </div>
+                                                    </div>
+                                                   
+                                                </div>
+                                                <div class="addon-box roaming">
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <h4>Daily Roaming Combo</h4>
+                                                            <small>1 GB Roaming Data (Throttled),15 Incoming/outgoing roaming</small>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <div title="User Voice Line" class="input-group number-spinner">
+                                                                <span class="input-group-btn">
+                                                                    <button class="btn btn-default" data-dir="dwn"><span
+                                                                            class="glyphicon glyphicon-minus"></span></button>
+                                                                </span>
+                                                                <input type="text" class="form-control text-center"
+                                                                    value="1">
+                                                                <span class="input-group-btn">
+                                                                    <button class="btn btn-default" data-dir="up"><span
+                                                                            class="glyphicon glyphicon-plus"></span></button>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <div class="price-box">
+                                                                <strong>60</strong>
+                                                                AED / Month
+                                                                <br>
+                                                                <small>5% VAT Exc.</small>
+                                                            </div>
+                                                            <a title="Please Select Box No. first"
+                                                                class="default-btn cart-btn" href="javascript:void(0);">Add
+                                                                to Cart</a>
+                                                            <a class="default-btn remove-btn"
+                                                                href="javascript:void(0);">Remove</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                              
+                                                <div class="addon-box voice" style="display: none;">
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <h4>International Minutes</h4>
+                                                            <small>150 Minutes</small>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                        <div title="User Voice Line" class="input-group number-spinner">
+                                                                <span class="input-group-btn">
+                                                                    <button class="btn btn-default row-btn"
+                                                                        data-dir="dwn"><span
+                                                                            class="glyphicon glyphicon-minus"></span></button>
+                                                                </span>
+                                                                <input max="10" type="text" class="form-control text-center"
+                                                                    value="1">
+                                                                <span class="input-group-btn">
+                                                                    <button class="btn btn-default row-btn"
+                                                                        data-dir="up"><span
+                                                                            class="glyphicon glyphicon-plus"></span></button>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <div class="price-box">
+                                                                <strong>100</strong>
+                                                                AED / Month
+                                                                <br>
+                                                                <small>5% VAT Exc.</small>
+                                                            </div>
+                                                            <a title="Please Select Box No. first"
+                                                                class="default-btn cart-btn" href="javascript:void(0);">Add
+                                                                to Cart</a>
+                                                            <a style="display: none;" class="default-btn remove-btn"
+                                                                href="javascript:void(0);">Remove</a>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="addon-box voice" style="display: none;">
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <h4>National Minutes</h4>
+                                                            <small>120 Minutes</small>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <div title="User Voice Line" class="input-group number-spinner">
+                                                                <span class="input-group-btn">
+                                                                    <button class="btn btn-default row-btn"
+                                                                        data-dir="dwn"><span
+                                                                            class="glyphicon glyphicon-minus"></span></button>
+                                                                </span>
+                                                                <input max="10" type="text" class="form-control text-center"
+                                                                    value="1">
+                                                                <span class="input-group-btn">
+                                                                    <button class="btn btn-default row-btn"
+                                                                        data-dir="up"><span
+                                                                            class="glyphicon glyphicon-plus"></span></button>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                       <div class="col-sm-4">
+                                                            <div class="price-box">
+                                                                <strong>30</strong>
+                                                                AED / Month
+                                                                <br>
+                                                                <small>5% VAT Exc.</small>
+                                                            </div>
+                                                            <a title="Please Select Box No. first"
+                                                                class="default-btn cart-btn" href="javascript:void(0);">Add
+                                                                to Cart</a>
+                                                            <a style="display: none;" class="default-btn remove-btn"
+                                                                href="javascript:void(0);">Remove</a>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="addon-box voice" style="display: none;">
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <h4>National Minutes</h4>
+                                                            <small>240 Minutes</small>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <div title="User Voice Line" class="input-group number-spinner">
+                                                                <span class="input-group-btn">
+                                                                    <button class="btn btn-default" data-dir="dwn"><span
+                                                                            class="glyphicon glyphicon-minus"></span></button>
+                                                                </span>
+                                                                <input type="text" class="form-control text-center"
+                                                                    value="1">
+                                                                <span class="input-group-btn">
+                                                                    <button class="btn btn-default" data-dir="up"><span
+                                                                            class="glyphicon glyphicon-plus"></span></button>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <div class="price-box">
+                                                                <strong>60</strong>
+                                                                AED / Month
+                                                                <br>
+                                                                <small>5% VAT Exc.</small>
+                                                            </div>
+                                                            <a title="Please Select Box No. first"
+                                                                class="default-btn cart-btn" href="javascript:void(0);">Add
+                                                                to Cart</a>
+                                                            <a class="default-btn remove-btn"
+                                                                href="javascript:void(0);">Remove</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="addon-box sms" style="display: none;">
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <h4>Flexi SMS</h4>
+                                                            <small>300 SMS</small>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                        <div title="User Voice Line" class="input-group number-spinner">
+                                                                <span class="input-group-btn">
+                                                                    <button class="btn btn-default row-btn"
+                                                                        data-dir="dwn"><span
+                                                                            class="glyphicon glyphicon-minus"></span></button>
+                                                                </span>
+                                                                <input max="10" type="text" class="form-control text-center"
+                                                                    value="1">
+                                                                <span class="input-group-btn">
+                                                                    <button class="btn btn-default row-btn"
+                                                                        data-dir="up"><span
+                                                                            class="glyphicon glyphicon-plus"></span></button>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <div class="price-box">
+                                                                <strong>40</strong>
+                                                                AED / Month
+                                                                <br>
+                                                                <small>5% VAT Exc.</small>
+                                                            </div>
+                                                            <a title="Please Select Box No. first"
+                                                                class="default-btn cart-btn" href="javascript:void(0);">Add
+                                                                to Cart</a>
+                                                            <a style="display: none;" class="default-btn remove-btn"
+                                                                href="javascript:void(0);">Remove</a>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="addon-box  sms" style="display: none;">
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <h4>Flexi SMS</h4>
+                                                            <small>500 SMS</small>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <div title="User Voice Line" class="input-group number-spinner">
+                                                                <span class="input-group-btn">
+                                                                    <button class="btn btn-default row-btn"
+                                                                        data-dir="dwn"><span
+                                                                            class="glyphicon glyphicon-minus"></span></button>
+                                                                </span>
+                                                                <input max="10" type="text" class="form-control text-center"
+                                                                    value="1">
+                                                                <span class="input-group-btn">
+                                                                    <button class="btn btn-default row-btn"
+                                                                        data-dir="up"><span
+                                                                            class="glyphicon glyphicon-plus"></span></button>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <div class="price-box">
+                                                                <strong>60</strong>
+                                                                AED / Month
+                                                                <br>
+                                                                <small>5% VAT Exc.</small>
+                                                            </div>
+                                                            <a title="Please Select Box No. first"
+                                                                class="default-btn cart-btn" href="javascript:void(0);">Add
+                                                                to Cart</a>
+                                                            <a style="display: none;" class="default-btn remove-btn"
+                                                                href="javascript:void(0);">Remove</a>
+                                                        </div>
+                                                    </div>                                                    
+                                                </div>
+                                                <div class="addon-box  sms" style="display: none;">
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <h4>Flexi SMS</h4>
+                                                            <small>1000 SMS</small>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <div title="User Voice Line" class="input-group number-spinner">
+                                                                <span class="input-group-btn">
+                                                                    <button class="btn btn-default" data-dir="dwn"><span
+                                                                            class="glyphicon glyphicon-minus"></span></button>
+                                                                </span>
+                                                                <input type="text" class="form-control text-center"
+                                                                    value="1">
+                                                                <span class="input-group-btn">
+                                                                    <button class="btn btn-default" data-dir="up"><span
+                                                                            class="glyphicon glyphicon-plus"></span></button>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <div class="price-box">
+                                                                <strong>100</strong>
+                                                                AED / Month
+                                                                <br>
+                                                                <small>5% VAT Exc.</small>
+                                                            </div>
+                                                            <a title="Please Select Box No. first"
+                                                                class="default-btn cart-btn" href="javascript:void(0);">Add
+                                                                to Cart</a>
+                                                            <a class="default-btn remove-btn"
+                                                                href="javascript:void(0);">Remove</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="addon-box data" style="display: none;">
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <h4>National Data</h4>
+                                                            <small>1GB</small>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <div title="User Voice Line" class="input-group number-spinner">
+                                                                <span class="input-group-btn">
+                                                                    <button class="btn btn-default row-btn"
+                                                                        data-dir="dwn"><span
+                                                                            class="glyphicon glyphicon-minus"></span></button>
+                                                                </span>
+                                                                <input max="10" type="text" class="form-control text-center"
+                                                                    value="1">
+                                                                <span class="input-group-btn">
+                                                                    <button class="btn btn-default row-btn"
+                                                                        data-dir="up"><span
+                                                                            class="glyphicon glyphicon-plus"></span></button>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                         <div class="col-sm-4">
+                                                            <div class="price-box">
+                                                                <strong>60</strong>
+                                                                AED / Month
+                                                                <br>
+                                                                <small>5% VAT Exc.</small>
+                                                            </div>
+                                                            <a title="Please Select Box No. first"
+                                                                class="default-btn cart-btn" href="javascript:void(0);">Add
+                                                                to Cart</a>
+                                                            <a style="display: none;" class="default-btn remove-btn"
+                                                                href="javascript:void(0);">Remove</a>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="addon-box data" style="display: none;">
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <h4>National Data</h4>
+                                                            <small>5GB</small>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <div title="User Voice Line" class="input-group number-spinner">
+                                                                <span class="input-group-btn">
+                                                                    <button class="btn btn-default row-btn"
+                                                                        data-dir="dwn"><span
+                                                                            class="glyphicon glyphicon-minus"></span></button>
+                                                                </span>
+                                                                <input max="10" type="text" class="form-control text-center"
+                                                                    value="1">
+                                                                <span class="input-group-btn">
+                                                                    <button class="btn btn-default row-btn"
+                                                                        data-dir="up"><span
+                                                                            class="glyphicon glyphicon-plus"></span></button>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <div class="price-box">
+                                                                <strong>149</strong>
+                                                                AED / Month
+                                                                <br>
+                                                                <small>5% VAT Exc.</small>
+                                                            </div>
+                                                            <a title="Please Select Box No. first"
+                                                                class="default-btn cart-btn" href="javascript:void(0);">Add
+                                                                to Cart</a>
+                                                            <a style="display: none;" class="default-btn remove-btn"
+                                                                href="javascript:void(0);">Remove</a>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="addon-box data" style="display: none;">
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <h4>National Data</h4>
+                                                            <small>12GB</small>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <div title="User Voice Line" class="input-group number-spinner">
+                                                                <span class="input-group-btn">
+                                                                    <button class="btn btn-default" data-dir="dwn"><span
+                                                                            class="glyphicon glyphicon-minus"></span></button>
+                                                                </span>
+                                                                <input type="text" class="form-control text-center"
+                                                                    value="1">
+                                                                <span class="input-group-btn">
+                                                                    <button class="btn btn-default" data-dir="up"><span
+                                                                            class="glyphicon glyphicon-plus"></span></button>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <div class="price-box">
+                                                                <strong>100</strong>
+                                                                AED / Month
+                                                                <br>
+                                                                <small>5% VAT Exc.</small>
+                                                            </div>
+                                                            <a title="Please Select Box No. first"
+                                                                class="default-btn cart-btn" href="javascript:void(0);">Add
+                                                                to Cart</a>
+                                                            <a class="default-btn remove-btn"
+                                                                href="javascript:void(0);">Remove</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="addon-box internet" style="display: none;">
+                                                    <div class="row">
+                                                        <div class="col-sm-3">
+                                                            <h4>Internet Calling Plan</h4>
+                                                            <small>Voice and Video Calls to Anyone Anywhere</small>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <div title="User Voice Line" class="input-group number-spinner">
+                                                                <span class="input-group-btn">
+                                                                    <button class="btn btn-default" data-dir="dwn"><span
+                                                                            class="glyphicon glyphicon-minus"></span></button>
+                                                                </span>
+                                                                <input type="text" class="form-control text-center"
+                                                                    value="1">
+                                                                <span class="input-group-btn">
+                                                                    <button class="btn btn-default" data-dir="up"><span
+                                                                            class="glyphicon glyphicon-plus"></span></button>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-3"></div>                                                       
+                                                        <div class="col-sm-4">
+                                                            <div class="price-box">
+                                                                <strong>50</strong>
+                                                                AED / Month
+                                                                <br>
+                                                                <small>5% VAT Exc.</small>
+                                                            </div>
+                                                            <a title="Please Select Box No. first"
+                                                                class="default-btn cart-btn" href="javascript:void(0);">Add
+                                                                to Cart</a>
+                                                            <a class="default-btn remove-btn"
+                                                                href="javascript:void(0);">Remove</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style="display:none;"
+                                            class="custom-container table-container small-table box-grid1">
+                                            <div class="data-container">
+                                                <table class="table myTable table-striped child-grid-01">
+                                                    <thead>
+                                                        <tr>
+                                                            <th></th>
+                                                            <th scope="col">
+                                                                BOX No.
+                                                            </th>
+                                                            <th scope="col">
+                                                                Add-On
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td width="20">
+                                                                <img src="../../assets/images/router-green.png" alt="">
+                                                            </td>
+                                                            <td>
+                                                                1
+                                                            </td>
+                                                            <td>OSN</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div style="display:none;"
+                                            class="custom-container table-container small-table box-grid2">
+                                            <div class="data-container">
+                                                <table class="table myTable table-striped child-grid-01">
+                                                    <thead>
+                                                        <tr>
+                                                            <th></th>
+                                                            <th scope="col">
+                                                                BOX No.
+                                                            </th>
+                                                            <th scope="col">
+                                                                Add-On
+                                                            </th>
+                                                            <th scope="col">
+                                                                Document
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td width="20">
+                                                                <img src="../../assets/images/router-green.png" alt="">
+                                                            </td>
+                                                            <td>
+                                                                1
+                                                            </td>
+                                                            <td>BEID</td>
+                                                            <td>Uploaded Document Link</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <div class="col-md-12  remove-padding-right text-right submit-button-container">
+                                    <button onclick="location.href = '../../index.html'">Previous</button>
+                                    <button>Save & Close</button>
+                                    <button onclick="location.href = 'pc-01.4.html'">Next</button>
+                                </div>
+
+                            </div>
+                            <div class="clearfix"></div>
+                            <!-- End SmartWizard Content -->
+                        </div>
+                        <div class="clearfix"></div>
+                    </section>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+
+    </div>
+    <!-- /.etisalat -->
+    <!-- /.footer -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../../assets/js/jquery-2.1.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../../assets/js/bootstrap.js"></script>
+    <script src="../../assets/js/bootstrap-select.js"></script>
+    <script src="../../assets/js/dcalendar.picker.js"></script>
+    <script type="text/javascript" src="../../assets/js/jquery.matchHeight-min.js"></script>
+    <script type="text/javascript" src="../../assets/js/jquery.smartWizard.js"></script>
+    <script src="../../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../../assets/js/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.0/rangeslider.min.js"></script>
+    <script src="../../assets/js/scripts.js"></script>
+    <script src="../../assets/js/custom.js"></script>
+    <script>
+       
+        $('.reset-btn').click(function () {
+            $('.offer-box-1').show();
+            $('.offer-box-2').show();
+            $('.offer-box-3').show();
+        });
+        $('#offer-select-01').change(function () {
+
+            $('.offer-box-1').show();
+            $('.offer-box-2').hide();
+            $('.offer-box-3').hide();
+        });
+        $('#offer-select-02').change(function () {
+
+            $('.offer-box-2').show();
+            $('.offer-box-1').hide();
+            $('.offer-box-3').hide();
+        });
+        $('#offer-select-03').change(function () {
+
+            $('.offer-box-3').show();
+            $('.offer-box-2').hide();
+            $('.offer-box-1').hide();
+        });
+        
+    
+        $('.cart-btn').click(function () {
+            //$(this).parent().find('.remove-btn').show();
+           // $(this).hide();
+            $(this).closest('.addon-box').find('.number-spinner').find('input').val('1');
+        });
+        $('.remove-btn').click(function () {
+            $(this).parent().find('.cart-btn').show();
+            $(this).hide();
+            $(this).closest('.addon-box').find('.number-spinner').removeClass('disabled');
+        });
+    
+        $(document).on('click', '.number-spinner button', function () {
+            var btn = $(this),
+                oldValue = btn.closest('.number-spinner').find('input').val().trim(),
+                newVal = 0;
+
+            if (btn.attr('data-dir') == 'up') {
+                newVal = parseInt(oldValue) + 1;
+            } else {
+                if (oldValue > 1) {
+                    newVal = parseInt(oldValue) - 1;
+                } else {
+                    newVal = 1;
+                }
+            }
+            btn.closest('.number-spinner').find('input').val(newVal);
+        });
+
+        $('.show-roaming').change(function(){            
+            $('.roaming').show();
+            $('.voice').hide();
+            $('.sms').hide();
+            $('.data').hide();
+            $('.internet').hide();
+        });
+        $('.show-voice').change(function(){
+            $('.roaming').hide();
+            $('.voice').show();
+            $('.sms').hide();
+            $('.data').hide();
+            $('.internet').hide();
+        });
+        $('.show-sms').change(function(){
+            $('.roaming').hide();
+            $('.voice').hide();
+            $('.sms').show();
+            $('.data').hide();
+            $('.internet').hide();
+        });
+        $('.show-data').change(function(){
+            $('.roaming').hide();
+            $('.voice').hide();
+            $('.sms').hide();
+            $('.data').show();
+            $('.internet').hide();
+        });
+        $('.show-internet').change(function(){
+            $('.roaming').hide();
+            $('.voice').hide();
+            $('.sms').hide();
+            $('.data').hide();
+            $('.internet').show();
+        });
+
+        $('.otp-send').click(function(){
+        $(this).closest('.email-number').hide();
+        $(this).closest('.login-wrap').find('.otp-field').show();
+        });
+
+        $('.scan-btn').click(function(){
+            $(this).closest('.card-scan').hide();
+            $('.finger-print').show();
+
+            setTimeout(function() {
+                $(".finger-btn").trigger('click');
+            }, 5000);
+        });
+        $('.finger-btn').click(function(){
+            $(this).closest('.finger-print').hide();
+            $('.thank-you').show();
+        });
+        $('.verify-btn').click(function(){
+            $(this).closest('.otp-field').hide();
+            $('.verify-box').show();
+        });
+        $('.login-btn').click(function(){
+            $('select').removeAttr('disabled');
+            $('.bootstrap-select').removeClass('disabled');
+            $('.dropdown-toggle').removeClass('disabled');
+            $('.bootstrap-select .dropdown-menu li[data-original-index="1"]').addClass('selected');
+            $('select option[value="01"]').attr('selected', 'selected');
+            $('.filter-option').html('UAT TEST B2B ACCOUNT INQUIRY ES - 37800781');
+            $('.govt-plan').show();
+        });
+        $('.cart-btn').click(function(){
+            $(".item-added").show('fade');
+            setTimeout(function() { $(".item-added").hide('fade'); }, 3000);
+        });
+    </script>
+</body>
+
+</html>

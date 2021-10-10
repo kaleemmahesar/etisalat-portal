@@ -1,0 +1,468 @@
+@font-face {
+  font-family: 'neotech-light';
+  src: url('../fonts/neotech-light.eot');
+  src: url('../fonts/neotech-light.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/neotech-light.ttf') format('truetype'),
+       url('../fonts/neotech-light.svg#museo_sans700') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'neotech-medium';
+  src: url('../fonts/neotech-medium.eot');
+  src: url('../fonts/neotech-medium.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/neotech-medium.ttf') format('truetype'),
+       url('../fonts/neotech-medium.svg#museo_sans700') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'neotech-regular';
+  src: url('../fonts/neotech-regular.eot');
+  src: url('../fonts/neotech-regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/neotech-regular.ttf') format('truetype'),
+       url('../fonts/neotech-regular.svg#museo_sans700') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+h1,h2,h3,h4,h5{
+  font-family: 'neotech-regular', Arial;
+  font-weight:300 !important;
+  color:#353738;
+}
+b, strong,label{
+  font-family: 'neotech-medium', Arial;
+  font-weight:300;
+}
+a,a:focus{color: #719e19;text-decoration:none;}
+a:hover{text-decoration:none;color: rgba(113,158,25,0.8);}
+
+body {
+  background: #f4f6fa;
+  font-family: 'neotech-regular', Arial;
+  color:#919192;
+  overflow-x:hidden;
+  overflow-y: scroll;
+  margin-top:65px;
+}
+
+.smart-wizard, .heading-title {
+  padding: 0px 30px;
+}
+
+.etisalat .navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  min-height: 60px;
+  margin-bottom: 0px;
+  border-color: #e1e1e1;
+  border-right-style: solid;
+  border-left-style: solid;
+  border-width: 0 0 1px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  background: #ffffff;
+  -webkit-box-shadow: 0 1px 7px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 7px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 7px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+  width: 100%;
+  display: flex;
+}
+
+.etisalat .navbar>.container-fluid {
+  width: 100%;
+  display: flex;
+}
+
+.etisalat .navbar>.container-fluid > *, .etisalat .navbar>.container-fluid #navbar {
+  min-height: 100%;
+}
+
+.etisalat .navbar .navbar-brand {
+  height: 65px;
+  padding: 11px 0 0 15px;
+  transition: all 0.3s;
+}
+
+.etisalat .navbar .navbar-brand img {
+  width: 120px;
+}
+
+.navbar-default .navbar-collapse {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-container ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: inline-block;
+  height: 65px;
+  float: left;
+}
+
+.nav-container ul li {
+  float: left;
+  margin: 0;
+}
+
+.nav-container > ul>li>a {
+  padding: 0 50px;
+  display: block;
+  position: relative;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "neotech-light", Arial;
+  height: 65px;
+  color: #575757;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.nav-container > ul>li>a.retail {
+  background: url(../images/green-icon/retail-icon.png) no-repeat 10px 15px / 35px auto;
+  font-size: 20px;
+  padding: 5px 50px;
+}
+
+.nav-container > ul>li>a::after {
+  content: "";
+  height: 2px;
+  width: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #616b1e;
+  transition: all 0.3s;
+}
+
+.nav-container > ul>li>a.retail:hover {
+  color: #575757;
+}
+
+.nav-container > ul>li>a:hover:after, .nav-container > ul>li>a.active:after {
+  width: 100%;
+}
+
+.swMain .progress-container ul {
+  margin-bottom: 0px;
+  padding-left: 0;
+}
+
+.swMain .progress-container li {
+  display: inline-block;
+  width: 150px;
+  position: relative;
+}
+
+.swMain .progress-container li a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #505a5f;
+  font-size: 1em;
+}
+
+.swMain .progress-container li span {
+  font-size: 1em;
+}
+
+.swMain .custom-container {
+  background: #fff;
+  padding: 15px 25px;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  margin-top: 0;
+  border-style: solid;
+  border-color: #e1e1e1;
+  border-width: 1px;
+  border-top: none;
+  position: relative;
+}
+
+.swMain .progress-container li a .stepIcon {
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  background: #6e7579;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  display: block;
+  margin: 15px auto 0px;
+  font-size: 12px;
+  color: #ffffff;
+  line-height: 31px;
+}
+
+.swMain .progress-container li a.selected .stepIcon {
+  background: #719e19;
+}
+
+.swMain .progress-container li a .stepIcon {
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  background: #6e7579;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  display: block;
+  margin: 15px auto 0px;
+  font-size: 12px;
+  color: #ffffff;
+  line-height: 31px;
+}
+
+.corporate-accounts h3, .selected-accounts h3, .form-wrap h3 {
+  margin: 0 0 20px 0;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: left;
+  color: #666666;
+  font-size: 1.3em;
+}
+
+.summary-box {
+  display: inline-block;
+  width: 100%;
+  padding: 15px;
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.1);
+  border: 1px solid #eee;
+}
+
+.summary-box.new {
+  padding: 25px 35px;
+}
+
+.summary-box.new .card-header h3 {
+  position: relative;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  color: #353738;
+  border-bottom: 1px solid #ddd;
+}
+
+.swMain .custom-container .form-group {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.form-group input, .form-group select {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+
+.form-group label, label.top-level {
+  font-size: 12px !important;
+  margin-bottom: 0;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 300;
+  font-family: 'neotech-medium', Arial;
+  color: #333;
+}
+
+.corporate-accounts input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+
+.corporate-accounts .summary-box input[type="text"] {
+  border-bottom: 1px solid #ededed !important;
+}
+
+input[type="text"], input[type="email"], input[type="number"], input[type="password"], select {
+  border: none !important;
+  border-bottom: 1px solid #ccc !important;
+  padding-left: 0 !important;
+  font-size: 14px !important;
+  opacity: 1 !important;
+}
+
+.verificheck span img, .verificheck span {
+  width: 20px;
+}
+
+.verificheck input.form-field.emirates-id {
+  width: calc(100% - 35px);
+  margin-left: 15px;
+}
+
+.btn-box-alone {
+  padding-top: 15px;
+}
+.text-left {
+  text-align: left !important;
+}
+
+.default-btn {
+  background: #719e19;
+  color: white;
+  border-radius: 0;
+  border: 1px solid #719e19;
+  width: 125px;
+  max-width: 100%;
+  outline: none;
+  font-size: 14px;
+  height: 32px;
+  font-weight: 300;
+  font-family: 'neotech-regular', Arial;
+}
+
+.white-btn.default-btn {
+  border-color: #719e19;
+  color: #719e19;
+  background-color: #fff;
+}
+
+.default-btn {
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+.ml-1 {
+  margin-left: 10px;
+}
+
+.mT-30 {
+  margin-top: 30px;
+}
+
+.mB-30 {
+  margin-bottom: 30px;
+}
+.text-right {
+  text-align: right !important;
+}
+
+.packages .sign-wrapper h4 {
+  font-size: 18px;
+  text-transform: uppercase;
+  font-family: "neotech-light", Arial;
+  text-align: left;
+  color: #666666;
+}
+
+.sig-box {
+  border: 1px solid #ddd;
+  padding: 15px;
+  width: 100%;
+  height: 150px;
+}
+
+.sign-btn-box {
+  text-align: right;
+  padding-top: 20px;
+}
+
+.summary-box #headingSign h3 svg {
+  width: 30px;
+  height: 30px;
+  margin: 8px 0 0 3px;
+}
+
+.summary-box #headingSign h3 svg g {
+  fill: #719e19;
+}
+
+.summary-box .card-header h3 span.icon {
+  position: absolute;
+  left: 2px;
+  top: -5px;
+}
+
+.summary-box .card-header h3 svg {
+  margin-left: -2px;
+  margin-top: 5px;
+  width: 35px;
+  height: 35px;
+}
+
+svg g g {
+  stroke: #719e19;
+}
+
+.collapsed svg g g {
+  stroke:  rgb(131, 135, 137);
+}
+
+.changeBtn{
+  font-family: Lato,Roboto,Arial,sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #719e19;
+  text-transform:uppercase;
+  position: absolute;
+  right:0px;
+  bottom:10px;
+}
+
+.changeBtn:focus {
+  outline: none;
+  color: #719e19;
+  text-decoration: none;
+}
+
+.summary-box.new .card-header h3 small {
+  display: block;
+  position: absolute;
+  padding-top: 3px;
+}
+
+.scan-popup-header-wrap {
+  border-bottom: none;
+}
+
+.modal-header .close {
+  position: absolute;
+  z-index: 9;
+  right: 10px;
+  top: 13px;
+  font-size: 32px;
+  width: 20px;
+  margin-top: -2px;
+}
+
+.login-wrap .thank-you img, .login-wrap .verify-box img {
+  margin: 50px auto 100px;
+}
+
+.login-wrap img {
+  max-width: 50%;
+  margin: auto;
+  display: block;
+}
+
+.login-wrap .card-scan img {
+  max-width: 55%;
+}
+
+.login-wrap .finger-print img {
+  max-width: 40%;
+}
+
+.unverified img, .scanning-error img {
+  width: 103px;
+}

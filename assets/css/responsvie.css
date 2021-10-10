@@ -1,0 +1,273 @@
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+	.eti-breadcrumbs .breadcrumb > li a {
+		font-size: 12px;
+	}
+
+    .eti-panel ul li .tile h5.h5 {
+        font-size: 19px;
+    }
+
+    .eti-graph {
+        overflow: scroll;
+        min-height: 270px;
+    }
+
+    .eti-panel {
+        overflow: hidden;
+    }
+
+    .eti-panel table, .eti-panel table svg {
+        margin-left: -30px;
+    }
+}
+
+@media screen and (max-width: 770px) {
+	.eti-panel table, .eti-panel table svg {
+        margin-left: 0px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+	/**** aside styleing ****/
+	.navbar-header .navbar-toggle {
+        float: left;
+        margin: 20px 0px 20px 20px;
+    }
+
+	.etisalat .navbar.navbar-default ul.etisalat-navbar li:before {
+		display: none;
+	}
+
+	/*** main container ***/
+	.etisalat .page-container .page-content.inner-page {
+	    padding: 0 5px 20px;
+	}
+
+	.etisalat .navbar.navbar-default ul.etisalat-navbar li {
+		padding: 5px 20px;
+		text-align: center;
+	}
+
+	.etisalat .page-container {
+		display: block;
+		position: relative;
+	}
+	.etisalat aside.sidebar {
+		display: none !important;
+	}
+	#user-info {
+		display: none;
+	}
+
+	.eti-breadcrumbs .breadcrumb > li a {
+		font-size: 12px;
+	}
+	
+
+	body.sideNavIn .sidebar2 {
+		position: absolute;
+		z-index: 222;
+		display: block !important;
+		opacity: 1;
+		width: 85px;
+		overflow: visible;
+		-webkit-transition: all ease-out 0.4s;
+		-moz-transition: all ease-out 0.4s;
+		-o-transition: all ease-out 0.4s;
+		transition: all ease-out 0.4s;
+	}
+
+	body.sideNavIn .navbar-collapse.in {
+		overflow: visible;
+	}
+
+	#sideNavToggle {
+		float: left;
+	    margin: 20px 0px 0px 20px;
+	    background: #fff;
+	    border: 1px solid #ddd;
+	    padding: 5px;
+	    border-radius: 5px;
+	}
+
+	#sideNavToggle .icon-bar {
+		display: block;
+	    width: 22px;
+	    height: 2px;
+	    border-radius: 1px;
+	    background: #787878;
+	    margin: 4px 5px;
+	}
+
+	#sideNavToggle:hover, #sideNavToggle:hover:focus, #sideNavToggle:active {
+		background: #ddd;
+	}
+
+	.etisalat .sidebar-widgets .widget.ql {
+		display: none;
+	}
+
+	.etisalat .page-container .page-content {
+		display: block;
+	}
+
+	.swMain ul.anchor li:after {
+		display: none;
+	}
+
+	.login-img.item {
+		display: none;
+	}
+
+	.etisalat .login-section .login-form {
+    	padding: 30px 30px 35px;
+    }
+
+    .login-form .form-group {
+      margin-bottom: 10px;
+    }
+
+    .login-form .spacer-top-bottom-20 {
+    	padding: 15px;
+    }
+
+    .login-form .col-sm-10 {
+    	padding: 0px;
+    }
+
+    /*** slider updating ***/
+    ul.item.anchor.slickslider {
+	    min-height: auto;
+	}
+
+	ul.item.anchor.slickslider.no {
+	    min-height: auto;
+	}
+    .col-md-2.col-sm-3.remove-padding-left.item {
+    	padding: 0px;
+    }
+
+    ul.item.anchor.slickslider.slick-initialized.slick-slider {
+    	margin: 20px auto;
+	    background: transparent;
+	    border: none;
+
+	}
+
+	.slickslider .slick-slide a:focus {
+		outline: 0px;
+	}
+
+	.slick-prev, .slick-next {
+	  position: absolute;
+	    top: 45%;
+	    width: 25px;
+	    height: 25px;
+	    font-size: 0px;
+	    color: transparent;
+	    background: #999;
+	    border: none;
+	    z-index: 22;
+	    -webkit-border-radius: 50%;
+	    -moz-border-radius: 50%;
+	    border-radius: 50%;
+	    line-height: 23px;
+	    box-shadow: 0px 0px 2px #666;
+	    -webkit-transition: all ease-out 0.4s;
+	    -moz-transition: all ease-out 0.4s;
+	    -o-transition: all ease-out 0.4s;
+	    transition: all ease-out 0.4s;
+	}
+
+	.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
+		background: #82a03a;
+		outline: 0px;
+	}
+
+	.slick-prev {
+	  right: -10px;
+	}
+
+	.slick-next {
+	  left: -10px;
+	}
+
+	.slick-prev:after {
+	  content: ">";
+	  color: #fff;
+	  font-size: 20px;
+	  right: 0px;
+	}
+
+	.slick-next:before {
+	  content: "<";
+	  color: #fff;
+	  font-size: 20px;
+	  left: 0px;
+	}
+
+	.eti-panel {
+		padding: 15px 0px;
+		overflow: hidden;
+	}
+
+	.eti-panel ul.eti-listing-num li {
+		display: block;
+		width: 100%;
+		float: none;
+		padding-bottom: 15px;
+		margin-bottom: 15px;
+		border: 0px;
+		text-align: center;
+		border-bottom: 1px solid #ccc;
+	}
+	.eti-panel ul.eti-listing-num li:last-child {
+		border-bottom: 0px;
+		margin-bottom: 0px;
+	}
+	.eti-graph {
+		overflow-x: auto;
+		overflow-y: hidden;
+	}
+
+
+
+	.mCSB_inside > .mCSB_container {
+		margin-right: 20px;
+	}
+	/*** footer ***/
+	footer.footer.login-footer {
+		height: auto;
+	}
+
+	footer .copyright {
+		text-align: center;
+	}
+	footer .footer-nav {
+		width: 100%;
+		clear: both;
+	}
+	footer.footer.login-footer ul.footer-nav li {
+		    display: block;
+	    border: none;
+	    float: none;
+	    text-align: center;
+	    margin-left: -50px;
+	}
+
+	footer.footer.login-footer ul.footer-nav li a {
+		padding: 0px;
+	}
+
+
+}
+
+
+@media screen and (max-width: 480px) {
+	.etisalat .page-container .page-content .page-controls .btn.btn-default {
+		display: block;
+		float: none;
+		width: 98%;
+		margin: 5px auto;
+	}
+}

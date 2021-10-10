@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sales Order Request :: Etisalat</title>
+    <!-- Bootstrap -->
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="../../assets/css/font-awesome.min.css" />
+    <link href="../../assets/css/CEP-automation-css/custom.css" rel="stylesheet" type="text/css">
+    <link href="../css/greeting.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/CEP-automation-css/new-custom.css" rel="stylesheet" type="text/css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        body.new-etisalat button.proceed {
+            background: #719e19;
+            color: #fff;
+            width: 100%;
+            margin-top: -13px;
+            height: 60px;
+        }
+        
+    </style>
+</head>
+
+<body class="loading new-etisalat no-step">
+    <div id="loaderM"></div>
+    <div>
+        <header class="main-head">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header col-sm-3">
+                        <a class="navbar-brand" href="../index.html">
+                            <svg class="etisalat-logo-en" viewBox="0 0 145 57">
+                                <g id="Touchpoints" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="Website---Desktop" transform="translate(-120.000000, -67.000000)">
+                                        <g id="Etisalat-Logo-Horizontal" transform="translate(120.000000, 67.000000)">
+                                            <path d="M-0.000102112676,26.5379376 L0.0106284463,9.93265321 C0.0111394253,4.44722202 4.43672854,-0.000924770642 9.89347328,0.000102752294 L135.12063,0.029387156 C140.578396,0.0304146789 145.00092,4.48113028 144.999898,9.96656147 L144.990189,26.5723596 L144.999898,46.1194422 C145.00092,51.6053872 140.578396,56.055589 135.12063,56.0571303 L9.89347328,56.0864147 C4.43672854,56.0874422 0.0111394253,51.6387817 0.0106284463,46.1533505 L-0.000102112676,26.5379376 Z" id="Fill-1" fill="#010202"></path>
+                                            <path d="M111.980079,36.0405211 C111.543037,36.0405211 111.166752,35.969622 110.878283,35.821145 C109.48853,35.097255 108.384692,31.6047046 108.41022,28.0119706 C108.416347,25.6687046 109.894428,24.3760807 112.105167,24.3760807 C113.284058,24.3760807 114.673301,24.7439339 116.164146,25.5207413 C120.442157,27.7443009 121.545995,31.2363376 118.639357,33.3299156 C116.336206,34.9898789 113.677192,36.0405211 111.980079,36.0405211 M111.438371,20.7766679 C110.807315,20.7766679 110.229357,20.8537321 109.739727,21.0186495 C107.814903,21.612044 107.054164,23.4209982 107.201206,25.9286679 C107.353864,28.444044 108.125836,31.0477872 108.697667,32.9389431 C109.329745,34.860411 109.765255,36.0759706 110.54897,36.4803009 C110.783319,36.6030899 111.063107,36.6570349 111.386294,36.6570349 C112.133248,36.6570349 113.141611,36.3662459 114.484903,35.9516404 C116.353565,35.3233101 118.910467,34.444778 121.033389,33.1177321 C123.153759,31.7886312 124.180502,30.1168514 123.548424,28.196411 C122.971488,26.2970349 120.738283,24.1510532 117.692773,22.5671266 C115.439657,21.398833 113.206963,20.7766679 111.438371,20.7766679 M103.682403,18.6055119 C102.587245,20.0466128 102.558143,22.4181358 103.287738,25.3537688 C104.312438,29.4864661 106.086646,33.6689982 106.912738,36.4556404 C107.861364,39.3142092 107.867491,40.7799706 108.23816,40.9685211 L108.368354,40.9978055 C108.851347,40.9978055 110.07772,40.2338422 112.659129,39.4441908 C115.398301,38.5081174 119.812632,37.5417321 123.754692,35.9870899 C126.537262,34.8958606 128.435026,33.5138422 128.983882,31.7937688 C128.098565,32.9918606 126.483143,34.0055119 124.350519,34.8424294 C120.402843,36.3965578 115.993107,37.3639706 113.254445,38.300044 C110.671505,39.0881541 109.453301,39.8541725 108.963671,39.8541725 L108.833477,39.8233468 C108.461276,39.6342826 108.456681,38.1700624 107.507544,35.3114936 C106.681963,32.5227963 104.909798,28.3433468 103.884076,24.2091083 C103.322967,21.9500991 103.211664,20.0281174 103.682403,18.6055119" id="Fill-4" fill="#BDCE1D"></path>
+                                            <path d="M108.384692,15.8660844 C107.5489,15.8660844 106.812667,15.9734606 106.192843,16.1810202 C104.889886,16.5781578 104.084217,17.4202128 103.682403,18.6054606 C104.136294,18.0182312 104.768371,17.5861578 105.599058,17.3313321 C106.21684,17.1181211 106.959199,17.0174239 107.796523,17.0174239 C110.6664,17.0174239 114.673301,18.2206532 118.80478,20.3722862 C124.150379,23.1476257 128.098565,26.6586716 128.91904,29.4458275 C129.19985,30.2950752 129.211593,31.070855 128.983882,31.7942312 C129.731857,30.7739009 129.953952,29.6128 129.519463,28.3027083 C128.694903,25.5145248 124.745185,22.0029651 119.399586,19.2276257 C115.263512,17.0759927 111.2561,15.8660844 108.384692,15.8660844" id="Fill-6" fill="#7E9D3D"></path>
+                                            <path d="M128.983729,31.7939743 C129.088905,31.456433 129.147109,31.1014239 129.141493,30.7381945 C129.141493,30.323589 129.071035,29.897167 128.918887,29.4460844 C128.098412,26.6584147 124.150225,23.1473688 118.804627,20.3720294 C114.673148,18.2209101 110.666246,17.017167 107.79637,17.017167 C106.959046,17.017167 106.216687,17.1178642 105.598905,17.3310752 C104.768218,17.5864147 104.136141,18.0184881 103.682761,18.6052037 C104.084063,17.4204697 104.889732,16.5779009 106.19269,16.1807633 C106.813025,15.9732037 107.548746,15.8658275 108.384539,15.8658275 C111.255947,15.8658275 115.26387,17.0757358 119.399433,19.2278826 C124.745032,22.003222 128.69475,25.5147817 129.51931,28.3024514 C129.666863,28.7514789 129.744468,29.1850936 129.744468,29.6002128 C129.73732,30.3944881 129.471827,31.1245431 128.983729,31.7939743" id="Fill-8" fill="#7E9D3D"></path>
+                                            <path d="M108.384692,15.8660844 C107.5489,15.8660844 106.812667,15.9734606 106.192843,16.1810202 C104.889886,16.5781578 104.084217,17.4202128 103.682403,18.6054606 C104.136294,18.0182312 104.768371,17.5861578 105.599058,17.3313321 C106.21684,17.1181211 106.959199,17.0174239 107.796523,17.0174239 C110.6664,17.0174239 114.673301,18.2206532 118.80478,20.3722862 C124.150379,23.1476257 128.098565,26.6586716 128.91904,29.4458275 C129.071188,29.8963963 129.141646,30.3233321 129.141646,30.7384514 L129.141646,30.8078092 C129.140625,31.146378 129.0814,31.4777541 128.983882,31.7942312 C129.471981,31.1248 129.737474,30.3942312 129.744621,29.6004697 C129.744621,29.1853505 129.667016,28.7522495 129.519463,28.3027083 C128.694903,25.5145248 124.745185,22.0029651 119.399586,19.2276257 C115.263512,17.0759927 111.2561,15.8660844 108.384692,15.8660844" id="Fill-10" fill="#45701F"></path>
+                                            <path d="M111.384762,36.6581138 C111.058512,36.6581138 110.782298,36.6046826 110.54897,36.4808661 C109.762192,36.076022 109.330766,34.8609761 108.69971,32.9415633 C108.124815,31.0473248 107.352843,28.4415266 107.203759,25.9318018 C107.055185,23.4189945 107.814903,21.6131229 109.739217,21.0192147 C110.232421,20.8537835 110.806294,20.7726092 111.439903,20.7726092 C113.206963,20.7726092 115.441699,21.3973431 117.689199,22.5651229 C120.740326,24.1536734 122.970977,26.299655 123.546382,28.1923523 C124.17897,30.1153615 123.153759,31.7871413 121.032368,33.1162422 C118.912509,34.4473982 116.353565,35.3228477 114.486945,35.9480954 C113.141611,36.3642422 112.133248,36.6581138 111.384762,36.6581138 M107.797033,17.0159853 C106.959199,17.0159853 106.218371,17.115655 105.599058,17.3309211 C104.76735,17.5826642 104.135783,18.0162789 103.685467,18.6060771 C103.209621,20.0302239 103.322967,21.9516917 103.883565,24.2081321 C104.910819,28.3433982 106.679921,32.5218202 107.506523,35.3120587 C108.458213,38.167545 108.46485,39.6312514 108.831945,39.8213431 L108.966224,39.8521688 C109.451259,39.8521688 110.670995,39.0876917 113.253935,38.2985541 C115.994639,37.3635083 120.403354,36.3935266 124.352562,34.8429945 C126.483653,34.0035083 128.098565,32.9955083 128.983882,31.7933064 C129.210572,31.0719853 129.203424,30.2900404 128.919551,29.446444 C128.096523,26.6587743 124.1514,23.1461872 118.807843,20.3698202 C114.673301,18.2222972 110.66691,17.0159853 107.797033,17.0159853" id="Fill-12" fill="#6F9C2E"></path>
+                                            <path d="M25.687618,33.8766092 L17.2878292,34.7433248 C17.620206,37.409233 19.5996602,38.4079853 21.7067553,38.4162055 L27.0911567,38.4162055 C27.8554701,38.4162055 28.3639912,38.9340771 28.3639912,39.6749211 L28.3639912,40.7594716 L21.6516144,40.7594716 C17.9107165,40.7594716 14.7651356,38.3093431 14.7651356,33.2904073 C14.7651356,29.0128294 17.7396778,26.1018569 21.9635687,26.1018569 C24.9973363,26.1018569 27.4618257,27.9657835 28.1316849,30.779655 C28.5345194,32.4858569 27.6206109,33.6598018 25.687618,33.8766092 M24.1355053,31.9597651 C24.8145546,31.8827009 25.3159278,31.7552881 25.5599771,31.5107376 C25.8070898,31.2631046 25.7784982,30.7575633 25.6156285,30.372756 C25.1035335,29.1582239 23.7112271,28.2709578 21.9344665,28.2709578 C19.2146954,28.2709578 17.2970194,30.0331596 17.2970194,32.7304073 C17.2970194,32.7304073 23.799044,31.9982972 24.1355053,31.9597651" id="Fill-14" fill="#FEFEFE"></path>
+                                            <path d="M55.0001849,26.1074569 C55.795132,26.1074569 56.3695158,26.4809615 56.3695158,27.2829431 C56.3695158,28.0900624 55.795132,28.4645945 55.0001849,28.4645945 L49.1496391,28.4645945 C47.9212236,28.5565578 47.7644806,29.7947229 47.8655722,30.5622826 C47.8987588,30.8088881 48.0156778,31.020044 48.1872271,31.1680073 C48.5691285,31.4921908 49.2343926,31.6077872 49.9195687,31.7259523 L54.373213,32.5161174 C56.7110827,32.9440807 57.5958891,34.141145 57.5958891,36.2655486 C57.5958891,39.5659523 55.5720158,40.7912734 52.4009067,40.7912734 L45.0089701,40.7912734 C45.0089701,40.7912734 45.012544,39.9682275 45.012544,39.6147596 C45.012544,38.8112367 45.5537412,38.4372183 46.381875,38.4372183 L52.2324208,38.4372183 C54.5146391,38.4372183 55.1012764,37.7297688 55.0987236,36.4654018 C55.0987236,35.3227963 54.7831954,34.8984294 53.2581426,34.6415486 L48.7503785,33.8971083 C46.4676496,33.5210349 45.4761356,32.3136954 45.355132,30.7739523 C45.1723504,28.5149431 46.1015757,26.1074569 49.1787412,26.1074569 L55.0001849,26.1074569 Z" id="Fill-16" fill="#FEFEFE"></path>
+                                            <path d="M71.102588,31.2716844 C71.102588,28.7162349 70.4153697,26.1017028 66.6494542,26.1017028 L61.3697183,26.1017028 C60.5426056,26.1017028 59.9983451,26.4752073 59.9983451,27.277189 C59.9983451,28.0837945 60.5426056,28.4567853 61.3697183,28.4567853 L66.2803169,28.4567853 C68.0208275,28.4567853 68.5906162,28.8616294 68.5906162,30.0946569 L68.5906162,30.4671339 C68.4910563,31.2203083 67.6465845,31.3990972 67.2207746,31.4992807 C63.6943134,32.3315743 58.9470951,31.4191339 58.9470951,36.5269505 C58.9470951,39.2534826 61.2553521,40.8630972 64.4249296,40.8630972 C64.460669,40.8630972 67.6072711,41.0192807 68.76625,39.420455 C68.76625,39.420455 68.76625,39.4687486 68.7728873,39.5601982 C68.8510035,40.3637211 69.2323944,40.786033 70.0508275,40.786033 L71.094419,40.786033 L71.102588,31.2716844 Z M68.5906162,35.5184367 C68.5906162,38.0184 67.1942254,38.9118312 64.8236796,38.9118312 C62.6839085,38.9118312 61.4570246,38.1345101 61.4570246,36.4134092 C61.4570246,35.1295193 62.5399296,34.3013358 63.8331866,34.0737394 C65.1264437,33.8404917 67.0926232,33.7526385 68.5906162,33.4094459 L68.5906162,35.5184367 Z" id="Fill-18" fill="#FEFEFE"></path>
+                                            <path d="M90.1684542,31.2716844 C90.1684542,28.7162349 89.4817465,26.1017028 85.7168521,26.1017028 L80.4371162,26.1017028 C79.6105141,26.1017028 79.0677852,26.4752073 79.0677852,27.277189 C79.0677852,28.0837945 79.6105141,28.4567853 80.4371162,28.4567853 L85.3461831,28.4567853 C87.0866937,28.4567853 87.6595458,28.8616294 87.6595458,30.0946569 L87.6595458,30.4671339 C87.5559014,31.2203083 86.7129613,31.3990972 86.287662,31.4992807 C82.7601796,32.3315743 78.0129613,31.4191339 78.0129613,36.5269505 C78.0129613,39.2534826 80.3212183,40.8630972 83.4907958,40.8630972 C83.5295986,40.8630972 86.6731373,41.0192807 87.8321162,39.420455 C87.8321162,39.420455 87.8321162,39.4687486 87.8392641,39.5601982 C87.9178908,40.3637211 88.2992817,40.786033 89.1166937,40.786033 L90.1613063,40.786033 L90.1684542,31.2716844 Z M87.6595458,35.5184367 C87.6595458,38.0184 86.2606021,38.9118312 83.8895458,38.9118312 C81.7513063,38.9118312 80.5249331,38.1345101 80.5249331,36.4134092 C80.5249331,35.1295193 81.607838,34.3013358 82.8995634,34.0737394 C84.193331,33.8404917 86.1600211,33.7526385 87.6595458,33.4094459 L87.6595458,35.5184367 Z" id="Fill-20" fill="#FEFEFE"></path>
+                                            <path d="M76.0736373,22.126833 L74.669588,22.126833 C73.4467887,22.126833 73.5652394,23.2396404 73.5652394,23.2396404 L73.5652394,36.8748697 L73.5550282,40.7830532 L76.0736373,40.7881908 L76.0736373,22.126833 Z" id="Fill-22" fill="#FEFEFE"></path>
+                                            <path d="M36.5510792,38.5917578 C34.6400405,38.5917578 33.9288257,38.5039046 33.9288257,37.0992807 L33.9288257,28.4588404 L36.1523292,28.4588404 C36.9508504,28.4588404 37.5201285,28.0853358 37.5201285,27.2828404 C37.5201285,26.4808587 36.9508504,26.1073541 36.1523292,26.1073541 L33.9288257,26.1073541 L33.9288257,23.6983266 L33.9288257,23.6865101 L33.9288257,22.2094459 L32.8602165,22.2073908 C32.6447588,22.2109872 32.4977165,22.2222899 32.3363785,22.239244 C31.3193363,22.3502165 31.4199173,23.3407486 31.4199173,23.3407486 L31.4199173,26.1073541 L30.737294,26.1073541 C29.9413257,26.1073541 29.3689842,26.4808587 29.3689842,27.2828404 C29.3689842,28.0853358 29.9413257,28.4588404 30.737294,28.4588404 L31.4199173,28.4588404 L31.4199173,35.780455 L31.4199173,37.6423266 C31.4199173,40.7418495 33.5601989,40.7793541 36.5510792,40.7793541 C37.0463257,40.7793541 38.0342658,40.7762716 38.0342658,40.7762716 C38.0342658,40.7762716 38.0337553,40.0934826 38.0337553,39.767244 C38.0337553,39.0495193 37.463456,38.5917578 36.5510792,38.5917578" id="Fill-24" fill="#FEFEFE"></path>
+                                            <path d="M98.7004278,38.5917578 C96.7888785,38.5917578 96.0786849,38.5039046 96.0786849,37.0992807 L96.0786849,28.4588404 L98.3001461,28.4588404 C99.0986673,28.4588404 99.668456,28.0853358 99.668456,27.2828404 C99.668456,26.4808587 99.0986673,26.1073541 98.3001461,26.1073541 L96.0786849,26.1073541 L96.0786849,23.6983266 L96.0786849,23.6865101 L96.0786849,22.2094459 L95.0059912,22.2073908 C94.7935968,22.2109872 94.6470651,22.2222899 94.484706,22.239244 C93.4676637,22.3502165 93.5707975,23.3407486 93.5707975,23.3407486 L93.5707975,26.1073541 L92.886132,26.1073541 C92.0901637,26.1073541 91.5157799,26.4808587 91.5157799,27.2828404 C91.5157799,28.0853358 92.0901637,28.4588404 92.886132,28.4588404 L93.5707975,28.4588404 L93.5707975,35.780455 L93.5707975,37.6423266 C93.5707975,40.7418495 95.7075053,40.7793541 98.7004278,40.7793541 C99.1946532,40.7793541 100.183614,40.7762716 100.183614,40.7762716 L100.183614,39.767244 C100.183614,39.0495193 99.612294,38.5917578 98.7004278,38.5917578" id="Fill-26" fill="#FEFEFE"></path>
+                                            <path d="M42.7117412,40.7857761 L42.7081673,26.1158312 L41.3036074,26.1101798 C40.358044,26.1245651 40.1956849,26.7210422 40.1956849,27.2358312 C40.1956849,27.430033 40.1982377,40.7857761 40.1982377,40.7857761 L42.7117412,40.7857761 Z" id="Fill-28" fill="#FEFEFE"></path>
+                                            <path d="M41.177294,24.9994275 C41.7879278,24.9994275 42.1075405,25.0174092 42.446044,24.6993908 C42.7120475,24.4527853 42.7120475,24.0094092 42.7120475,23.5064367 C42.7120475,23.2115376 42.7084736,22.2158679 42.7084736,22.2158679 L41.297787,22.2158679 C40.3496708,22.2323083 40.1959912,22.8205651 40.1959912,23.3322716 C40.1959912,23.5310972 40.1924173,24.9999413 40.1924173,24.9999413 C40.1924173,24.9999413 40.915375,24.9994275 41.177294,24.9994275" id="Fill-30" fill="#FEFEFE"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </a>
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                            aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="col-sm-9 text-right km-dropdown-area">
+                        <div class="dropdown">
+                            <a id="dLabel" data-target="#" href="http://example.com/" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <img src="../images/more.png" style="max-width: 17px;">
+                            </a>
+                          
+                            <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                <li><a href="../managed.html"><i class="fa fa-cube" aria-hidden="true"></i> Update Authorized Contact EID (Managed)</a></li>
+                                <li><a href="../unmanaged.html"><i class="fa fa-cubes" aria-hidden="true"></i> Update Authorized Contact EID (Un-Managed)</a></li>
+                                <li><a href="../search-filter.html"><i class="fa fa-line-chart" aria-hidden="true"></i> Device Stock Availibility</a></li>
+                            </ul>
+                          </div>
+                    </div>
+                    <!--/.nav-collapse -->
+                    <div class="col-sm-3">
+                        
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="page-container">
+                    <section class="page-content inner-page">
+                        <div class="clearfix"></div>
+                        <div class="swMain">
+                               
+                            <div class="col-md-12 custom-container corporate-accounts">
+                                <div class="row">
+
+                                    <div class="col-sm-12">
+                                        <div class="card-head">
+                                            <span class="icon-box">
+                                                <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="273.000000pt" height="273.000000pt" viewBox="0 0 273.000000 273.000000" preserveAspectRatio="xMidYMid meet">
+                                                    <metadata>
+                                                    Created by potrace 1.16, written by Peter Selinger 2001-2019
+                                                    </metadata>
+                                                    <g transform="translate(0.000000,273.000000) scale(0.100000,-0.100000)" fill="#719e19" stroke="none">
+                                                    <path d="M1185 2464 c-11 -2 -45 -9 -75 -15 -229 -46 -390 -269 -390 -539 0 -158 54 -301 152 -400 l49 -50 -3 -71 -3 -71 -249 -104 c-292 -122 -317 -135 -384 -209 -86 -94 -122 -196 -122 -346 0 -72 3 -82 25 -104 30 -30 64 -32 99 -4 24 19 26 27 26 93 0 136 45 242 127 299 21 14 164 78 318 142 154 64 289 125 300 136 18 18 20 33 20 164 l0 144 -66 63 c-72 69 -101 117 -124 205 -51 197 37 410 203 486 38 18 66 22 142 22 88 0 101 -3 162 -33 146 -72 216 -219 197 -415 -11 -116 -71 -232 -143 -277 -49 -29 -56 -56 -56 -200 0 -128 0 -130 28 -159 18 -20 85 -53 212 -105 102 -42 193 -76 202 -76 9 0 29 11 44 23 33 29 37 79 8 107 -10 10 -89 48 -174 83 l-155 65 -3 72 -3 72 49 52 c97 103 141 208 149 362 18 324 -175 565 -472 587 -38 3 -79 3 -90 1z"></path>
+                                                    <path d="M2198 953 l-388 -388 -218 218 c-205 204 -220 217 -255 217 -47 0 -77 -28 -77 -73 0 -29 25 -58 253 -285 l253 -252 44 0 44 0 418 418 c401 401 418 419 418 455 0 47 -28 77 -73 77 -29 0 -68 -36 -419 -387z"></path>
+                                                    </g>
+                                                </svg>
+                                            </span>
+                                            <h3>Authorized Contact Verification</h3>
+                                            <small>Please insert your Emirates ID and click scan button</small>
+                                            <select id="scenario" class="selectpicker">
+                                                <option value="Select Emirates ID">Select Emirates ID</option>
+                                                <option value="scenario01">XXX-XXXX-001</option>
+                                                <option value="scenario02">XXX-XXXX-002</option>
+                                                <option value="scenario03">XXX-XXXX-003</option>
+                                                <option value="scenario04">XXX-XXXX-004</option>
+                                                <option value="scenario05">XXX-XXXX-005</option>
+                                                <option value="scenario06">XXX-XXXX-006</option>
+                                                <option value="scenario07">XXX-XXXX-007</option>
+                                                <option value="scenario08">XXX-XXXX-008</option>
+                                                <option value="scenario09">XXX-XXXX-009</option>
+                                                <option value="scenario10">XXX-XXXX-010</option>
+                                            </select>
+                                            <button class="scan-btn scan01 disabled">Scan</button>
+                                            <button style="display:none;" class="scan-btn scan02 disabled">Scan</button>
+                                            <button style="display:none;" class="scan-btn scan03 disabled">Scan</button>
+                                            <button style="display:none;" class="scan-btn scan04 disabled">Scan</button>
+                                            <button style="display:none;" class="scan-btn scan05 disabled">Scan</button>
+                                            <button style="display:none;" class="scan-btn scan06 disabled">Scan</button>
+                                            <button style="display:none;" class="scan-btn scan07 disabled">Scan</button>
+                                            <button style="display:none;" class="scan-btn scan08 disabled">Scan</button>
+                                            <button style="display:none;" class="scan-btn scan09 disabled">Scan</button>
+                                            <button style="display:none;" class="scan-btn scan10 disabled">Scan</button>
+                                        </div>
+                                        <div style="display:none;" class="text-left scenarioMsg hiddenMsg01">
+                                            <h3>We found that you are an authorized person for&nbsp;<span>ASTER Pharmacy</span>&nbsp;customer, To place an order, you can simply click on Proceed now</h3>
+                                        </div>
+                                        <div style="display:none;" class="text-left scenarioMsg hiddenMsg02">
+                                            <h3>
+                                                We found that you are an authorized person for&nbsp;<span>ASTER Pharmacy</span>&nbsp;customer, However you cant place an order as your registered Mobile Number or Registered Email Address is not verified yet. To verify your registered Mobile Number and Registered Email Address, You can simply click on Update Now
+                                            </h3>
+                                        </div>
+                                        <div style="display:none;" class="text-left scenarioMsg hiddenMsg03">
+                                            <h3>
+                                                We found that you are an authorized person for <span>ASTER Pharmacy</span> customer. However you cant place an order as your LOA is expired with Etisalat on 22-SEP-2020.
+                                                To create a new LOA, You can Simply click on Create New LOA Now
+                                            </h3>
+                                        </div>
+                                        <div style="display:none;" class="text-left scenarioMsg hiddenMsg04">
+                                            <h3>
+                                                We found that you are an authorized person for <span>ASTER Pharmacy</span> customer, However you cant place an order as your LOA is expired with Etisalat on 22-SEP-2020.<br>
+                                                Trade License is NOT verified but still you can proceed to create a new LOA, however, the request will be send to QA for verification. To Create New LOA Now You can Simply click create a new LOA
+                                            </h3>
+                                        </div>
+                                        <div style="display:none;" class="text-left scenarioMsg hiddenMsg05">
+                                            <h3>
+                                                We found that you are an authorized person for <span>ASTER Pharmacy</span> customer, However you cant place an order as your LOA is expired with Etisalat on 22-SEP-2020.<br>
+                                                Trade License is already verified and found that you are NOT the owner of this company. You will need a legal POA in order to be onbaorded as authorized contact for ASTER Pharmacy. To Create New LOA Now You can Simply click create a new LOA
+                                            </h3>
+                                        </div>
+                                        <div style="display:none;" class="text-left scenarioMsg hiddenMsg06">
+                                            <h3>
+                                                We found that you are an authorized person for <span>ASTER Pharmacy</span> customer, However you cant place an order as your LOA is expired with Etisalat on 22-SEP-2020.<br>
+                                                <p class="text-danger">Trade License is verified but still you can't proceed to create a new LOA, as the company trade license is expired in MOHRE.</p>
+                                            </h3>
+                                        </div>
+                                        <div style="display:none;" class="text-left scenarioMsg hiddenMsg07">
+                                            <h3>
+                                                We found that you are an authorized person for <span>ASTER Pharmacy</span> customer, However you cant place an order as your LOA is expired with Etisalat on 22-SEP-2020.<br>
+                                                <p class="text-danger">
+                                                    New LOA have been created on 22-OCT-2020 and now its under approval. Once approved you will be able to place an order
+                                                </p>
+                                            </h3>
+                                        </div>
+                                        <div style="display:none;" class="text-left scenarioMsg hiddenMsg08">
+                                            <h3>
+                                                We didn’t find find any record about you or your company in our database, however we found that you are the owner of <span>Below Companies</span>, To create a new LOA and Register your company you can Simply select your company from the list below and click on Register New Company &amp; Create LOA Nowq
+                                                <div class="row">
+                                                    <div class="company-list">
+                                                        <form action="compList">
+                                                            <div class="col-sm-3">
+                                                                <label class="container">
+                                                                    ASTER Pharmacy
+                                                                    <input name="compList" type="radio">
+                                                                    <span class="checkmark"></span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="col-sm-3">
+                                                                <label class="container">
+                                                                    Manara Pharmacy
+                                                                    <input name="compList" type="radio">
+                                                                    <span class="checkmark"></span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="col-sm-3">
+                                                                <label class="container">
+                                                                    Marina Pharmacy
+                                                                    <input name="compList" type="radio">
+                                                                    <span class="checkmark"></span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="col-sm-3">
+                                                                <label class="container">
+                                                                    Non of these
+                                                                    <input name="compList" type="radio">
+                                                                    <span class="checkmark"></span>
+                                                                </label>
+                                                            </div>
+                                                        </form>
+
+                                                    </div>
+
+                                                </div>
+                                            </h3>
+                                        </div>
+                                        <div style="display:none;" class="text-left scenarioMsg hiddenMsg09">
+                                            <h3>
+                                                We didn’t find find any record about you or your company in our database. MOHRE didn’t show any Company under your name.<br>
+                                                However you can still continue and register your company, request will be sent for Document Approval<br>
+                                                To create a new LOA and Register your company you can Simply click on Register New Company &amp; Create LOA Now
+                                            </h3>
+                                        </div>
+                                        <div style="display:none;" class="text-left scenarioMsg hiddenMsg10">
+                                            <h3>
+                                                We didn’t find find any record about you or your company in our database. MOHRE didn’t show any Company under your name.<br>
+                                                However you can still continue and register your company, request will be sent for Document Approval<br>
+                                                To create a new LOA and Register your company you can Simply click on Register New Company &amp; Create LOA Now
+                                            </h3>
+                                        </div>
+                                        <div class="empty-form" style="display: none;">
+                                            <h4>Contact Details</h4>
+                                            <div class="contactdetails">
+                                                <div class="flex-box">
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label for="">Select Customer
+                                                                <span class="req">*</span></label>
+                                                            <input id="cusField" type="text">
+                                                            <a id="cusModal" data-toggle="modal" data-target="#customerModal" href="javascript:void(0)"></a>
+                                                            <div class="modal" id="customerModal" tabindex="-1" role="dialog" aria-labelledby="customerModalLabel" style="display: none;">
+                                                                <div class="modal-dialog" role="document">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                            Look Up Record
+                                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                                                        </div>
+                                                                        <div class="modal-body">
+                                                                            <div class="row">
+                                                                                <div class="col-sm-6">
+                                                                                    <div class="form-group">
+                                                                                        <label>Search</label>
+                                                                                        <input class="search-field" type="text">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="custom-container table-container small-table cusSelectGrid">
+                                                                                <div class="data-container">
+                                                                                    <table class="table table-striped">
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th width="10%" scope="col">
+
+                                                                                                </th>
+                                                                                                <th scope="col">
+                                                                                                    Customer
+                                                                                                    Name
+                                                                                                </th>
+                                                                                                <th scope="col">
+                                                                                                    Customer
+                                                                                                    ID
+                                                                                                </th>
+
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td>
+                                                                                                    <a class="selectBtn" href="javascript:void(0)"></a>
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    Aster
+                                                                                                    Pharmacy
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    B2141878
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td>
+                                                                                                    <a class="selectBtn" href="javascript:void(0)"></a>
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    Emirates
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    B2141878
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td>
+                                                                                                    <a class="selectBtn" href="javascript:void(0)"></a>
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    Carrefour
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    B2141878
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <button type="button" data-dismiss="modal" aria-label="Close" class="add-btn btn btn-primary">Select</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label for="">Select Party <span class="req">*</span></label>
+                                                            <input id="cusField2" type="text">
+                                                            <a id="cusModal" data-toggle="modal" data-target="#customerModal22" href="javascript:void(0)"></a>
+                                                            <div class="modal" id="customerModal22" tabindex="-1" role="dialog" aria-labelledby="customerModal02Label" style="display: none;">
+                                                                <div class="modal-dialog" role="document">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                            Party Look Up
+                                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                                                        </div>
+                                                                        <div class="modal-body">
+                                                                            <div class="row">
+                                                                                <div class="col-sm-6">
+                                                                                    <div class="form-group">
+                                                                                        <label>Search</label>
+                                                                                        <input class="search-field" type="text">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="custom-container table-container small-table cusSelectGrid">
+                                                                                <div class="data-container">
+                                                                                    <table class="table table-striped">
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th width="10%" scope="col">
+
+                                                                                                </th>
+                                                                                                <th scope="col">
+                                                                                                    Contact
+                                                                                                    Name
+                                                                                                </th>
+                                                                                                <th scope="col">
+                                                                                                    Mobile
+                                                                                                    Number
+                                                                                                </th>
+                                                                                                <th>
+                                                                                                    Email
+                                                                                                </th>
+                                                                                                <th>
+                                                                                                    Gender
+                                                                                                </th>
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td>
+                                                                                                    <a class="selectBtn" href="javascript:void(0)"></a>
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    Minal
+                                                                                                    Doongarwal
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    0401856396
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    minal@etisalat.ae
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    Male
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td>
+                                                                                                    <a class="selectBtn" href="javascript:void(0)"></a>
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    Ahmed
+                                                                                                    Al
+                                                                                                    Amiri
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    0501856396
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    ahmed@etisalat.ae
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    Male
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td>
+                                                                                                    <a class="selectBtn" href="javascript:void(0)"></a>
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    Mustafa
+                                                                                                    Kamal
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    0501856396
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    mkamal@etisalat.ae
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    Male
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <button type="button" data-dismiss="modal" aria-label="Close" class="add-btn2 btn btn-primary">Select</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label for="">Authorized Contact <span class="req">*</span></label>
+                                                            <input id="cusField3" type="text">
+                                                            <a id="cusModal" data-toggle="modal" data-target="#customerModal33" href="javascript:void(0)"></a>
+                                                            <div class="modal" id="customerModal33" tabindex="-1" role="dialog" aria-labelledby="customerModal02Label" style="display: none;">
+                                                                <div class="modal-dialog" role="document">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                            Contact Look Up
+                                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                                                        </div>
+                                                                        <div class="modal-body">
+                                                                            <div class="row">
+                                                                                <div class="col-sm-6">
+                                                                                    <div class="form-group">
+                                                                                        <label>Search</label>
+                                                                                        <input class="search-field" type="text">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="custom-container table-container small-table cusSelectGrid">
+                                                                                <div class="data-container">
+                                                                                    <table class="table table-striped">
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th width="10%" scope="col">
+
+                                                                                                </th>
+                                                                                                <th scope="col">
+                                                                                                    Contact
+                                                                                                    Name
+                                                                                                </th>
+                                                                                                <th scope="col">
+                                                                                                    Mobile
+                                                                                                    Number
+                                                                                                </th>
+                                                                                                <th>
+                                                                                                    Email
+                                                                                                </th>
+                                                                                                <th>
+                                                                                                    Gender
+                                                                                                </th>
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td>
+                                                                                                    <a class="selectBtn" href="javascript:void(0)"></a>
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    Minal
+                                                                                                    Doongarwal
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    0401856396
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    minal@etisalat.ae
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    Male
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td>
+                                                                                                    <a class="selectBtn" href="javascript:void(0)"></a>
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    Ahmed
+                                                                                                    Al
+                                                                                                    Amiri
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    0501856396
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    ahmed@etisalat.ae
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    Male
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td>
+                                                                                                    <a class="selectBtn" href="javascript:void(0)"></a>
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    Mustafa
+                                                                                                    Kamal
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    0501856396
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    mkamal@etisalat.ae
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    Male
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <button type="button" data-dismiss="modal" aria-label="Close" class="add-btn3 btn btn-primary">Select</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <h4>EID Details</h4>
+                                            <div class="flex-box">
+                                                <div class="col-sm-10">
+                                                    <div class="row"> 
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label for="">First Name</label>
+                                                                <input readonly="" value="" class="form-field visibleField" type="text">
+                                                                <input readonly="" value="Minal" class="hiddenField form-field" type="text">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label for="">Last Name</label>
+                                                                <input readonly="" value="" class="form-field visibleField" type="text">
+                                                                <input readonly="" value="Doongarwal" class="hiddenField form-field" type="text">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label>EID Number</label>
+                                                                <input class="hiddenField" readonly="" value="789-1987-3866106-0" type="text">
+                                                                <input class="visibleField" readonly="" value="" type="text">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label>EID Expiry</label>
+                                                                <input class="hiddenField" readonly="" value="02/04/20" type="text">
+                                                                <input class="visibleField" readonly="" value="" type="text">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label for="">Gender</label>
+                                                                <input class="hiddenField" readonly="" value="Male" type="text">
+                                                                <input class="visibleField" readonly="" value="" type="text">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label for="">Nationality</label>
+                                                                <input class="hiddenField" readonly="" value="UAE" type="text">
+                                                                <input class="visibleField" readonly="" value="" type="text">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label>Passport Number</label>
+                                                                <input class="hiddenField" readonly="" value="XXXXXX" type="text">
+                                                                <input class="visibleField" readonly="" value="" type="text">                                                                                                        
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label>Passport Expiry</label>
+                                                                <input class="hiddenField" readonly="" value="02/04/20" type="text">
+                                                                <input class="visibleField" readonly="" value="" type="text">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-2">
+                                                    <div class="photo-box">
+                                                        <img class="hidden-pic" src="../images/Passport.jpg" alt="">
+                                                    </div>
+                                                </div> 
+                                            </div>  
+                                            <div class="clearfix"></div>
+                                            
+                                            <h4><span class="cusDetails">Customer Details</span></h4>
+                                            <div class="col-sm-12">
+                                                <div class="row"> 
+                                                    <div class="cusDetails">
+                                                        <div class="col-sm-5">
+                                                            <div class="form-group">
+                                                                <label for="">Select Customer</label>
+                                                                <input readonly="" value="Aster Pharmacy" class="form-field" type="text">
+                                                                <a id="cusModal" data-toggle="modal" data-target="#customerModal01" href="javascript:void(0)"></a>
+                                                                <div class="modal" id="customerModal01" tabindex="-1" role="dialog" aria-labelledby="customerModal01Label">
+                                                                    <div class="modal-dialog" role="document">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                            Look Up Record
+                                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                                                        </div>
+                                                                        <div class="modal-body">
+                                                                            <div class="row">
+                                                                                <div class="col-sm-6">
+                                                                                    <div class="form-group">
+                                                                                        <label>Search</label>
+                                                                                        <input class="search-field" type="text">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="custom-container table-container small-table cusSelectGrid">
+                                                                                <div class="data-container">
+                                                                                    <table class="table table-striped">
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th width="10%" scope="col">
+                                                                                                </th>
+                                                                                                <th scope="col">
+                                                                                                    Customer Name
+                                                                                                </th>
+                                                                                                
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td>
+                                                                                                    <a class="selectBtn" href="javascript:void(0)"></a>
+                                                                                                </td>
+                                                                                                
+                                                                                                <td>
+                                                                                                Aster Pharmacy
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td>
+                                                                                                    <a class="selectBtn" href="javascript:void(0)"></a>
+                                                                                                </td>
+                                                                                                
+                                                                                                <td>
+                                                                                                Emirates
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td>
+                                                                                                    <a class="selectBtn" href="javascript:void(0)"></a>
+                                                                                                </td>
+                                                                                            
+                                                                                                <td>
+                                                                                                Carrefour
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>                                
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <button type="button" data-dismiss="modal" aria-label="Close" class="add-btn btn btn-primary">Select</button>
+                                                                        </div>
+                                                                    </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-5">
+                                                            <div class="form-group removeSce03">
+                                                                <label for="">Select Party <span class="req">*</span></label>
+                                                                <input id="partyField" readonly value="B2141878" type="text">
+                                                                <a id="cusModal" data-toggle="modal" data-target="#customerModal33" href="javascript:void(0)"></a>
+                                                                <div class="modal" id="customerModal33" tabindex="-1" role="dialog" aria-labelledby="customerModalLabel">
+                                                                    <div class="modal-dialog" role="document">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                            Look Up Record
+                                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                                                        </div>
+                                                                        <div class="modal-body">
+                                                                            <div class="row">
+                                                                                <div class="col-sm-6">
+                                                                                    <div class="form-group">
+                                                                                        <label>Search</label>
+                                                                                        <input class="search-field" type="text">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="custom-container table-container small-table cusSelectGrid">
+                                                                                <div class="data-container">
+                                                                                    <table class="table table-striped">
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th width="10%" scope="col">
+                                                                                                    
+                                                                                                </th>
+                                                                                                <th scope="col">
+                                                                                                    Customer ID
+                                                                                                </th>
+                                                                                                
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td>
+                                                                                                    <a class="selectBtn" href="javascript:void(0)"></a>
+                                                                                                </td>
+                                                                                                
+                                                                                                <td>
+                                                                                                B2141878
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td>
+                                                                                                    <a class="selectBtn" href="javascript:void(0)"></a>
+                                                                                                </td>
+                                                                                                
+                                                                                                <td>
+                                                                                                B2141878
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td>
+                                                                                                    <a class="selectBtn" href="javascript:void(0)"></a>
+                                                                                                </td>
+                                                                                            
+                                                                                                <td>
+                                                                                                B2141878
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>                                
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <button type="button" data-dismiss="modal" aria-label="Close" class="add-btn btn btn-primary">Select</button>
+                                                                        </div>
+                                                                    </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="fRight col-sm-2 hiddenField">
+                                                        <button onclick="location.href = 'scenario01-2.html'" class="proceed btn01">
+                                                            Proceed Now
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
+                                                                <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
+                                                                  <path id="Path_2684" data-name="Path 2684" d="M7.5,18h21" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+                                                                  <path id="Path_2685" data-name="Path 2685" d="M18,7.5,28.5,18,18,28.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+                                                                </g>
+                                                              </svg>
+                                                        </button>
+                                                        <button onclick="location.href = 'scenario02/pc-00.html'" class="proceed btn02">
+                                                            Update Now
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
+                                                                <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
+                                                                  <path id="Path_2684" data-name="Path 2684" d="M7.5,18h21" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                  <path id="Path_2685" data-name="Path 2685" d="M18,7.5,28.5,18,18,28.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                </g>
+                                                              </svg>
+                                                        </button>
+                                                        <button onclick="location.href = 'scenario03/3.1/loa-step01.html'" class="proceed btn03">
+                                                            Create New LOA Now
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
+                                                                <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
+                                                                    <path id="Path_2684" data-name="Path 2684" d="M7.5,18h21" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                    <path id="Path_2685" data-name="Path 2685" d="M18,7.5,28.5,18,18,28.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                </g>
+                                                            </svg>
+                                                        </button>
+                                                        <button onclick="location.href = 'scenario03/3.2/loa-step01.html'" class="proceed btn04">
+                                                            Create New LOA Now
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
+                                                                <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
+                                                                    <path id="Path_2684" data-name="Path 2684" d="M7.5,18h21" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                    <path id="Path_2685" data-name="Path 2685" d="M18,7.5,28.5,18,18,28.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                </g>
+                                                            </svg>
+                                                        </button>
+                                                        <button onclick="location.href = 'scenario03/3.3/loa-step01.html'" class="proceed btn05">
+                                                            Create New LOA Now
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
+                                                                <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
+                                                                    <path id="Path_2684" data-name="Path 2684" d="M7.5,18h21" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                    <path id="Path_2685" data-name="Path 2685" d="M18,7.5,28.5,18,18,28.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                </g>
+                                                            </svg>
+                                                        </button>
+                                                        <button onclick="location.href = 'scenario04/4.1/loa-step01.html'" class="proceed btn08">
+                                                            Create New LOA Now
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
+                                                                <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
+                                                                    <path id="Path_2684" data-name="Path 2684" d="M7.5,18h21" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                    <path id="Path_2685" data-name="Path 2685" d="M18,7.5,28.5,18,18,28.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                </g>
+                                                            </svg>
+                                                        </button>
+                                                        <button onclick="location.href = 'scenario04/4.2/loa-step01.html'" class="proceed btn09">
+                                                            Register New Company &amp; Create LOA Now
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
+                                                                <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
+                                                                    <path id="Path_2684" data-name="Path 2684" d="M7.5,18h21" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                    <path id="Path_2685" data-name="Path 2685" d="M18,7.5,28.5,18,18,28.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                </g>
+                                                            </svg>
+                                                        </button>
+                                                        <button onclick="location.href = 'scenario04/4.2/loa-step01.html'" class="proceed btn10">
+                                                            Register New Company &amp; Create LOA Now
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
+                                                                <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
+                                                                    <path id="Path_2684" data-name="Path 2684" d="M7.5,18h21" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                    <path id="Path_2685" data-name="Path 2685" d="M18,7.5,28.5,18,18,28.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                </g>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        
+                                                                                   
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </section>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+
+    </div>
+    <!-- /.etisalat -->
+    <!-- /.footer -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../../assets/js/jquery-2.1.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../../assets/js/bootstrap.js"></script>
+    <script src="../../assets/js/bootstrap-select.js"></script>
+    <script src="../../assets/js/dcalendar.picker.js"></script>
+    <script type="text/javascript" src="../../assets/js/jquery.matchHeight-min.js"></script>
+    <script type="text/javascript" src="../../assets/js/jquery.smartWizard.js"></script>
+    <script src="../../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../../assets/js/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.0/rangeslider.min.js"></script>
+    <script src="../../assets/js/scripts.js"></script>
+    <script src="../../assets/js/custom.js"></script>
+    <script>
+        $('.selectBtn').click(function(){
+            $(this).closest('tbody').find('tr').removeClass('selected');
+            $(this).closest('tr').toggleClass('selected');
+        });
+        $('.scan-btn').click(function () {
+            $('.visibleField').hide();
+            $('.hiddenField').show();
+            $('.hidden-pic').show();
+        });
+        $('#scenario').change(function () {
+            $(this).closest('.card-head').find('.scan-btn').removeClass('disabled');
+            if($(this).val() === "scenario01"){
+                $('.scan01').show();
+                $('.scan01').siblings('.scan-btn').hide();
+            }
+            if($(this).val() === "scenario02"){
+                $('.scan02').show();
+                $('.scan02').siblings('.scan-btn').hide();
+                $('.cusDetails').hide();
+            }
+            else if($(this).val() !== "scenario02"){
+                $('.cusDetails').show();
+            }
+            if($(this).val() === "scenario03"){
+                $('.scan03').show();
+                $('.scan03').siblings('.scan-btn').hide();
+                $('.removeSce03').hide();
+            }
+            else if($(this).val() !== "scenario03"){
+                $('.removeSce03').show();
+            }
+            if($(this).val() === "scenario04"){
+                $('.scan04').show();
+                $('.scan04').siblings('.scan-btn').hide();
+            }
+            if($(this).val() === "scenario05"){
+                $('.scan05').show();
+                $('.scan05').siblings('.scan-btn').hide();
+            }
+            if($(this).val() === "scenario06"){
+                $('.scan06').show();
+                $('.scan06').siblings('.scan-btn').hide();
+            }
+            if($(this).val() === "scenario07"){
+                $('.scan07').show();
+                $('.scan07').siblings('.scan-btn').hide();
+            }
+            if($(this).val() === "scenario08"){
+                $('.scan08').show();
+                $('.scan08').siblings('.scan-btn').hide();
+            }
+            if($(this).val() === "scenario09"){
+                $('.scan09').show();
+                $('.scan09').siblings('.scan-btn').hide();
+            }
+            if($(this).val() === "scenario10"){
+                $('.scan10').show();
+                $('.scan10').siblings('.scan-btn').hide();
+            }
+        });
+        $('.scan01').click(function(){
+            $('.empty-form').show();
+            $('.hiddenMsg01').show();
+            $('.hiddenMsg01').siblings('.scenarioMsg').hide();
+            $('.btn01').show();
+            $('.btn01').siblings('.proceed').hide();
+        });
+        $('.scan02').click(function(){
+            $('.empty-form').show();
+            $('.hiddenMsg02').show();
+            $('.hiddenMsg02').siblings('.scenarioMsg').hide();
+            $('.btn02').show();
+            $('.btn02').siblings('.proceed').hide();
+        });
+        $('.scan03').click(function(){
+            $('.empty-form').show();
+            $('.hiddenMsg03').show();
+            $('.hiddenMsg03').siblings('.scenarioMsg').hide();
+            $('.btn03').show();
+            $('.btn03').siblings('.proceed').hide();
+        });
+        $('.scan04').click(function(){
+            $('.empty-form').show();
+            $('.hiddenMsg04').show();
+            $('.hiddenMsg04').siblings('.scenarioMsg').hide();
+            $('.btn04').show();
+            $('.btn04').siblings('.proceed').hide();
+        });
+        $('.scan05').click(function(){
+            $('.empty-form').show();
+            $('.hiddenMsg05').show();
+            $('.hiddenMsg05').siblings('.scenarioMsg').hide();
+            $('.btn05').show();
+            $('.btn05').siblings('.proceed').hide();
+        });
+        $('.scan06').click(function(){
+            $('.empty-form').show();
+            $('.hiddenMsg06').show();
+            $('.hiddenMsg06').siblings('.scenarioMsg').hide();
+            $('.proceed').hide();
+        });
+        $('.scan07').click(function(){
+            $('.empty-form').show();
+            $('.hiddenMsg07').show();
+            $('.hiddenMsg07').siblings('.scenarioMsg').hide();
+            $('.proceed').hide();
+        });
+        $('.scan08').click(function(){
+            $('.empty-form').show();
+            $('.hiddenMsg08').show();
+            $('.hiddenMsg08').siblings('.scenarioMsg').hide();
+            $('.btn08').show();
+            $('.btn08').siblings('.proceed').hide();
+        });
+        $('.scan09').click(function(){
+            $('.empty-form').show();
+            $('.hiddenMsg09').show();
+            $('.hiddenMsg09').siblings('.scenarioMsg').hide();
+            $('.btn09').show();
+            $('.btn09').siblings('.proceed').hide();
+        });
+        $('.scan10').click(function(){
+            $('.empty-form').show();
+            $('.hiddenMsg10').show();
+            $('.hiddenMsg10').siblings('.scenarioMsg').hide();
+            $('.btn10').show();
+            $('.btn10').siblings('.proceed').hide();
+        });
+        var divWidth = $('.photo-box').width(); 
+        $(window).load(function(){
+            $('.photo-box').height(divWidth);
+        });
+        $(window).resize(function(){
+            $('.photo-box').height(divWidth);
+        });
+        $('.add-btn').click(function(){
+            $('#cusField').val('Aster Pharmacy');
+        });
+        $('.add-btn2').click(function(){
+            $('#cusField2').val('B2141878');
+        });
+        $('.add-btn3').click(function(){
+            $('#cusField3').val('Minal Doongarwal');
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sales Order Request :: Etisalat</title>
+    <!-- Bootstrap -->
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="../../assets/css/font-awesome.min.css" />
+    <link href="../../assets/css/CEP-automation-css/custom.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.0/rangeslider.min.css" rel="stylesheet"
+        type="text/css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="loading">
+    <div id="loaderM"></div>
+    <div class="etisalat">
+        <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header col-sm-2">
+                        <a class="navbar-brand" href="../../login.html">
+                            <img src="../../assets/images/logo_white.png" alt="Etisalat">
+                        </a>
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                            aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="col-sm-8">
+                        <div id="navbar" class="col-md-12 custom-container nav-container navbar-collapse collapse">
+                            <ul>
+                                <li>
+                                    <a class="active" href="../order.html">Order</a>
+                                </li>                               
+                            </ul>
+                        </div>
+                    </div>
+                    <!--/.nav-collapse -->
+                    <div class="col-sm-2">
+                        <div class="navbar-left">
+                            <div class="dropdown user-details">
+                                <a class="user-name" href="javascript:void(0);">Imran</a>
+                                <div class="dropdown-menu">
+                                    <ul>
+                                        <li><a href="javascript:void(0);">Profile</a></li>
+                                        <li><a href="javascript:void(0);">Log Out</a></li>
+                                    </ul>
+                                </div>
+                            </div>                        
+                        </div>
+                    </div>
+                </div>
+        </nav>       
+        <div class="container-fluid">
+            <div class="row">
+                <div class="page-container">
+                    <section class="page-content inner-page">
+                        <div class="clearfix"></div>
+                        <div class="smart-wizard">
+                            <!-- Tabs -->
+                            <div class="swMain">
+                                <div class="col-md-12 item custom-container progress-container">
+                                    <ul class="item  slickslider">
+                                        <li>
+                                            <a href="pc-01.html" class="selected">
+                                                <span class="stepDesc">Package Selection</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>1
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="pc-01.1.html" class="selected">
+                                                <span class="stepDesc">Account Selection</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>2
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="pc-01.2.html" class="selected">
+                                                <span class="stepDesc">Devices</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>3
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="pc-01.3.html" class="selected">
+                                                <span class="stepDesc">Add-Ons</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>4
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="delivery.html" class="selected">
+                                                <span class="stepDesc">Delivery</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>5
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="review.pc.4.html" class="selected">
+                                                <span class="stepDesc">Review</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>6
+                                                </div>
+                                            </a>
+                                        </li>                                        
+                                    </ul>
+                                </div>
+                                <div class="col-md-12 custom-container corporate-accounts">
+                                    <div class="row">
+                                        <div class="col-sm-9">
+                                            <div class="summary-box">
+                                                <h3>Review</h3>
+                                                <div id="packages" class="packages">
+                                                    <div class="card">
+                                                        <div class="card-header" id="headingPackage">
+                                                            <h5 class="mb-0 internet" data-toggle="collapse"
+                                                                data-target="#collapsePackage" aria-expanded="false"
+                                                                aria-controls="collapsePackage">
+                                                                <span class="icon">
+                                                                    <img src="../../assets/images/icon-green/opt13.png"
+                                                                        alt="">
+                                                                </span>
+                                                                Package Details
+                                                                <span>
+                                                                    <img src="../../assets/images/down-arrow.png" alt="">
+                                                                </span>
+                                                            </h5>
+                                                        </div>
+                                                        <div id="collapsePackage" class="collapse in"
+                                                            aria-labelledby="headingPackage" data-parent="#packages"
+                                                            aria-expanded="false">
+                                                            <div class="card-body">
+                                                                <table class="table review-grid">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th></th>
+                                                                            <th>QTY</th>
+                                                                            <th>Unit Price</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td style="width:70%;">
+                                                                                <span>BUSINESS FIRS</span>
+                                                                                <h4>National 140+</h4>
+                                                                                <small>24 Month Contract</small>                                                                                
+                                                                            </td>
+                                                                            <td>x 5</td>
+                                                                            <td>140 AED/Month</td>
+                                                                        </tr>
+
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-header" id="headingAccount">
+                                                            <h5 class="mb-0 internet" data-toggle="collapse"
+                                                                data-target="#collapseAccount" aria-expanded="false"
+                                                                aria-controls="collapseAccount">
+                                                                <span class="icon">
+                                                                    <img src="../../assets/images/icon-green/contact-icon.png"
+                                                                        alt="">
+                                                                </span>
+                                                                Account Details
+                                                                <span>
+                                                                    <img src="../../assets/images/down-arrow.png" alt="">
+                                                                </span>
+                                                            </h5>
+                                                        </div>
+                                                        <div id="collapseAccount" class="collapse in"
+                                                            aria-labelledby="headingAccount" data-parent="#packages"
+                                                            aria-expanded="false">
+                                                            <div class="card-body">
+                                                                <table class="table review-grid">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th scope="col">
+                                                                                Account Number
+                                                                            </th>
+                                                                            
+                                                                            <th scope="col">
+                                                                                Sim
+                                                                            </th>
+                                                                            <th scope="col">
+                                                                                Sim Delivery
+                                                                            </th>
+                                                                            <th scope="col">
+                                                                                Sim / QR Code <span class="req" style="display: none">*</span>
+                                                                            </th>
+                                                                            <th width="30"></th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="row-01">
+                                                                            <td>0506369711</td>
+                                                                            
+                                                                            <td>
+                                                                                Trio Sim
+                                                                            </td>
+                                                                            <td>
+                                                                                Pickup
+                                                                            </td>
+                                                                            <td>
+                                                                                N/A
+                                                                            </td>
+                                                                            <td><a class="removeBtn" href="javascript:void(0)">Remove</a></td>
+                                                                        </tr>
+                                                                        <tr class="row-02" >
+                                                                            <td>0507369712</td>
+                                                                            
+                                                                            <td>
+                                                                                Trio Sim
+                                                                            </td>
+                                                                            <td>
+                                                                                Delivery
+                                                                            </td>
+                                                                            <td>
+                                                                                N/A
+                                                                            </td>
+                                                                            <td><a class="removeBtn" href="javascript:void(0)">Remove</a></td>
+                                                                        </tr>
+                                                                        <tr class="row-03">
+                                                                            <td>0508369713</td>
+                                                                            
+                                                                            <td>
+                                                                                Trio Sim
+                                                                            </td>
+                                                                            <td>
+                                                                                Serial Number
+                                                                            </td>
+                                                                            <td>
+                                                                                2356654
+                                                                            </td>
+                                                                            <td><a class="removeBtn" href="javascript:void(0)">Remove</a></td>
+                                                                        </tr>
+                                                                        <tr class="row-04">
+                                                                            <td>0509369714</td>
+                                                                            
+                                                                            <td>
+                                                                                E-Sim
+                                                                            </td>
+                                                                            <td>
+                                                                                Email
+                                                                            </td>
+                                                                            <td>
+                                                                                N/A
+                                                                            </td>
+                                                                            <td><a class="removeBtn" href="javascript:void(0)">Remove</a></td>
+                                                                        </tr>
+                                                                        <tr class="row-05">
+                                                                            <td>0510369715</td>
+                                                                            
+                                                                            <td>
+                                                                                QR-Code
+                                                                            </td>
+                                                                            <td>
+                                                                                Email
+                                                                            </td>
+                                                                            <td>
+                                                                                N/A
+                                                                            </td>
+                                                                            <td><a class="removeBtn" href="javascript:void(0)">Remove</a></td>
+                                                                        </tr>
+                                                                        
+                                                                    </tbody>
+                                                                </table>                                                                                        
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-header" id="headingDevice">
+                                                            <h5 class="mb-0 device" data-toggle="collapse"
+                                                                data-target="#collapseDevice" aria-expanded="false"
+                                                                aria-controls="collapseDevice">
+                                                                <span class="icon">
+                                                                    <img src="../../assets/images/icon-green/device-icon.png"
+                                                                        alt="">
+                                                                </span>
+                                                                Device Details
+                                                                <span>
+                                                                    <img src="../../assets/images/down-arrow.png" alt="">
+                                                                </span>
+                                                            </h5>
+                                                        </div>
+                                                        <div id="collapseDevice" class="collapse in"
+                                                            aria-labelledby="headingDevice" data-parent="#packages"
+                                                            aria-expanded="false">
+                                                            <div class="card-body">
+                                                                <table class="table review-grid">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th></th>
+                                                                            <th>Color</th>
+                                                                            <th>Capacity</th>
+                                                                            <th>Contract</th>
+                                                                            <th>QTY</th>
+                                                                            <th>Unit Price</th>
+                                                                            <th width="30"></th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td style="width:30%;">
+                                                                                <h4>IPHONE XSMAX</h4>
+                                                                                <small>APPLE</small>
+                                                                            </td>
+                                                                            <td>Gold</td>
+                                                                            <td>256 GB</td>
+                                                                            <td>18 Months</td>
+                                                                            <td>x 3</td>
+                                                                            <td>260 AED/Month</td>
+                                                                            <td><a class="removeBtn" href="javascript:void(0)">Remove</a></td>
+                                                                        </tr>
+                                                                                                                                              
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-header" id="headingAddOn">
+                                                            <h5 class="mb-0 internet" data-toggle="collapse"
+                                                                data-target="#collapseAddOn" aria-expanded="false"
+                                                                aria-controls="collapseAddOn">
+                                                                <span class="icon">
+                                                                    <img src="../../assets/images/icon-green/addon-icon.png"
+                                                                        alt="">
+                                                                </span>
+                                                                Add-On Details
+                                                                <span>
+                                                                    <img src="../../assets/images/down-arrow.png" alt="">
+                                                                </span>
+                                                            </h5>
+                                                        </div>
+                                                        <div id="collapseAddOn" class="collapse in"
+                                                            aria-labelledby="headingAddOn" data-parent="#packages"
+                                                            aria-expanded="false">
+                                                            <div class="card-body">
+                                                                <table class="table review-grid">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th></th>
+                                                                            <th>QTY</th>
+                                                                            <th>Unit Price</th>
+                                                                            <th width="30"></th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td style="width:70%;">
+                                                                                <h4>Internet Calling Plan</h4>
+                                                                                <small>Voice and Video Calls to Anyone Anywhere</small>
+                                                                            </td>
+                                                                            <td>x 3</td>
+                                                                            <td>50 AED</td>
+                                                                            <td><a class="removeBtn" href="javascript:void(0)">Remove</a></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td style="width:70%;">
+                                                                                <h4>Incoming Roaming</h4>
+                                                                                <small>Incoming Roaming 3000 Minutes (30 days)</small>
+                                                                            </td>
+                                                                            <td>x 3</td>
+                                                                            <td>95 AED</td>
+                                                                            <td><a class="removeBtn" href="javascript:void(0)">Remove</a></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td style="width:70%;">
+                                                                                <h4>Daily Roaming Combo</h4>
+                                                                                <small>1 GB Roaming Data (Throttled),15</small>
+                                                                            </td>
+                                                                            <td>x 5</td>
+                                                                            <td>60 AED</td>
+                                                                            <td><a class="removeBtn" href="javascript:void(0)">Remove</a></td>
+                                                                        </tr>                                                                        
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-header" id="headingBilling">
+                                                            <h5 class="mb-0 internet" data-toggle="collapse"
+                                                                data-target="#collapseBilling" aria-expanded="false"
+                                                                aria-controls="collapseBilling">
+                                                                <span class="icon">
+                                                                    <img src="../../assets/images/icon-green/opt10.png"
+                                                                        alt="">
+                                                                </span>
+                                                                Delivery & Billing Details
+                                                                <span>
+                                                                    <img src="../../assets/images/down-arrow.png" alt="">
+                                                                </span>
+                                                            </h5>
+                                                        </div>
+                                                        <div id="collapseBilling" class="collapse in"
+                                                            aria-labelledby="headingBilling" data-parent="#packages"
+                                                            aria-expanded="false">
+                                                            <div class="card-body">
+                                                                <div class="BandD-box">
+                                                                    <div class="col-md-12">
+                                                                        <h4>Billing Details</h4>
+                                                                        <div class="contact-fields">
+                                                                            <div class=" row">
+                                                                                <div class="col-sm-6">
+                                                                                    <div class="form-group">
+                                                                                        <label for="">Ebill</label>
+                                                                                        <input readonly=""
+                                                                                            value="mdoongarwal@etisalat.ae"
+                                                                                            class="form-field"
+                                                                                            type="text">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-sm-6">
+                                                                                    <div class="form-group">
+                                                                                        <label for="">Delivery ID</label>
+                                                                                        <input readonly=""
+                                                                                            value="Dubai, Dubai, United Arab Emirates, 39393"
+                                                                                            class="form-field"
+                                                                                            type="text">
+                                                                                    </div>
+                                                                                </div>                                                                                
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-12">
+                                                                        <h4>Delivery Details</h4>
+                                                                        <div class="contact-fields tech-contact"
+                                                                            style="display: block;">
+                                                                            <div class="row">
+                                                                                <div class="col-sm-4">
+                                                                                    <div class="form-group">
+                                                                                        <label for="">Emirates</label>
+                                                                                        <input readonly=""
+                                                                                            value="Minal Doongarwal"
+                                                                                            class="form-field"
+                                                                                            type="text">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-sm-4">
+                                                                                    <div class="form-group">
+                                                                                        <label for="">Street</label>
+                                                                                        <input readonly=""
+                                                                                            value="Al Mankhool Street"
+                                                                                            class="form-field"
+                                                                                            type="text">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-sm-4">
+                                                                                    <div class="form-group">
+                                                                                        <label for="">City</label>
+                                                                                        <input readonly=""
+                                                                                            value="Dubai"
+                                                                                            class="form-field"
+                                                                                            type="text">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="row">
+                                                                                <div class="col-sm-4">
+                                                                                    <div class="form-group">
+                                                                                        <label for="">Postal Code</label>
+                                                                                        <input readonly=""
+                                                                                            value="75950"
+                                                                                            class="form-field"
+                                                                                            type="text">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-sm-4">
+                                                                                    <div class="form-group">
+                                                                                        <label for="">PO Box</label>
+                                                                                        <input readonly=""
+                                                                                            value="75950"
+                                                                                            class="form-field"
+                                                                                            type="text">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-sm-4">
+                                                                                    <div class="form-group">
+                                                                                        <label for="">Country</label>
+                                                                                        <input readonly=""
+                                                                                            value="UAE"
+                                                                                            class="form-field"
+                                                                                            type="text">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>                                                                                                                                        
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="summary-box">
+                                                <h3>Order Summary</h3>
+                                                <div class="price-box">
+                                                    <h5>Total</h5>
+                                                    <strong>1,713</strong>
+                                                    AED
+                                                    <br>
+                                                    <small>5% VAT Exc.</small>
+                                                </div>
+                                                <div class="termsCond">
+                                                    <form id="tandC">
+                                                        <!-- <label class="container col-sm-12 small-check tc-check">I agree to the
+                                                            <a href="javascript:void(0);" data-toggle="modal"
+                                                            data-target="#tcModal">terms and conditions</a>
+                                                            <input disabled value="Terms and Condition" name="tandc"
+                                                                type="checkbox">
+                                                            <span class="checkmark"></span>
+                                                        </label> -->
+                                                    </form>
+                                                    <div class="modal" id="tcModal" tabindex="-1" role="dialog"
+                                                        aria-labelledby="tcModalLabel">
+                                                        <div class="modal-dialog" role="document">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <button type="button" class="close"
+                                                                        data-dismiss="modal" aria-label="Close"><span
+                                                                            aria-hidden="true">&times;</span></button>
+                                                                    <h4 class="modal-title" id="tcModalLabel">Terms &
+                                                                        Conditions</h4>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <div class="tandc">
+                                                                        <div class="row">
+                                                                            <div class="col-sm-6">
+                                                                                <h4>1. Introduction</h4>
+                                                                                <ul class="tc-content">
+                                                                                    <li>These Terms and Condetions shall govern of supply of all of supply the govern shall Conditions and Terms These. a
+                                                                                        “offer Promotion “the under services and products telecommunications
+                                                                                        Telecommunications Emirates between and by”) Service “the (product
+                                                                                        .(“Customer “the (Service the using party any and”) Etisalat (“Corporation
+                                                                                        Etisalat between agreement an constitute Conditions and Terms These
+                                                                                        Customer the, Service the of use commencing Upon. Customer the and
+                                                                                        and Terms these accepted and understood, read have to deemed is
+                                                                                        .Conditions
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        This agreement is subject to Etisalat's General Terms and Conditions,
+                                                                                        published at etisalat.ae (the "Website"). In the event of any discrepancy between the terms of this agreement, and the
+                                                                                        General Terms and Conditions, the terms of this agreement shall prevail.                                                                    
+                                                                                    </li>
+                                                                                </ul>
+                                                                                <h4>2. The Service provided</h4>
+                                                                                <ul class="tc-content">
+                                                                                    <li>
+                                                                                        Etisalat will provide the Service subject to this agreement.
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        The Customer acknowledges they have taken the effort to familiarise
+                                                                                        themselves with all the Terms and Conditions of the Service being purchased,
+                                                                                        This includes details of the prices and the benefits provided under the Service
+                                                                                        as stipulated on the Website. In particular, the Customer is aware of the cost of
+                                                                                        any additional benefits and/or services over and above those allocated under the Service.
+                                                                                    </li>
+                                                                                    <li>
+                                                                                            The Customer any have not does and use to right the has only Customer The. c
+                                                                                            reserves Etisalat. Etisalat by allocated number phone mobile a to rights
+                                                                                            ,technical for number Customer allocated an change to right the
+                                                                                            the with provided card SIM The. reasons other or legal, operational
+                                                                                            the remain shall Customer the of possession the in already or Service
+                                                                                            card SIM the use to entitled only is Customer the and Etisalat of property
+                                                                                            Services other any or/and Service the utilising of purpose the for provided
+                                                                                            .Etisalat by provided 
+                                                                                    </li>
+                                                                                </ul>
+                                                                                <h4>3. Introduction</h4>
+                                                                                <ul class="tc-content">
+                                                                                    <li>These Terms and Condetions shall govern of supply of all of supply the govern shall Conditions and Terms These. a
+                                                                                        “offer Promotion “the under services and products telecommunications
+                                                                                        Telecommunications Emirates between and by”) Service “the (product
+                                                                                        .(“Customer “the (Service the using party any and”) Etisalat (“Corporation
+                                                                                        Etisalat between agreement an constitute Conditions and Terms These
+                                                                                        Customer the, Service the of use commencing Upon. Customer the and
+                                                                                        and Terms these accepted and understood, read have to deemed is
+                                                                                        .Conditions
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        This agreement is subject to Etisalat's General Terms and Conditions,
+                                                                                        published at etisalat.ae (the "Website"). In the event of any discrepancy between the terms of this agreement, and the
+                                                                                        General Terms and Conditions, the terms of this agreement shall prevail.                                                                    
+                                                                                    </li>
+                                                                                </ul>
+                                                                                <h4>4. The Service provided</h4>
+                                                                                <ul class="tc-content">
+                                                                                    <li>
+                                                                                        Etisalat will provide the Service subject to this agreement.
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        The Customer acknowledges they have taken the effort to familiarise
+                                                                                        themselves with all the Terms and Conditions of the Service being purchased,
+                                                                                        This includes details of the prices and the benefits provided under the Service
+                                                                                        as stipulated on the Website. In particular, the Customer is aware of the cost of
+                                                                                        any additional benefits and/or services over and above those allocated under the Service.
+                                                                                    </li>
+                                                                                    <li>
+                                                                                            The Customer any have not does and use to right the has only Customer The. c
+                                                                                            reserves Etisalat. Etisalat by allocated number phone mobile a to rights
+                                                                                            ,technical for number Customer allocated an change to right the
+                                                                                            the with provided card SIM The. reasons other or legal, operational
+                                                                                            the remain shall Customer the of possession the in already or Service
+                                                                                            card SIM the use to entitled only is Customer the and Etisalat of property
+                                                                                            Services other any or/and Service the utilising of purpose the for provided
+                                                                                            .Etisalat by provided 
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div class="col-sm-6">
+                                                                                <h4>5. Network interruptions</h4>
+                                                                                <ul class="tc-content">
+                                                                                    <li>These Terms and Condetions shall govern of supply of all of supply the govern shall Conditions and Terms These. a
+                                                                                        “offer Promotion “the under services and products telecommunications
+                                                                                        Telecommunications Emirates between and by”) Service “the (product
+                                                                                        .(“Customer “the (Service the using party any and”) Etisalat (“Corporation
+                                                                                        Etisalat between agreement an constitute Conditions and Terms These
+                                                                                        Customer the, Service the of use commencing Upon. Customer the and
+                                                                                        and Terms these accepted and understood, read have to deemed is
+                                                                                        .Conditions
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        This agreement is subject to Etisalat's General Terms and Conditions,
+                                                                                        published at etisalat.ae (the "Website"). In the event of any discrepancy between the terms of this agreement, and the
+                                                                                        General Terms and Conditions, the terms of this agreement shall prevail.                                                                    
+                                                                                    </li>
+                                                                                </ul>
+                                                                                <h4>6. Billing</h4>
+                                                                                <ul class="tc-content">
+                                                                                    <li>
+                                                                                        Etisalat will provide the Service subject to this agreement.
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        The Customer acknowledges they have taken the effort to familiarise
+                                                                                        themselves with all the Terms and Conditions of the Service being purchased,
+                                                                                        This includes details of the prices and the benefits provided under the Service
+                                                                                        as stipulated on the Website. In particular, the Customer is aware of the cost of
+                                                                                        any additional benefits and/or services over and above those allocated under the Service.
+                                                                                    </li>
+                                                                                    <li>
+                                                                                            The Customer any have not does and use to right the has only Customer The. c
+                                                                                            reserves Etisalat. Etisalat by allocated number phone mobile a to rights
+                                                                                            ,technical for number Customer allocated an change to right the
+                                                                                            the with provided card SIM The. reasons other or legal, operational
+                                                                                            the remain shall Customer the of possession the in already or Service
+                                                                                            card SIM the use to entitled only is Customer the and Etisalat of property
+                                                                                            Services other any or/and Service the utilising of purpose the for provided
+                                                                                            .Etisalat by provided 
+                                                                                    </li>
+                                                                                </ul>
+                                                                                <h4>7. Network interruptions</h4>
+                                                                                <ul class="tc-content">
+                                                                                    <li>These Terms and Condetions shall govern of supply of all of supply the govern shall Conditions and Terms These. a
+                                                                                        “offer Promotion “the under services and products telecommunications
+                                                                                        Telecommunications Emirates between and by”) Service “the (product
+                                                                                        .(“Customer “the (Service the using party any and”) Etisalat (“Corporation
+                                                                                        Etisalat between agreement an constitute Conditions and Terms These
+                                                                                        Customer the, Service the of use commencing Upon. Customer the and
+                                                                                        and Terms these accepted and understood, read have to deemed is
+                                                                                        .Conditions
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        This agreement is subject to Etisalat's General Terms and Conditions,
+                                                                                        published at etisalat.ae (the "Website"). In the event of any discrepancy between the terms of this agreement, and the
+                                                                                        General Terms and Conditions, the terms of this agreement shall prevail.                                                                    
+                                                                                    </li>
+                                                                                </ul>
+                                                                                <h4>8. Billing</h4>
+                                                                                <ul class="tc-content">
+                                                                                    <li>
+                                                                                        Etisalat will provide the Service subject to this agreement.
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        The Customer acknowledges they have taken the effort to familiarise
+                                                                                        themselves with all the Terms and Conditions of the Service being purchased,
+                                                                                        This includes details of the prices and the benefits provided under the Service
+                                                                                        as stipulated on the Website. In particular, the Customer is aware of the cost of
+                                                                                        any additional benefits and/or services over and above those allocated under the Service.
+                                                                                    </li>
+                                                                                    <li>
+                                                                                            The Customer any have not does and use to right the has only Customer The. c
+                                                                                            reserves Etisalat. Etisalat by allocated number phone mobile a to rights
+                                                                                            ,technical for number Customer allocated an change to right the
+                                                                                            the with provided card SIM The. reasons other or legal, operational
+                                                                                            the remain shall Customer the of possession the in already or Service
+                                                                                            card SIM the use to entitled only is Customer the and Etisalat of property
+                                                                                            Services other any or/and Service the utilising of purpose the for provided
+                                                                                            .Etisalat by provided 
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" disabled class="btn btn-default tc-accept"
+                                                                        data-dismiss="modal">Accept</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="order-btn text-right submit-button-container">
+                                                    <button class="order-btn"
+                                                        onclick="location.href = 'step-6.html'">Place Order</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <!-- End SmartWizard Content -->
+                        </div>
+                        <div class="clearfix"></div>
+                    </section>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+
+    </div>
+    <!-- /.etisalat -->
+    <!-- /.footer -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../../assets/js/jquery-2.1.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../../assets/js/bootstrap.js"></script>
+    <script src="../../assets/js/bootstrap-select.js"></script>
+    <script src="../../assets/js/dcalendar.picker.js"></script>
+    <script type="text/javascript" src="../../assets/js/jquery.matchHeight-min.js"></script>
+    <script type="text/javascript" src="../../assets/js/jquery.smartWizard.js"></script>
+    <script src="../../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../../assets/js/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.0/rangeslider.min.js"></script>
+    <script src="../../assets/js/scripts.js"></script>
+    <script src="../../assets/js/custom.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('input[name=tandc]').change(function () {
+                if ($(this).prop('checked') == true) {
+                    $('.order-btn button').removeAttr('disabled');
+                }
+                else {
+                    $('.order-btn button').attr('disabled', 'disabled');
+                }
+            });
+        }); 
+
+        $('.tc-accept').click(function (){
+            $('.tc-check input[type=checkbox]').removeAttr('disabled');
+            $('.tc-check input[type=checkbox]').prop('checked', 'checked');
+            $('.order-btn').removeAttr('disabled');
+        });
+
+        $('.modal-body').scroll(function() {    
+            var scroll = $('.modal-body').scrollTop();
+
+            //>=, not <=
+            if (scroll >= 400) {
+                //clearHeader, not clearheader - caps H
+                $(".tc-accept").removeAttr('disabled');
+            }
+        }); //missing );
+    </script>
+</body>
+
+</html>

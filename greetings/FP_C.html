@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sales Order Request :: Etisalat</title>
+    <!-- Bootstrap -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="../assets/css/font-awesome.min.css" />
+    <link href="../assets/css/CEP-automation-css/custom.css" rel="stylesheet" type="text/css">
+    <link href="css/greeting.css" rel="stylesheet" type="text/css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="loading">
+    <div id="loaderM"></div>
+    <div class="etisalat">
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="page-container">
+                    <section class="page-content inner-page">
+                        <div class="clearfix"></div>
+                        <div class="smart-wizard">
+                            <!-- Tabs -->
+                            <div class="swMain">
+                                
+                                <div class="col-md-12 custom-container corporate-accounts">
+                                    <div class="row">
+
+                                        <div class="col-sm-9">
+                                            <div class="summary-box new">
+                                                <div class="card-box">
+                                                    <div class="card-header">
+                                                        <h3 class="auth-contact1">
+                                                            <span class="icon">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="273.000000pt" height="273.000000pt" viewBox="0 0 273.000000 273.000000" preserveAspectRatio="xMidYMid meet">
+                                                                    <metadata>
+                                                                    Created by potrace 1.16, written by Peter Selinger 2001-2019
+                                                                    </metadata>
+                                                                    <g transform="translate(0.000000,273.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+                                                                    <path d="M1185 2464 c-11 -2 -45 -9 -75 -15 -229 -46 -390 -269 -390 -539 0 -158 54 -301 152 -400 l49 -50 -3 -71 -3 -71 -249 -104 c-292 -122 -317 -135 -384 -209 -86 -94 -122 -196 -122 -346 0 -72 3 -82 25 -104 30 -30 64 -32 99 -4 24 19 26 27 26 93 0 136 45 242 127 299 21 14 164 78 318 142 154 64 289 125 300 136 18 18 20 33 20 164 l0 144 -66 63 c-72 69 -101 117 -124 205 -51 197 37 410 203 486 38 18 66 22 142 22 88 0 101 -3 162 -33 146 -72 216 -219 197 -415 -11 -116 -71 -232 -143 -277 -49 -29 -56 -56 -56 -200 0 -128 0 -130 28 -159 18 -20 85 -53 212 -105 102 -42 193 -76 202 -76 9 0 29 11 44 23 33 29 37 79 8 107 -10 10 -89 48 -174 83 l-155 65 -3 72 -3 72 49 52 c97 103 141 208 149 362 18 324 -175 565 -472 587 -38 3 -79 3 -90 1z"/>
+                                                                    <path d="M2198 953 l-388 -388 -218 218 c-205 204 -220 217 -255 217 -47 0 -77 -28 -77 -73 0 -29 25 -58 253 -285 l253 -252 44 0 44 0 418 418 c401 401 418 419 418 455 0 47 -28 77 -73 77 -29 0 -68 -36 -419 -387z"/>
+                                                                    </g>
+                                                                </svg>
+                                                            </span>
+                                                            Authorized Contact Verification
+                                                            <small>Please Select how you want to Proceed with Authorized
+                                                                Contact Verification</small>
+
+                                                        </h3>
+                                                    </div>
+                                                    <div class="select-login-option collapse in" id="collapseMain"
+                                                        class="collapse in" aria-labelledby="headingMain"
+                                                        data-parent="#packages">
+                                                        <div class="tab-cont">
+                                                            <ul class="nav nav-tabs" role="tablist">
+                                                                <li role="presentation"
+                                                                    class="active customer-walk col-sm-4 no-gutter">
+                                                                    <a href="#eid" aria-controls="home" role="tab"
+                                                                        data-toggle="tab">
+                                                                        Customer facing
+                                                                    </a>
+                                                                </li>
+                                                                <!-- <li class="col-sm-4 no-gutter non-face" role="presentation">
+                                                                    <a href="#email" aria-controls="profile" role="tab"
+                                                                        data-toggle="tab">
+                                                                        Customer Non Facing
+                                                                    </a>
+                                                                </li> -->
+                                                                <li class="col-sm-4 no-gutter customer" role="presentation">
+                                                                    <a href="#customer" aria-controls="profile" role="tab"
+                                                                        data-toggle="tab">
+                                                                        On Behalf of Customer
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                            <div class="tab-content">
+                                                                <div role="tabpanel" class="tab-pane active" id="eid">
+                                                                    <div style="height: auto;" class="login-wrap">
+                                                                        <div class="tab-cont card-detail-scan">
+                                                                            <div class="row flex-box">
+                                                                                <div class="col-sm-8">
+                                                                                    <h4>Authorized Contact EID Details</h4>
+                                                                                    <div class="row">
+                                                                                        <div class="col-sm-6">
+                                                                                            <div class="form-group">
+                                                                                                <label for="">First Name</label>
+                                                                                                <input readonly value="Minal" class="form-field" type="text">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="col-sm-6">
+                                                                                            <div class="form-group">
+                                                                                                <label for="">Last Name</label>
+                                                                                                <input readonly alue="Doongarwal" class="form-field" type="text">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="row">
+                                                                                        <div class="col-sm-6">
+                                                                                            <div class="form-group">
+                                                                                                <label for="">EID
+                                                                                                    Number</label>
+                                                                                                <input readonly
+                                                                                                    value="789-1987-3866106-0"
+                                                                                                    class="form-field"
+                                                                                                    type="text">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="col-sm-6">
+                                                                                            <div class="form-group">
+                                                                                                <label for="">EID
+                                                                                                    Expiry</label>
+                                                                                                <input readonly
+                                                                                                    value="02/04/20"
+                                                                                                    class="form-field"
+                                                                                                    type="text">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <h4>Authorized Contact Email and Mobile</h4>
+                                                                                    <div class="row">
+                                                                                        <div class="col-sm-6">
+                                                                                            <div class="form-group">
+                                                                                                <label for="">Mobile
+                                                                                                    Number</label>
+                                                                                                <input readonly
+                                                                                                    value="0501856393"
+                                                                                                    class="form-field"
+                                                                                                    type="text">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="col-sm-6">
+                                                                                            <div class="form-group">
+                                                                                                <label
+                                                                                                    for="">Email</label>
+                                                                                                <input readonly
+                                                                                                    value="mdoongarwal@etisalat.ae"
+                                                                                                    class="form-field"
+                                                                                                    type="text">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-sm-4">
+                                                                                    <div class="form-group">
+                                                                                        <h4>Authorized Contact verified by <span class="req">*</span></h4>
+                                                                                        <select id="cusID" class="selectpicker">
+                                                                                            <option value="select">Please Select</option>
+                                                                                            <option value="fingerprint">Finger Print</option>
+                                                                                            <option value="OTP">OTP</option>
+                                                                                        </select>
+                                                                                    </div>
+                                                                                    <div class="tab-cont scan-finger" style="display: none; height:100%;">
+                                                                                        <div class="card-scan ">
+                                                                                            <img class="insert"
+                                                                                                src="../assets/images/insert.gif"
+                                                                                                alt="">
+                                                                                            <p>Please insert your Emirates ID card into
+                                                                                                ID reader then click scan</p>
+                                                                                            <div class="text-center mT-20">
+                                                                                                <button
+                                                                                                    class="default-btn scan-btn">Scan</button>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="finger-print" style="display: none;">
+                                                                                            <img src="../assets/images/hand-palm.gif" alt="">
+                                                                                            <p class="text-center">Please place right index finger on the fingerprint sensor</p>
+                                                                                            <div class="text-center mT-30">
+                                                                                                <button class="default-btn finger-btn verify-btn" style="display:none;">Verify</button>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div style="display:none;" class="verified">
+                                                                                            <img src="../assets/images/thankyou.png" alt="">
+                                                                                            Fingerprint Verified Sucessfully
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    
+
+                                                                                    <div style="display:none;height:100%;" class="otp-scan-box scan-otp">
+                                                                                        <div class="card-scan ">
+                                                                                            <img class="insert"
+                                                                                                src="../assets/images/insert.gif"
+                                                                                                alt="">
+                                                                                            <p>Please insert your Emirates ID card into
+                                                                                                ID reader then click scan</p>
+                                                                                            <div class="text-center mT-20">
+                                                                                                <button
+                                                                                                    class="default-btn scan-btn01">Scan</button>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="form-group otp-field"
+                                                                                            style="display:none;">
+                                                                                            <p>Please enter the 6-digit verification
+                                                                                                code sent to your mobile number
+                                                                                                0501856393</p>
+                                                                                            <label>Enter OTP <span
+                                                                                                    class="req">*</span></label>
+                                                                                            <input
+                                                                                                placeholder="Enter a 6-digit verification code"
+                                                                                                class="otpField" type="text">
+                                                                                            <div class="text-right mT-10">
+                                                                                                <button disabled class="default-btn verify-btn">Verify</button>
+                                                                                                <button style="display: none;" class="default-btn error-btn">Verify</button>
+                                                                                            </div>
+                                                                                            <p>Didn't receive your code yet?
+                                                                                                <a class="resend" style="float:none"
+                                                                                                    href="javascript:void(0);">Resend
+                                                                                                    OTP</a>
+                                                                                            </p>
+                                                                                        </div>
+                                                                                        <div style="display:none;height:100%;" class="verified">
+                                                                                            <img src="../assets/images/thankyou.png" alt="">
+                                                                                            OTP Verified Sucessfully
+                                                                                        </div>
+                                                                                        <div style="display:none;height:100%;" class="error-box">
+                                                                                            <img src="../assets/images/error.png" alt="">
+                                                                                            OTP not Verified
+                                                                                            <div class="btn-box text-center">
+                                                                                                <button class="default-btn try-btn">Try Again</button>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div role="tabpanel" class="tab-pane" id="otp">
+                                                                    <div style="height: auto;" class="login-wrap otp-scan-box">
+                                                                        <div class="row">
+                                                                            <div class="col-sm-8">
+                                                                                <h4>EID Details</h4>
+                                                                                <div class="row">
+                                                                                    <div class="col-sm-6">
+                                                                                        <div class="form-group">
+                                                                                            <label for="">First
+                                                                                                Name</label>
+                                                                                            <input readonly
+                                                                                                value="Minal"
+                                                                                                class="form-field"
+                                                                                                type="text">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-sm-6">
+                                                                                        <div class="form-group">
+                                                                                            <label for="">Last
+                                                                                                Name</label>
+                                                                                            <input readonly
+                                                                                                value="Doongarwal"
+                                                                                                class="form-field"
+                                                                                                type="text">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                    <div class="col-sm-6">
+                                                                                        <div class="form-group">
+                                                                                            <label for="">EID
+                                                                                                Number</label>
+                                                                                            <input readonly
+                                                                                                value="789-1987-3866106-0"
+                                                                                                class="form-field"
+                                                                                                type="text">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-sm-6">
+                                                                                        <div class="form-group">
+                                                                                            <label for="">EID
+                                                                                                Expiry</label>
+                                                                                            <input readonly
+                                                                                                value="02/04/20"
+                                                                                                class="form-field"
+                                                                                                type="text">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <h4>Contact Details</h4>
+                                                                                <div class="row">
+                                                                                    <div class="col-sm-6">
+                                                                                        <div class="form-group">
+                                                                                            <label for="">Mobile
+                                                                                                Number</label>
+                                                                                            <input readonly
+                                                                                                value="0501856393"
+                                                                                                class="form-field"
+                                                                                                type="text">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-sm-6">
+                                                                                        <div class="form-group">
+                                                                                            <label for="">Email</label>
+                                                                                            <input readonly
+                                                                                                value="mdoongarwal@etisalat.ae"
+                                                                                                class="form-field"
+                                                                                                type="text">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-4">
+                                                                                <div class="card-scan">
+                                                                                    <img class="insert"
+                                                                                        src="../assets/images/insert.gif"
+                                                                                        alt="">
+                                                                                    <p>Please insert your Emirates ID card into
+                                                                                        ID reader then click scan</p>
+                                                                                    <div class="text-center mT-20">
+                                                                                        <button
+                                                                                            class="default-btn scan-btn01">Scan</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group otp-field"
+                                                                                    style="display:none;height:100%;">
+                                                                                    <p>Please enter the 6-digit verification
+                                                                                        code sent to your mobile number
+                                                                                        0501856393</p>
+                                                                                    <label>Enter OTP <span
+                                                                                            class="req">*</span></label>
+                                                                                    <input
+                                                                                        placeholder="Enter a 6-digit verification code"
+                                                                                        class="otpField" type="text">
+                                                                                    <div class="text-right mT-10">
+                                                                                        <button disabled
+                                                                                            class="default-btn verify-btn">Verify</button>
+                                                                                    </div>
+                                                                                    <p>Didn't receive your code yet?
+                                                                                        <a class="resend" style="float:none"
+                                                                                            href="javascript:void(0);">Resend
+                                                                                            OTP</a>
+                                                                                    </p>
+                                                                                </div>
+                                                                                <div style="display:none;" class="verified">
+                                                                                    <img src="../assets/images/thankyou.png" alt="">
+                                                                                    OTP Verified Sucessfully
+                                                                                    <div class="text-center mT-30">
+                                                                                        <button class="default-btn  tc-accept">Next</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        
+                                                                    </div>
+                                                                </div>
+                                                                <div role="tabpanel" class="tab-pane" id="email">
+                                                                    <div class="login-wrap" style="height:auto;">
+                                                                        <div class="email-wrap">
+                                                                            <div class="col-sm-12">
+                                                                                <form id="email" action="email">
+                                                                                    <label class="container">
+                                                                                        <input name="email" value="auth" type="checkbox">
+                                                                                        I am confirming that I am placing
+                                                                                        this order based on customer
+                                                                                        request came through Email / Phone Call, an email will be sent to <a
+                                                                                            href="javascript:void(0);">ammar@asterpharmacy.ae</a> and SMS will be sent to <a>0506458985</a>
+                                                                                            
+                                                                                        to confirm the order
+                                                                                        <span class="checkmark"></span>
+                                                                                    </label>
+                                                                                    <!-- <label class="container enable-next">
+                                                                                        <input name="email" value="unauth" type="radio">
+                                                                                        I am confirming that I am placing
+                                                                                        this order based on custome OTP sent to <a>0506458985</a> 
+                                                                                        <span class="checkmark"></span>
+                                                                                    </label> -->
+                                                                                </form>
+                                                                                <div class="row hidden-form otp-scan-box">
+                                                                                    <div class="col-sm-8">
+                                                                                        <h4>EID Details</h4>
+                                                                                        <div class="row">
+                                                                                            <div class="col-sm-6">
+                                                                                                <div class="form-group">
+                                                                                                    <label for="">First
+                                                                                                        Name</label>
+                                                                                                    <input class="visible-field" readonly
+                                                                                                        value=""
+                                                                                                        class="form-field"
+                                                                                                        type="text">
+                                                                                                    <input class="hidden-fields" readonly
+                                                                                                    value="Minal"
+                                                                                                    class="form-field"
+                                                                                                    type="text">
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="col-sm-6">
+                                                                                                <div class="form-group">
+                                                                                                    <label for="">Last Name</label>
+                                                                                                    <input class="visible-field" readonly
+                                                                                                    value=""
+                                                                                                    class="form-field"
+                                                                                                    type="text">
+                                                                                                    <input class="hidden-fields" readonly
+                                                                                                    value="Doongarwal"
+                                                                                                    class="form-field"
+                                                                                                    type="text">
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="row">
+                                                                                            <div class="col-sm-6">
+                                                                                                <div class="form-group">
+                                                                                                    <label for="">EID
+                                                                                                        Number</label>
+                                                                                                        <input class="visible-field" readonly
+                                                                                                        value=""
+                                                                                                        class="form-field"
+                                                                                                        type="text">
+                                                                                                        <input class="hidden-fields" readonly
+                                                                                                        value="789-1987-3866106-0"
+                                                                                                        class="form-field"
+                                                                                                        type="text">
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="col-sm-6">
+                                                                                                <div class="form-group">
+                                                                                                    <label for="">EID
+                                                                                                        Expiry</label>
+                                                                                                        <input class="visible-field" readonly
+                                                                                                        value=""
+                                                                                                        class="form-field"
+                                                                                                        type="text">
+                                                                                                        <input class="hidden-fields" readonly
+                                                                                                        value="02/04/20"
+                                                                                                        class="form-field"
+                                                                                                        type="text">
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <h4>Contact Details</h4>
+                                                                                        <div class="row">
+                                                                                            <div class="col-sm-4">
+                                                                                                <div class="form-group">
+                                                                                                    <label for="">Mobile
+                                                                                                        Number <span class="req">*</span></label>
+                                                                                                    <input
+                                                                                                        value=""
+                                                                                                        class="form-field"
+                                                                                                        type="text">
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="col-sm-4">
+                                                                                                <div class="form-group">
+                                                                                                    <label
+                                                                                                        for="">Email</label>
+                                                                                                    <input 
+                                                                                                        value=""
+                                                                                                        class="form-field"
+                                                                                                        type="text">
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="col-sm-4">
+                                                                                                <div class="form-group">
+                                                                                                    <label
+                                                                                                        for="">Title</label>
+                                                                                                    <select id="" class="selectpicker">
+                                                                                                        <option>PRO</option>
+                                                                                                        <option>Driver</option>
+                                                                                                    </select>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-sm-4">
+                                                                                        <div class="card-scan" style="display:none;">
+                                                                                            <img class="insert"
+                                                                                                src="../assets/images/insert.gif"
+                                                                                                alt="">
+                                                                                            <p>Please insert your Emirates ID card into
+                                                                                                ID reader then click scan</p>
+                                                                                            <div class="text-center mT-20">
+                                                                                                <button
+                                                                                                    class="default-btn scan-btn01">Scan</button>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="form-group otp-field">
+                                                                                            <p>Please enter the 6-digit verification
+                                                                                                code sent to your mobile number
+                                                                                                0501856393</p>
+                                                                                            <label>Enter OTP <span
+                                                                                                    class="req">*</span></label>
+                                                                                            <input
+                                                                                                placeholder="Enter a 6-digit verification code"
+                                                                                                class="otpField" type="text">
+                                                                                            <div class="text-right mT-10">
+                                                                                                <button disabled
+                                                                                                    class="default-btn verify-btn">Verify</button>
+                                                                                            </div>
+                                                                                            <p>Didn't receive your code yet?
+                                                                                                <a class="resend" style="float:none"
+                                                                                                    href="javascript:void(0);">Resend
+                                                                                                    OTP</a>
+                                                                                            </p>
+                                                                                        </div>
+                                                                                        <div style="display:none;" class="verified">
+                                                                                            <img src="../assets/images/thankyou.png" alt="">
+                                                                                            OTP Verified Sucessfully
+                                                                                            <div class="text-center mT-30">
+                                                                                                <button class="default-btn  tc-accept">Next</button>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div style="display: none;" class="text-center mT-20">
+                                                                                    <button disabled class="default-btn conf-chbox">Next</button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                                <div role="tabpanel" class="tab-pane" id="customer">
+                                                                    <div style="height: auto;" class="login-wrap">
+                                                                        <div class="tab-cont card-detail-scan">
+                                                                            <div class="row">
+                                                                                <div class="col-sm-12">
+                                                                                    <div class="bg-info text-left info-text">
+                                                                                        System need to scan the EID and finger print of the person and an email / SMS will be sent to selected authorized contact to confirm the order
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="row flex-box">
+                                                                                <div class="col-sm-8">
+                                                                                    <h4>EID Details</h4>
+                                                                                    <div class="row">
+                                                                                        <div class="col-sm-6">
+                                                                                            <div class="form-group">
+                                                                                                <label for="">First
+                                                                                                    Name</label>
+                                                                                                <input class="visible-field" readonly
+                                                                                                    value=""
+                                                                                                    class="form-field"
+                                                                                                    type="text">
+                                                                                                <input class="hidden-fields" readonly
+                                                                                                value="Minal"
+                                                                                                class="form-field"
+                                                                                                type="text">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="col-sm-6">
+                                                                                            <div class="form-group">
+                                                                                                <label for="">Last Name</label>
+                                                                                                <input class="visible-field" readonly
+                                                                                                value=""
+                                                                                                class="form-field"
+                                                                                                type="text">
+                                                                                                <input class="hidden-fields" readonly
+                                                                                                value="Doongarwal"
+                                                                                                class="form-field"
+                                                                                                type="text">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="row">
+                                                                                        <div class="col-sm-6">
+                                                                                            <div class="form-group">
+                                                                                                <label for="">EID
+                                                                                                    Number</label>
+                                                                                                    <input class="visible-field" readonly
+                                                                                                    value=""
+                                                                                                    class="form-field"
+                                                                                                    type="text">
+                                                                                                    <input class="hidden-fields" readonly
+                                                                                                    value="789-1987-3866106-0"
+                                                                                                    class="form-field"
+                                                                                                    type="text">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="col-sm-6">
+                                                                                            <div class="form-group">
+                                                                                                <label for="">EID
+                                                                                                    Expiry</label>
+                                                                                                    <input class="visible-field" readonly
+                                                                                                    value=""
+                                                                                                    class="form-field"
+                                                                                                    type="text">
+                                                                                                    <input class="hidden-fields" readonly
+                                                                                                    value="02/04/20"
+                                                                                                    class="form-field"
+                                                                                                    type="text">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <h4>Contact Details</h4>
+                                                                                    <div class="row">
+                                                                                        <div class="col-sm-4">
+                                                                                            <div class="form-group">
+                                                                                                <label for="">Mobile Number <span class="req">*</span></label>
+                                                                                                <input id="mobNum" value="" class="form-field" type="text">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="col-sm-4">
+                                                                                            <div class="form-group">
+                                                                                                <label
+                                                                                                    for="">Email</label>
+                                                                                                <input 
+                                                                                                    value=""
+                                                                                                    class="form-field"
+                                                                                                    type="text">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="col-sm-4">
+                                                                                            <div class="form-group">
+                                                                                                <label
+                                                                                                    for="">Title</label>
+                                                                                                <select id="" class="selectpicker">
+                                                                                                    <option>PRO</option>
+                                                                                                    <option>Driver</option>
+                                                                                                </select>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-sm-4">
+                                                                                    
+                                                                                    <div style="height:auto;" class="card-scan-visible">
+                                                                                        <h4>Authorized Contact verified by</h4>
+                                                                                        <img class="insert"
+                                                                                            src="../assets/images/insert.jpg"
+                                                                                            alt="">
+                                                                                        <p>Please insert your Emirates
+                                                                                            ID card into ID reader then
+                                                                                            click scan</p>
+                                                                                        <div class="text-center mT-20">
+                                                                                            <button disabled class="default-btn scan-btn">Scan</button>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div style="display:none;height:auto;" class="card-scan">
+                                                                                        <h4>Authorized Contact verified by</h4>
+                                                                                        <img class="insert"
+                                                                                            src="../assets/images/insert.gif"
+                                                                                            alt="">
+                                                                                        <p>Please insert your Emirates
+                                                                                            ID card into ID reader then
+                                                                                            click scan</p>
+                                                                                        <div class="text-center mT-20">
+                                                                                            <button class="default-btn scan-btn">Scan</button>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="finger-print"
+                                                                                        style="display: none;">
+                                                                                        <img style="margin-bottom:15px;" src="../assets/images/hand-palm.gif"
+                                                                                            alt="">
+                                                                                        <p class="text-center">Please place right index finger on the fingerprint sensor</p>
+                                                                                        <div class="text-center mT-30">
+                                                                                            <button
+                                                                                                class="default-btn finger-btn verify-btn" style="display:none;">Verify</button>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div style="display:none;height:100%;" class="verified">
+                                                                                        <img src="../assets/images/thankyou.png" alt="">
+                                                                                        Finger Print Verified successfully and email / SMS sent to selected authorized contact in order to confirm the order within 48 Hours
+                                                                                        
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="summary-box">
+                                                <h3>Order Summary</h3>
+                                                <div>
+                                                    You have <strong id="timer">5:30</strong> remaining to place the order
+                                                </div>
+                                                <div class="order-btn text-right submit-button-container">
+                                                    <button disabled class="order-btn"
+                                                        onclick="location.href = '../index.html'">Place Order</button>
+                                                </div>
+                                                <div class="flex-box order-btn text-right submit-button-container">
+                                                    <button class="order-btn"
+                                                        onclick="location.href = '../index.html'">Save & Close</button>
+                                                    <button class="order-btn"
+                                                        onclick="location.href = '../index.html'">Cancel Order</button>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <!-- End SmartWizard Content -->
+                        </div>
+                        <div class="clearfix"></div>
+                    </section>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+
+    </div>
+    <!-- /.etisalat -->
+    <!-- /.footer -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../assets/js/jquery-2.1.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../assets/js/bootstrap.js"></script>
+    <script src="../assets/js/bootstrap-select.js"></script>
+    <script src="../assets/js/dcalendar.picker.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery.matchHeight-min.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery.smartWizard.js"></script>
+    <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../assets/js/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.0/rangeslider.min.js"></script>
+    <script src="../assets/js/scripts.js"></script>
+    <script src="../assets/js/custom.js"></script>
+    <script>
+        $('#email').click(function(){
+            var radioAuth = $("input[value='auth']:checked").val();
+            var radioUnAuth = $("input[value='unauth']:checked").val();
+            if(radioAuth){
+                $('.hidden-form').hide();
+                $('.conf-chbox').trigger("click");
+            }
+            // if(radioUnAuth){
+            //     $('.hidden-form').show();
+            //     $('.conf-chbox').hide();
+            // }
+        });
+        $('#customer .scan-btn').click(function () {
+            setTimeout(function () {
+                $( ".verify-btn" ).trigger( "click" );
+            }, 3000);
+        });
+        $('#cusID').change(function () {
+            if($(this).val() === "fingerprint"){
+                $(this).closest('.col-sm-4').find('.scan-finger').show();
+                $(this).closest('.col-sm-4').find('.scan-otp').hide();
+                
+            }
+    
+            if($(this).val() === "OTP"){
+                $(this).closest('.col-sm-4').find('.scan-otp').show();
+                $(this).closest('.col-sm-4').find('.scan-finger').hide();
+            }
+            $(this).closest('.form-group').hide();
+        });
+        
+        $( ".scan-btn01" ).click(function(e){
+            $(this).closest('.card-scan').hide();
+            $(this).closest('.scan-otp').find('.otp-field').show();
+           
+        });
+        $('.scan-btn').click(function () {
+            var that = this;
+            $(this).closest('.card-scan').hide();
+            $(this).closest('.card-box').find('.finger-print').show();
+            $(this).closest('.login-wrap').find('.visible-field').hide();
+            $(this).closest('.login-wrap').find('.hidden-fields').show();
+            setTimeout(function () {
+                $(that).closest('.tab-cont').find('.finger-print').hide();
+                $(that).closest('.tab-cont').find('.verified').show();
+                $('h3.auth-contact1 small').html('Authorized Contact Verified Successfully');
+                $(that).closest('.card-box').find('.nav-tabs').find('li>a').addClass('disabled');
+                $('.order-btn').removeAttr('disabled');
+           }, 3000);
+            
+        });
+        $( ".verify-btn" ).click(function(e){
+            $(this).closest('.col-sm-4').find('.finger-print').hide();
+            $(this).closest('.col-sm-4').find('.verified').show();
+            $(this).closest('.card-box').find('.nav-tabs').find('li>a').addClass('disabled');
+            $('.tc-check input[type=checkbox]').removeAttr('disabled');
+            $('.tc-check input[type=checkbox]').prop('checked', 'checked');
+
+            // $(this).closest('.collapse').removeClass('in');
+            // $(this).closest('.card-box').find('h3').addClass('collapsed');
+            // e.preventDefault();
+
+            $('h3.auth-contact1 small').html('Authorized Contact Verified Successfully');
+            $('.contract .changeBtn').show();
+            $('.order-btn').removeAttr('disabled');
+            $(this).closest('.tab-cont').find('.nav-tabs').find('li>a').addClass('disabled');
+        
+        });
+         $('input[name=email]').change(function () {
+                if ($(this).prop('checked') == true) {
+                    $(this).closest('.email-wrap').find('.conf-chbox').removeAttr('disabled');
+                }
+                else {
+                    $('.conf-chbox').attr('disabled', 'disabled');
+                }
+            });
+           
+        $(document).ready(function () {
+            $(".otpField").on("input", function () {
+                $(this).addClass('focus');
+                $(this).closest('.otp-field').find('.verify-btn').removeAttr('disabled');
+                if ($(this).val() === 'error') {
+                    $(this).closest('.otp-field').find('.verify-btn').hide();
+                    $(this).closest('.otp-field').find('.error-btn').show();
+                }
+            });
+        });
+        $(".otpField").on('blur', function () {
+
+            if ($(this).val() === '0') {
+                $(this).removeClass('focus');
+                $(this).closest('.otp-field').find('.verify-btn').attr('disabled', 'disabled');
+            }
+        });
+        
+        $("#mobNum").on("input", function () {
+            $(this).closest('.tab-cont').find('.card-scan').show();
+            $(this).closest('.tab-cont').find('.card-scan-visible').hide();
+        });
+        $('.error-btn').click(function (e) {
+            $(this).closest('.otp-field').hide();
+            $(this).closest('.otp-scan-box').find('.error-box').show();
+        });
+        $('.try-btn').click(function (e) {
+            $(this).closest('.error-box').hide();
+            $(this).closest('.otp-scan-box').find('.otp-field').show();
+            $(this).closest('.otp-scan-box').find('.otp-field').find('.verify-btn').show();
+            $(this).closest('.otp-scan-box').find('.otp-field').find('.error-btn').hide();
+        });
+        
+        $(document).ready(function () {
+            $('input[name=tandc]').change(function () {
+                if ($(this).prop('checked') == true) {
+                    $('.order-btn button').removeAttr('disabled');
+                }
+                else {
+                    $('.order-btn button').attr('disabled', 'disabled');
+                }
+            });
+        });
+        $('.tc-accept').click(function (e) {
+            $('.tc-check input[type=checkbox]').removeAttr('disabled');
+            $('.tc-check input[type=checkbox]').prop('checked', 'checked');
+
+            $(this).closest('.collapse').removeClass('in');
+            $(this).closest('.card-box').find('h3').addClass('collapsed');
+            //$('.order-btn').removeAttr('disabled');
+            e.preventDefault();
+            // $('#collapsetermsCond').removeClass('in');
+            // $('#headingtermsCond h3').addClass('collapsed');
+
+            $('#headingtermsCond h3 small').html('Terms & Conditions accepted!');
+            $('.contract .changeBtn').show();
+            $('.order-btn').removeAttr('disabled');
+        });
+        $('#partySelect').change(function () {
+            $('#collapseCustomer').removeClass('in');
+            $('#headingCustomer h3').addClass('collapsed');
+            $('#headingCustomer h3 small').html('Party Selected!');
+            $('#collapseSign').addClass('in');
+            $('#headingSign h3').removeClass('collapsed');
+            $('#headingCustomer .changeBtn').show();
+        });
+        // $('.party-btn').click(function () {
+        //     $('#collapseCustomer').removeClass('in');
+        //     $('#headingCustomer h3').addClass('collapsed');
+        //     $('#headingCustomer h3 small').html('Party Selected!');
+        //     $('#collapseSign').addClass('in');
+        //     $('#headingSign h3').removeClass('collapsed');
+        //     $('#headingCustomer .changeBtn').show();
+        // });
+
+        $('.sign-btn').click(function () {
+            $('.order-btn').removeAttr('disabled');
+            $('#collapseSign').removeClass('in');
+            $('#headingSign h3').addClass('collapsed');
+            $('#headingSign h3 small').html('Signature Accepted!');
+            $('.sign .changeBtn').show();
+        });
+        $('.modal-body').scroll(function () {
+            var scroll = $('.modal-body').scrollTop();
+
+            //>=, not <=
+            if (scroll >= 300) {
+                //clearHeader, not clearheader - caps H
+                //$(".tc-accept").removeAttr('disabled');
+                $(".verify-next").removeAttr('disabled');
+            }
+        });
+        $('.open-btn').click(function () {
+            $(this).closest('.card-box').find('h3').addClass('collapsed');
+            //$(this).closest('.card-box').next('.card-box').find('h3').removeClass('collapsed');
+            $(this).closest('.card-box').find('h3').find('small').html('Emirates ID');
+            $(this).closest('.card-box').find('.changeBtn').show();
+            $(this).closest('.collapse').removeClass('in');
+        });
+        $('.scan-option').click(function () {
+            $(this).closest('.summary-box').find('.eid').show();
+            $(this).closest('.summary-box').find('.eid').find('h3').removeClass('collapsed');
+            $(this).closest('.summary-box').find('.otp').hide();
+        });
+        $('.scan-option1').click(function () {
+            $(this).closest('.summary-box').find('.eid1').show();
+            $(this).closest('.summary-box').find('.eid1').find('h3').removeClass('collapsed');
+        });
+        $('.otp-option').click(function () {
+            $(this).closest('.summary-box').find('.eid').hide();
+            $(this).closest('.summary-box').find('.otp').show();
+            $(this).closest('.card-box').find('h3').find('small').html('OTP');
+            $(this).closest('.summary-box').find('#headingOTP h3').removeClass('collapsed');
+        });
+        $('.contract-option').click(function () {
+            $(this).closest('.summary-box').find('.eid').hide();
+            $(this).closest('.summary-box').find('.otp').hide();
+            $(this).closest('.summary-box').find('.contract').show();
+        });
+
+        $('.scan-option').click(function () {
+            $('.card-scan-box').show();
+            $('.otp-box').hide();
+            $('.contract-box').hide();
+        });
+        $('.scan-option1').click(function () {
+            $('.card-scan-box1').show();
+            $('#collapseScan1').addClass('in');
+        });
+        $('.otp-option').click(function () {
+            $('.card-scan-box').hide();
+            $('.otp-box').show();
+            $('.contract-box').hide();
+        });
+        $('.contract-option').click(function () {
+            $('.card-scan-box').hide();
+            $('.otp-box').hide();
+            $('.contract-box').show();
+        });
+        $('.otp-send').click(function () {
+            $(this).closest('.email-number').hide();
+            $(this).closest('.tab-cont').find('.otp-field').show();
+            $('#headingOTP small').html('Please Enter OTP');
+        });
+        
+        $('.verify-next').click(function () {
+            $(this).closest('.card-box').next('.card-box').find('.card-header h3').removeClass('collapsed');
+            $(this).closest('.card-box').next('.card-box').find('.collapse').addClass('in');
+            $(this).closest('.card-box').find('.card-header h3').addClass('collapsed');
+            $(this).closest('.card-box').find('.collapse').removeClass('in');
+        });
+        $('.conf-chbox').click(function () {
+            $(this).closest('.otp-field').hide();
+            $(this).closest('.collapse').removeClass('in');
+            $('.order-btn').removeAttr('disabled');
+            //$('#headingtermsCond').show();
+            //$('#headingtermsCond').find('h3').removeClass('collapsed');
+            $('.auth-contact1').addClass('collapsed');
+            //$('#collapsetermsCond').addClass('in');
+        });
+        $('.verify-btn').click(function () {
+            $(this).closest('.otp-field').hide();
+            $(this).closest('.otp-scan-box').find('.verified').show();
+        });
+        $('.login-btn').click(function () {
+            $('select').removeAttr('disabled');
+            $('.bootstrap-select').removeClass('disabled');
+            $('.dropdown-toggle').removeClass('disabled');
+            $('.bootstrap-select .dropdown-menu li[data-original-index="1"]').addClass('selected');
+            $('select option[value="01"]').attr('selected', 'selected');
+            $('.filter-option').html('UAT TEST B2B ACCOUNT INQUIRY ES - 37800781');
+            $('.govt-plan').show();
+        });
+        $("[data-scroll-to]").click(function () {
+            var $this = $(this),
+                $toElement = $this.attr('data-scroll-to'),
+                $focusElement = $this.attr('data-scroll-focus'),
+                $offset = $this.attr('data-scroll-offset') * 1 || 0,
+                $speed = $this.attr('data-scroll-speed') * 1 || 500;
+
+            $('html, body').animate({
+                scrollTop: $($toElement).offset().top + $offset
+            }, $speed);
+
+            if ($focusElement) $($focusElement).focus();
+        });
+        $('.send-otp-btn').click(function () {
+            $('.verify-btn').removeAttr('disabled');
+        });
+        // var counter = 10;
+        // var interval = setInterval(function () {
+        //     counter--;
+        //     // Display 'counter' wherever you want to display it.
+        //     if (counter <= 0) {
+        //         clearInterval(interval);
+        //         $('#timer').html("<h3>Count down complete</h3>");
+        //         return;
+        //     } else {
+        //         $('#time').text(counter);
+        //         console.log("Timer --> " + counter);
+        //     }
+        // }, 1000);
+
+        setInterval(function () {
+            var d = new Date();
+            var seconds = d.getMinutes() * 60 + d.getSeconds(); //convet 00:00 to seconds for easier caculation
+            var fiveMin = 60 * 5; //five minutes is 300 seconds!
+            var timeleft = fiveMin - seconds % fiveMin; // let's say 01:30, then current seconds is 90, 90%300 = 90, then 300-90 = 210. That's the time left!
+            var result = parseInt(timeleft / 60) + ':' + timeleft % 60; //formart seconds into 00:00 
+            document.getElementById('timer').innerHTML = result;
+
+        }, 500) //calling it every 0.5 second to do a count down
+    </script>
+</body>
+
+</html>

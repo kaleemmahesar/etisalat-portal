@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sales Order Request :: Etisalat</title>
+    <!-- Bootstrap -->
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="../../assets/css/font-awesome.min.css" />
+    <link href="../../assets/css/CEP-automation-css/custom.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="loading">
+    <div id="loaderM"></div>
+    <div class="etisalat">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header col-sm-2">
+                    <a class="navbar-brand" href="home.html">
+                        <img src="../../assets/images/logo_white.png" alt="Etisalat">
+                    </a>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="col-sm-8">
+                    <div id="navbar" class="col-md-12 custom-container nav-container navbar-collapse collapse">
+                        <ul>
+                            <li>
+                                <a href="javascript:void(0);">Mobile</a>
+                            </li>
+                            <li>
+                                <a class="show-fixed-content" href="../../index.html">Fixed</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">ICT</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Product Catalogue</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--/.nav-collapse -->
+                <div class="col-sm-2">
+                    <div class="navbar-right">
+                        <div class="dropdown">
+                            <a id="oSummary" class="summary-btn" data-target="#" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">
+                                Order Summary
+                                <span class="caret"></span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="oSummary">
+                                <div class="item-list">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Order ID</th>
+                                                <th>Customer Name</th>
+                                                <th>Party ID</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>ORD-212-2323</td>
+                                                <td>Aster Pharmacy</td>
+                                                <td>17567</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Order Status</th>
+                                                <th>Service Type</th>
+                                                <th>Sales Manager</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Draft</td>
+                                                <td>New Account</td>
+                                                <td>Jordan</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Authorized Contact Name</th>
+                                                <th>Authorized Contact Email</th>
+                                                <th>Authorized Contact Mobile</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Minal Doongarwal</td>
+                                                <td>mdoongarwal@etisalat.ae</td>
+                                                <td>971569629141</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="total collapsed">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <span id="breakDown" class="collapsed" data-toggle="collapse"
+                                                data-target="#collapseBreakdown" aria-expanded="false"
+                                                aria-controls="collapseBreakdown">
+                                                Break Down
+                                                <span>
+                                                    <img src="../../assets/images/down-arrow.png" alt="">
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <h4>Grand Total</h4>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <h5 class="price">
+                                                1095 AED
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapseBreakdown" class="collapse" aria-labelledby="breakDown">
+                                    <div class="card-body">
+                                        <div id="packages" class="packages">
+                                            <div class="card">
+                                                <div class="card-header" id="headingOne">
+                                                    <h5 class="mb-0 internet">
+                                                        <span class="icon">
+                                                            <img src="../assets/images/icon-green/opt13.png" alt="">
+                                                        </span>
+                                                        Package Details
+                                                    </h5>
+                                                    <!-- <h5 class="mb-0 internet"data-toggle="collapse"
+                                                                    data-target="#collapseOne" aria-expanded="false"
+                                                                    aria-controls="collapseOne">
+                                                                    <span class="icon">
+                                                                        <img src="../assets/images/icon-green/opt13.png" alt="">
+                                                                    </span>
+                                                                    Package Details
+                                                                    <span>
+                                                                        <img src="../assets/images/down-arrow.png" alt="">
+                                                                    </span>
+                                                                </h5> -->
+                                                </div>
+                                                <div id="collapseOne" class="collapse in" aria-labelledby="headingOne"
+                                                    data-parent="#packages" aria-expanded="false">
+                                                    <div class="card-body">
+                                                        <table class="table review-grid">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th></th>
+                                                                    <th>QTY</th>
+                                                                    <th>Unit Price (MRC)</th>
+                                                                    <th>OTC</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td style="width:70%;">
+                                                                        <span>Business in a box</span>
+                                                                        <h4>200 Mbps plan</h4>
+                                                                        <small>12 Month Contract</small>
+                                                                    </td>
+                                                                    <td>x 1</td>
+                                                                    <td>995 AED/Month</td>
+                                                                    <td>100 AED</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div class="card-header" id="headingTwo">
+                                                    <h5 class="mb-0 internet">
+                                                        <span class="icon">
+                                                            <img src="../assets/images/icon-green/addon-icon.png"
+                                                                alt="">
+                                                        </span>
+                                                        Add-On Details
+                                                    </h5>
+                                                    <!-- <h5 class="mb-0 internet" data-toggle="collapse"
+                                                                    data-target="#collapseTwo" aria-expanded="false"
+                                                                    aria-controls="collapseTwo">
+                                                                    <span class="icon">
+                                                                        <img src="../assets/images/icon-green/addon-icon.png"
+                                                                            alt="">
+                                                                    </span>
+                                                                    Add-On Details
+                                                                    <span>
+                                                                        <img src="../assets/images/down-arrow.png" alt="">
+                                                                    </span>
+                                                                </h5> -->
+                                                </div>
+                                                <div id="collapseTwo" class="collapse in" aria-labelledby="headingTwo"
+                                                    data-parent="#packages" aria-expanded="false">
+                                                    <div class="card-body">
+                                                        <table class="table review-grid">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th></th>
+                                                                    <th>QTY</th>
+                                                                    <th>Unit Price (MRC)</th>
+                                                                    <th>OTC</th>
+                                                                    <th></th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td style="width:60%;">
+                                                                        <h4>User Voice Line</h4>
+                                                                        <small>12 Month Contract</small>
+                                                                    </td>
+                                                                    <td>x 10</td>
+                                                                    <td>100 AED</td>
+                                                                    <td>50 AED</td>
+                                                                    <td><a class="removeBtn"
+                                                                            href="javascript:void(0)">Remove</a></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="page-container">
+                    <section class="page-content inner-page">
+                        <div class="clearfix"></div>
+                        <div class="smart-wizard">
+                            <!-- Tabs -->
+                            <div class="swMain">
+                                <div class="col-md-12 item custom-container progress-container">
+                                    <ul class="item  slickslider">
+                                        <li>
+                                            <a href="account-selection.html" class="selected">
+                                                <span class="stepDesc">Account Selection</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>1
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="package.html" class="selected">
+                                                <span class="stepDesc">Package Selection</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>2
+                                                </div>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="configuration.html" class="selected">
+                                                <span class="stepDesc">Configuration</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>3
+                                                </div>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="docs.html">
+                                                <span class="stepDesc">Documents & Notes</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>4
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="billing.html">
+                                                <span class="stepDesc">Contact</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>5
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="review.html">
+                                                <span class="stepDesc">Review</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>6
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-12 custom-container corporate-accounts">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div id="packages" class="packages noTagLine">
+                                                <div class="card">
+                                                    <div class="card-header" id="headingNumber">
+                                                        <h5 class="mb-0 storage" data-toggle="collapse"
+                                                            data-target="#collapseNumber" aria-expanded="true"
+                                                            aria-controls="collapseNumber">
+                                                            <svg data-name="Layer 1" id="Layer_1"
+                                                                viewBox="0 0 49.90527 81.85059"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <defs>
+                                                                    <style>
+                                                                        .cls-1 {
+                                                                            fill: #fff;
+                                                                        }
+                                                                    </style>
+                                                                </defs>
+                                                                <title />
+                                                                <path class="cls-1"
+                                                                    d="M32.00525,62.56055h.62268v-.3877a1.98831,1.98831,0,0,1,.07-.49835A1.09655,1.09655,0,0,0,32.00525,62.56055Z"
+                                                                    transform="translate(-24.36523 -8.50098)" />
+                                                                <path
+                                                                    d="M69.23047,60.0957H55.78906V49.72656h3.65625a.74966.74966,0,0,0,.53028-1.28027l-8.72071-8.7207a.74972.74972,0,0,0-1.06054,0l-8.72071,8.7207a.74966.74966,0,0,0,.53028,1.28027h3.65527V60.0957H44.627V59.708a2.01553,2.01553,0,0,0-2.01269-2.0127h-4.919a2.01553,2.01553,0,0,0-2.01269,2.0127v.38769H33.08691a2.60811,2.60811,0,0,0-2.59649,2.46485h-.45819A2.60678,2.60678,0,0,0,27.442,64.96289h-.46448a2.61506,2.61506,0,0,0-2.61231,2.61133v20.166a2.61506,2.61506,0,0,0,2.61231,2.61133H63.12109a2.60678,2.60678,0,0,0,2.59021-2.40234h.46448a2.6083,2.6083,0,0,0,2.5965-2.46582h.45819a2.61506,2.61506,0,0,0,2.6123-2.61133V62.707A2.61506,2.61506,0,0,0,69.23047,60.0957Zm1.1123,22.77637a1.11341,1.11341,0,0,1-1.1123,1.11133h-.44336V65.17188a2.61485,2.61485,0,0,0-2.61133-2.61133H55.78906V61.5957H69.23047a1.11342,1.11342,0,0,1,1.1123,1.11133Zm-4.167,3.57715h-.44336v-18.875a2.61485,2.61485,0,0,0-2.61133-2.61133h-7.332v-.90234H66.17578a1.11321,1.11321,0,0,1,1.11133,1.11133v20.165A1.11341,1.11341,0,0,1,66.17578,86.44922Zm-3.05469,2.40234H26.97754a1.11342,1.11342,0,0,1-1.11231-1.11133v-20.166a1.11342,1.11342,0,0,1,1.11231-1.11133h3.3457a.7502.7502,0,0,0,.75-.75V64.57617a.5141.5141,0,0,1,.5127-.51367h4.91894a.5141.5141,0,0,1,.5127.51367v1.13672a.7502.7502,0,0,0,.75.75H63.12109a1.11321,1.11321,0,0,1,1.11133,1.11133v20.166A1.11321,1.11321,0,0,1,63.12109,88.85156ZM37.69531,59.19531h4.919a.51389.51389,0,0,1,.51269.5127V60.8457a.75019.75019,0,0,0,.75.75h1.78223v.96485H41.57227v-.3877a2.01553,2.01553,0,0,0-2.0127-2.01269h-2.377V59.708A.51389.51389,0,0,1,37.69531,59.19531Zm8.71387-10.96875H43.81445l6.91016-6.91015,6.91016,6.91015H55.03906a.7502.7502,0,0,0-.75.75V64.86914H47.15918V48.97656A.7502.7502,0,0,0,46.40918,48.22656Zm-7.8916,16.73633v-.38672a2.01573,2.01573,0,0,0-2.0127-2.01367h-2.377v-.38965a.51388.51388,0,0,1,.51269-.51269h4.919a.51388.51388,0,0,1,.5127.51269v1.1377a.75019.75019,0,0,0,.75.75h4.83691v.90234Zm-5.88965-2.79v.3877h-.62268a1.09655,1.09655,0,0,1,.69269-.886A1.98831,1.98831,0,0,0,32.62793,62.17285Zm-3.05469,2.40332v.38672h-.61a1.09778,1.09778,0,0,1,.65942-.81934A2.00622,2.00622,0,0,0,29.57324,64.57617Z"
+                                                                    transform="translate(-24.36523 -8.50098)" />
+                                                                <path class="cls-1"
+                                                                    d="M28.96326,64.96289h.61v-.38672a2.00622,2.00622,0,0,1,.04944-.43262A1.09778,1.09778,0,0,0,28.96326,64.96289Z"
+                                                                    transform="translate(-24.36523 -8.50098)" />
+                                                                <path
+                                                                    d="M66.76367,34.77539H37.35449a9.5141,9.5141,0,0,1-1.10156-18.96484A7.98571,7.98571,0,0,1,51.9707,14.60449a7.97375,7.97375,0,0,1,11.49707,5.66992,7.60377,7.60377,0,1,1,3.2959,14.501ZM44.21,10.001a6.49439,6.49439,0,0,0-6.4873,6.48632.76554.76554,0,0,1-.7168.76758,8.01393,8.01393,0,0,0,.34863,16.02051H66.76367a6.00684,6.00684,0,1,0,0-12.01367.84814.84814,0,0,1-.08691-.00488,5.749,5.749,0,0,0-3.42481.81836.75121.75121,0,0,1-1.16211-.60059,6.47155,6.47155,0,0,0-10.24121-5.041.75071.75071,0,0,1-1.18359-.542A6.44745,6.44745,0,0,0,44.21,10.001Z"
+                                                                    transform="translate(-24.36523 -8.50098)" />
+                                                            </svg>
+                                                            Cloud Storage Configuration
+                                                            <small></small>
+                                                        </h5>
+                                                    </div>
+                                                    <div id="collapseMain" class="collapse in"
+                                                        aria-labelledby="headingMain" data-parent="#packages">
+                                                        <div class="card-body">
+                                                            <div class="tab-cont">
+                                                                <div class="row">
+                                                                    <div class="col-sm-4">
+                                                                        <div class="form-group">
+                                                                            <label>Cloud Storage Days</label>
+                                                                            <select class="selectpicker">
+                                                                                <option>7 Days (Standard)</option>
+                                                                                <option>30 Days (+70 AED)</option>
+                                                                                <option>60 Days (+150 AED)</option>
+                                                                            </select>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12  remove-padding-right text-right submit-button-container">
+                                    <button onclick="location.href = 'package.html'">Previous</button>
+                                    <button>Save & Close</button>
+                                    <button onclick="location.href = 'docs.html'">Next</button>
+                                </div>
+                            </div>
+
+                            <div class="clearfix"></div>
+                            <!-- End SmartWizard Content -->
+                        </div>
+                        <div class="clearfix"></div>
+                    </section>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+
+    </div>
+
+    <!-- /.etisalat -->
+    <!-- /.footer -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../../assets/js/jquery-2.1.3.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../../assets/js/bootstrap.js"></script>
+    <script src="../../assets/js/bootstrap-select.js"></script>
+    <script src="../../assets/js/dcalendar.picker.js"></script>
+    <script type="text/javascript" src="../../assets/js/jquery.matchHeight-min.js"></script>
+    <script type="text/javascript" src="../../assets/js/jquery.smartWizard.js"></script>
+    <script src="../../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../../assets/js/slick.min.js"></script>
+    <script src="../../assets/js/scripts.js"></script>
+    <script src="../../assets/js/custom.js"></script>
+    <script>
+        $('.next-btn').click(function () {
+            $(this).closest('.card').find('h5').addClass('collapsed');
+            $(this).closest('.card').next('.card').find('h5').removeClass('collapsed');
+            $(this).closest('.card').next('.card').find('.collapse').addClass('in');
+            $(this).closest('.card').find('.changeBtn').show();
+            $(this).closest('.card').find('.addBtn').hide();
+            $(this).closest('.collapse').removeClass('in');
+        });
+        $('.changeBtn').click(function () {
+            $(this).closest('h5').removeClass('collapsed');
+            $(this).hide();
+            $(this).closest('.card').find('.addBtn').show();
+            $(this).closest('.card').find('.collapse').addClass('in');
+        });
+        $('.account-select li').click(function () {
+            $(this).closest('.account-select').find('li').removeClass('selected');
+            $(this).toggleClass('selected');
+            // $(this).closest('.card').find('h5 small').html($(this).html());
+            $(this).closest('.tab-cont').find('button').removeAttr('disabled');
+        });
+        $('.mainNum li').click(function () {
+            //$(this).closest('ul').find('li').removeClass('selected');
+            $(this).toggleClass('selected');
+            // $(this).closest('.card').find('h5 small').html($(this).html());
+            $(this).closest('.tab-cont').find('button').removeAttr('disabled');
+        });
+        $('.number-list li').click(function () {
+            $(this).toggleClass('selected');
+            if ($(this).hasClass('selected')) {
+                $(this).find('.price-box').show();
+            }
+
+            else {
+                $(this).find('.price-box').hide();
+            }
+        });
+
+        $('.number-list li').click(function () {
+            if ($('.number-list li').hasClass('selected')) {
+                $(this).closest('.tab-cont').find('.next-btn').removeAttr('disabled');
+            }
+            else {
+                $(this).closest('.tab-cont').find('.next-btn').attr('disabled', 'disabled');
+            }
+        });
+
+        $('.cart-btn-icon').click(function () {
+            $(this).hide();
+            $(this).closest('.addon-box').find('.remove-btn-icon').show();
+            //$(this).closest('.addon-box').find('.added-item').show();
+            $(this).closest('.addon-box').addClass('added');
+            $(this).closest('.addon-box').find('select').attr('disabled', 'disabled');
+            $(this).closest('.addon-box').find('input[type=text]').attr('disabled', 'disabled');
+            $(this).closest('.addon-box').siblings().removeClass('added');
+            $(this).closest('.addon-box').siblings().find('.remove-btn-icon').hide();
+            $(this).closest('.addon-box').siblings().find('.cart-btn-icon').show();
+            $(this).closest('.addon-box').siblings().find('.added-item').hide();
+            $(this).closest('.addon-box').siblings().find('select').removeAttr('disabled');
+            $(this).closest('.addon-box').siblings().find('input[type=text]').removeAttr('disabled');
+        });
+        $('.remove-btn-icon').click(function () {
+            $(this).hide();
+            $(this).closest('.addon-box').find('.cart-btn-icon').show();
+            //$(this).closest('.addon-box').find('.added-item').hide();
+            $(this).closest('.addon-box').removeClass('added');
+            $(this).closest('.addon-box').find('select').removeAttr('disabled');
+            $(this).closest('.addon-box').find('input[type=text]').removeAttr('disabled');
+        });
+        $('#appType').change(function () {
+            if ($(this).val() == 'Approval ID') {
+                $('.appID').show();
+                $('.appDoc').hide();
+            }
+            if ($(this).val() == 'Approval Documents') {
+                $('.appID').hide();
+                $('.appDoc').show();
+            }
+        });
+        $(document).ready(function () {
+            $(".sameCam").change(function () {
+                var val = $(this).val();
+                console.log(val);
+                $('.sameCam').find('.filter-option').html(val);
+            });
+        });
+        $('.addBtn').click(function () {
+            $(this).addClass('addOther')
+            $('.hidden-row01').show();
+            $('.addOther').click(function () {
+                $('.hidden-row02').show();
+                $(this).removeClass('addOther')
+            });
+        });
+
+        $('.removeBtn').click(function () {
+            $(this).closest('.hidden-row');
+        });
+    </script>
+</body>
+
+</html>

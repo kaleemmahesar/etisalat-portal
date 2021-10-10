@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sales Order Request :: Etisalat</title>
+    <!-- Bootstrap -->
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="../../assets/css/font-awesome.min.css" />
+    <link href="../../assets/css/CEP-automation-css/custom.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        a.btn.btn-default {
+            width: 100%;
+            border-radius: 0;
+        }
+    </style>
+</head>
+
+<body class="loading">
+    <div id="loaderM"></div>
+    <div class="etisalat">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header col-sm-2">
+                    <a class="navbar-brand" href="home.html">
+                        <img src="../../assets/images/logo_white.png" alt="Etisalat">
+                    </a>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="col-sm-8">
+                    <div id="navbar" class="col-md-12 custom-container nav-container navbar-collapse collapse">
+                        <ul>
+                            <li>
+                                <a href="../index.html">Amendment</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--/.nav-collapse -->
+                <div class="col-sm-2">
+                    
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="page-container">
+                    <section class="page-content inner-page">
+                        <div class="clearfix"></div>
+                        <div class="smart-wizard">
+                            <!-- Tabs -->
+                            <div class="swMain">
+                                <div class="col-md-12 item custom-container progress-container">
+                                    <ul class="item  slickslider">
+                                        <li>
+                                            <a href="configuration.html" class="selected">
+                                                <span class="stepDesc">Configuration</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>2
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="billing.html" class="selected">
+                                                <span class="stepDesc">Contact</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>2
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-12 custom-container corporate-accounts">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div id="packages" class="packages noTagLine">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h5 class="mb-0 contact" data-toggle="collapse"
+                                                            data-target="#collapseNumber" aria-expanded="true"
+                                                            aria-controls="collapseNumber">
+                                                            <svg enable-background="new 0 0 26 26" id="Слой_1" version="1.1" viewBox="0 0 26 26" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M18.3085938,15.2519531c-0.3701172,0-0.6054688,0.1582031-0.7382813,0.2910156l-1.4833984,1.484375   c-0.0117188,0.0117188-0.0751953,0.0429688-0.2216797,0.0429688c-0.8173828,0-2.5527344-0.9091797-4.2890625-2.6464844   c-2.3339844-2.3330078-2.8486328-4.265625-2.6035156-4.5107422l1.484375-1.4833984   c0.9785156-0.9785156-0.7529297-3.0019531-1.8720703-4.1210938C8.0771484,3.8007813,6.3339844,2.1455078,5.203125,2.1455078   c-0.3701172,0-0.6054688,0.1582031-0.7382813,0.2910156l-2.96875,2.96875   c-0.890625,0.890625-0.5732422,2.6201172,0.9453125,5.1396484c1.3105469,2.1757813,3.3828125,4.7246094,5.8359375,7.1777344   C11.8994141,21.3447266,16.6992188,25,19.2568359,25h0.0009766c0.6953125,0,1.1113281-0.2695313,1.3369141-0.4960938   l2.96875-2.96875c0.9785156-0.9775391-0.7529297-3.0009766-1.8720703-4.1201172   C21.1835938,16.9072266,19.4404297,15.2519531,18.3085938,15.2519531z M19.5341797,23.4433594   C19.5126953,23.4648438,19.4306641,23.5,19.2568359,23.5c-1.4931641,0-5.4775391-2.3964844-9.9189453-6.8378906   c-2.3691406-2.3691406-4.3623047-4.8164063-5.6123047-6.890625C2.3291016,7.4521484,2.4482422,6.5742188,2.5566406,6.4658203   l2.7763672-2.7763672c0.3701172,0.1513672,1.1992188,0.6875,2.1914063,1.6796875   c0.9931641,0.9931641,1.5283203,1.8222656,1.6796875,2.1914063L7.9121094,8.8525391   c-1.3837891,1.3857422,0.3798828,4.4091797,2.6035156,6.6318359c1.9023438,1.9033203,3.9521484,3.0859375,5.3496094,3.0859375   c0.6601563,0,1.0615234-0.2617188,1.2822266-0.4824219l1.2919922-1.2919922   c0.3691406,0.1513672,1.1982422,0.6865234,2.1914063,1.6796875c0.9921875,0.9931641,1.5283203,1.8212891,1.6796875,2.1914063   L19.5341797,23.4433594z" fill="#1D1D1B"/><path d="M22.4667969,3.5332031C20.8339844,1.8994141,18.6601563,1,16.3466797,1   c-0.0009766,0-0.0019531,0-0.0019531,0c-0.4140625,0-0.75,0.3359375-0.75,0.75s0.3359375,0.75,0.75,0.75   c0.0009766,0,0.0009766,0,0.0019531,0c1.9130859,0,3.7099609,0.7431641,5.0595703,2.09375   C22.7568359,5.9443359,23.5,7.7412109,23.5,9.6552734c0,0.4140625,0.3359375,0.75,0.75,0.75s0.75-0.3359375,0.75-0.75   C25.0009766,7.3408203,24.1005859,5.1669922,22.4667969,3.5332031z" fill="#1D1D1B"/><path d="M15.3554688,5.4658203c0.0009766,0,0.0009766,0,0.0019531,0   c1.3847656,0,2.6845703,0.5380859,3.6621094,1.5146484c0.9765625,0.9775391,1.5146484,2.2783203,1.5146484,3.6640625   c0,0.4140625,0.3359375,0.75,0.75,0.75s0.75-0.3359375,0.75-0.75c0.0009766-1.7861328-0.6933594-3.4638672-1.9541016-4.7246094   c-1.2607422-1.2597656-2.9375-1.9541016-4.7226563-1.9541016c-0.0009766,0-0.0019531,0-0.0019531,0   c-0.4140625,0-0.75,0.3359375-0.75,0.75S14.9414063,5.4658203,15.3554688,5.4658203z" fill="#1D1D1B"/><path d="M14.3662109,8.4316406c0.0009766,0,0.0009766,0,0.0019531,0   c0.8554688,0,1.6601563,0.3330078,2.2636719,0.9365234c0.6044922,0.6044922,0.9365234,1.4091797,0.9365234,2.265625   c0,0.4140625,0.3359375,0.75,0.75,0.75s0.75-0.3359375,0.75-0.75c0.0009766-1.2568359-0.4882813-2.4384766-1.3759766-3.3261719   C16.8056641,7.4199219,15.625,6.9316406,14.3681641,6.9316406c-0.0009766,0-0.0019531,0-0.0019531,0   c-0.4140625,0-0.75,0.3359375-0.75,0.75S13.9521484,8.4316406,14.3662109,8.4316406z" fill="#1D1D1B"/></g></svg>
+                                                            Contact Details
+                                                            <small></small>    
+                                                            <a class="changeBtn" href="javascript:void(0);" style="display: none;">Change</a>                                                    
+                                                        </h5>
+                                                    </div>
+                                                    <div id="collapseMain" class="collapse in"
+                                                        aria-labelledby="headingMain" data-parent="#packages">
+                                                        <div class="card-body">
+                                                            <div class="tab-cont">
+                                                                <div class="row">
+                                                                    <div class="col-md-6">
+                                                                        <h3>Main Site Contact</h3>
+                                                                        <div class="sameDetail">
+                                                                            <form id="details">
+                                                                                <label class="container col-sm-12 small-check">Use Main Site Contact
+                                                                                    for Technical site Contract
+                                                                                    <input value="Same Contact" name="details"type="checkbox">
+                                                                                    <span class="checkmark"></span>
+                                                                                </label>
+                                                                            </form>
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <label for="">Select Contact <span class="req">*</span></label>
+                                                                            <input id="cusField" type="text" value="Minal Doongarwal">
+                                                                            <a id="cusModal" data-toggle="modal" data-target="#customerModal" href="javascript:void(0)"></a>
+                                                                            <div class="modal" id="customerModal" tabindex="-1" role="dialog" aria-labelledby="customerModalLabel">
+                                                                                <div class="modal-dialog" role="document">
+                                                                                <div class="modal-content">
+                                                                                    <div class="modal-header">
+                                                                                        Contact Look Up
+                                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                                                                    </div>
+                                                                                    <div class="modal-body">
+                                                                                        <div class="row">
+                                                                                            <div class="col-sm-6">
+                                                                                                <div class="form-group">
+                                                                                                    <label>Search</label>
+                                                                                                    <input class="search-field" type="text">
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="custom-container table-container small-table cusSelectGrid">
+                                                                                            <div class="data-container">
+                                                                                                <table class="table table-striped">
+                                                                                                    <thead>
+                                                                                                        <tr>
+                                                                                                            <th width="10%" scope="col">
+                                                                                                                
+                                                                                                            </th>
+                                                                                                            <th scope="col">
+                                                                                                                Contact Name
+                                                                                                            </th>
+                                                                                                            <th scope="col">
+                                                                                                                Mobile Number
+                                                                                                            </th>
+                                                                                                            <th>
+                                                                                                                Email
+                                                                                                            </th>
+                                                                                                        </tr>
+                                                                                                    </thead>
+                                                                                                    <tbody>
+                                                                                                        <tr>
+                                                                                                            <td>
+                                                                                                                <a class="selectBtn" href="javascript:void(0)"></a>
+                                                                                                            </td>
+                                                                                                            <td>
+                                                                                                                Minal Doongarwal
+                                                                                                            </td>
+                                                                                                            <td>
+                                                                                                                0401856396
+                                                                                                            </td>
+                                                                                                            <td>
+                                                                                                                minal@etisalat.ae
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                        <tr>
+                                                                                                            <td>
+                                                                                                                <a class="selectBtn" href="javascript:void(0)"></a>
+                                                                                                            </td>
+                                                                                                            <td>
+                                                                                                                Ahmed Al Amiri
+                                                                                                            </td>
+                                                                                                            <td>
+                                                                                                                0501856396
+                                                                                                            </td>
+                                                                                                            <td>
+                                                                                                                ahmed@etisalat.ae
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                        <tr>
+                                                                                                            <td>
+                                                                                                                <a class="selectBtn" href="javascript:void(0)"></a>
+                                                                                                            </td>
+                                                                                                            <td>
+                                                                                                                Mustafa Kamal
+                                                                                                            </td>
+                                                                                                            <td>
+                                                                                                                0501856396
+                                                                                                            </td>
+                                                                                                            <td>
+                                                                                                                mkamal@etisalat.ae
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                    </tbody>
+                                                                                                </table>                                
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="modal-footer">
+                                                                                        <button type="button" data-dismiss="modal" aria-label="Close" class="add-btn btn btn-primary">Select</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="contact-fields admin-01" style="display: block;">
+                                                                            <div class="row">
+                                                                                <div class="col-sm-6">
+                                                                                    <div class="form-group">
+                                                                                        <label for="">First Name</label>
+                                                                                        <input style="display: block;" class="hidden-field" readonly="" value="Minal"
+                                                                                            class="form-field" type="text">
+                                                                                        <input style="display:none" class="visible-field" readonly="" value=""
+                                                                                        class="form-field" type="text">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-sm-6">
+                                                                                    <div class="form-group">
+                                                                                        <label for="">Last Name</label>
+                                                                                        <input style="display: block;" class="hidden-field" readonly="" value="Doongarwal"
+                                                                                            class="form-field" type="text">
+                                                                                        <input style="display:none" class="visible-field" readonly="" value=""
+                                                                                        class="form-field" type="text">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-sm-6">
+                                                                                    <div class="form-group">
+                                                                                        <label for="">Email Address</label>
+                                                                                        <input style="display: block;" class="hidden-field" readonly="" value="mdoongarwal@etisalat.ae"
+                                                                                            class="form-field" type="text">
+                                                                                        <input style="display:none" class="visible-field" readonly="" value=""
+                                                                                        class="form-field" type="text">
+                                                                                        
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-sm-6">
+                                                                                    <div class="form-group">
+                                                                                        <label for="">Mobile Number</label>
+                                                                                        <input style="display: block;" class="hidden-field" readonly="" value="971569629141"
+                                                                                            class="form-field" type="text">
+                                                                                        <input style="display:none" class="visible-field" readonly="" value=""
+                                                                                        class="form-field" type="text">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                        <div class="add-contact-new">
+                                                                            <a class="fRight" href="javascript:void(0)" data-toggle="modal" data-target="#ContactModal2">
+                                                                               Add Contact
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="modal" id="ContactModal2" tabindex="-1" role="dialog"
+                                                                        aria-labelledby="ContactModal1" style="display: none;">
+                                                                        <div class="modal-dialog" role="document">
+                                                                            <div class="modal-content">
+                                                                                <div class="modal-header">
+                                                                                    <button type="button" class="close" data-dismiss="modal"
+                                                                                        aria-label="Close">
+                                                                                        <span aria-hidden="true">×</span>
+                                                                                    </button>
+                                                                                    <h4 class="modal-title" id="myModalLabel">New Contact</h4>
+                                                                                </div>
+                                                                                <div class="modal-body">
+                                                                                    <div class="contact-fields">
+                                                                                        <div class="row">
+                                                                                            <div class="col-sm-6">
+                                                                                                <div class="form-group">
+                                                                                                    <label for="">First Name
+                                                                                                        <span class="req">*</span>
+                                                                                                    </label>
+                                                                                                    <input class="form-field" type="text">
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="col-sm-6">
+                                                                                                <div class="form-group">
+                                                                                                    <label for="">Last Name
+                                                                                                        <span class="req">*</span>
+                                                                                                    </label>
+                                                                                                    <input class="form-field" type="text">
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="col-sm-6">
+                                                                                                <div class="form-group">
+                                                                                                    <label for="">Email
+                                                                                                        <span class="req">*</span>
+                                                                                                    </label>
+                                                                                                    <input class="form-field" type="text">
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="col-sm-6">
+                                                                                                <div class="form-group">
+                                                                                                    <label for="">Mobile Number eg. 971XXXXXXXXX
+                                                                                                        <span class="req">*</span>
+                                                                                                    </label>
+                                                                                                    <input class="form-field" type="text">
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="modal-footer">
+                                                                                    <button type="button" data-dismiss="modal"
+                                                                                        aria-label="Close" class="btn btn-primary">ADD</button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6" id="techContact">
+                                                                        <h3>Technical Site Contact
+                                                                        </h3>
+                                                                        <label class="spacer"></label>
+                                                                        <div class="form-group">
+                                                                            <label for="">Select Contact <span class="req">*</span></label>
+                                                                            <input id="cusField" type="text" value="">
+                                                                            <a id="cusModal" data-toggle="modal" data-target="#customerModal" href="javascript:void(0)"></a>
+                                                                            <div class="modal" id="customerModal" tabindex="-1" role="dialog" aria-labelledby="customerModalLabel">
+                                                                                <div class="modal-dialog" role="document">
+                                                                                <div class="modal-content">
+                                                                                    <div class="modal-header">
+                                                                                        Contact Look Up
+                                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                                                                    </div>
+                                                                                    <div class="modal-body">
+                                                                                        <div class="row">
+                                                                                            <div class="col-sm-6">
+                                                                                                <div class="form-group">
+                                                                                                    <label>Search</label>
+                                                                                                    <input class="search-field" type="text">
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="custom-container table-container small-table cusSelectGrid">
+                                                                                            <div class="data-container">
+                                                                                                <table class="table table-striped">
+                                                                                                    <thead>
+                                                                                                        <tr>
+                                                                                                            <th width="10%" scope="col">
+                                                                                                                
+                                                                                                            </th>
+                                                                                                            <th scope="col">
+                                                                                                                Contact Name
+                                                                                                            </th>
+                                                                                                            <th scope="col">
+                                                                                                                Mobile Number
+                                                                                                            </th>
+                                                                                                            <th>
+                                                                                                                Email
+                                                                                                            </th>
+                                                                                                        </tr>
+                                                                                                    </thead>
+                                                                                                    <tbody>
+                                                                                                        <tr>
+                                                                                                            <td>
+                                                                                                                <a class="selectBtn" href="javascript:void(0)"></a>
+                                                                                                            </td>
+                                                                                                            <td>
+                                                                                                                Minal Doongarwal
+                                                                                                            </td>
+                                                                                                            <td>
+                                                                                                                0401856396
+                                                                                                            </td>
+                                                                                                            <td>
+                                                                                                                minal@etisalat.ae
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                        <tr>
+                                                                                                            <td>
+                                                                                                                <a class="selectBtn" href="javascript:void(0)"></a>
+                                                                                                            </td>
+                                                                                                            <td>
+                                                                                                                Ahmed Al Amiri
+                                                                                                            </td>
+                                                                                                            <td>
+                                                                                                                0501856396
+                                                                                                            </td>
+                                                                                                            <td>
+                                                                                                                ahmed@etisalat.ae
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                        <tr>
+                                                                                                            <td>
+                                                                                                                <a class="selectBtn" href="javascript:void(0)"></a>
+                                                                                                            </td>
+                                                                                                            <td>
+                                                                                                                Mustafa Kamal
+                                                                                                            </td>
+                                                                                                            <td>
+                                                                                                                0501856396
+                                                                                                            </td>
+                                                                                                            <td>
+                                                                                                                mkamal@etisalat.ae
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                    </tbody>
+                                                                                                </table>                                
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="modal-footer">
+                                                                                        <button type="button" data-dismiss="modal" aria-label="Close" class="add-btn btn btn-primary">Select</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="contact-fields tech-00" style="display: show;">
+                                                                            <div class="row">
+                                                                                <div class="col-sm-6">
+                                                                                    <div class="form-group">
+                                                                                        <label for="">First Name</label>
+                                                                                        <input readonly="" value="" class="form-field" type="text">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-sm-6">
+                                                                                    <div class="form-group">
+                                                                                        <label for="">Last Name</label>
+                                                                                        <input readonly="" value="" class="form-field" type="text">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-sm-6">
+                                                                                    <div class="form-group">
+                                                                                        <label for="">Email Address</label>
+                                                                                        <input readonly="" value="" class="form-field" type="text">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-sm-6">
+                                                                                    <div class="form-group">
+                                                                                        <label for="">Mobile Number</label>
+                                                                                        <input readonly="" value="" class="form-field" type="text">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="contact-fields tech-01" style="display: none;">
+                                                                            <div class="row">
+                                                                                <div class="col-sm-6">
+                                                                                    <div class="form-group">
+                                                                                        <label for="">First Name</label>
+                                                                                        <input readonly="" value="Minal"
+                                                                                            class="form-field" type="text">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-sm-6">
+                                                                                    <div class="form-group">
+                                                                                        <label for="">Last Name</label>
+                                                                                        <input readonly="" value="Doongarwal"
+                                                                                            class="form-field" type="text">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-sm-6">
+                                                                                    <div class="form-group">
+                                                                                        <label for="">Email Address</label>
+                                                                                        <input readonly="" value="mdoongarwal@etisalat.ae"
+                                                                                            class="form-field" type="text">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-sm-6">
+                                                                                    <div class="form-group">
+                                                                                        <label for="">Mobile Number</label>
+                                                                                        <input readonly="" value="971569629141" class="form-field"
+                                                                                            type="text">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="contact-fields tech-02" style="display: none;">
+                                                                            <div class="row">
+                                                                                <div class="col-sm-4">
+                                                                                    <div class="form-group">
+                                                                                        <label for="">Full Name</label>
+                                                                                        <input readonly="" value="Ammar Al Ameri" class="form-field"
+                                                                                            type="text">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-sm-4">
+                                                                                    <div class="form-group">
+                                                                                        <label for="">Email Address</label>
+                                                                                        <input readonly="" value="alameri@etisalat.ae"
+                                                                                            class="form-field" type="text">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-sm-4">
+                                                                                    <div class="form-group">
+                                                                                        <label for="">Mobile Number</label>
+                                                                                        <input readonly="" value="971569656995" class="form-field"
+                                                                                            type="text">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="contact-fields tech-03" style="display: none;">
+                                                                            <div class="row">
+                                                                                <div class="col-sm-4">
+                                                                                    <div class="form-group">
+                                                                                        <label for="">Full Name</label>
+                                                                                        <input readonly="" value="John Wick" class="form-field"
+                                                                                            type="text">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-sm-4">
+                                                                                    <div class="form-group">
+                                                                                        <label for="">Email Address</label>
+                                                                                        <input readonly="" value="john@etisalat.ae"
+                                                                                            class="form-field" type="text">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-sm-4">
+                                                                                    <div class="form-group">
+                                                                                        <label for="">Mobile Number</label>
+                                                                                        <input readonly="" value="971569254985" class="form-field"
+                                                                                            type="text">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="add-contact-new">
+                                                                            <a class="fRight" href="javascript:void(0)" data-toggle="modal" data-target="#ContactModal3">
+                                                                               Add Contact
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="modal" id="ContactModal3" tabindex="-1" role="dialog"
+                                                                        aria-labelledby="ContactModal1" style="display: none;">
+                                                                        <div class="modal-dialog" role="document">
+                                                                            <div class="modal-content">
+                                                                                <div class="modal-header">
+                                                                                    <button type="button" class="close" data-dismiss="modal"
+                                                                                        aria-label="Close">
+                                                                                        <span aria-hidden="true">×</span>
+                                                                                    </button>
+                                                                                    <h4 class="modal-title" id="myModalLabel">New Contact</h4>
+                                                                                </div>
+                                                                                <div class="modal-body">
+                                                                                    <div class="contact-fields">
+                                                                                        <div class="row">
+                                                                                            <div class="col-sm-6">
+                                                                                                <div class="form-group">
+                                                                                                    <label for="">First Name
+                                                                                                        <span class="req">*</span>
+                                                                                                    </label>
+                                                                                                    <input class="form-field" type="text">
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="col-sm-6">
+                                                                                                <div class="form-group">
+                                                                                                    <label for="">Last Name
+                                                                                                        <span class="req">*</span>
+                                                                                                    </label>
+                                                                                                    <input class="form-field" type="text">
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="col-sm-6">
+                                                                                                <div class="form-group">
+                                                                                                    <label for="">Email
+                                                                                                        <span class="req">*</span>
+                                                                                                    </label>
+                                                                                                    <input class="form-field" type="text">
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="col-sm-6">
+                                                                                                <div class="form-group">
+                                                                                                    <label for="">Mobile Number eg. 971XXXXXXXXX
+                                                                                                        <span class="req">*</span>
+                                                                                                    </label>
+                                                                                                    <input class="form-field" type="text">
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="modal-footer">
+                                                                                    <button type="button" data-dismiss="modal"
+                                                                                        aria-label="Close" class="btn btn-primary">ADD</button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12  remove-padding-right text-right submit-button-container">
+                                    <button onclick="location.href = 'configuration.html'">Previous</button>
+                                    <button onclick="location.href = '../index.html'">Save & Close</button>
+                                    <button onclick="location.href = '../index.html'">Next</button>
+                                </div>
+                            </div>
+
+                            <div class="clearfix"></div>
+                            <!-- End SmartWizard Content -->
+                        </div>
+                        <div class="clearfix"></div>
+                    </section>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+
+    </div>
+
+    <!-- /.etisalat -->
+    <!-- /.footer -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../../assets/js/jquery-2.1.3.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../../assets/js/bootstrap.js"></script>
+    <script src="../../assets/js/bootstrap-select.js"></script>
+    <script src="../../assets/js/dcalendar.picker.js"></script>
+    <script type="text/javascript" src="../../assets/js/jquery.matchHeight-min.js"></script>
+    <script type="text/javascript" src="../../assets/js/jquery.smartWizard.js"></script>
+    <script src="../../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../../assets/js/slick.min.js"></script>
+    <script src="../../assets/js/scripts.js"></script>
+    <script src="../../assets/js/custom.js"></script>
+    <script>
+        $('.selectBtn').click(function(){
+            $(this).closest('tbody').find('tr').removeClass('selected');
+            $(this).closest('tr').toggleClass('selected');
+        });
+        $('.add-btn').click(function(){
+            $(this).closest('.tab-cont').find('#cusField').val('Minal Doongarwal');
+            $(this).closest('.col-md-6').find('.hidden-field').show();
+            $(this).closest('.col-md-6').find('.visible-field').hide();
+            $(this).closest('.col-md-6').find('input[value="Same Contact"]').removeAttr('disabled');
+        });
+        $('.next-btn').click(function () {
+            $(this).closest('.card').find('h5').addClass('collapsed');
+            $(this).closest('.card').next('.card').find('h5').removeClass('collapsed');
+            $(this).closest('.card').next('.card').find('.collapse').addClass('in');
+            $(this).closest('.card').find('.changeBtn').show();
+            $(this).closest('.collapse').removeClass('in');            
+        });
+        $('.changeBtn').click(function () {
+            $(this).closest('h5').removeClass('collapsed');
+            $(this).closest('.card').find('.collapse').addClass('in');            
+        });
+        $('.add-addon').click(function () {
+            $('.box-grid1').show();
+        });
+        $('.add-addon2').click(function () {
+            $('.box-grid2').show();
+        });
+        $('#adminContact').change(function () {
+            if ($(this).val() == 'adminOne') {
+                $('.admin-01').show();
+                $('.admin-02').hide();
+                $('.admin-03').hide();
+            }
+            if ($(this).val() == 'adminTwo') {
+                $('.admin-01').hide();
+                $('.admin-01').hide();
+                $('.admin-02').show();
+            }
+            if ($(this).val() == 'adminThree') {
+                $('.admin-01').hide();
+                $('.admin-02').hide();
+                $('.admin-03').show();
+            }
+        });
+        $('#techContact').change(function () {
+            if ($(this).val() == 'techOne') {
+                $('.tech-01').show();
+                $('.tech-02').hide();
+                $('.tech-03').hide();
+                $('.tech-00').hide();
+            }
+            if ($(this).val() == 'techTwo') {
+                $('.tech-01').hide();
+                $('.tech-03').hide();
+                $('.tech-02').show();
+                $('.tech-00').hide();
+            }
+            if ($(this).val() == 'techThree') {
+                $('.tech-01').hide();
+                $('.tech-02').hide();
+                $('.tech-03').show();
+                $('.tech-00').hide();
+            }
+        });
+
+
+        $('#details').click(function () {
+            if ($(this).find('input[type=checkbox]').is(':checked')) {
+                $("#techContact option[value=techOne]").attr('selected', 'selected');
+                $("#techContact .dropdown-menu li[data-original-index=1]").addClass('selected');
+                $("#techContact .dropdown-menu li[data-original-index=0]").removeClass('selected');
+                $("#techContact .filter-option").html('Minal Doongarwal');
+                $('.tech-01').show();
+                $('.tech-02').hide();
+                $('.tech-03').hide();
+                $('.tech-00').hide();
+                $(this).closest('.tab-cont').find('#techContact').find('#cusField').val('Minal Doongarwal');
+            }
+            else {
+                
+                $('.tech-01').hide();
+                $('.tech-02').hide();
+                $('.tech-03').hide();
+                $('.tech-00').show();
+
+                $("#techContact option[value=techNone]").attr('selected', 'selected');
+                $("#techContact .dropdown-menu li[data-original-index=0]").addClass('selected');
+                $("#techContact .dropdown-menu li[data-original-index=1]").removeClass('selected');
+                $("#techContact .filter-option").html('Select Contact');
+                $(this).closest('.tab-cont').find('#techContact').find('#cusField').val('');
+            }
+        });
+    </script>
+</body>
+
+</html>

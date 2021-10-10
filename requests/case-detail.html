@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sales Order Request :: Etisalat</title>
+    <!-- Bootstrap -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/bootstrap-select.min.css" />
+    <link href="../assets/css/CEP-automation-css/custom.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="loading">
+    <div id="loaderM"></div>
+    <div class="etisalat">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header col-sm-2">
+                    <a class="navbar-brand" href="home.html">
+                        <img src="../assets/images/logo_white.png" alt="Etisalat">
+                    </a>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="col-sm-8">
+                    <div id="navbar" class="col-md-12 custom-container nav-container navbar-collapse collapse">
+                        <ul>
+                            <li>
+                                <a href="javascript:void(0);">Mobile</a>
+                            </li>
+                            <li>
+                                <a class="show-fixed-content" href="index.html">Fixed</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">ICT</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Product Catalogue</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--/.nav-collapse -->
+                <div class="col-sm-2">
+                    <div class="navbar-right">
+                        <div class="dropdown">
+                            <a id="oSummary" class="summary-btn" data-target="#" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">
+                                Order Summary
+                                <span class="caret"></span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="oSummary">
+                                <div class="item-list">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Order ID</th>
+                                                <th>Customer Name</th>
+                                                <th>Party ID</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>ORD-212-2323</td>
+                                                <td>Aster Pharmacy</td>
+                                                <td>17567</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Order Status</th>
+                                                <th>Service Type</th>
+                                                <th>Sales Manager</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Draft</td>
+                                                <td>New Account</td>
+                                                <td>Jordan</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="page-container">
+                    <section class="page-content inner-page">
+                        <div class="clearfix"></div>
+                        <div class="smart-wizard">
+                            <!-- Tabs -->
+                            <div class="swMain">
+                                <div class="col-md-12 custom-container case-detailsbox">
+                                    <div class="row">
+                                        <div class="col-md-7">
+                                            <h2>
+                                                <small>CASE</small>02205999
+                                            </h2>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <ul class="upperinfo">
+                                                <li>
+                                                    <span>Priority</span>
+                                                    <strong>Normal</strong>
+                                                </li>
+                                                <li>
+                                                    <span>Created On</span>
+                                                    <strong>16/03/21 10:26</strong>
+                                                </li>
+                                                <li>
+                                                    <span>Owner<b>*</b></span>
+                                                    <strong><a href="javascript:void(0)">Bcrmintegration</a></strong>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <h3>Summary</h3>
+                                    <h4>Case Details</h4>
+                                    <div class="row case-summary">
+                                        <div class="col-md-6">
+                                            <ul class="suminfo">
+                                                <li>
+                                                    <span>Case Title<b>*</b></span>
+                                                    <strong>02205999</strong>
+                                                </li>
+                                                <li>
+                                                    <span>ID<b>*</b></span>
+                                                    <strong>CAS-43707-F1XO</strong>
+                                                </li>
+                                                <li>
+                                                    <span>First Name<b>*</b></span>
+                                                    <strong>John</strong>
+                                                </li>
+                                                <li>
+                                                    <span>Last Name<b>*</b></span>
+                                                    <strong>Smith</strong>
+                                                </li>
+                                                <li>
+                                                    <span>Customer<b>*</b></span>
+                                                    <strong><a href="javascript:void(0)">PHARMA TECH MEDICAL EQUIPMENT
+                                                            TRADING L L C</a></strong>
+                                                </li>
+                                                <li>
+                                                    <span>Party<b>*</b></span>
+                                                    <strong><a href="javascript:void(0)">AL ARD AL MUBARAKA FOODSTUFF
+                                                            TRADING L L C</a></strong>
+                                                </li>
+                                                <li>
+                                                    <span>Party ID<b>*</b></span>
+                                                    <strong>29533501</strong>
+                                                </li>
+                                                <li>
+                                                    <span>Email ID<b>*</b></span>
+                                                    <strong><a href="javascript:void(0)">billing@psinv.net</a></strong>
+                                                </li>
+                                                <li>
+                                                    <span>Contact</span>
+                                                    <strong><a href="javascript:void(0)">SAID OMAR SAID ABU
+                                                            LAILA</a></strong>
+                                                </li>
+                                                <li>
+                                                    <span>Project ID</span>
+                                                    <strong>---</strong>
+                                                </li>
+                                                <li>
+                                                    <span>Project</span>
+                                                    <strong>---</strong>
+                                                </li>
+                                                <li>
+                                                    <span>Account Number<b>*</b></span>
+                                                    <strong>29533501</strong>
+                                                </li>
+                                                <li>
+                                                    <span>Company Name</span>
+                                                    <strong>ETISALAT</strong>
+                                                </li>
+                                                <li>
+                                                    <span>Contact Number<b>*</b></span>
+                                                    <strong><a href="javascript:void(0)">501204548</a></strong>
+                                                </li>
+                                                <li>
+                                                    <span>UCMS Complaint ID</span>
+                                                    <strong>---</strong>
+                                                </li>
+                                                <li>
+                                                    <span>UCMS Request ID</span>
+                                                    <strong>---</strong>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ul class="suminfo">
+                                                <li class="dropdownli">
+                                                    <span>Case Study<b>*</b></span>
+                                                    <div class="form-group">
+                                                        <select class="selectpicker">
+                                                            <option value="pendingprice">Pending Pricing Approval
+                                                            </option>
+                                                            <option value="pendingbm">Pending with BM</option>
+                                                            <option value="closed">Closed</option>
+                                                        </select>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <span>Waiting for Customer</span>
+                                                    <strong>---</strong>
+                                                </li>
+                                                <li>
+                                                    <span>Ready for Closure</span>
+                                                    <strong>16/03/21 10:26</strong>
+                                                </li>
+                                                <li>
+                                                    <span>Nature<b>*</b></span>
+                                                    <strong>Others</strong>
+                                                </li>
+                                                <li>
+                                                    <span>Type<b>*</b></span>
+                                                    <strong>Others</strong>
+                                                </li>
+                                                <li>
+                                                    <span>Category of Request<b>*</b></span>
+                                                    <strong>Complaint</strong>
+                                                </li>
+                                                <li>
+                                                    <span>Closure Reason<b>*</b></span>
+                                                    <strong>---</strong>
+                                                </li>
+                                                <li>
+                                                    <span>Origin<b>*</b></span>
+                                                    <strong>---</strong>
+                                                </li>
+                                                <li>
+                                                    <span>URL</span>
+                                                    <strong><a
+                                                            href="javascript:void(0)">http://127.0.0.1:5500/requests/case-detail.html</a></strong>
+                                                </li>
+                                                <li>
+                                                    <span>Is Updated from Case</span>
+                                                    <strong>No</strong>
+                                                </li>
+                                                <li>
+                                                    <span>Is Updated from Case</span>
+                                                    <strong>No</strong>
+                                                </li>
+                                                <li>
+                                                    <span>Logging Flag</span>
+                                                    <strong>No</strong>
+                                                </li>
+                                                <li>
+                                                    <span>Language</span>
+                                                    <strong>English</strong>
+                                                </li>
+                                                <li>
+                                                    <span>Channel</span>
+                                                    <strong>B2B</strong>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="clearfix"></div>
+                            <!-- End SmartWizard Content -->
+                        </div>
+                        <div class="clearfix"></div>
+                    </section>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+
+    </div>
+
+    <!-- /.etisalat -->
+    <!-- /.footer -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../assets/js/jquery-2.1.3.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../assets/js/bootstrap.js"></script>
+    <script src="../assets/js/bootstrap-select.js"></script>
+    <script src="../assets/js/dcalendar.picker.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery.matchHeight-min.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery.smartWizard.js"></script>
+    <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../assets/js/slick.min.js"></script>
+    <script src="../assets/js/scripts.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('input[name=tandc]').change(function () {
+                if ($(this).prop('checked') == true) {
+                    $('.order-btn button').removeAttr('disabled');
+                }
+                else {
+                    $('.order-btn button').attr('disabled', 'disabled');
+                }
+            });
+        });
+        $('.review-grid .removeBtn').click(function () {
+            $(this).closest('tr').hide();
+        });
+    </script>
+</body>
+
+</html>

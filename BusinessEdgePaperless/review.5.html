@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sales Order Request :: Etisalat</title>
+    <!-- Bootstrap -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="../assets/css/font-awesome.min.css" />
+    <link href="../assets/css/CEP-automation-css/custom.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .etisalat .container-fluid{width:auto;}
+        .summary-box .flex-box .price-box,
+        .summary-box .flex-box .plus {
+            max-width: 33.333%;
+            flex: 0 0 33.333%;
+            min-width: 0;
+        }
+        .summary-box .flex-box .plus{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body class="loading">
+    <div id="loaderM"></div>
+    <div class="etisalat">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header col-sm-2">
+                    <a class="navbar-brand" href="home.html">
+                        <img src="../assets/images/logo_white.png" alt="Etisalat">
+                    </a>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="col-sm-8">
+                    
+                </div>
+                <!--/.nav-collapse -->
+                <div class="col-sm-2">
+                    
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="page-container">
+                    <section class="page-content inner-page">
+                        <div class="clearfix"></div>
+                        <div class="smart-wizard">
+                            <!-- Tabs -->
+                            <div class="swMain">
+                                <!-- <div class="col-md-12 item custom-container progress-container">
+                                    <ul class="item  slickslider">
+                                        <li>
+                                            <a href="bib-01.4.html" class="selected">
+                                                <span class="stepDesc">Package Selection</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>1
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="bib-03.3.html" class="selected">
+                                                <span class="stepDesc">Site Location</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>2
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="bundle-comp.html" class="selected">
+                                                <span class="stepDesc">Bundle Components</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>3
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="addon.5.html" class="selected">
+                                                <span class="stepDesc">Add-Ons</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>4
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="saas.html" class="selected">
+                                                <span class="stepDesc">SAAS</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>5
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="docs.html" class="selected">
+                                                <span class="stepDesc">Documents &amp; Notes</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>6
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="billing.4.html" class="selected">
+                                                <span class="stepDesc">Contact & Billing</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>7
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="review.5.html" class="selected">
+                                                <span class="stepDesc">Review</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>8
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="tandc-1.html" class="">
+                                                <span class="stepDesc">Terms & Condition</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>9
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div> -->
+                                <div class="col-md-12 custom-container corporate-accounts">
+                                    <div class="row">
+                                        <div class="col-sm-9">
+                                            <div class="summary-box">
+                                                <h3>Review</h3>
+                                                <div id="packages" class="packages">
+                                                    <div class="card">
+                                                        <div class="card-header" id="headingPackage">
+                                                            <h5 class="mb-0 internet" data-toggle="collapse"
+                                                                data-target="#collapsePackage" aria-expanded="false"
+                                                                aria-controls="collapsePackage">
+                                                                <span class="icon">
+                                                                    <img src="../assets/images/icon-green/opt13.png"
+                                                                        alt="">
+                                                                </span>
+                                                                Business Edge Package Details
+                                                                <span>
+                                                                    <img src="../assets/images/down-arrow.png" alt="">
+                                                                </span>
+                                                            </h5>
+                                                        </div>
+                                                        <div id="collapsePackage" class="collapse in"
+                                                            aria-labelledby="headingPackage" data-parent="#packages"
+                                                            aria-expanded="false">
+                                                            <div class="card-body">
+                                                                <h4>Plan Details</h4>
+                                                                <div class="row">
+                                                                    <div class="col-sm-4">
+                                                                        <div class="form-group">
+                                                                            <label>Product/Pack</label>
+                                                                            <input type="text" value="Security Premium" readonly>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-4">
+                                                                        <div class="form-group">
+                                                                            <label>Min. Contract Preiod</label>
+                                                                            <input type="text" value="12 Month" readonly>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-4">
+                                                                        <div class="form-group">
+                                                                            <label>Billing Frequency</label>
+                                                                            <input type="text" value="Monthly" readonly>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-4">
+                                                                        <div class="form-group">
+                                                                            <label>Monthly Rental</label>
+                                                                            <input type="text" value="1475 AED" readonly>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-4">
+                                                                        <div class="form-group">
+                                                                            <label>Discount</label>
+                                                                            <input type="text" value="-" readonly>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-4">
+                                                                        <div class="form-group">
+                                                                            <label>Activation Charges</label>
+                                                                            <input type="text" value="-" readonly>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <h4>Special Benefits</h4>
+                                                                <ul class="benifits">
+                                                                    <li>
+                                                                        <strong>Bandwidth</strong>
+                                                                        <span class="txt-right">300
+                                                                            Mbps</span>
+                                                                    </li>
+                                                                    <li>
+                                                                        <strong>User Voice Line</strong>
+                                                                        <span class="txt-right">3</span>
+                                                                    </li>
+                                                                    <li>
+                                                                        <strong>Toll
+                                                                            Free</strong>
+                                                                        <span class="txt-right">1</span>
+                                                                    </li>
+                                                                    <li>
+                                                                        <strong>Domain</strong>
+                                                                        <span class="txt-right">1</span>
+                                                                    </li>
+                                                                    <li>
+                                                                        <strong>Managed
+                                                                            Devices</strong>
+                                                                        <span class="txt-right">1</span>
+                                                                    </li>
+                                                                    <li>
+                                                                        <strong>User Email</strong>
+                                                                        <span class="txt-right">3</span>
+                                                                    </li>
+                                                                    <li>
+                                                                        <strong>User Data Backup (1TB)</strong>
+                                                                        <span class="txt-right">3</span>
+                                                                    </li>
+                                                                    <li>
+                                                                        <strong>User Endpoint Security</strong>
+                                                                        <span class="txt-right">3</span>
+                                                                    </li>
+                                                                    <li>
+                                                                        <strong>V-Firewall</strong>
+                                                                        <span class="txt-right">Yes</span>
+                                                                    </li>
+                                                                    <li>
+                                                                        <strong>IVR</strong>
+                                                                        <span class="txt-right">Yes</span>
+                                                                    </li>
+                                                                </ul>
+                                                                <h4>Additional Details</h4>
+                                                                <h6>Early Termination Charges</h6>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                                                </p>
+                                                                <h6>Penalty Free Service</h6>
+                                                                <p>Customer can exit the service contract within a maximum period of 5 days from activation without penalty charges (i.e. exit charges) if the service contract was miss sold or the provided service did not comply with the service terms and conditions.</p>
+                                                                <h6>Any Special Restriction</h6>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                                                </p>
+                                                                <h6>Fair Usage Policy</h6>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-header" id="headingAccount">
+                                                            <h5 class="mb-0 internet" data-toggle="collapse"
+                                                                data-target="#collapseAccount" aria-expanded="false"
+                                                                aria-controls="collapseAccount">
+                                                                <span class="icon">
+                                                                    <img src="../assets/images/icon-green/contact-icon.png"
+                                                                        alt="">
+                                                                </span>
+                                                                Account Details
+                                                                <span>
+                                                                    <img src="../assets/images/down-arrow.png" alt="">
+                                                                </span>
+                                                            </h5>
+                                                        </div>
+                                                        <div id="collapseAccount" class="collapse in"
+                                                            aria-labelledby="headingAccount" data-parent="#packages"
+                                                            aria-expanded="false">
+                                                            <div class="card-body">
+                                                                <div class="BandD-box">
+                                                                    <div class="row">
+                                                                        <div class="col-sm-4">
+                                                                            <div class="form-group">
+                                                                                <label for="">Main Account Number</label>
+                                                                                <input readonly="" value="048776879"
+                                                                                    class="form-field" type="text">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-4">
+                                                                            <div class="form-group">
+                                                                                <label for="">Interneet User Name</label>
+                                                                                <input readonly="" value="USR_ACC048776879" class="form-field" type="text">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-4">
+                                                                            <div class="form-group">
+                                                                                <label for="">VCPE / Router</label>
+                                                                                <input readonly="" value="Cisco X1" class="form-field" type="text">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-header" id="headingVoice">
+                                                            <h5 class="mb-0 internet" data-toggle="collapse"
+                                                                data-target="#collapseVoice" aria-expanded="false"
+                                                                aria-controls="collapseVoice">
+                                                                <span class="icon">
+                                                                    <img src="../assets/images/icon-green/voice-icon.png"
+                                                                        alt="">
+                                                                </span>
+                                                                Voice Lines
+                                                                <span>
+                                                                    <img src="../assets/images/down-arrow.png" alt="">
+                                                                </span>
+                                                            </h5>
+                                                        </div>
+                                                        <div id="collapseVoice" class="collapse in" aria-labelledby="headingVoice" data-parent="#packages" aria-expanded="false">
+                                                            <div class="card-body">
+                                                                <div class="BandD-box">
+                                                                    <div class="contact-fields tech-contact"
+                                                                            style="display: block;">
+                                                                            <div class="row">
+                                                                                <div class="col-sm-6">
+                                                                                    <div class="form-group">
+                                                                                        <label for="">Flexi Minuts</label>
+                                                                                        <input readonly="" value="Individual" class="form-field" type="text">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-sm-6">
+                                                                                    <div class="form-group">
+                                                                                        <label for="">IVR</label>
+                                                                                        <input readonly="" value="Active" class="form-field" type="text">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <table class="table table-striped">
+                                                                                <thead>
+                                                                                    <tr>
+                                                                                        <th>Account Number</th>
+                                                                                        <th>Package</th>
+                                                                                        <th>Devices</th>
+                                                                                        <th>Price</th>
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td>044564822</td>
+                                                                                        <td>Communicate</td>
+                                                                                        <td>Soft Client</td>
+                                                                                        <td>Free</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>044564823</td>
+                                                                                        <td>Communicate</td>
+                                                                                        <td>Basic Phone + Soft Client</td>
+                                                                                        <td>+13 AED</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>044564824</td>
+                                                                                        <td>Communicate</td>
+                                                                                        <td>Cordless Phone + Soft Client</td>
+                                                                                        <td>+95 AED</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>044564825</td>
+                                                                                        <td>Communicate</td>
+                                                                                        <td>Soft Client</td>
+                                                                                        <td>+95 AED</td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-header" id="headingSec">
+                                                            <h5 class="mb-0 internet" data-toggle="collapse"
+                                                                data-target="#collapseSec" aria-expanded="false"
+                                                                aria-controls="collapseSec">
+                                                                <span class="icon">
+                                                                    <img src="../assets/images/icon-green/security-icon.png"
+                                                                        alt="">
+                                                                </span>
+                                                                Security
+                                                                <span>
+                                                                    <img src="../assets/images/down-arrow.png" alt="">
+                                                                </span>
+                                                            </h5>
+                                                        </div>
+                                                        <div id="collapseSec" class="collapse in" aria-labelledby="headingSec" data-parent="#packages" aria-expanded="false">
+                                                            <div class="card-body">
+                                                                <div class="BandD-box">
+                                                                    <div class="contact-fields tech-contact"
+                                                                        style="display: block;">
+                                                                        <div class="row">
+                                                                            <div class="col-sm-4">
+                                                                                <div class="form-group">
+                                                                                    <label for="">Virtual Firewall</label>
+                                                                                    <input readonly="" value="Enabled" class="form-field" type="text">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-4">
+                                                                                <div class="form-group">
+                                                                                    <label for="">Client to Site VPN</label>
+                                                                                    <input readonly="" value="5 License" class="form-field" type="text">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-4">
+                                                                                <div class="form-group">
+                                                                                    <label for="">Site to Site VPN</label>
+                                                                                    <input readonly="" value="mysite.ae" class="form-field" type="text">
+                                                                                </div>
+                                                                            </div>
+                                                                            
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-header" id="headingDevice">
+                                                            <h5 class="mb-0 internet" data-toggle="collapse"
+                                                                data-target="#collapseDevice" aria-expanded="false"
+                                                                aria-controls="collapseDevice">
+                                                                <span class="icon">
+                                                                    <img src="../assets/images/icon-green/device-icon.png"
+                                                                        alt="">
+                                                                </span>
+                                                                Manage Services with Devices
+                                                                <span>
+                                                                    <img src="../assets/images/down-arrow.png" alt="">
+                                                                </span>
+                                                            </h5>
+                                                        </div>
+                                                        <div id="collapseDevice" class="collapse in" aria-labelledby="headingDevice" data-parent="#packages" aria-expanded="false">
+                                                            <div class="card-body">
+                                                                <div class="BandD-box">
+                                                                    <div class="contact-fields tech-contact"
+                                                                        style="display: block;">
+                                                                        <table class="table table-striped">
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th>Device Name</th>
+                                                                                    <th>Price</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>Managed Wifi – Cisco Meraki MR33</td>
+                                                                                    <td>13 AED</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Managed Signage</td>
+                                                                                    <td>15 AED</td>
+                                                                                </tr>
+                                                                                
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-header" id="headingDomain">
+                                                            <h5 class="mb-0 internet" data-toggle="collapse"
+                                                                data-target="#collapseDomain" aria-expanded="false"
+                                                                aria-controls="collapseDomain">
+                                                                <span class="icon">
+                                                                    <img src="../assets/images/icon-green/domain-store-icon.png"
+                                                                        alt="">
+                                                                </span>
+                                                                Domain
+                                                                <span>
+                                                                    <img src="../assets/images/down-arrow.png" alt="">
+                                                                </span>
+                                                            </h5>
+                                                        </div>
+                                                        <div id="collapseDomain" class="collapse in" aria-labelledby="headingDomain" data-parent="#packages" aria-expanded="false">
+                                                            <div class="card-body">
+                                                                <div class="BandD-box">
+                                                                    <div class="contact-fields tech-contact"
+                                                                        style="display: block;">
+                                                                        <div class="row">
+                                                                            <div class="col-sm-4">
+                                                                                <div class="form-group">
+                                                                                    <label for="">Domain Name</label>
+                                                                                    <input readonly="" value="mysite.ae" class="form-field" type="text">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-header" id="headingSaas">
+                                                            <h5 class="mb-0 internet" data-toggle="collapse"
+                                                                data-target="#collapseSaas" aria-expanded="false"
+                                                                aria-controls="collapseSaas">
+                                                                <span class="icon">
+                                                                    <img src="../assets/images/saas-icon.png"
+                                                                        alt="">
+                                                                </span>
+                                                                SAAS
+                                                                <span>
+                                                                    <img src="../assets/images/down-arrow.png" alt="">
+                                                                </span>
+                                                            </h5>
+                                                        </div>
+                                                        <div id="collapseSaas" class="collapse in" aria-labelledby="headingSaas" data-parent="#packages" aria-expanded="false">
+                                                            <div class="card-body">
+                                                                <h4>E-Store</h4>
+                                                                    <div class="contact-fields admin-01" style="display: block;">
+                                                                        <div class="row">
+                                                                            <div class="col-sm-6">
+                                                                                <div class="form-group">
+                                                                                    <label for="">First Name</label>
+                                                                                    <input readonly="" value="Minal" type="text">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-6">
+                                                                                <div class="form-group">
+                                                                                    <label for="">Last Address</label>
+                                                                                    <input readonly="" value="Doongarwal" type="text">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-6">
+                                                                                <div class="form-group">
+                                                                                    <label for="">Email</label>
+                                                                                    <input readonly="" value="mdoongarwal@etisalat.ae" type="text">
+                                                                                    
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-6">
+                                                                                <div class="form-group">
+                                                                                    <label for="">Mobile Number</label>
+                                                                                    <input readonly="" value="0501856396" type="text">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <h4>Email + Microsoft Essentials</h4>
+                                                                    <div class="row">
+                                                                        <div class="col-sm-6">
+                                                                            <div class="form-group md-domain">
+                                                                                <label>Microsoft Sub Domain</label>
+                                                                                <input type="text" value="mydomain" readonly>
+                                                                                <span class="msd">.onmicrosoft.com</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-6">
+                                                                            <div class="form-group">
+                                                                                <label>Domain </label>
+                                                                                <input type="text" value="mydomain.ae" readonly>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <h4>AntiVirus</h4>
+                                                                    <p style="margin-top:25px;" class="text-left">
+                                                                        Antivirus already included in this package and no extra configurations is required
+                                                                    </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-header" id="headingToll">
+                                                            <h5 class="mb-0 internet" data-toggle="collapse"
+                                                                data-target="#collapseToll" aria-expanded="false"
+                                                                aria-controls="collapseToll">
+                                                                <span class="icon">
+                                                                    <img src="../assets/images/icon-green/contact-icon.png"
+                                                                        alt="">
+                                                                </span>
+                                                                Toll Free
+                                                                <span>
+                                                                    <img src="../assets/images/down-arrow.png" alt="">
+                                                                </span>
+                                                            </h5>
+                                                        </div>
+                                                        <div id="collapseToll" class="collapse in" aria-labelledby="headingToll" data-parent="#packages" aria-expanded="false">
+                                                            <div class="card-body">
+                                                                <div class="BandD-box">
+                                                                    <div class="contact-fields tech-contact" style="display: block;">
+                                                                        <div class="row">
+                                                                            <div class="col-sm-6">
+                                                                                <div class="form-group">
+                                                                                    <label for="">Toll Free Number</label>
+                                                                                    <input readonly="" value="8001110812" class="form-field" type="text">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-6">
+                                                                                <div class="form-group">
+                                                                                    <label for="">Termination Number</label>
+                                                                                    <input readonly="" value="044564823 (Ext.)" class="form-field" type="text">
+                                                                                </div>
+                                                                            </div>
+                                                                            
+                                                                        </div>
+                                                                    </div>
+                                                                 
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-header" id="headingAddOn">
+                                                            <h5 class="mb-0 internet" data-toggle="collapse"
+                                                                data-target="#collapseAddOn" aria-expanded="false"
+                                                                aria-controls="collapseAddOn">
+                                                                <span class="icon">
+                                                                    <img src="../assets/images/icon-green/addon-icon.png"
+                                                                        alt="">
+                                                                </span>
+                                                                Add-On Details
+                                                                <span>
+                                                                    <img src="../assets/images/down-arrow.png" alt="">
+                                                                </span>
+                                                            </h5>
+                                                        </div>
+                                                        <div id="collapseAddOn" class="collapse in"
+                                                            aria-labelledby="headingAddOn" data-parent="#packages"
+                                                            aria-expanded="false">
+                                                            <div class="card-body">
+                                                                <div class="addon-box ucas-combo ve-serv expanable">
+                                                                    <div class="row">
+                                                                        <div class="col-sm-7">
+                                                                            <h4>UCAAS V3 Combo</h4>
+                                                                            <small>Voice Line, Email</small>
+                                                                        </div>
+                                                                        <div class="col-sm-2">
+                                                                            <div class="form-group">
+                                                                                <h4>Qty: <span>4</span></h4>
+                                                                                
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-3">
+                                                                            <div class="price-box">
+                                                                                <strong>200</strong>
+                                                                                AED / Month
+                                                                                <br>
+                                                                                <small>5% VAT Exc.</small>
+                                                                            </div>
+                                                                            <a class="expandIcon open" href="javascript:void(0);"></a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="hidden-fields" style="display:block;">
+                                                                        <div class="table-container small-table voice-grid">
+                                                                            <div class="data-container">
+                                                                                <table class="table table-striped number-grid">
+                                                                                    <thead>
+                                                                                        <tr>
+                                                                                            <th scope="col">
+                                                                                                Account Number
+                                                                                            </th>
+                                                                                            <th scope="col">
+                                                                                                Package
+                                                                                            </th>
+                                                                                            <th scope="col">
+                                                                                                Devices
+                                                                                            </th>
+                                                                                            <th scope="col">
+                                                                                                Price
+                                                                                            </th>
+                                                                                            <th scope="col">
+                                                                                                Duration
+                                                                                            </th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody>
+                                                                                        <tr class="row-01">
+                                                                                            <td>044564822</td>
+                                                                                            <td>
+                                                                                               <span class="readonly">Communicate</span>
+                                                                                            </td>
+                                                                                            <td>
+                                                                                                <span class="readonly">Soft Client</span>
+                                                                                            </td>
+                                                                                            <td class="price-cell">Free</td>
+                                                                                            <td>12 Months</td>
+                                                                                        </tr>
+                                                                                        <tr class="row-02">
+                                                                                            <td>044564823</td>
+                                                                                            <td>
+                                                                                                <span style="display: none;" class="readonly">Communicate</span>
+                                                                                            </td>
+                                                                                            <td>
+                                                                                                <span class="readonly">Basic Phone + Soft Client</span>
+                                                                                            </td>
+                                                                                            <td class="price-cell">Free</td>
+                                                                                            <td>12 Months</td>
+                                                                                        </tr>
+                                                                                        <tr class="row-04">
+                                                                                            <td>044564825</td>
+                                                                                            <td>
+                                                                                                <span class="readonly">Communicate</span>
+                                                                                            </td>
+                                                                                            <td>
+                                                                                                <span class="readonly">Soft Client</span>
+                                                                                            </td>
+                                                                                            <td class="price-cell">Free</td>
+                                                                                            <td>12 Months</td>
+                                                                                        </tr>
+                                                                                        <tr class="row-05">
+                                                                                            <td>044564826</td>
+                                                                                            <td>
+                                                                                                <span class="readonly">Communicate</span>
+                                                                                            </td>
+                                                                                            <td>
+                                                                                                <span class="readonly">Conference Phone + Soft Client</span>
+                                                                                            </td>
+                                                                                            <td class="price-cell">Free</td>
+                                                                                            <td>12 Months</td>
+                                                                                            
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-header" id="headingThree">
+                                                            <h5 class="mb-0 internet" data-toggle="collapse"
+                                                                data-target="#collapseThree" aria-expanded="false"
+                                                                aria-controls="collapseThree">
+                                                                <span class="icon">
+                                                                    <img src="../assets/images/icon-green/contact-icon.png"
+                                                                        alt="">
+                                                                </span>
+                                                                Contact Details
+                                                                <span>
+                                                                    <img src="../assets/images/down-arrow.png" alt="">
+                                                                </span>
+                                                            </h5>
+                                                        </div>
+                                                        <div id="collapseThree" class="collapse in" aria-labelledby="headingThree" data-parent="#packages" aria-expanded="false">
+                                                            <div class="card-body">
+                                                                <div class="BandD-box">
+                                                                    <h4>Admin Site Contact</h4>
+                                                                    <div class="contact-fields tech-contact"
+                                                                        style="display: block;">
+                                                                        <div class="row">
+                                                                            <div class="col-sm-3">
+                                                                                <div class="form-group">
+                                                                                    <label for="">First Name</label>
+                                                                                    <input readonly="" value="Ammar" class="form-field" type="text">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-3">
+                                                                                <div class="form-group">
+                                                                                    <label for="">Last Name</label>
+                                                                                    <input readonly="" value="Al Ameri" class="form-field" type="text">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-3">
+                                                                                <div class="form-group">
+                                                                                    <label for="">Email
+                                                                                        Address</label>
+                                                                                    <input readonly="" value="ammar@Hotmail.com"
+                                                                                        class="form-field"
+                                                                                        type="text">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-3">
+                                                                                <div class="form-group">
+                                                                                    <label for="">Mobile
+                                                                                        Number</label>
+                                                                                    <input readonly=""
+                                                                                        value="0507897896"
+                                                                                        class="form-field"
+                                                                                        type="text">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                 
+                                                                    <h4>Technical Site Contact</h4>
+                                                                    <div class="contact-fields">
+                                                                        <div class=" row">
+                                                                            <div class="col-sm-3">
+                                                                                <div class="form-group">
+                                                                                    <label for="">First Name</label>
+                                                                                    <input readonly="" value="Tarun" class="form-field" type="text">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-3">
+                                                                                <div class="form-group">
+                                                                                    <label for="">Last Name</label>
+                                                                                    <input readonly="" value="Sandra" class="form-field" type="text">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-3">
+                                                                                <div class="form-group">
+                                                                                    <label for="">Email Address</label>
+                                                                                    <input readonly="" value="0509878796" class="form-field" type="text">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-3">
+                                                                                <div class="form-group">
+                                                                                    <label for="">Mobile Number</label>
+                                                                                    <input readonly="" value="tarun@Hotmail.com" class="form-field" type="text">
+                                                                                </div>
+                                                                            </div>
+                                                                            
+                                                                        </div>
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-header" id="headingFour">
+                                                            <h5 class="mb-0 internet" data-toggle="collapse"
+                                                                data-target="#collapseFour" aria-expanded="false"
+                                                                aria-controls="collapseFour">
+                                                                <span class="icon">
+                                                                    <img src="../assets/images/ebill.png"
+                                                                        alt="">
+                                                                </span>
+                                                                E-Billing detail
+                                                                <span>
+                                                                    <img src="../assets/images/down-arrow.png" alt="">
+                                                                </span>
+                                                            </h5>
+                                                        </div>
+                                                        <div id="collapseFour" class="collapse in" aria-labelledby="headingFour" data-parent="#packages" aria-expanded="false">
+                                                            <div class="card-body">
+                                                                <div class="BandD-box">
+                                                                    <div class="contact-fields tech-contact"
+                                                                        style="display: block;">
+                                                                        <div class="row">
+                                                                            <div class="col-sm-3">
+                                                                                <div class="form-group">
+                                                                                    <label for="">First Name</label>
+                                                                                    <input readonly="" value="Ammar" class="form-field" type="text">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-3">
+                                                                                <div class="form-group">
+                                                                                    <label for="">Last Name</label>
+                                                                                    <input readonly="" value="Al Ameri" class="form-field" type="text">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-3">
+                                                                                <div class="form-group">
+                                                                                    <label for="">Email
+                                                                                        Address</label>
+                                                                                    <input readonly="" value="ammar@Hotmail.com"
+                                                                                        class="form-field"
+                                                                                        type="text">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-3">
+                                                                                <div class="form-group">
+                                                                                    <label for="">Mobile
+                                                                                        Number</label>
+                                                                                    <input readonly=""
+                                                                                        value="0507897896"
+                                                                                        class="form-field"
+                                                                                        type="text">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-header" id="headingBill">
+                                                            <h5 class="mb-0 internet" data-toggle="collapse"
+                                                                data-target="#collapseBill" aria-expanded="false"
+                                                                aria-controls="collapseBill">
+                                                                <span class="icon">
+                                                                    <img src="../assets/images/email-active.png"
+                                                                        alt="">
+                                                                </span>
+                                                                Bill delivery address details
+                                                                <span>
+                                                                    <img src="../assets/images/down-arrow.png" alt="">
+                                                                </span>
+                                                            </h5>
+                                                        </div>
+                                                        <div id="collapseBill" class="collapse in" aria-labelledby="headingBill" data-parent="#packages" aria-expanded="false">
+                                                            <div class="card-body">
+                                                                <div class="BandD-box">
+                                                                    <div class="contact-fields tech-contact"
+                                                                        style="display: block;">
+                                                                        <div class="row">
+                                                                            <div class="col-sm-6">
+                                                                                <div class="form-group">
+                                                                                    <label for="">PO Box</label>
+                                                                                    <input readonly="" value="75950" class="form-field" type="text">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-6">
+                                                                                <div class="form-group">
+                                                                                    <label for="">Emirate</label>
+                                                                                    <input readonly="" value="Dubai" class="form-field" type="text">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-6">
+                                                                                <div class="form-group">
+                                                                                    <label for="">Address line 1</label>
+                                                                                    <input readonly="" value="1802 Al Mankhool Satreet" class="form-field" type="text">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-6">
+                                                                                <div class="form-group">
+                                                                                    <label for="">Address line 2</label>
+                                                                                    <input readonly="" value="Latifa Tower" class="form-field" type="text">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="summary-box">
+                                                <h3>Order Summary</h3>
+                                                <div class="flex-box">
+                                                    <div class="price-box">
+                                                        <h5>Subscription</h5>
+                                                        <strong>1,713</strong>
+                                                        AED
+                                                        <br>
+                                                        <small>Monthly</small>
+                                                    </div>
+                                                    <div class="plus">+</div>
+                                                    <div class="price-box">
+                                                        <h5>One Time</h5>
+                                                        <strong>200</strong>
+                                                        AED
+                                                        <br>
+                                                        <small>One Time</small>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <form id="tandC">
+                                                    <label class="container col-sm-12 small-check tc-check">I
+                                                        agree to the
+                                                        <a href="javascript:void(0);" data-toggle="modal"
+                                                            data-target="#tcModal">terms and conditions</a>
+                                                        <input id="tandc" disabled value="Terms and Condition" name="tandc"
+                                                            type="checkbox">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </form>
+                                                <br><br>
+                                                <div class="modal" id="tcModal" tabindex="-1" role="dialog"
+                                                    aria-labelledby="tcModalLabel">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <button type="button" class="close"
+                                                                    data-dismiss="modal"
+                                                                    aria-label="Close"><span
+                                                                        aria-hidden="true">&times;</span></button>
+                                                                <h4 class="modal-title" id="tcModalLabel">Terms
+                                                                    &
+                                                                    Conditions</h4>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <div class="tandc">
+                                                                    <img style="margin-top: -13px;" src="../assets/images/t&c1.jpg" alt="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button"
+                                                                    class="btn btn-default tc-accept"
+                                                                    data-dismiss="modal"
+                                                                    data-scroll-to="#collapseSign"
+                                                                    data-scroll-focus="#collapseSign"
+                                                                    data-scroll-speed="700"
+                                                                    data-scroll-offset="200">Accept</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="order-btn text-right submit-button-container">
+                                                    <button class="order-btn">Place Order</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="clearfix"></div>
+                            <!-- End SmartWizard Content -->
+                        </div>
+                        <div class="clearfix"></div>
+                    </section>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+
+    </div>
+
+    <!-- /.etisalat -->
+    <!-- /.footer -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../assets/js/jquery-2.1.3.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../assets/js/bootstrap.js"></script>
+    <script src="../assets/js/bootstrap-select.js"></script>
+    <script src="../assets/js/dcalendar.picker.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery.matchHeight-min.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery.smartWizard.js"></script>
+    <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../assets/js/slick.min.js"></script>
+    <script src="../assets/js/scripts.js"></script>
+    <script src="../assets/js/custom.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('input[name=tandc]').change(function () {
+                if ($(this).prop('checked') == true) {
+                    $('.order-btn button').removeAttr('disabled');
+                }
+                else {
+                    $('.order-btn button').attr('disabled', 'disabled');
+                }
+            });
+        });
+        $('.expandIcon').click(function(){
+            $(this).toggleClass('open');
+            $(this).closest('.addon-box').find('.hidden-fields').toggle('slow');
+        });
+        $('.tc-accept').click(function (e) {
+            $('.tc-check input[type=checkbox]').removeAttr('disabled');
+            $('.tc-check input[type=checkbox]').prop('checked', 'checked');
+            e.preventDefault();
+        });
+    </script>
+</body>
+
+</html>

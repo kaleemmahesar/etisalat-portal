@@ -1,0 +1,2109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sales Order Request :: Etisalat</title>
+    <!-- Bootstrap -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="../assets/css/font-awesome.min.css" />
+    <link href="../assets/css/CEP-automation-css/custom.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="loading">
+    <div id="loaderM"></div>
+    <div class="etisalat">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header col-sm-2">
+                    <a class="navbar-brand" href="home.html">
+                        <img src="../assets/images/logo_white.png" alt="Etisalat">
+                    </a>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="col-sm-8">
+                    <div id="navbar" class="col-md-12 custom-container nav-container navbar-collapse collapse">
+                        <ul>
+                            <li>
+                                <a href="javascript:void(0);">Mobile</a>
+                            </li>
+                            <li>
+                                <a class="show-fixed-content" href="../index.html">Fixed</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">ICT</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Product Catalogue</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--/.nav-collapse -->
+                <div class="col-sm-2">
+                    <div class="navbar-right">
+                        <div class="dropdown">
+                            <a id="oSummary" class="summary-btn" data-target="#" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">
+                                Order Summary
+                                <span class="caret"></span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="oSummary">
+                                <div class="item-list">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Order ID</th>
+                                                <th>Customer Name</th>
+                                                <th>Party ID</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>ORD-212-2323</td>
+                                                <td>Aster Pharmacy</td>
+                                                <td>17567</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Order Status</th>
+                                                <th>Service Type</th>
+                                                <th>Sales Manager</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Draft</td>
+                                                <td>New Account</td>
+                                                <td>Jordan</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Authorized Contact Name</th>
+                                                <th>Authorized Contact Email</th>
+                                                <th>Authorized Contact Mobile</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Minal Doongarwal</td>
+                                                <td>mdoongarwal@etisalat.ae</td>
+                                                <td>971569629141</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>                                  
+                                </div>
+                                <div class="total collapsed">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <span id="breakDown" class="collapsed" data-toggle="collapse"
+                                                data-target="#collapseBreakdown" aria-expanded="false"
+                                                aria-controls="collapseBreakdown">
+                                                Break Down
+                                                <span>
+                                                    <img src="../assets/images/down-arrow.png" alt="">
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <h4>Grand Total</h4>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <h5 class="price">
+                                                1,713 AED
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapseBreakdown" class="collapse" aria-labelledby="breakDown">
+                                    <div class="card-body">
+                                        <div id="packages" class="packages">
+                                            <div class="card">
+                                                <div class="card-header" id="headingOne">
+                                                    <h5 class="mb-0 internet">
+                                                        <span class="icon">
+                                                            <img src="../assets/images/icon-green/opt13.png" alt="">
+                                                        </span>
+                                                        Package Details
+                                                    </h5>
+                                                    <!-- <h5 class="mb-0 internet"data-toggle="collapse"
+                                                                        data-target="#collapseOne" aria-expanded="false"
+                                                                        aria-controls="collapseOne">
+                                                                        <span class="icon">
+                                                                            <img src="../assets/images/icon-green/opt13.png" alt="">
+                                                                        </span>
+                                                                        Package Details
+                                                                        <span>
+                                                                            <img src="../assets/images/down-arrow.png" alt="">
+                                                                        </span>
+                                                                    </h5> -->
+                                                </div>
+                                                <div id="collapseOne" class="collapse in" aria-labelledby="headingOne"
+                                                    data-parent="#packages" aria-expanded="false">
+                                                    <div class="card-body">
+                                                        <table class="table review-grid">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th></th>
+                                                                    <th>QTY</th>
+                                                                    <th>Unit Price</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td style="width:70%;">
+                                                                        <span>Business in a box</span>
+                                                                        <h4>Security Essential Plan</h4>
+                                                                        <small>12 Month Contract</small>
+                                                                    </td>
+                                                                    <td>x 1</td>
+                                                                    <td>1095 AED/Month</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div class="card-header" id="headingTwo">
+                                                    <h5 class="mb-0 internet">
+                                                        <span class="icon">
+                                                            <img src="../assets/images/icon-green/addon-icon.png"
+                                                                alt="">
+                                                        </span>
+                                                        Add-On Details
+                                                    </h5>
+                                                    <!-- <h5 class="mb-0 internet" data-toggle="collapse"
+                                                                        data-target="#collapseTwo" aria-expanded="false"
+                                                                        aria-controls="collapseTwo">
+                                                                        <span class="icon">
+                                                                            <img src="../assets/images/icon-green/addon-icon.png"
+                                                                                alt="">
+                                                                        </span>
+                                                                        Add-On Details
+                                                                        <span>
+                                                                            <img src="../assets/images/down-arrow.png" alt="">
+                                                                        </span>
+                                                                    </h5> -->
+                                                </div>
+                                                <div id="collapseTwo" class="collapse in" aria-labelledby="headingTwo"
+                                                    data-parent="#packages" aria-expanded="false">
+                                                    <div class="card-body">
+                                                        <table class="table review-grid">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th></th>
+                                                                    <th>QTY</th>
+                                                                    <th>Unit Price</th>
+                                                                    <th></th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td style="width:70%;">
+                                                                        <h4>User Voice Line</h4>
+                                                                        <small>12 Month Contract</small>
+                                                                    </td>
+                                                                    <td>x 10</td>
+                                                                    <td>1000 AED</td>
+                                                                    <td><a class="removeBtn" href="javascript:void(0)">Remove</a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width:70%;">
+                                                                        <h4>User Email</h4>
+                                                                        <small>Description of Email</small>
+                                                                    </td>
+                                                                    <td>x 10</td>
+                                                                    <td>150 AED</td>
+                                                                    <td><a class="removeBtn" href="javascript:void(0)">Remove</a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width:70%;">
+                                                                        <h4>User Data Backup (1TB)</h4>
+                                                                        <small>Description of User Data Backup</small>
+                                                                    </td>
+                                                                    <td>x 10</td>
+                                                                    <td>200 AED</td>
+                                                                    <td><a class="removeBtn" href="javascript:void(0)">Remove</a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width:70%;">
+                                                                        <h4>User Endpoint Security</h4>
+                                                                        <small>Description of User Data Backup</small>
+                                                                    </td>
+                                                                    <td>x 10</td>
+                                                                    <td>100 AED</td>
+                                                                    <td><a class="removeBtn" href="javascript:void(0)">Remove</a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width:70%;">
+                                                                        <h4>Cordless Phone</h4>
+                                                                    </td>
+                                                                    <td>x 1</td>
+                                                                    <td>13 AED</td>
+                                                                    <td><a class="removeBtn" href="javascript:void(0)">Remove</a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width:70%;">
+                                                                        <h4>Video Phone</h4>
+                                                                    </td>
+                                                                    <td>x 1</td>
+                                                                    <td>95 AED</td>
+                                                                    <td><a class="removeBtn" href="javascript:void(0)">Remove</a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width:70%;">
+                                                                        <h4>Deluse Phone</h4>
+                                                                    </td>
+                                                                    <td>x 1</td>
+                                                                    <td>15 AED</td>
+                                                                    <td><a class="removeBtn" href="javascript:void(0)">Remove</a></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="page-container">
+                    <section class="page-content inner-page">
+                        <div class="clearfix"></div>
+                        <div class="smart-wizard">
+                            <!-- Tabs -->
+                            <div class="swMain">
+                                <div class="col-md-12 item custom-container progress-container">
+                                    <ul class="item  slickslider">
+                                        <li>
+                                            <a href="bib-01.4.html" class="selected">
+                                                <span class="stepDesc">Package Selection</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>1
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="bib-03.3.html" class="selected">
+                                                <span class="stepDesc">Site Location</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>2
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="bundle-comp.html" class="selected">
+                                                <span class="stepDesc">Bundle Components</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>3
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="addon.5.html" class="">
+                                                <span class="stepDesc">Add-Ons</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>4
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="billing.4.html" class="">
+                                                <span class="stepDesc">Contact & Billing</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>5
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="review.5.html">
+                                                <span class="stepDesc">Review</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>6
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-12 custom-container corporate-accounts">
+                                    <div class="row">
+                                        <div class="col-sm-10 col-sm-offset-1">
+                                            <div id="packages" class="packages component">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h5 class="mb-0 main">
+                                                            <svg width="40px" height="40px" viewBox="0 0 40 40"
+                                                                version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                                <g id="UCaaS-_Web" stroke="none" fill="none"
+                                                                    fill-rule="evenodd" stroke-linecap="round"
+                                                                    stroke-linejoin="round">
+                                                                    <g id="01.B2B---UCaaS-Config---Desktop-Copy"
+                                                                        transform="translate(-122.000000, -695.000000)">
+                                                                        <g id="Main-Number"
+                                                                            transform="translate(120.000000, 689.000000)">
+                                                                            <g id="Icon/Outline-1pt/phone/phone_number_grey"
+                                                                                transform="translate(0.000000, 4.000000)">
+                                                                                <path
+                                                                                    d="M12.7644,17.875 L33.3894,17.875"
+                                                                                    id="Line"></path>
+                                                                                <path
+                                                                                    d="M11.26675,25.4375 L31.89175,25.4375"
+                                                                                    id="Line"></path>
+                                                                                <path
+                                                                                    d="M27.14195,9.96875 L24.046825,34.03125"
+                                                                                    id="Line"></path>
+                                                                                <path
+                                                                                    d="M19.953175,9.96875 L16.85805,34.03125"
+                                                                                    id="Line"></path>
+                                                                                <path
+                                                                                    d="M41.25,22 C41.25,32.6313103 32.6319741,41.25 22,41.25 C11.3680259,41.25 2.75,32.6313103 2.75,22 C2.75,11.3680259 11.3680259,2.75 22,2.75 C32.6319741,2.75 41.25,11.3680259 41.25,22 L41.25,22 Z"
+                                                                                    id="Line"></path>
+                                                                            </g>
+                                                                        </g>
+                                                                    </g>
+                                                                </g>
+                                                            </svg>
+                                                            Main Number
+                                                            <small>1 Main Number with this
+                                                                bundle</small>
+                                                            <a id="headingMain" class="changeBtn"
+                                                                href="javascript:void(0);" data-toggle="collapse"
+                                                                data-target="#collapseMain" aria-expanded="true"
+                                                                aria-controls="collapseMain"
+                                                                style="display: none;">Change</a>
+                                                        </h5>
+                                                    </div>
+                                                    <div id="collapseMain" class="collapse in"
+                                                        aria-labelledby="headingMain" data-parent="#packages">
+                                                        <div class="card-body">
+                                                            <div class="account-container text-left">
+                                                                <div class="tab-cont">
+                                                                    <div class="row">
+                                                                        <div class="col-sm-5">
+                                                                            <div class="form-group">
+                                                                                <label>Main Number</label>
+                                                                                <input id="filter01" type="text">
+                                                                            </div>                                                                            
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row search-grid">
+                                                                        <div class="col-sm-12">
+                                                                            <div class="account-container">
+                                                                                <ul class="mainNum">
+                                                                                    <li>
+                                                                                        044564821
+                                                                                    </li>
+                                                                                    <li>044574821
+                                                                                    </li>
+                                                                                    <li>044584821
+                                                                                    </li>
+                                                                                    <li>044594821
+                                                                                    </li>
+                                                                                    <li>044565821
+                                                                                    </li>
+                                                                                    <li>044566821
+                                                                                    </li>
+                                                                                    <li>044567821
+                                                                                    </li>
+                                                                                    <li>044568821
+                                                                                    </li>
+                                                                                    <li>044569821
+                                                                                    </li>
+                                                                                    <li>044570821
+                                                                                    </li>
+                                                                                    <li>044571821</li>
+                                                                                    <li>044572821</li>
+                                                                                    <li>044573821</li>
+                                                                                    <li>044574821</li>
+                                                                                    <li>044575821</li>
+                                                                                    <li>044576821</li>
+                                                                                    <li>044577821</li>
+                                                                                    <li>044578821</li>
+                                                                                    <li>044579821</li>
+                                                                                    <li>044580821</li>
+                                                                                    <li>044581821</li>
+                                                                                    <li>044582821</li>
+                                                                                    <li>044583821</li>
+                                                                                    <li>044584821</li>
+                                                                                    <li>044585821</li>
+                                                                                    <li>044586821</li>
+                                                                                    <li>044587821</li>
+                                                                                    <li>044588821</li>
+                                                                                    <li>044589821</li>
+                                                                                    <li>044590821</li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-12 btn-box-alone">
+                                                                            <button disabled id="headingInternet"
+                                                                                class="default-btn next-btn"
+                                                                                data-toggle="collapse"
+                                                                                data-target="#collapseInternet"
+                                                                                aria-expanded="false"
+                                                                                aria-controls="collapseInternet">Next</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h5 class="mb-0 internet collapsed">
+                                                            <svg enable-background="new -0.824 -0.825 141.732 141.732"
+                                                                height="40" id="Livello_1" version="1.1"
+                                                                viewBox="-0.824 -0.825 141.732 141.732" width="40"
+                                                                xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                                                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                                <g id="Livello_39">
+                                                                    <path
+                                                                        d="M134.631,72.609c-0.616,15.764-6.873,30.078-16.813,40.979c-5.521-5.15-11.873-9.42-18.836-12.583   c1.959-8.614,3.125-18.228,3.295-28.396H134.631z M134.631,67.473h-32.354c-0.198-12.014-1.793-23.256-4.438-32.988   c6.312-2.73,12.131-6.369,17.312-10.74C126.629,34.93,133.961,50.344,134.631,67.473 M111.099,20.107   c-4.479,3.686-9.457,6.781-14.824,9.168c-3.139-9.508-7.348-17.23-12.24-22.355C94.146,9.152,103.373,13.748,111.099,20.107    M91.504,31.17c-5.946,2.094-12.293,3.344-18.894,3.602V5.693C80.323,7.455,87.086,17.064,91.504,31.17 M72.61,40.171   c7.109-0.255,13.947-1.575,20.363-3.798c2.314,9.121,3.719,19.734,3.901,31.1H72.61V40.171z M72.61,72.609h24.268   c-0.152,9.459-1.15,18.395-2.816,26.385c-6.729-2.457-13.938-3.914-21.449-4.186V72.609H72.61z M72.61,100.209   c7.092,0.277,13.888,1.699,20.213,4.08c-4.319,16.607-11.686,28.152-20.213,30.1V100.209z M84.032,133.162   c5.642-5.907,10.373-15.27,13.604-26.832c6.029,2.852,11.545,6.605,16.375,11.092C105.739,125.102,95.453,130.643,84.032,133.162    M67.473,134.389c-8.527-1.947-15.894-13.492-20.213-30.1c6.326-2.381,13.122-3.803,20.213-4.08V134.389z M67.473,94.809   c-7.513,0.271-14.722,1.729-21.449,4.188c-1.666-7.99-2.663-16.929-2.817-26.388h24.267L67.473,94.809L67.473,94.809z    M67.473,67.473H43.206c0.185-11.363,1.586-21.975,3.903-31.096c6.416,2.221,13.255,3.537,20.363,3.794L67.473,67.473   L67.473,67.473z M67.473,34.771c-6.6-0.258-12.944-1.508-18.893-3.602C52.998,17.064,59.76,7.455,67.473,5.693V34.771z    M56.053,6.92c-4.895,5.125-9.104,12.85-12.242,22.355c-5.367-2.387-10.347-5.482-14.823-9.168   C36.711,13.748,45.938,9.152,56.053,6.92 M24.93,23.748c5.185,4.369,11.011,8.002,17.318,10.732   c-2.646,9.733-4.239,20.977-4.438,32.992H5.453C6.123,50.346,13.453,34.934,24.93,23.748 M5.453,72.609H37.81   c0.169,10.168,1.335,19.781,3.294,28.396c-6.963,3.163-13.316,7.433-18.838,12.583C12.326,102.688,6.07,88.373,5.453,72.609    M26.072,117.422c4.83-4.486,10.346-8.24,16.375-11.092c3.232,11.562,7.962,20.925,13.604,26.832   C44.631,130.643,34.344,125.102,26.072,117.422 M140.032,72.609h0.052v-5.137h-0.052C138.71,30.833,109.25,1.372,72.61,0.05V0   h-5.138v0.051C30.834,1.373,1.373,30.834,0.052,67.473H0v5.136h0.052c0.622,17.261,7.487,32.929,18.408,44.812   c-0.03,0.033-0.062,0.065-0.093,0.101h0.186c12.258,13.285,29.59,21.813,48.92,22.512v0.053h2.565h0.004h0.004h2.564v-0.053   c19.332-0.695,36.664-9.227,48.92-22.512h0.187c-0.03-0.033-0.062-0.064-0.093-0.101   C132.545,105.537,139.409,89.869,140.032,72.609" />
+                                                                </g>
+                                                                <g id="Livello_1_1_" />
+                                                            </svg>
+                                                            Internet
+                                                            <small>1 Internet connection with this
+                                                                bundle</small>
+                                                            <a id="headingInternet" class="changeBtn"
+                                                                href="javascript:void(0);" data-toggle="collapse"
+                                                                data-target="#collapseInternet" aria-expanded="true"
+                                                                aria-controls="collapseInternet"
+                                                                style="display: none;">Change</a>
+                                                        </h5>
+                                                        </h5>
+                                                    </div>
+
+                                                    <div id="collapseInternet" class="collapse"
+                                                        aria-labelledby="headingInternet" data-parent="#packages">
+                                                        <div class="card-body">
+                                                            <div class="account-container text-left">
+                                                                <div class="tab-cont">
+                                                                    <div class="row">                                                                        
+                                                                        <div class="col-sm-5 form-group">
+                                                                            <label>User Name <span
+                                                                                    class="req">*</span></label>
+                                                                            <input id="reserve01" type="text">
+                                                                        </div>
+                                                                        <div class="col-sm-2 btn-box-alone">
+                                                                            <button
+                                                                                class="default-btn reserve-btn">Reserve</button>
+                                                                            <button style="display:none;"
+                                                                                class="default-btn unreserve-btn">Un-Reserve</button>
+                                                                        </div>
+                                                                        <div class="col-sm-12 btn-box-alone">
+                                                                            <button disabled id="headingVoice"
+                                                                                class="default-btn next-btn"
+                                                                                data-toggle="collapse"
+                                                                                data-target="#collapseVoice"
+                                                                                aria-expanded="false"
+                                                                                aria-controls="collapseVoice">Next</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h5 class="mb-0 voice collapsed">
+                                                            <svg width="40px" height="40px" viewBox="0 0 40 40"
+                                                                version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                                <g id="UCaaS-_Web" stroke="none" fill="none"
+                                                                    fill-rule="evenodd" stroke-linecap="round"
+                                                                    stroke-linejoin="round">
+                                                                    <g id="01.B2B---UCaaS-Config---Desktop-Copy"
+                                                                        transform="translate(-122.000000, -807.000000)">
+                                                                        <g id="Voice-Lines"
+                                                                            transform="translate(120.000000, 801.000000)">
+                                                                            <g id="Icon/Outline-1pt/voice-services/additional_grey"
+                                                                                transform="translate(0.000000, 4.000000)">
+                                                                                <path
+                                                                                    d="M26.8125,12.375 L36.4375,12.375"
+                                                                                    id="Line"></path>
+                                                                                <path d="M31.625,17.1875 L31.625,7.5625"
+                                                                                    id="Line"></path>
+                                                                                <path
+                                                                                    d="M41.25,12.375 C41.25,17.69075 36.939375,22 31.625,22 C26.30925,22 22,17.69075 22,12.375 C22,7.05925 26.30925,2.75 31.625,2.75 C36.939375,2.75 41.25,7.05925 41.25,12.375 L41.25,12.375 Z"
+                                                                                    id="Line"></path>
+                                                                                <path
+                                                                                    d="M14.2158395,19.1302813 C15.4966423,17.8493879 15.4966423,15.7723237 14.2158395,14.4914303 L10.7361115,11.0125706 C9.45586576,9.73167723 7.37894839,9.73167723 6.09703131,11.0125706 L4.18947629,12.9202605 C2.53429348,14.5761175 2.27802149,17.1585189 3.56885238,19.1118953 C9.11268414,27.4936962 16.5078025,34.8887802 24.8890109,40.4324467 C26.8377923,41.7216974 29.4283679,41.4648501 31.0790938,39.8123361 L32.987763,37.9035319 C34.2685659,36.6226385 34.2685659,34.5461315 32.987763,33.2646809 L29.5085921,29.7858212 C28.2283464,28.5049278 26.1508719,28.5049278 24.8695119,29.7858212 L23.7101597,30.9452554 C19.8950497,27.8185161 16.1818914,24.1056524 13.0564873,20.2897155 L14.2158395,19.1302813 L14.2158395,19.1302813 Z"
+                                                                                    id="Line"></path>
+                                                                            </g>
+                                                                        </g>
+                                                                    </g>
+                                                                </g>
+                                                            </svg>
+                                                            Voice Lines
+                                                            <small>3 Voice lines with this bundle
+                                                            </small>
+                                                            <a id="headingVoice" class="changeBtn"
+                                                                href="javascript:void(0);" data-toggle="collapse"
+                                                                data-target="#collapseVoice" aria-expanded="true"
+                                                                aria-controls="collapseVoice"
+                                                                style="display: none;">Change</a>
+                                                        </h5>
+                                                    </div>
+                                                    <div id="collapseVoice" class="collapse"
+                                                        aria-labelledby="headingVoice" data-parent="#packages">
+                                                        <div class="tab-cont">
+                                                            <div class="void-data" style="display: none;">
+                                                                <div class="row collaborate-box" style="display:none;">
+                                                                    <div class="col-sm-4">
+                                                                        <label>Account Number</label>
+                                                                        <input type="text">
+                                                                    </div>
+                                                                    <div class="col-sm-4">
+                                                                        <label>Number Pool</label>
+                                                                        <select id="numberSort" class="selectpicker">
+                                                                            <option value="public">Public Pool</option>
+                                                                            <option value="special">Special Pool
+                                                                            </option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="col-sm-2 add-btn-default">
+                                                                        <button class="btn btn-default">Search</button>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- <div class="row search-grid">
+                                                                    <div class="col-sm-12">
+                                                                        <div class="account-container">
+                                                                            <ul class="account-select">
+                                                                                <li class="show-set01 selected">044564822</li>
+                                                                                <li class="show-set02">044564823</li>
+                                                                                <li class="show-set03">044564824</li>
+                                                                                <li class="show-set04">044564825</li>
+                                                                                <li class="show-set05">044564826</li>
+                                                                                <li class="show-set06">044564827</li>
+                                                                                <li class="show-set07">044564828</li>
+                                                                                <li class="show-set08">044564829</li>
+                                                                                <li class="show-set09">044564830</li>
+                                                                                <li class="show-set10">044564821</li>
+                                                                                <li>041211082</li>
+                                                                                <li>041211083</li>
+                                                                                <li>041211084</li>
+                                                                                <li>041211085</li>
+                                                                                <li>041211086</li>
+                                                                                <li>041211087</li>
+                                                                                <li>041211088</li>
+                                                                                <li>041211089</li>
+                                                                                <li>041211080</li>
+                                                                                <li>041211081</li>
+                                                                                <li>041211082</li>
+                                                                                <li>041211083</li>
+                                                                                <li>041211084</li>
+                                                                                <li>041211085</li>
+                                                                                <li>041211086</li>
+                                                                                <li>041211087</li>
+                                                                                <li>041211088</li>
+                                                                                <li>041211089</li>
+                                                                                <li>041211080</li>
+                                                                                <li>041211081</li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div> -->
+
+                                                            </div>
+                                                            <div
+                                                                class="custom-container table-container small-table voice-grid">
+                                                                <div class="data-container">
+                                                                    <table class="table table-striped">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th scope="col">
+                                                                                    Account Number
+                                                                                </th>
+                                                                                <th scope="col">
+                                                                                    Package
+                                                                                </th>
+                                                                                <th scope="col">
+                                                                                    Devices
+                                                                                </th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr class="row-01">
+                                                                                <td>044564822</td>
+                                                                                <td>
+                                                                                    <input type="text"
+                                                                                        value="Communicate">
+                                                                                </td>
+                                                                                <td>
+                                                                                    <select class="selectpicker">
+                                                                                        <option>Basic Phone + Soft
+                                                                                            Client (Free)</option>
+                                                                                        <option>Soft Client</option>
+                                                                                        <option>Cordless Phone + Soft
+                                                                                            Client (13 AED)</option>
+                                                                                        <option>Deluxe Phone + Soft
+                                                                                            Client (15 AED)</option>
+                                                                                        <option>Video Phone + Soft
+                                                                                            Client (95 AED)</option>
+                                                                                        <option>Conference Phone + Soft
+                                                                                            Client (95 AED)</option>
+                                                                                    </select>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr class="row-02">
+                                                                                <td>044564823</td>
+                                                                                <td>
+                                                                                    <input type="text"
+                                                                                        value="Communicate">
+                                                                                </td>
+                                                                                <td>
+                                                                                    <select class="selectpicker">
+                                                                                        <option>Soft Client</option>
+                                                                                        <option>Basic Phone + Soft
+                                                                                            Client (+10 AED)</option>
+                                                                                        <option>Cordless Phone + Soft
+                                                                                            Client (13 AED)</option>
+                                                                                        <option>Deluxe Phone + Soft
+                                                                                            Client (15 AED)</option>
+                                                                                        <option>Video Phone + Soft
+                                                                                            Client (95 AED)</option>
+                                                                                        <option>Conference Phone + Soft
+                                                                                            Client (95 AED)</option>
+                                                                                    </select>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr class="row-03">
+                                                                                <td>044564824</td>
+                                                                                <td>
+                                                                                    <input type="text"
+                                                                                        value="Communicate">
+                                                                                </td>
+                                                                                <td>
+                                                                                    <select class="selectpicker">
+                                                                                        <option>Soft Client</option>
+                                                                                        <option>Basic Phone + Soft
+                                                                                            Client (+10 AED)</option>
+                                                                                        <option>Cordless Phone + Soft
+                                                                                            Client (13 AED)</option>
+                                                                                        <option>Deluxe Phone + Soft
+                                                                                            Client (15 AED)</option>
+                                                                                        <option>Video Phone + Soft
+                                                                                            Client (95 AED)</option>
+                                                                                        <option>Conference Phone + Soft
+                                                                                            Client (95 AED)</option>
+                                                                                    </select>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr class="row-04" style="display: none;">
+                                                                                <td>044564825</td>
+                                                                                <td>
+                                                                                    <input type="text"
+                                                                                        value="Communicate">
+                                                                                </td>
+                                                                                <td>
+                                                                                    <select class="selectpicker">
+                                                                                        <option>Soft Client</option>
+                                                                                        <option>Basic Phone + Soft
+                                                                                            Client (+10 AED)</option>
+                                                                                        <option>Cordless Phone + Soft
+                                                                                            Client (13 AED)</option>
+                                                                                        <option>Deluxe Phone + Soft
+                                                                                            Client (15 AED)</option>
+                                                                                        <option>Video Phone + Soft
+                                                                                            Client (95 AED)</option>
+                                                                                        <option>Conference Phone + Soft
+                                                                                            Client (95 AED)</option>
+                                                                                    </select>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr class="row-05" style="display: none;">
+                                                                                <td>044564826</td>
+                                                                                <td>
+                                                                                    <input type="text"
+                                                                                        value="Communicate">
+                                                                                </td>
+                                                                                <td>
+                                                                                    <select class="selectpicker">
+                                                                                        <option>Soft Client</option>
+                                                                                        <option>Basic Phone + Soft
+                                                                                            Client (+10 AED)</option>
+                                                                                        <option>Cordless Phone + Soft
+                                                                                            Client (13 AED)</option>
+                                                                                        <option>Deluxe Phone + Soft
+                                                                                            Client (15 AED)</option>
+                                                                                        <option>Video Phone + Soft
+                                                                                            Client (95 AED)</option>
+                                                                                        <option>Conference Phone + Soft
+                                                                                            Client (95 AED)</option>
+                                                                                    </select>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr class="row-06" style="display: none;">
+                                                                                <td>044564827</td>
+                                                                                <td>
+                                                                                    <input type="text"
+                                                                                        value="Communicate">
+                                                                                </td>
+                                                                                <td>
+                                                                                    <select class="selectpicker">
+                                                                                        <option>Soft Client</option>
+                                                                                        <option>Basic Phone + Soft
+                                                                                            Client (+10 AED)</option>
+                                                                                        <option>Cordless Phone + Soft
+                                                                                            Client (13 AED)</option>
+                                                                                        <option>Deluxe Phone + Soft
+                                                                                            Client (15 AED)</option>
+                                                                                        <option>Video Phone + Soft
+                                                                                            Client (95 AED)</option>
+                                                                                        <option>Conference Phone + Soft
+                                                                                            Client (95 AED)</option>
+                                                                                    </select>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr class="row-07" style="display: none;">
+                                                                                <td>044564828</td>
+                                                                                <td>
+                                                                                    <input type="text"
+                                                                                        value="Communicate">
+                                                                                </td>
+                                                                                <td>
+                                                                                    <select class="selectpicker">
+                                                                                        <option>Soft Client</option>
+                                                                                        <option>Basic Phone + Soft
+                                                                                            Client (+10 AED)</option>
+                                                                                        <option>Cordless Phone + Soft
+                                                                                            Client (13 AED)</option>
+                                                                                        <option>Deluxe Phone + Soft
+                                                                                            Client (15 AED)</option>
+                                                                                        <option>Video Phone + Soft
+                                                                                            Client (95 AED)</option>
+                                                                                        <option>Conference Phone + Soft
+                                                                                            Client (95 AED)</option>
+                                                                                    </select>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr class="row-08" style="display: none;">
+                                                                                <td>044564829</td>
+                                                                                <td>
+                                                                                    <input type="text"
+                                                                                        value="Communicate">
+                                                                                </td>
+                                                                                <td>
+                                                                                    <select class="selectpicker">
+                                                                                        <option>Soft Client</option>
+                                                                                        <option>Basic Phone + Soft
+                                                                                            Client (+10 AED)</option>
+                                                                                        <option>Cordless Phone + Soft
+                                                                                            Client (13 AED)</option>
+                                                                                        <option>Deluxe Phone + Soft
+                                                                                            Client (15 AED)</option>
+                                                                                        <option>Video Phone + Soft
+                                                                                            Client (95 AED)</option>
+                                                                                        <option>Conference Phone + Soft
+                                                                                            Client (95 AED)</option>
+                                                                                    </select>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr class="row-09" style="display: none;">
+                                                                                <td>044564830</td>
+                                                                                <td>
+                                                                                    <input type="text"
+                                                                                        value="Communicate">
+                                                                                </td>
+                                                                                <td>
+                                                                                    <select class="selectpicker">
+                                                                                        <option>Soft Client</option>
+                                                                                        <option>Basic Phone + Soft
+                                                                                            Client (+10 AED)</option>
+                                                                                        <option>Cordless Phone + Soft
+                                                                                            Client (13 AED)</option>
+                                                                                        <option>Deluxe Phone + Soft
+                                                                                            Client (15 AED)</option>
+                                                                                        <option>Video Phone + Soft
+                                                                                            Client (95 AED)</option>
+                                                                                        <option>Conference Phone + Soft
+                                                                                            Client (95 AED)</option>
+                                                                                    </select>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr class="row-10" style="display: none;">
+                                                                                <td>044564830</td>
+                                                                                <td>
+                                                                                    <input type="text"
+                                                                                        value="Communicate">
+                                                                                </td>
+                                                                                <td>
+                                                                                    <select class="selectpicker">
+                                                                                        <option>Soft Client</option>
+                                                                                        <option>Basic Phone + Soft
+                                                                                            Client (+10 AED)</option>
+                                                                                        <option>Cordless Phone + Soft
+                                                                                            Client (13 AED)</option>
+                                                                                        <option>Deluxe Phone + Soft
+                                                                                            Client (15 AED)</option>
+                                                                                        <option>Video Phone + Soft
+                                                                                            Client (95 AED)</option>
+                                                                                        <option>Conference Phone + Soft
+                                                                                            Client (95 AED)</option>
+                                                                                    </select>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-sm-12 btn-box-alone text-left">
+                                                                    <button id="headingDevice"
+                                                                        class="default-btn next-btn"
+                                                                        data-toggle="collapse"
+                                                                        data-target="#collapseDevice"
+                                                                        aria-expanded="false"
+                                                                        aria-controls="collapseDevice">Next</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card">
+                                                    <div class="card-header devices">
+                                                        <h5 class="mb-0 voice collapsed">
+                                                            <svg width="39px" height="39px" viewBox="0 0 64 64"
+                                                                version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                                <g id="Icon/Outline-1pt/phone-headset/device_black"
+                                                                    stroke="none" stroke-width="2" fill="none"
+                                                                    fill-rule="evenodd">
+                                                                    <g id="Devices"
+                                                                        transform="translate(3.000000, 9.000000)"
+                                                                        stroke="#000000">
+                                                                        <g id="vertical-example-copy"
+                                                                            transform="translate(42.000000, 20.000000)"
+                                                                            stroke-linecap="round">
+                                                                            <path
+                                                                                d="M17,25.2867319 C17,26.2290294 16.2734363,27 15.3854139,27 L1.61458605,27 C0.726563723,27 0,26.2290294 0,25.2867319 L0,1.7132681 C0,0.770970643 0.726563723,0 1.61458605,0 L15.3854139,0 C16.2734363,0 17,0.770970643 17,1.7132681 L17,25.2867319 Z"
+                                                                                id="Stroke-7" stroke-linejoin="round">
+                                                                            </path>
+                                                                            <path d="M0,22.5616438 L17,22.5616438"
+                                                                                id="Stroke-5"></path>
+                                                                            <path d="M0,3.77914453 L17,3.77914453"
+                                                                                id="Stroke-3"></path>
+                                                                            <path
+                                                                                d="M7.23404255,1.92982947 L10.1276596,1.92982947"
+                                                                                id="Stroke-7"></path>
+                                                                            <path
+                                                                                d="M9.40425532,24.9657534 C9.40425532,25.272 9.16119149,25.5205479 8.86170213,25.5205479 C8.56221277,25.5205479 8.31914894,25.272 8.31914894,24.9657534 C8.31914894,24.6595068 8.56221277,24.4109589 8.86170213,24.4109589 C9.16119149,24.4109589 9.40425532,24.6595068 9.40425532,24.9657534 Z"
+                                                                                id="Stroke-9-Copy"></path>
+                                                                        </g>
+                                                                        <g id="horizontal-example-copy">
+                                                                            <path
+                                                                                d="M16.1632653,46.6328125 L38.095743,46.6328125"
+                                                                                id="Stroke-1" stroke-linecap="round"
+                                                                                stroke-linejoin="round"></path>
+                                                                            <path
+                                                                                d="M27.2378428,39.2890625 L27.2378428,46.6328125"
+                                                                                id="Stroke-3" stroke-linecap="round"
+                                                                                stroke-linejoin="round"></path>
+                                                                            <path
+                                                                                d="M0,30.4765625 L38.4919683,30.4765625"
+                                                                                id="Stroke-5" stroke-linecap="round">
+                                                                            </path>
+                                                                            <path
+                                                                                d="M38.4919683,39.2890625 L3.72413793,39.2890625 C1.67586207,39.2890625 0,37.7516644 0,35.8726223 L0,3.41644022 C0,1.5373981 1.67586207,0 3.72413793,0 L50.2758621,0 C52.3241379,0 54,1.5373981 54,3.41644022 L54,17.7366982"
+                                                                                id="Stroke-7" stroke-linecap="round"
+                                                                                stroke-linejoin="round"></path>
+                                                                            <path
+                                                                                d="M27.9183673,34.8828125 C27.9183673,35.2881875 27.5892245,35.6171875 27.1836735,35.6171875 C26.7781224,35.6171875 26.4489796,35.2881875 26.4489796,34.8828125 C26.4489796,34.4774375 26.7781224,34.1484375 27.1836735,34.1484375 C27.5892245,34.1484375 27.9183673,34.4774375 27.9183673,34.8828125 Z"
+                                                                                id="Stroke-9"></path>
+                                                                        </g>
+                                                                    </g>
+                                                                </g>
+                                                            </svg>
+                                                            Devices
+                                                            & Services
+                                                            <small>2 devices with this internet Bundle.</small>
+                                                            <a id="headingDevice" class="changeBtn"
+                                                                href="javascript:void(0);" data-toggle="collapse"
+                                                                data-target="#collapseDevice" aria-expanded="true"
+                                                                aria-controls="collapseDevice"
+                                                                style="display: none;">Change</a>
+                                                        </h5>
+                                                    </div>
+                                                    <div id="collapseDevice" class="collapse"
+                                                        aria-labelledby="headingDevice" data-parent="#packages">
+                                                        <div
+                                                            class="custom-container table-container small-table offer-detail">
+                                                            <div class="data-container">
+                                                                <div class="tab-cont">
+                                                                    <div class="row">
+                                                                        <div class="col-sm-6">
+                                                                            <div class="form-group">
+                                                                                <label>Please Select Device 1 <span
+                                                                                        class="req">*</span></label>
+                                                                                <select class="selectpicker">
+                                                                                    <option></option>
+                                                                                    <option>Managed Wifi</option>
+                                                                                    <option>Managed Signage</option>
+                                                                                    <option>Managed Smartphone (Samsung)</option>
+                                                                                    <option>Managed Tablet (Samsung)</option>
+                                                                                    <option>Managed Laptop (HP i3)</option>
+                                                                                    <option>Managed Laptop (Lenovo i3)</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-6">
+                                                                            <div class="form-group">
+                                                                                <label>Please Select Device 2 <span
+                                                                                        class="req">*</span></label>
+                                                                                <select class="selectpicker req-field">
+                                                                                    <option></option>
+                                                                                    <option>Managed Wifi</option>
+                                                                                    <option>Managed Signage</option>
+                                                                                    <option>Managed Smartphone (Samsung)</option>
+                                                                                    <option>Managed Tablet (Samsung)</option>
+                                                                                    <option>Managed Laptop (HP i3)</option>
+                                                                                    <option>Managed Laptop (Lenovo i3)</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-sm-12 btn-box-alone text-left">
+                                                                            <button disabled id="headingDomain"
+                                                                                class="default-btn next-btn"
+                                                                                data-toggle="collapse"
+                                                                                data-target="#collapseDomain"
+                                                                                aria-expanded="false"
+                                                                                aria-controls="collapseDomain">Next</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card">
+                                                    <div class="card-header domain">
+                                                        <h5 class="mb-0 voice collapsed">
+                                                            <svg width="30px" height="40px" viewBox="0 0 30 40"
+                                                                version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                                <g id="UCaaS-_Web" stroke="none" fill="none"
+                                                                    fill-rule="evenodd" stroke-linecap="round"
+                                                                    stroke-linejoin="round">
+                                                                    <g id="01.B2B---UCaaS-Config---Desktop-Copy"
+                                                                        transform="translate(-127.000000, -1031.000000)">
+                                                                        <g id="Domain"
+                                                                            transform="translate(120.000000, 1025.000000)">
+                                                                            <g id="Icon-/Outline-1pt/eBill/eBill_grey"
+                                                                                transform="translate(0.000000, 4.000000)">
+                                                                                <polygon id="Line"
+                                                                                    points="8.25 41.25 11.7178991 37.9068999 15.1253435 41.1916747 18.6509493 37.9068999 21.999313 41.1916747 25.4369848 37.8777372 28.8746565 41.1916747 32.3123283 37.8777372 35.75 41.25 35.75 2.8083253 32.3123283 6.06393747 28.8746565 2.75 25.4369848 6.06393747 21.999313 2.75 18.5616413 6.06393747 15.1253435 2.75 11.6876717 6.06393747 8.25 2.8083253">
+                                                                                </polygon>
+                                                                                <path
+                                                                                    d="M25.2457582,22.0690433 C25.2457582,23.7781683 23.8361718,25.1627933 22.0962354,25.1627933 C20.356299,25.1627933 18.9453128,23.7781683 18.9453128,22.0690433 C18.9453128,20.3599183 20.356299,18.9752933 22.0962354,18.9752933 C23.8361718,18.9752933 25.2457582,20.3599183 25.2457582,22.0690433 L25.2457582,22.0690433 Z"
+                                                                                    id="Line"></path>
+                                                                                <path
+                                                                                    d="M26.6633554,28.8154669 C25.3362968,29.7263954 23.7309147,30.25 22.0007173,30.25 C17.444244,30.25 13.75,26.5560772 13.75,22 C13.75,17.4439228 17.444244,13.75 22.0007173,13.75 C26.5571907,13.75 30.25,17.4439228 30.25,22 L30.25,22.7172666 C30.25,24.1044601 29.1266629,25.2291341 27.7393488,25.2291341 C26.3534693,25.2291341 25.2286975,24.1044601 25.2286975,22.7172666 L25.2286975,22"
+                                                                                    id="Line"></path>
+                                                                            </g>
+                                                                        </g>
+                                                                    </g>
+                                                                </g>
+                                                            </svg>
+                                                            Domain
+                                                            <small>1 Domain with this
+                                                                bundle</small>
+                                                            <a id="headingDomain" class="changeBtn"
+                                                                href="javascript:void(0);" data-toggle="collapse"
+                                                                data-target="#collapseDomain" aria-expanded="true"
+                                                                aria-controls="collapseDomain"
+                                                                style="display: none;">Change</a>
+                                                        </h5>
+                                                    </div>
+                                                    <div id="collapseDomain" class="collapse"
+                                                        aria-labelledby="headingDomain" data-parent="#packages">
+                                                        <div class="card-body tab-cont">
+                                                            <div class="account-container text-left">
+                                                                <div class="row searchDomain">
+                                                                    <div class="col-sm-5 form-group">
+                                                                        <label>Search Domain</label>
+                                                                        <input type="text">
+                                                                    </div>
+                                                                    <div class="col-sm-5 form-group">
+                                                                        <label>Extensions</label>
+                                                                        <select id="divRatings"
+                                                                            placeholder="Select Extensions" multiple
+                                                                            class="addonQty selectpicker"
+                                                                            data-selected-text-format="count>2">
+                                                                            <option value="All">Select All</option>
+                                                                            <option>.ae</option>
+                                                                            <option>.net</option>
+                                                                            <option>.com</option>
+                                                                            <option>.org</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="col-sm-2">
+                                                                        <button
+                                                                            class="default-btn btn-only show-available">Search</button>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="availableDomain" style="display:none;">
+                                                                    <div class="">
+                                                                        <ul>
+                                                                            <li>
+                                                                                <div class="row">
+                                                                                    <div class="col-sm-10">
+                                                                                        <label
+                                                                                            class="domain-ext">mycompany.ae
+                                                                                            <small>(Available)</small></label>
+                                                                                    </div>
+                                                                                    <div class="col-sm-2">
+                                                                                        <button
+                                                                                            class="select-btn default-btn">Select</button>
+                                                                                    </div>
+                                                                                    <div class="user-name"
+                                                                                        style="display: none">
+                                                                                        <div class="col-sm-6">
+                                                                                            <label for="">User Name
+                                                                                                <span
+                                                                                                    class="req">*</span></label>
+                                                                                            <input id="userName"
+                                                                                                type="text">
+                                                                                        </div>
+                                                                                        <div class="col-sm-6">
+                                                                                            <!-- <button class="uname-search default-btn">Check</button> -->
+                                                                                            <button
+                                                                                                class="confirm-search default-btn">Confirm</button>
+                                                                                            <button
+                                                                                                class="reset-btn default-btn"
+                                                                                                style="display:none;">Reset
+                                                                                                Password</button>
+                                                                                            <button
+                                                                                                class="selected-btn default-btn"
+                                                                                                style="display:none;">Cancel</button>
+                                                                                            <button
+                                                                                                class="back-btn default-btn"
+                                                                                                style="display:none;">Cancel</button>
+                                                                                        </div>
+                                                                                        <div class="col-sm-12">
+                                                                                            <strong class="success"
+                                                                                                style="display: none">
+                                                                                                This user name is
+                                                                                                available!
+                                                                                            </strong>
+                                                                                            <strong class="failed"
+                                                                                                style="display: none">
+                                                                                                Sorry! This user name is
+                                                                                                not
+                                                                                                avaiable!
+                                                                                            </strong>
+                                                                                            <strong class="error"
+                                                                                                style="display: none">
+                                                                                                Please Enter the user
+                                                                                                name
+                                                                                            </strong>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="selected-user"
+                                                                                        style="display: none;">
+                                                                                        <div class="col-sm-4">
+                                                                                            <div class="form-group">
+                                                                                                <label
+                                                                                                    for="">Domain</label>
+                                                                                                <input readonly=""
+                                                                                                    value="mycompany.ae"
+                                                                                                    class="form-field"
+                                                                                                    type="text">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="col-sm-4">
+                                                                                            <div class="form-group">
+                                                                                                <label for="">User
+                                                                                                    Name</label>
+                                                                                                <input readonly=""
+                                                                                                    value="ammar"
+                                                                                                    class="form-field"
+                                                                                                    type="text">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="col-sm-4">
+                                                                                            <a href="javascript:void(0)"
+                                                                                                class="edit-btn">Edit</a>
+                                                                                            <a href="javascript:void(0)"
+                                                                                                class="delete-btn">Delete</a>
+                                                                                        </div>
+                                                                                        <div class="col-sm-12">
+                                                                                            <strong class="updated"
+                                                                                                style="display: none">
+                                                                                                Password reset
+                                                                                                successfully!
+                                                                                            </strong>
+                                                                                        </div>
+
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="row">
+                                                                                    <div class="col-sm-10">
+                                                                                        <label
+                                                                                            class="domain-ext">mycompany.net
+                                                                                            <small>(Available)</small></label>
+                                                                                    </div>
+                                                                                    <div class="col-sm-2">
+                                                                                        <button
+                                                                                            class="select-btn default-btn">Select</button>
+                                                                                        <button
+                                                                                            class="selected-btn default-btn"
+                                                                                            style="display:none;">Deselect</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="row">
+                                                                                    <div class="col-sm-10">
+                                                                                        <label
+                                                                                            class="domain-ext">mycompany.org
+                                                                                            <small>(Available)</small></label>
+                                                                                    </div>
+                                                                                    <div class="col-sm-2">
+                                                                                        <button
+                                                                                            class="select-btn default-btn">Select</button>
+                                                                                        <button
+                                                                                            class="selected-btn default-btn"
+                                                                                            style="display:none;">Deselect</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li>
+                                                                                <div class="row">
+                                                                                    <div class="col-sm-10">
+                                                                                        <label
+                                                                                            class="domain-ext">mycompany.com
+                                                                                            <small class="red-txt">(Not
+                                                                                                Available)</small></label>
+                                                                                    </div>
+                                                                                    <div class="col-sm-2">
+
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-sm-12 btn-box-alone text-left">
+                                                                    <!-- <button id="headingFirewall"
+                                                                        class="default-btn next-btn"
+                                                                        data-toggle="collapse"
+                                                                        data-target="#collapseFirewall"
+                                                                        aria-expanded="false"
+                                                                        aria-controls="collapseFirewall">Next</button> -->
+                                                                    <button disabled id="headingToll"
+                                                                        class="default-btn next-btn"
+                                                                        data-toggle="collapse"
+                                                                        data-target="#collapseToll"
+                                                                        aria-expanded="false"
+                                                                        aria-controls="collapseToll">Next</button>
+                                                                    <button id="headingFirewall"
+                                                                        class="default-btn next-btn"
+                                                                        data-toggle="collapse"
+                                                                        data-target="#collapseToll"
+                                                                        aria-expanded="false"
+                                                                        aria-controls="collapseToll">Skip</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- <div class="card">
+                                                    <div class="card-header firewall">
+                                                        <h5 class="mb-0 voice collapsed">
+                                                            <img src="../assets/images/firewall-icon.png" alt="">
+                                                            V-Firewall
+                                                            <small>Basic Firewall Enabled</small>
+                                                            <a id="headingFirewall" class="changeBtn"
+                                                                href="javascript:void(0);" data-toggle="collapse"
+                                                                data-target="#collapseFirewall" aria-expanded="true"
+                                                                aria-controls="collapseFirewall"
+                                                                style="display: none;">Change</a>
+                                                        </h5>
+                                                    </div>
+                                                    <div id="collapseFirewall" class="collapse"
+                                                        aria-labelledby="headingFirewall" data-parent="#packages">
+                                                        <div
+                                                            class="custom-container table-container small-table offer-detail">
+                                                            <div class="data-container">
+                                                                <div class="row">
+                                                                    <div class="v-firewall-box tab-cont">
+
+                                                                        <div class="col-sm-4">
+                                                                            <label class="top-label">Falvour</label>
+                                                                            <select class="selectpicker vFirewall">
+                                                                                <option>Basic</option>
+                                                                                <option>Premium</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <div class="col-sm-12 btn-box-alone text-left">
+                                                                            <button id="headingToll"
+                                                                                class="default-btn next-btn"
+                                                                                data-toggle="collapse"
+                                                                                data-target="#collapseToll"
+                                                                                aria-expanded="false"
+                                                                                aria-controls="collapseToll">Next</button>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>  -->
+                                                <div class="card">
+                                                    <div class="card-header toll-free" id="headingToll">
+                                                        <h5 class="mb-0 voice collapsed">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="40"
+                                                                height="40" viewBox="0 0 238.413 378.85">
+                                                                <g id="mobile_shield" data-name="mobile shield"
+                                                                    transform="translate(-2037 -158)" stroke-width="8">
+                                                                    <g id="Group_3" data-name="Group 3"
+                                                                        transform="translate(2023.761 143)">
+                                                                        <path id="Path_4" data-name="Path 4"
+                                                                            d="M192.326,193.85V27a12.035,12.035,0,0,0-12-12H25.239a12.035,12.035,0,0,0-12,12V330.152a12.035,12.035,0,0,0,12,12H80.561"
+                                                                            fill="none" />
+                                                                        <path id="Path_5" data-name="Path 5"
+                                                                            d="M169.062,393.85c-5.131-3.765-11.4-5.159-16.916-8.17-26.881-14.666-43.42-37.573-53.073-66.031A188.755,188.755,0,0,1,89.857,271.9c-.794-11.322-1.213-22.558.045-33.861.34-3.057,1.749-4.5,4.459-5.11A312.787,312.787,0,0,0,166.9,206.97a6.813,6.813,0,0,1,6.6.033,371.9,371.9,0,0,0,72.1,25.892c2.663.656,4.245,1.952,4.578,5.033,3.666,33.95,1.011,67.083-13.543,98.429-12.036,25.921-31.616,44.106-58.4,54.387-2.43.933-5.1,1.327-7.17,3.106Z"
+                                                                            fill="none" />
+                                                                        <path id="Path_6" data-name="Path 6"
+                                                                            d="M174.265,253.426c0-10.485.107-20.971-.054-31.453-.059-3.846.823-4.617,4.512-2.957A360.115,360.115,0,0,0,238.286,239.9c2.6.657,3.554,1.846,3.9,4.713,1.609,13.462.765,26.866-.172,40.3-.251,3.6-1.468,5.138-5.477,5.093q-28.7-.326-57.413,0c-4.1.047-5.021-1.313-4.937-5.124C174.415,274.4,174.263,263.91,174.265,253.426Z"
+                                                                            fill="none" />
+                                                                        <path id="Path_7" data-name="Path 7"
+                                                                            d="M166.012,254.035c0,10.647-.1,21.3.06,31.942.045,3.059-.934,4-3.981,3.983q-28.948-.17-57.9-.008c-2.9.015-3.79-.827-4.264-3.852-2.121-13.541-1.955-27.14-1.951-40.765,0-3.324,1.189-4.662,4.238-5.4a298.154,298.154,0,0,0,59.5-20.876c3.942-1.9,4.389-.508,4.345,3.034C165.926,232.738,166.012,243.387,166.012,254.035Z"
+                                                                            fill="none" />
+                                                                        <path id="Path_8" data-name="Path 8"
+                                                                            d="M239.7,298.853c-7.559,37.113-24.939,66.182-60.346,82.086-3.564,1.6-5.21,1.8-5.175-3.064.177-24.663.1-49.329.063-73.994,0-2.883-.016-5.131,4.069-5.1C198.466,298.939,218.62,298.853,239.7,298.853Z"
+                                                                            fill="none" />
+                                                                        <path id="Path_9" data-name="Path 9"
+                                                                            d="M166.012,340.338q0,18.465-.006,36.929c-.009,5.282-.16,5.364-4.836,3.156-26.664-12.594-43.254-33.967-53.047-61.161-1.961-5.445-3.353-11.1-4.962-16.664-.667-2.307-.816-3.862,2.683-3.83q28.192.264,56.39.019c3.237-.023,3.853,1.26,3.827,4.124C165.946,315.386,166.012,327.862,166.012,340.338Z"
+                                                                            fill="none" />
+                                                                        <path id="Path_10" data-name="Path 10"
+                                                                            d="M174.951,193.85V49.634a12.035,12.035,0,0,0-12-12H43.957a12.035,12.035,0,0,0-12,12V282.77a12.035,12.035,0,0,0,12,12h36.6"
+                                                                            fill="none" />
+                                                                        <line id="Line_1" data-name="Line 1" y1="88.057"
+                                                                            x2="88.057"
+                                                                            transform="translate(55.25 72.371)"
+                                                                            fill="none" />
+                                                                        <line id="Line_2" data-name="Line 2" y1="49.683"
+                                                                            x2="49.683"
+                                                                            transform="translate(49.595 54.925)"
+                                                                            fill="none" />
+                                                                    </g>
+                                                                </g>
+                                                            </svg>
+                                                            Toll Free
+                                                            <small>1 Toll Free number with this
+                                                                bundle</small>
+                                                            <a id="headingToll" class="changeBtn"
+                                                                href="javascript:void(0);" data-toggle="collapse"
+                                                                data-target="#collapseToll" aria-expanded="true"
+                                                                aria-controls="collapseToll"
+                                                                style="display: none;">Change</a>
+                                                        </h5>
+                                                    </div>
+                                                    <div id="collapseToll" class="collapse"
+                                                        aria-labelledby="headingToll" data-parent="#packages">
+                                                        <div class="tab-cont">
+                                                            <div class="void-data">
+                                                                <div class="row">
+                                                                    <div class="col-sm-6 form-group">
+                                                                        <label>Toll Free Number</label>
+                                                                        <input type="text">
+                                                                    </div>
+                                                                    <div class="col-sm-6 form-group">
+                                                                        <label>Termination Number <span
+                                                                                class="req">*</span></label>
+                                                                        <select disabled
+                                                                            class="selectpicker termination">
+                                                                            <option></option>
+                                                                            <option value="main">044564821 (Main)
+                                                                            </option>
+                                                                            <option>044564822 (Ext.)</option>
+                                                                            <option>044564823 (Ext.)</option>
+                                                                            <option>044564824 (Ext.)</option>
+                                                                        </select>
+                                                                    </div>
+
+                                                                    <!-- <div class="col-sm-6 communicate-box">
+                                                                        <label>Number Pool</label>
+                                                                        <select id="selectPackage" class="selectpicker">
+                                                                            <option>Basic Pool</option>
+                                                                            <option>Special Pool</option>
+                                                                            <option>GHQ Pool</option>
+                                                                        </select>
+                                                                    </div> -->
+                                                                </div>
+
+                                                                <div class="row collaborate-box" style="display:none;">
+                                                                    <div class="col-sm-4 form-group">
+                                                                        <label>Account Number</label>
+                                                                        <input type="text">
+                                                                    </div>
+                                                                    <div class="col-sm-4 form-group">
+                                                                        <label>Number Pool</label>
+                                                                        <select id="numberSort" class="selectpicker">
+                                                                            <option value="public">Public Pool</option>
+                                                                            <option value="special">Special Pool
+                                                                            </option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="col-sm-2 add-btn-default">
+                                                                        <button class="btn btn-default">Search</button>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row search-grid">
+                                                                    <div class="col-sm-12">
+                                                                        <div class="account-container">
+                                                                            <ul class="voiceNum">
+                                                                                <li>8001110812</li>
+                                                                                <li>8001110813</li>
+                                                                                <li>8001110814</li>
+                                                                                <li>8001110815</li>
+                                                                                <li>8001110816</li>
+                                                                                <li>8001110817</li>
+                                                                                <li>8001110818</li>
+                                                                                <li>8001110819</li>
+                                                                                <li>8001110820</li>
+                                                                                <li>8001110821</li>
+                                                                                <li>8002110822</li>
+                                                                                <li>8002110823</li>
+                                                                                <li>8002110824</li>
+                                                                                <li>8002110825</li>
+                                                                                <li>8002110826</li>
+                                                                                <li>8002110827</li>
+                                                                                <li>8002110828</li>
+                                                                                <li>8002110829</li>
+                                                                                <li>8002110830</li>
+                                                                                <li>8002110831</li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="number-setting account-container text-left"
+                                                                style="display: none;">
+                                                                <div class="row">
+                                                                    <div class="col-sm-3">
+                                                                        <label>Termination Number</label>
+                                                                        <select placeholder="Select Extensions" multiple
+                                                                            class="addonQty selectpicker"
+                                                                            data-selected-text-format="count>2">
+                                                                            <option>0411110812</option>
+                                                                            <option>0411110813</option>
+                                                                            <option>0411110814</option>
+                                                                            <option>0411110815</option>
+                                                                            <option>0411110816</option>
+                                                                            <option>0411110817</option>
+                                                                            <option>0411110818</option>
+                                                                            <option>0411110819</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="col-sm-3">
+                                                                        <label>Call Originator</label>
+                                                                        <input type="text">
+                                                                    </div>
+                                                                    <div class="col-sm-3">
+                                                                        <label>Timestamp Period</label>
+                                                                        <input type="text">
+                                                                    </div>
+                                                                    <div class="col-sm-3">
+                                                                        <label>Call Forwarding Rule</label>
+                                                                        <input type="text">
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="row">
+                                                                    <div class="col-sm-3">
+                                                                        <label>Call Forwarding / Busy</label>
+                                                                        <input type="text">
+                                                                    </div>
+                                                                    <div class="col-sm-3">
+                                                                        <label>Call Forwarding / No Answer</label>
+                                                                        <input type="text">
+                                                                    </div>
+                                                                    <div class="col-sm-3">
+                                                                        <label>Voice Recorded / Busy</label>
+                                                                        <input type="text">
+                                                                    </div>
+                                                                    <div class="col-sm-3">
+                                                                        <label>Voice Recorded / No Answer</label>
+                                                                        <input type="text">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-sm-12 btn-box-alone text-left">
+                                                                    <button disabled id="headingEmail"
+                                                                        class="default-btn next-btn voiceNum-btn"
+                                                                        data-toggle="collapse"
+                                                                        data-target="#collapseEmail"
+                                                                        aria-expanded="true"
+                                                                        aria-controls="collapseEmail">Next</button>
+                                                                    <button id="headingEmail"
+                                                                        class="default-btn next-btn"
+                                                                        data-toggle="collapse"
+                                                                        data-target="#collapseEmail"
+                                                                        aria-expanded="true"
+                                                                        aria-controls="collapseEmail">Skip</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- <div class="card">
+                                                    <div class="card-header ivr">
+                                                        <h5 class="mb-0 voice collapsed">
+                                                            <svg width="39px" height="39px" viewBox="0 0 64 64"
+                                                                version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                                <g id="Icon/Outline-1pt/phone-headset/device_black"
+                                                                    stroke="none" stroke-width="1" fill="none"
+                                                                    fill-rule="evenodd">
+                                                                    <g id="Devices"
+                                                                        transform="translate(3.000000, 9.000000)"
+                                                                        stroke="#000000">
+                                                                        <g id="vertical-example-copy"
+                                                                            transform="translate(42.000000, 20.000000)"
+                                                                            stroke-linecap="round">
+                                                                            <path
+                                                                                d="M17,25.2867319 C17,26.2290294 16.2734363,27 15.3854139,27 L1.61458605,27 C0.726563723,27 0,26.2290294 0,25.2867319 L0,1.7132681 C0,0.770970643 0.726563723,0 1.61458605,0 L15.3854139,0 C16.2734363,0 17,0.770970643 17,1.7132681 L17,25.2867319 Z"
+                                                                                id="Stroke-7" stroke-linejoin="round">
+                                                                            </path>
+                                                                            <path d="M0,22.5616438 L17,22.5616438"
+                                                                                id="Stroke-5"></path>
+                                                                            <path d="M0,3.77914453 L17,3.77914453"
+                                                                                id="Stroke-3"></path>
+                                                                            <path
+                                                                                d="M7.23404255,1.92982947 L10.1276596,1.92982947"
+                                                                                id="Stroke-7"></path>
+                                                                            <path
+                                                                                d="M9.40425532,24.9657534 C9.40425532,25.272 9.16119149,25.5205479 8.86170213,25.5205479 C8.56221277,25.5205479 8.31914894,25.272 8.31914894,24.9657534 C8.31914894,24.6595068 8.56221277,24.4109589 8.86170213,24.4109589 C9.16119149,24.4109589 9.40425532,24.6595068 9.40425532,24.9657534 Z"
+                                                                                id="Stroke-9-Copy"></path>
+                                                                        </g>
+                                                                        <g id="horizontal-example-copy">
+                                                                            <path
+                                                                                d="M16.1632653,46.6328125 L38.095743,46.6328125"
+                                                                                id="Stroke-1" stroke-linecap="round"
+                                                                                stroke-linejoin="round"></path>
+                                                                            <path
+                                                                                d="M27.2378428,39.2890625 L27.2378428,46.6328125"
+                                                                                id="Stroke-3" stroke-linecap="round"
+                                                                                stroke-linejoin="round"></path>
+                                                                            <path
+                                                                                d="M0,30.4765625 L38.4919683,30.4765625"
+                                                                                id="Stroke-5" stroke-linecap="round">
+                                                                            </path>
+                                                                            <path
+                                                                                d="M38.4919683,39.2890625 L3.72413793,39.2890625 C1.67586207,39.2890625 0,37.7516644 0,35.8726223 L0,3.41644022 C0,1.5373981 1.67586207,0 3.72413793,0 L50.2758621,0 C52.3241379,0 54,1.5373981 54,3.41644022 L54,17.7366982"
+                                                                                id="Stroke-7" stroke-linecap="round"
+                                                                                stroke-linejoin="round"></path>
+                                                                            <path
+                                                                                d="M27.9183673,34.8828125 C27.9183673,35.2881875 27.5892245,35.6171875 27.1836735,35.6171875 C26.7781224,35.6171875 26.4489796,35.2881875 26.4489796,34.8828125 C26.4489796,34.4774375 26.7781224,34.1484375 27.1836735,34.1484375 C27.5892245,34.1484375 27.9183673,34.4774375 27.9183673,34.8828125 Z"
+                                                                                id="Stroke-9"></path>
+                                                                        </g>
+                                                                    </g>
+                                                                </g>
+                                                            </svg>
+                                                            IVR
+                                                            <small>1 IVR with this
+                                                                bundle</small>
+                                                            <a id="headingIVR" class="changeBtn"
+                                                                href="javascript:void(0);" data-toggle="collapse"
+                                                                data-target="#collapseIVR" aria-expanded="true"
+                                                                aria-controls="collapseIVR"
+                                                                style="display: none;">Change</a>
+                                                        </h5>
+                                                    </div>
+                                                    <div id="collapseIVR" class="collapse" aria-labelledby="headingIVR"
+                                                        data-parent="#packages">
+                                                        <div
+                                                            class="custom-container table-container small-table offer-detail">
+                                                            <div class="data-container">
+                                                                <div class="tab-cont">
+                                                                    <div class="row">
+                                                                        <div class="v-firewall-box">
+                                                                            <div class="col-sm-2">
+                                                                                <label class="top-label">Enable IVR</label>
+                                                                                <div class="on-off">
+                                                                                <label>Off</label>
+                                                                                <label class="switch ivr-switch">
+                                                                                    <input type="checkbox">
+                                                                                    <span class="slider round"></span>
+                                                                                </label>
+                                                                                <label>On</label>
+                                                                                </div>
+                                                                                
+                                                                            </div>
+                                                                           
+                                                                        </div>
+                                                                        <div class="col-sm-12 btn-box-alone text-left">
+                                                                            <button disabled id="headingEmail"
+                                                                            class="default-btn next-btn"
+                                                                            data-toggle="collapse"
+                                                                            data-target="#collapseEmail"
+                                                                            aria-expanded="true"
+                                                                            aria-controls="collapseEmail">Next</button>
+                                                                            <button id="headingEmail"
+                                                                            class="default-btn next-btn"
+                                                                            data-toggle="collapse"
+                                                                            data-target="#collapseEmail"
+                                                                            aria-expanded="true"
+                                                                            aria-controls="collapseEmail">Skip</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> -->
+                                                <div class="card">
+                                                    <div class="card-header" id="headingEmail">
+                                                        <h5 class="mb-0 email collapsed">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="30"
+                                                                height="25" viewBox="0 0 149.967 133.892">
+                                                                <g id="email" transform="translate(-1151 -326)"
+                                                                    stroke="none" stroke-width="5" fill="none"
+                                                                    fill-rule="evenodd">
+                                                                    <g id="Group_2" data-name="Group 2"
+                                                                        transform="translate(1141.133 306)">
+                                                                        <g id="Group_1" data-name="Group 1">
+                                                                            <path id="Path_1" data-name="Path 1"
+                                                                                d="M85.036,78.343a30.321,30.321,0,0,1-9.972-1.633,23.058,23.058,0,0,1-8.269-4.933,23.846,23.846,0,0,1-5.642-8.162,28.617,28.617,0,0,1-2.094-11.392,33.935,33.935,0,0,1,2.484-13.237,31.547,31.547,0,0,1,6.672-10.15,29.372,29.372,0,0,1,9.8-6.529A30.838,30.838,0,0,1,89.863,20a27.2,27.2,0,0,1,10.043,1.774,21.653,21.653,0,0,1,7.665,5,22.06,22.06,0,0,1,4.862,7.736,27.8,27.8,0,0,1,1.7,9.9,23.06,23.06,0,0,1-1.384,8.339,18.9,18.9,0,0,1-3.584,6,14.828,14.828,0,0,1-4.9,3.62,12.978,12.978,0,0,1-5.324,1.206,9.479,9.479,0,0,1-5.181-1.349,5.777,5.777,0,0,1-2.626-4.045H91a13.333,13.333,0,0,1-3.974,3.478,9.194,9.194,0,0,1-4.614,1.348,8.349,8.349,0,0,1-6.423-2.732q-2.521-2.731-2.52-7.63A18.688,18.688,0,0,1,74.5,46.581a18.913,18.913,0,0,1,2.876-5.43,15.482,15.482,0,0,1,4.4-3.939,10.863,10.863,0,0,1,5.678-1.527,5.933,5.933,0,0,1,5.536,3.479h.142l.923-2.911h5.181L96.18,51.23Q94.406,58.4,99.729,58.4a6.4,6.4,0,0,0,3.264-.958,9.575,9.575,0,0,0,2.91-2.733,14.8,14.8,0,0,0,2.06-4.294,19.34,19.34,0,0,0,.779-5.714,24.053,24.053,0,0,0-1.171-7.594,17.376,17.376,0,0,0-3.548-6.21,16.751,16.751,0,0,0-6.068-4.224,23.725,23.725,0,0,0-17.816.355,24.3,24.3,0,0,0-7.807,5.43,27.28,27.28,0,0,0-5.5,8.447,27.962,27.962,0,0,0-2.094,11.036,24.145,24.145,0,0,0,1.633,9.228A18.224,18.224,0,0,0,77.513,71.813a24.437,24.437,0,0,0,8.163,1.349,21.756,21.756,0,0,0,5.89-.817,25.182,25.182,0,0,0,5.253-2.094l1.916,4.542A27.252,27.252,0,0,1,85.036,78.343Zm-.922-20.655a4.917,4.917,0,0,0,2.626-.852A13.418,13.418,0,0,0,89.721,54l1.845-10.434a4.554,4.554,0,0,0-3.9-2.485,5.454,5.454,0,0,0-3.3,1.065,9.721,9.721,0,0,0-2.484,2.7,13.171,13.171,0,0,0-1.561,3.585,14.162,14.162,0,0,0-.533,3.726,6.252,6.252,0,0,0,1.171,4.223A4.015,4.015,0,0,0,84.114,57.688Z"
+                                                                                fill="none" />
+                                                                        </g>
+                                                                        <path id="Path_2" data-name="Path 2"
+                                                                            d="M43.622,49.495H21.867a12.035,12.035,0,0,0-12,12v80.4a12.035,12.035,0,0,0,12,12H147.834a12.035,12.035,0,0,0,12-12v-80.4a12.035,12.035,0,0,0-12-12H125.343"
+                                                                            fill="none" />
+                                                                        <path id="Path_3" data-name="Path 3"
+                                                                            d="M11.841,54.752l61.693,50.69a14.413,14.413,0,0,0,17.622.3l67.3-49.933"
+                                                                            fill="none" />
+                                                                    </g>
+                                                                </g>
+                                                            </svg>
+                                                            Email & Data Backup
+                                                            <small>3 Emails and 3 user data backup
+                                                                1 TB with this bundle</small>
+                                                            <a id="headingEmail" class="changeBtn"
+                                                                href="javascript:void(0);" data-toggle="collapse"
+                                                                data-target="#collapseEmail" aria-expanded="true"
+                                                                aria-controls="collapseEmail"
+                                                                style="display: none;">Change</a>
+                                                        </h5>
+                                                    </div>
+
+                                                    <div id="collapseEmail" class="collapse"
+                                                        aria-labelledby="headingEmail" data-parent="#packages">
+                                                        <div class="card-body">
+                                                            <div class="account-container text-left">
+                                                                <div class="tab-cont">
+                                                                    <div class="row">
+                                                                        <div class="domain-sub">
+                                                                            <div class="col-sm-6">
+                                                                                <div class="form-group md-domain">
+                                                                                    <label>Microsoft Sub Domain</label>
+                                                                                    <input type="text" value="">
+                                                                                    <span
+                                                                                        class="msd">.onmicrosoft.com</span>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-6">
+                                                                                <div class="form-group">
+                                                                                    <label>Domain </label>
+                                                                                    <input type="text" value="">
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- <div class="col-sm-4">
+                                                                                <button style="margin-top:15px;"
+                                                                                    class="confirm-domain default-btn">Confirm</button>
+                                                                            </div> -->
+                                                                        </div>
+                                                                        <div class="available-domain-sub"
+                                                                            style="display: none;">
+                                                                            <div class="col-sm-4">
+                                                                                <div class="form-group">
+                                                                                    <label>Sub Domain</label>
+                                                                                    <input disabled type="text"
+                                                                                        value="mycompany.onmicrosoft.com">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-4">
+                                                                                <div class="form-group">
+                                                                                    <label>Domain </label>
+                                                                                    <input disabled type="text"
+                                                                                        value="mysubcompany.ae">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-4">
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="edit-btn">Edit</a>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!-- <div class="col-sm-12 btn-box-alone text-left">
+                                                                            <button id="headingSecurity" class="default-btn next-btn"
+                                                                            data-toggle="collapse"
+                                                                            data-target="#collapseSecurity" aria-expanded="false"
+                                                                            aria-controls="collapseSecurity">Next</button>
+                                                                        </div> -->
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- <div class="card">
+                                                    <div class="card-header" id="headingSecurity">
+                                                        <h5 class="mb-0 security collapsed">
+                                                            <img src="../assets/images/security-icon.png" alt="">
+                                                            Endpoint
+                                                            Security
+                                                            <small>3 Endpoint security with this
+                                                                bundle
+                                                            </small>
+                                                            <a id="headingSecurity" class="changeBtn"
+                                                            href="javascript:void(0);" data-toggle="collapse"
+                                                            data-target="#collapseSecurity" aria-expanded="true"
+                                                            aria-controls="collapseSecurity"
+                                                            style="display: none;">Change</a>
+                                                        </h5>
+                                                    </div>
+                                                    <div id="collapseSecurity" class="collapse"
+                                                        aria-labelledby="headingSecurity" data-parent="#packages">
+                                                        <div class="account-container text-left">
+                                                            <div class="tab-cont">
+                                                                <div class="availableUser">
+                                                                    <div class="">
+                                                                        <div class="user-name">
+                                                                            <div class="row">
+                                                                                <div class="col-sm-6">
+                                                                                    <div class="form-group">
+                                                                                        <label for="">Flavour</label>
+                                                                                        <select disabled
+                                                                                            class="selectpicker">
+                                                                                            <option>Basic</option>
+                                                                                            <option>Premium</option>
+                                                                                        </select>
+                                                                                    </div>
+                                                                                </div>
+                                                                                
+                                                                            </div>
+                                                                            <div class="col-sm-12">
+                                                                                <strong class="success"
+                                                                                    style="display: none;">
+                                                                                    This user name is available!
+                                                                                </strong>
+                                                                                <strong class="failed"
+                                                                                    style="display: none">
+                                                                                    Sorry! This user name is not
+                                                                                    avaiable!
+                                                                                </strong>
+                                                                                <strong class="error" style="display: none">
+                                                                                    Please Enter the user name
+                                                                                </strong>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="selected-user" style="display:none;">
+                                                                            <div class="row">
+                                                                                <div class="col-sm-4">
+                                                                                    <div class="form-group">
+                                                                                        <label for="">Flavour</label>
+                                                                                        <select disabled
+                                                                                            class="selectpicker">
+                                                                                            <option>Basic</option>
+                                                                                            <option>Premium</option>
+                                                                                        </select>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-sm-4">
+                                                                                    <div class="form-group">
+                                                                                        <label for="">User
+                                                                                            Name</label>
+                                                                                        <input readonly="" value="ammar"
+                                                                                            class="form-field" type="text">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-sm-4">
+                                                                                    <a href="javascript:void(0)"
+                                                                                        class="edit-btn">Edit</a>
+                                                                                </div>
+                                                                                <div class="col-sm-12">
+                                                                                    <strong class="updated"
+                                                                                        style="display: none">
+                                                                                        Password reset successfully!
+                                                                                    </strong>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+    
+                                                                    </div>
+                                                                </div>
+                                                            </div>                                                            
+                                                        </div>
+                                                    </div>
+                                                </div> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12  remove-padding-right text-right submit-button-container">
+                                    <button onclick="location.href = 'bib-03.3.html'">Previous</button>
+                                    <button>Save & Close</button>
+                                    <button onclick="location.href = 'addon.5.html'">Next</button>
+                                </div>
+                            </div>
+
+                            <div class="clearfix"></div>
+                            <!-- End SmartWizard Content -->
+                        </div>
+                        <div class="clearfix"></div>
+                    </section>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+
+    </div>
+    <!-- /.etisalat -->
+    <!-- /.footer -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../assets/js/jquery-2.1.3.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../assets/js/bootstrap.js"></script>
+    <script src="../assets/js/bootstrap-select.js"></script>
+    <script src="../assets/js/dcalendar.picker.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery.matchHeight-min.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery.smartWizard.js"></script>
+    <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../assets/js/slick.min.js"></script>
+    <script src="../assets/js/scripts.js"></script>
+    <script src="../assets/js/custom.js"></script>
+    <script>
+        $('.reserve-btn').click(function () {
+            $(this).hide();
+            $(this).closest('.tab-cont').find('.next-btn').removeAttr('disabled');
+            $('.unreserve-btn').show();
+        });
+        $('.unreserve-btn').click(function () {
+            $(this).hide();
+            $(this).closest('.tab-cont').find('.next-btn').attr('disabled', 'disabled');
+            $('.reserve-btn').show();
+        });
+        $('.next-btn').click(function () {
+            $(this).closest('.card').find('h5').addClass('collapsed');
+            $(this).closest('.card').next('.card').find('h5').removeClass('collapsed');
+            $(this).closest('.card').find('.changeBtn').show();
+            $(this).closest('.collapse').removeClass('in');
+        });
+        $('.changeBtn').click(function () {
+            $(this).parents('.card').siblings('.card').find('h5').addClass('collapsed');
+            $(this).parents('.card').siblings('.card').find('.collapse').removeClass('in');
+
+        });
+
+
+        $('.show-available').click(function () {
+            //$(this).closest('.searchDomain').hide();
+            $('.availableDomain').show();
+        });
+        $('.select-btn').click(function () {
+            $(this).parents('ul').find('li').removeClass('selected');
+            $(this).parents('ul').find('li').addClass('disabled');
+            $(this).parents('ul').find('.selected-btn').hide();
+            $(this).parents('ul').find('.select-btn').show();
+            //$(this).parents('li').addClass('selected');
+            $(this).parents('li').addClass('disabled');
+            $(this).parents('ul').find('.user-name').hide();
+            //$(this).parents('li').find('.user-name').show();
+            $(this).closest('li').find('.selected-btn').show();
+            $(this).closest('li').find('.confirm-search').show();
+            $(this).closest('.tab-cont').find('.next-btn').removeAttr('disabled');
+            $(this).closest('.selected').find('small').hide();
+            $(this).hide();
+
+            $(this).closest('.card').find('h5 small').html('mycompany.ae');
+        });
+        $('.selected-btn').click(function () {
+            $(this).closest('li').find('.select-btn').show();
+            $(this).parents('ul').find('li').removeClass('disabled');
+            $(this).parents('li').removeClass('selected');
+            $(this).hide();
+            $(this).parents().find('.user-name').hide();
+            $(this).parents().find('.selected-user').hide();
+            $(this).closest('li').find('#userName').removeAttr('disabled', 'disabled');
+        });
+
+        $('.req-field').change(function () {
+            $(this).closest('.tab-cont').find('button').removeAttr('disabled');
+        });
+        $('#userName').change(function () {
+            var user = $('#userName').val();
+            if ($(this).val().indexOf("ali") > -1) {
+                $('.failed').show();
+                $('.error').hide();
+                $('.success').hide();
+                //alert(user);
+            }
+            if ($(this).val().indexOf("ammar") > -1) {
+                $('.success').show();
+                $('.failed').hide();
+                $('.error').hide();
+                $('.confirm-search').show();
+                //alert(user);
+            }
+        });
+        $('.confirm-search').click(function () {
+            $('.selected-user').show();
+            $(this).parents('.user-name').find('.success').hide();
+            $(this).closest('li').find('#userName').attr('disabled', 'disabled');
+            $(this).closest('li').find('.user-name').hide();
+            $(this).closest('li').find('.selected-btn').hide();
+            $(this).closest('ul').find('li.disabled').hide();
+            $(this).closest('li').find('.updated').hide();
+            $(this).hide();
+        });
+        $('.edit-btn').click(function () {
+            $('.user-name').show();
+            $(this).closest('li').find('.confirm-search').show();
+            $(this).closest('li').find('.back-btn').show();
+            $(this).closest('li').find('.reset-btn').show();
+            $(this).parents('.selected-user').hide();
+            //$(this).closest('li').find('.confirm-search').hide();
+            $(this).closest('li').find('#userName').removeAttr('disabled', 'disabled');
+
+        });
+        $('.delete-btn').click(function () {
+            $(this).closest('li').find('.select-btn').show();
+            $(this).parents('ul').find('li').removeClass('disabled');
+            $(this).parents('li').removeClass('selected');
+            $(this).parents('ul').find('li').show();
+            // $(this).hide();
+            $(this).parents().find('.user-name').hide();
+            $(this).parents().find('.selected-user').hide();
+            $(this).closest('.availableDomain').hide();
+            $(this).closest('li').find('#userName').removeAttr('disabled', 'disabled');
+        });
+        $('.reset-btn').click(function () {
+            $('.user-name').show();
+            $(this).parents('.selected-user').hide();
+            $(this).closest('li').find('.selected-user').show();
+            $(this).closest('li').find('.updated').show();
+            $(this).closest('.user-name').hide();
+            $(this).hide();
+        });
+        $('.back-btn').click(function () {
+            $('.user-name').show();
+            $(this).parents('.selected-user').hide();
+            $(this).closest('li').find('.selected-user').show();
+            $(this).closest('li').find('.updated').hide();
+            $(this).closest('.user-name').hide();
+            $(this).hide();
+        });
+
+        $('.add-data-row').click(function () {
+            $(".hideable-row").hide();
+            $(".new-row").show();
+        });
+
+        $('.account-select li').click(function () {
+            $(this).toggleClass('selected');
+        });
+        $('.mainNum li').click(function () {
+            $(this).closest('ul').find('li').removeClass('selected');
+            $(this).toggleClass('selected');
+            $(this).closest('.card').find('h5 small').html($(this).html());
+            $(this).closest('.search-grid').find('button').removeAttr('disabled');
+
+            //$(this).closest('.card').find('#filter01').prop('value', $(this).html());
+        });
+        $('.voiceNum li').click(function () {
+            $(this).siblings('li').removeClass('selected');
+            //$(this).closest('.tab-cont').find('button').removeAttr('disabled');
+            $(this).closest('.tab-cont').find('.termination').removeAttr('disabled');
+            $(this).closest('.tab-cont').find('.dropdown-toggle').removeClass('disabled');
+
+            $(this).toggleClass('selected');
+            $(this).closest('.card').find('h5 small').html($(this).html());
+
+            if (!$(this).hasClass('selected')) {
+                $(this).closest('.card').find('h5 small').html('1 Toll Free number with this bundle');
+                $(this).closest('.tab-cont').find('.termination').attr('disabled', 'disabled');
+                $(this).closest('.tab-cont').find('.dropdown-toggle').addClass('disabled');
+                $(this).closest('.tab-cont').find('.voiceNum-btn').attr('disabled', 'disabled');
+            }
+        });
+        $('.termination').change(function (){
+            $(this).closest('.tab-cont').find('button').removeAttr('disabled');
+        });
+        $('.show-set01').click(function () {
+            $('.number-grid').toggle();
+            $('.row-01').toggle();
+        });
+        $('.show-set02').click(function () {
+            $('.row-02').toggle();
+        });
+        $('.show-set03').click(function () {
+            $('.row-03').toggle();
+        });
+        $('.show-set04').click(function () {
+            $('.row-04').toggle();
+        });
+        $('.show-set05').click(function () {
+            $('.row-05').toggle();
+        });
+        $('.show-set06').click(function () {
+            $('.row-06').toggle();
+        });
+        $('.show-set07').click(function () {
+            $('.row-07').toggle();
+        });
+        $('.show-set08').click(function () {
+            $('.row-08').toggle();
+        });
+        $('.show-set09').click(function () {
+            $('.row-09').toggle();
+        });
+        $('.show-set10').click(function () {
+            $('.row-10').toggle();
+        });
+
+        $('.switch').click(function () {
+            if ($(this).find('input').prop('checked') == true) {
+                //alert('unchecked')
+                $(this).closest('.v-firewall-box').find('.selectpicker').removeAttr('disabled');
+                $(this).closest('.v-firewall-box').find('.bootstrap-select').removeClass('disabled');
+                $(this).closest('.v-firewall-box').find('.dropdown-toggle').removeClass('disabled');
+            }
+            if ($(this).find('input').prop('checked') !== true) {
+                //alert('checked')
+                $(this).closest('.v-firewall-box').find('.selectpicker').attr('disabled');
+                $(this).closest('.v-firewall-box').find('.bootstrap-select').addClass('disabled');
+                $(this).closest('.v-firewall-box').find('.dropdown-toggle').addClass('disabled');
+            }
+        });
+        $('.ivr-switch').click(function () {
+            if ($(this).find('input').prop('checked') == true) {
+                //alert('unchecked')
+                $(this).closest('.card').find('h5 small').html('IVR Enabled');
+                $(this).closest('.tab-cont').find('.next-btn').removeAttr('disabled');
+            }
+            if ($(this).find('input').prop('checked') !== true) {
+                //alert('checked')
+                $(this).closest('.card').find('h5 small').html('1 IVR with this bundle');
+                $(this).closest('.tab-cont').find('.next-btn').attr('disabled', 'disabled');
+            }
+        });
+
+        function toggleSelectAll(control) {
+            var allOptionIsSelected = (control.val() || []).indexOf("All") > -1;
+            function valuesOf(elements) {
+                return $.map(elements, function (element) {
+                    return element.value;
+                });
+            }
+
+            if (control.data('allOptionIsSelected') != allOptionIsSelected) {
+                // User clicked 'All' option
+                if (allOptionIsSelected) {
+                    // Can't use .selectpicker('selectAll') because multiple "change" events will be triggered
+                    control.selectpicker('val', valuesOf(control.find('option')));
+                } else {
+                    control.selectpicker('val', []);
+                }
+            } else {
+                // User clicked other option
+                if (allOptionIsSelected && control.val().length != control.find('option').length) {
+                    // All options were selected, user deselected one option
+                    // => unselect 'All' option
+                    control.selectpicker('val', valuesOf(control.find('option:selected[value!=All]')));
+                    allOptionIsSelected = false;
+                } else if (!allOptionIsSelected && control.val().length == control.find('option').length - 1) {
+                    // Not all options were selected, user selected all options except 'All' option
+                    // => select 'All' option too
+                    control.selectpicker('val', valuesOf(control.find('option')));
+                    allOptionIsSelected = true;
+                }
+            }
+            control.data('allOptionIsSelected', allOptionIsSelected);
+        }
+
+        $('#divRatings').selectpicker().change(function () { toggleSelectAll($(this)); }).trigger('change');
+
+        /*Search filter*/
+
+        $(document).ready(function () {
+            $("#filter01").keyup(function () {
+
+                // Retrieve the input field text and reset the count to zero
+                var filter = $(this).val(), count = 0;
+
+                // Loop through the comment list
+                $(".mainNum li").each(function () {
+
+                    // If the list item does not contain the text phrase fade it out
+                    if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+                        $(this).fadeOut();
+
+                        // Show the list item if the phrase matches and increase the count by 1
+                    } else {
+                        $(this).show();
+                        count++;
+                    }
+                });
+
+                // Update the count
+                var numberItems = count;
+                $("#filter-count").text("Number of Comments = " + count);
+            });
+        });
+
+        $('.vFirewall').change(function () {
+            $(this).closest('.card').find('h5 small').html('Premium Enabled')
+        });
+    </script>
+</body>
+
+</html>

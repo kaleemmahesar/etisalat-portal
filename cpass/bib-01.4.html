@@ -1,0 +1,1933 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sales Order Request :: Etisalat</title>
+    <!-- Bootstrap -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="../assets/css/font-awesome.min.css" />
+    <link href="../assets/css/CEP-automation-css/custom.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.0/rangeslider.min.css" rel="stylesheet"
+        type="text/css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="loading">
+    <div id="loaderM"></div>
+    <div class="etisalat">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header col-sm-2">
+                    <a class="navbar-brand" href="home.html">
+                        <img src="../assets/images/logo_white.png" alt="Etisalat">
+                    </a>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="col-sm-8">
+                    <div id="navbar" class="col-md-12 custom-container nav-container navbar-collapse collapse">
+                        <ul>
+                            <li>
+                                <a href="javascript:void(0);">Mobile</a>
+                            </li>
+                            <li>
+                                <a class="show-fixed-content" href="../index.html">Fixed</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">ICT</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Product Catalogue</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--/.nav-collapse -->
+                <div class="col-sm-2">
+                    <div class="navbar-right">
+                        <div class="dropdown">
+                            <a id="oSummary" class="summary-btn" data-target="#" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">
+                                Order Summary
+                                <span class="caret"></span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="oSummary">
+                                <div class="item-list">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Order ID</th>
+                                                <th>Customer Name</th>
+                                                <th>Party ID</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>ORD-212-2323</td>
+                                                <td>Aster Pharmacy</td>
+                                                <td>17567</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Order Status</th>
+                                                <th>Service Type</th>
+                                                <th>Sales Manager</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Draft</td>
+                                                <td>New Account</td>
+                                                <td>Jordan</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Authorized Contact Name</th>
+                                                <th>Authorized Contact Email</th>
+                                                <th>Authorized Contact Mobile</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Minal Doongarwal</td>
+                                                <td>mdoongarwal@etisalat.ae</td>
+                                                <td>971569629141</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="total collapsed">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <span id="breakDown" class="collapsed" data-toggle="collapse"
+                                                data-target="#collapseBreakdown" aria-expanded="false"
+                                                aria-controls="collapseBreakdown">
+                                                Break Down
+                                                <span>
+                                                    <img src="../assets/images/down-arrow.png" alt="">
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <h4>Grand Total</h4>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <h5 class="price">
+                                                1,713 AED
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapseBreakdown" class="collapse" aria-labelledby="breakDown">
+                                    <div class="card-body">
+                                        <div id="packages" class="packages">
+                                            <div class="card">
+                                                <div class="card-header" id="headingOne">
+                                                    <h5 class="mb-0 internet">
+                                                        <span class="icon">
+                                                            <img src="../assets/images/icon-green/opt13.png" alt="">
+                                                        </span>
+                                                        Package Details
+                                                    </h5>
+                                                    <!-- <h5 class="mb-0 internet"data-toggle="collapse"
+                                                                        data-target="#collapseOne" aria-expanded="false"
+                                                                        aria-controls="collapseOne">
+                                                                        <span class="icon">
+                                                                            <img src="../assets/images/icon-green/opt13.png" alt="">
+                                                                        </span>
+                                                                        Package Details
+                                                                        <span>
+                                                                            <img src="../assets/images/down-arrow.png" alt="">
+                                                                        </span>
+                                                                    </h5> -->
+                                                </div>
+                                                <div id="collapseOne" class="collapse in" aria-labelledby="headingOne"
+                                                    data-parent="#packages" aria-expanded="false">
+                                                    <div class="card-body">
+                                                        <table class="table review-grid">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th></th>
+                                                                    <th>QTY</th>
+                                                                    <th>Unit Price</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td style="width:70%;">
+                                                                        <span>Business in a box</span>
+                                                                        <h4>Security Essential Plan</h4>
+                                                                        <small>12 Month Contract</small>
+                                                                    </td>
+                                                                    <td>x 1</td>
+                                                                    <td>1095 AED/Month</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div class="card-header" id="headingTwo">
+                                                    <h5 class="mb-0 internet">
+                                                        <span class="icon">
+                                                            <img src="../assets/images/icon-green/addon-icon.png"
+                                                                alt="">
+                                                        </span>
+                                                        Add-On Details
+                                                    </h5>
+                                                    <!-- <h5 class="mb-0 internet" data-toggle="collapse"
+                                                                        data-target="#collapseTwo" aria-expanded="false"
+                                                                        aria-controls="collapseTwo">
+                                                                        <span class="icon">
+                                                                            <img src="../assets/images/icon-green/addon-icon.png"
+                                                                                alt="">
+                                                                        </span>
+                                                                        Add-On Details
+                                                                        <span>
+                                                                            <img src="../assets/images/down-arrow.png" alt="">
+                                                                        </span>
+                                                                    </h5> -->
+                                                </div>
+                                                <div id="collapseTwo" class="collapse in" aria-labelledby="headingTwo"
+                                                    data-parent="#packages" aria-expanded="false">
+                                                    <div class="card-body">
+                                                        <table class="table review-grid">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th></th>
+                                                                    <th>QTY</th>
+                                                                    <th>Unit Price</th>
+                                                                    <th></th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td style="width:70%;">
+                                                                        <h4>User Voice Line</h4>
+                                                                        <small>12 Month Contract</small>
+                                                                    </td>
+                                                                    <td>x 10</td>
+                                                                    <td>1000 AED</td>
+                                                                    <td><a class="removeBtn"
+                                                                            href="javascript:void(0)">Remove</a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width:70%;">
+                                                                        <h4>User Email</h4>
+                                                                        <small>Description of Email</small>
+                                                                    </td>
+                                                                    <td>x 10</td>
+                                                                    <td>150 AED</td>
+                                                                    <td><a class="removeBtn"
+                                                                            href="javascript:void(0)">Remove</a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width:70%;">
+                                                                        <h4>User Data Backup (1TB)</h4>
+                                                                        <small>Description of User Data Backup</small>
+                                                                    </td>
+                                                                    <td>x 10</td>
+                                                                    <td>200 AED</td>
+                                                                    <td><a class="removeBtn"
+                                                                            href="javascript:void(0)">Remove</a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width:70%;">
+                                                                        <h4>User Endpoint Security</h4>
+                                                                        <small>Description of User Data Backup</small>
+                                                                    </td>
+                                                                    <td>x 10</td>
+                                                                    <td>100 AED</td>
+                                                                    <td><a class="removeBtn"
+                                                                            href="javascript:void(0)">Remove</a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width:70%;">
+                                                                        <h4>Cordless Phone</h4>
+                                                                    </td>
+                                                                    <td>x 1</td>
+                                                                    <td>13 AED</td>
+                                                                    <td><a class="removeBtn"
+                                                                            href="javascript:void(0)">Remove</a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width:70%;">
+                                                                        <h4>Video Phone</h4>
+                                                                    </td>
+                                                                    <td>x 1</td>
+                                                                    <td>95 AED</td>
+                                                                    <td><a class="removeBtn"
+                                                                            href="javascript:void(0)">Remove</a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width:70%;">
+                                                                        <h4>Deluse Phone</h4>
+                                                                    </td>
+                                                                    <td>x 1</td>
+                                                                    <td>15 AED</td>
+                                                                    <td><a class="removeBtn"
+                                                                            href="javascript:void(0)">Remove</a></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="page-container">
+                    <section class="page-content inner-page">
+                        <div class="clearfix"></div>
+                        <div class="smart-wizard">
+                            <!-- Tabs -->
+                            <div class="swMain">
+                                <div class="col-md-12 item custom-container progress-container">
+                                    <ul class="item  slickslider">
+                                        <li>
+                                            <a href="bib-01.4.html" class="selected">
+                                                <span class="stepDesc">Package Selection</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>1
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="addon.5.html" class="">
+                                                <span class="stepDesc">Add-Ons</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>2
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="docs.html" class="">
+                                                <span class="stepDesc">Documents &amp; Notes</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>3
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="billing.4.html" class="">
+                                                <span class="stepDesc">Billing</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>4
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="review.5.html">
+                                                <span class="stepDesc">Review</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>5
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="tandc-1.html" class="">
+                                                <span class="stepDesc">Terms & Condition</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>6
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-12 custom-container corporate-accounts">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <div class="filter-col">
+                                                <h3>
+                                                    <img src="../assets/images/icon-green/opt07.png" alt=""> Filter
+                                                </h3>
+                                                <button class="custom-btn reset-btn">Reset</button>
+                                                <h4>Package Code </h4>
+                                                <input type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <div class="bg-cards sdwan-wrap">
+                                                <div class="cartepackage cradiobox" id="cartepackage">
+                                                    <!-- Collapse Items stat -->
+                                                    <div id="packages" class="packages component km-lacartepackagesbox">
+                                                        <div class="card">
+                                                            <div class="card-header km-customicon">
+                                                                <h5 class="mb-0 main">
+                                                                    <svg version="1.0"
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        width="223.000000pt" height="auto"
+                                                                        viewBox="0 0 223.000000 226.000000"
+                                                                        preserveAspectRatio="xMidYMid meet">
+
+                                                                        <g transform="translate(0.000000,226.000000) scale(0.100000,-0.100000)"
+                                                                            fill="#303030" stroke="none">
+                                                                            <path d="M1200 2245 c-6 -8 -10 -22 -8 -32 2 -14 24 -21 103 -34 130 -21 202
+-42 302 -89 117 -55 219 -128 315 -228 96 -100 152 -181 205 -299 34 -76 40
+-84 63 -81 39 5 36 33 -14 136 -58 118 -111 195 -194 284 -170 181 -401 302
+-655 343 -112 18 -102 18 -117 0z"></path>
+                                                                            <path d="M833 2136 c-84 -27 -169 -101 -199 -171 -11 -27 -20 -33 -54 -39 -55
+-9 -124 -75 -140 -134 -23 -87 20 -176 104 -217 l53 -26 340 3 340 3 40 27
+c51 33 81 82 89 141 13 89 -61 189 -149 204 -29 4 -38 12 -53 45 -57 127 -238
+208 -371 164z m151 -67 c80 -22 143 -81 172 -163 9 -25 18 -32 52 -38 87 -15
+132 -59 132 -133 0 -26 -9 -45 -34 -73 l-34 -37 -339 -3 c-325 -2 -339 -2
+-371 18 -32 20 -62 71 -62 106 0 59 72 124 139 124 26 0 33 7 55 53 29 61 39
+74 86 109 59 44 131 57 204 37z"></path>
+                                                                            <path d="M303 1873 c-19 -7 -108 -131 -151 -213 -148 -277 -173 -611 -68 -905
+48 -133 75 -180 106 -180 35 0 31 30 -14 131 -58 131 -78 220 -83 384 -9 267
+54 472 208 676 27 36 49 71 49 79 0 17 -30 34 -47 28z"></path>
+                                                                            <path d="M1476 1714 c-9 -8 -16 -19 -16 -23 0 -17 151 -133 166 -127 43 17 23
+53 -69 127 -55 44 -59 45 -81 23z"></path>
+                                                                            <path d="M1671 1496 c-8 -10 -2 -33 29 -100 35 -74 44 -86 65 -86 36 0 33 39
+-10 128 -35 74 -58 90 -84 58z"></path>
+                                                                            <path d="M471 1430 c-25 -41 -55 -145 -48 -164 7 -19 43 -21 53 -4 23 37 60
+167 52 182 -14 25 -36 19 -57 -14z"></path>
+                                                                            <path d="M1865 1275 l-33 -35 -204 -2 c-186 -3 -203 -4 -206 -21 -8 -43 9 -47
+218 -47 196 0 198 0 213 -23 37 -56 126 -59 171 -7 21 25 32 30 70 30 54 0 81
+21 66 51 -9 15 -22 19 -65 19 -45 0 -55 3 -60 20 -9 27 -55 50 -101 50 -29 0
+-44 -7 -69 -35z m105 -39 c19 -23 8 -61 -18 -64 -44 -7 -67 32 -36 62 19 20
+38 20 54 2z"></path>
+                                                                            <path d="M410 1155 c-9 -11 -11 -36 -6 -92 8 -91 19 -115 49 -111 21 3 22 7
+18 98 -2 52 -8 101 -13 108 -14 16 -33 15 -48 -3z"></path>
+                                                                            <path d="M1595 1076 c-17 -7 -39 -25 -48 -39 -14 -22 -26 -26 -69 -29 -49 -3
+-53 -5 -53 -28 0 -23 4 -25 55 -28 49 -3 57 -6 72 -32 33 -58 143 -58 176 0
+l17 30 205 2 205 3 3 28 3 27 -205 0 -206 0 -17 26 c-16 26 -68 54 -95 54 -7
+-1 -27 -7 -43 -14z m75 -71 c26 -32 -13 -81 -47 -59 -35 22 -23 74 17 74 10 0
+23 -7 30 -15z"></path>
+                                                                            <path d="M618 929 c-10 -5 -21 -28 -24 -49 -9 -56 -26 -67 -63 -41 -46 33 -80
+27 -129 -22 -47 -48 -53 -80 -22 -120 31 -40 26 -56 -22 -63 -61 -10 -78 -32
+-78 -102 0 -72 17 -98 71 -107 49 -9 57 -25 30 -64 -32 -45 -27 -71 27 -124
+53 -53 70 -56 119 -26 43 27 59 20 66 -26 9 -58 20 -65 103 -65 64 0 75 3 88
+22 9 12 16 35 16 51 0 37 22 43 63 18 50 -30 67 -27 120 27 53 53 58 79 26
+123 -27 39 -19 55 31 64 57 10 74 38 68 116 -5 70 -16 83 -78 93 -45 7 -49 18
+-20 61 29 44 25 70 -21 120 -48 52 -82 58 -130 24 -24 -17 -33 -18 -44 -9 -8
+7 -15 21 -15 32 0 22 -18 60 -34 70 -16 11 -128 9 -148 -3z m118 -86 c11 -55
+22 -69 62 -82 37 -13 43 -12 77 9 l37 23 25 -25 25 -26 -25 -37 c-25 -36 -25
+-40 -11 -74 19 -47 22 -49 69 -59 37 -7 40 -11 43 -44 3 -36 3 -37 -44 -44
+-42 -6 -48 -10 -65 -48 -18 -41 -18 -41 6 -82 l24 -41 -24 -23 -24 -22 -36 22
+c-34 21 -40 22 -77 9 -40 -13 -51 -27 -62 -81 -6 -24 -11 -28 -41 -28 -30 0
+-35 4 -41 28 -11 54 -22 68 -62 81 -37 13 -43 12 -70 -8 -37 -26 -40 -26 -68
+0 l-23 22 22 38 c21 36 21 40 6 81 -15 40 -19 44 -63 52 -47 8 -47 9 -44 44 3
+34 6 37 46 45 36 7 45 14 57 44 20 47 19 59 -6 95 l-22 30 26 25 25 26 37 -23
+c34 -21 40 -22 77 -9 40 13 51 27 62 82 6 23 11 27 41 27 30 0 35 -4 41 -27z"></path>
+                                                                            <path d="M615 693 c-46 -24 -66 -45 -86 -88 -57 -125 29 -258 166 -258 131 0
+220 131 170 250 -20 48 -41 71 -87 94 -45 23 -122 24 -163 2z m119 -57 c68
+-28 95 -101 61 -166 -40 -78 -160 -78 -200 0 -33 64 -8 137 59 166 39 17 40
+17 80 0z"></path>
+                                                                            <path d="M1893 850 c-12 -5 -29 -20 -39 -34 l-16 -26 -197 0 c-108 0 -202 -4
+-209 -9 -8 -4 -12 -19 -10 -32 l3 -24 203 -3 204 -2 33 -35 c25 -28 40 -35 69
+-35 46 0 92 23 101 50 5 17 15 20 60 20 43 0 56 4 65 19 15 29 -12 51 -65 51
+-36 0 -49 6 -78 35 -37 37 -76 44 -124 25z m68 -60 c40 -22 13 -89 -30 -75
+-29 9 -36 42 -15 66 20 22 20 22 45 9z"></path>
+                                                                            <path d="M1420 564 c-36 -18 -82 -39 -102 -45 -42 -13 -52 -29 -34 -54 18 -24
+62 -15 156 33 57 29 76 44 78 61 3 20 -12 42 -28 40 -3 0 -34 -16 -70 -35z"></path>
+                                                                            <path d="M1910 398 c-119 -127 -252 -213 -415 -268 -114 -38 -183 -51 -330
+-59 -108 -5 -120 -8 -123 -25 -10 -48 71 -57 253 -31 141 20 234 48 351 105
+121 59 236 143 328 240 73 78 84 114 36 117 -19 1 -42 -17 -100 -79z"></path>
+                                                                        </g>
+                                                                    </svg>
+                                                                    WhatsApp for Business
+                                                                    <small class="changetextwafbnext"
+                                                                        id="package-text-box-wab">Select maximum one
+                                                                        package from this
+                                                                        section</small>
+                                                                    <a id="WhatAppHeading" class="changeBtn"
+                                                                        href="javascript:void(0);"
+                                                                        data-toggle="collapse"
+                                                                        data-target="#collapseMain" aria-expanded="true"
+                                                                        aria-controls="collapseMain"
+                                                                        style="display: none;">Change</a>
+                                                                </h5>
+                                                            </div>
+                                                            <div id="collapseMain" class="collapse in"
+                                                                aria-labelledby="WhatAppHeading"
+                                                                data-parent="#packages">
+                                                                <div class="card-body">
+                                                                    <div class="account-container text-left">
+                                                                        <div class="tab-cont">
+                                                                            <div class="row search-grids">
+                                                                                <ul class="pricingTables" id="WAB">
+                                                                                    <!-- Purple Table -->
+                                                                                    <li class="link"
+                                                                                        data-package-text="Package 1 selected from this section">
+                                                                                        <div
+                                                                                            class="pricing-table purple">
+                                                                                            <!-- Table Head -->
+                                                                                            <h2>Package 1</h2>
+                                                                                            <h5>Made for starters</h5>
+                                                                                            <!-- Features -->
+                                                                                            <div
+                                                                                                class="pricing-features">
+                                                                                                <div class="feature">
+                                                                                                    On-Net
+                                                                                                    Minutes<span>--</span>
+                                                                                                </div>
+                                                                                                <div class="feature">
+                                                                                                    Off-Net
+                                                                                                    Minutes<span>--</span>
+                                                                                                </div>
+                                                                                                <div class="feature">
+                                                                                                    Internet<span>--</span>
+                                                                                                </div>
+                                                                                                <div class="feature">
+                                                                                                    Validity<span>--</span>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <!-- Price -->
+                                                                                            <div class="price-tag">
+                                                                                                <span
+                                                                                                    class="symbol">AED</span>
+                                                                                                <span
+                                                                                                    class="amount">500</span>
+                                                                                                <span class="after">+5%
+                                                                                                    VAT Exc</span>
+                                                                                            </div>
+                                                                                            <!-- Button -->
+                                                                                            <a class="price-button"
+                                                                                                href="javascript:void(0);"><span>SELECT
+                                                                                                    NOW</span><i>SELECTED</i></a>
+                                                                                        </div>
+                                                                                    </li>
+                                                                                    <!-- Turquoise Table -->
+                                                                                    <li
+                                                                                        data-package-text="Package 2 selected from this section">
+                                                                                        <div
+                                                                                            class="pricing-table purple">
+                                                                                            <!-- Table Head -->
+                                                                                            <h2>Package 2</h2>
+                                                                                            <h5>Made for starters</h5>
+                                                                                            <!-- Features -->
+                                                                                            <div
+                                                                                                class="pricing-features">
+                                                                                                <div class="feature">
+                                                                                                    On-Net
+                                                                                                    Minutes<span>--</span>
+                                                                                                </div>
+                                                                                                <div class="feature">
+                                                                                                    Off-Net
+                                                                                                    Minutes<span>--</span>
+                                                                                                </div>
+                                                                                                <div class="feature">
+                                                                                                    Internet<span>--</span>
+                                                                                                </div>
+                                                                                                <div class="feature">
+                                                                                                    Validity<span>--</span>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <!-- Price -->
+                                                                                            <div class="price-tag">
+                                                                                                <span
+                                                                                                    class="symbol">AED</span>
+                                                                                                <span
+                                                                                                    class="amount">800</span>
+                                                                                                <span class="after">+5%
+                                                                                                    VAT Exc</span>
+                                                                                            </div>
+                                                                                            <!-- Button -->
+                                                                                            <a class="price-button"
+                                                                                                href="javascript:void(0);"><span>SELECT
+                                                                                                    NOW</span><i>SELECTED</i></a>
+                                                                                        </div>
+                                                                                    </li>
+                                                                                    <!-- Red Table -->
+                                                                                    <li
+                                                                                        data-package-text="Package 3 selected from this section">
+                                                                                        <div
+                                                                                            class="pricing-table purple">
+                                                                                            <!-- Table Head -->
+                                                                                            <h2>Package 3</h2>
+                                                                                            <h5>Made for starters</h5>
+                                                                                            <!-- Features -->
+                                                                                            <div
+                                                                                                class="pricing-features">
+                                                                                                <div class="feature">
+                                                                                                    On-Net
+                                                                                                    Minutes<span>--</span>
+                                                                                                </div>
+                                                                                                <div class="feature">
+                                                                                                    Off-Net
+                                                                                                    Minutes<span>--</span>
+                                                                                                </div>
+                                                                                                <div class="feature">
+                                                                                                    Internet<span>--</span>
+                                                                                                </div>
+                                                                                                <div class="feature">
+                                                                                                    Validity<span>--</span>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <!-- Price -->
+                                                                                            <div class="price-tag">
+                                                                                                <span
+                                                                                                    class="symbol">AED</span>
+                                                                                                <span
+                                                                                                    class="amount">1000</span>
+                                                                                                <span class="after">+5%
+                                                                                                    VAT Exc</span>
+                                                                                            </div>
+                                                                                            <!-- Button -->
+                                                                                            <a class="price-button"
+                                                                                                href="javascript:void(0);"><span>SELECT
+                                                                                                    NOW</span><i>SELECTED</i></a>
+                                                                                        </div>
+                                                                                    </li>
+                                                                                </ul>
+                                                                                <div
+                                                                                    class="col-sm-12s btn-box-alone text-right text-right">
+                                                                                    <button
+                                                                                        class="default-btn next-btn skip-button-wab"
+                                                                                        data-package-text="No package selected from this section">Skip</button>
+                                                                                    <button
+                                                                                        class="default-btn next-btn wafbnext"
+                                                                                        disabled>Next</button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card">
+                                                            <div class="card-header km-customicon">
+                                                                <h5 class="mb-0 internet collapsed">
+                                                                    <svg version="1.0"
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        width="223.000000pt" height="auto"
+                                                                        viewBox="0 0 223.000000 226.000000"
+                                                                        preserveAspectRatio="xMidYMid meet">
+
+                                                                        <g transform="translate(0.000000,226.000000) scale(0.100000,-0.100000)"
+                                                                            fill="#303030" stroke="none">
+                                                                            <path d="M1200 2245 c-6 -8 -10 -22 -8 -32 2 -14 24 -21 103 -34 130 -21 202
+-42 302 -89 117 -55 219 -128 315 -228 96 -100 152 -181 205 -299 34 -76 40
+-84 63 -81 39 5 36 33 -14 136 -58 118 -111 195 -194 284 -170 181 -401 302
+-655 343 -112 18 -102 18 -117 0z"></path>
+                                                                            <path d="M833 2136 c-84 -27 -169 -101 -199 -171 -11 -27 -20 -33 -54 -39 -55
+-9 -124 -75 -140 -134 -23 -87 20 -176 104 -217 l53 -26 340 3 340 3 40 27
+c51 33 81 82 89 141 13 89 -61 189 -149 204 -29 4 -38 12 -53 45 -57 127 -238
+208 -371 164z m151 -67 c80 -22 143 -81 172 -163 9 -25 18 -32 52 -38 87 -15
+132 -59 132 -133 0 -26 -9 -45 -34 -73 l-34 -37 -339 -3 c-325 -2 -339 -2
+-371 18 -32 20 -62 71 -62 106 0 59 72 124 139 124 26 0 33 7 55 53 29 61 39
+74 86 109 59 44 131 57 204 37z"></path>
+                                                                            <path d="M303 1873 c-19 -7 -108 -131 -151 -213 -148 -277 -173 -611 -68 -905
+48 -133 75 -180 106 -180 35 0 31 30 -14 131 -58 131 -78 220 -83 384 -9 267
+54 472 208 676 27 36 49 71 49 79 0 17 -30 34 -47 28z"></path>
+                                                                            <path d="M1476 1714 c-9 -8 -16 -19 -16 -23 0 -17 151 -133 166 -127 43 17 23
+53 -69 127 -55 44 -59 45 -81 23z"></path>
+                                                                            <path d="M1671 1496 c-8 -10 -2 -33 29 -100 35 -74 44 -86 65 -86 36 0 33 39
+-10 128 -35 74 -58 90 -84 58z"></path>
+                                                                            <path d="M471 1430 c-25 -41 -55 -145 -48 -164 7 -19 43 -21 53 -4 23 37 60
+167 52 182 -14 25 -36 19 -57 -14z"></path>
+                                                                            <path d="M1865 1275 l-33 -35 -204 -2 c-186 -3 -203 -4 -206 -21 -8 -43 9 -47
+218 -47 196 0 198 0 213 -23 37 -56 126 -59 171 -7 21 25 32 30 70 30 54 0 81
+21 66 51 -9 15 -22 19 -65 19 -45 0 -55 3 -60 20 -9 27 -55 50 -101 50 -29 0
+-44 -7 -69 -35z m105 -39 c19 -23 8 -61 -18 -64 -44 -7 -67 32 -36 62 19 20
+38 20 54 2z"></path>
+                                                                            <path d="M410 1155 c-9 -11 -11 -36 -6 -92 8 -91 19 -115 49 -111 21 3 22 7
+18 98 -2 52 -8 101 -13 108 -14 16 -33 15 -48 -3z"></path>
+                                                                            <path d="M1595 1076 c-17 -7 -39 -25 -48 -39 -14 -22 -26 -26 -69 -29 -49 -3
+-53 -5 -53 -28 0 -23 4 -25 55 -28 49 -3 57 -6 72 -32 33 -58 143 -58 176 0
+l17 30 205 2 205 3 3 28 3 27 -205 0 -206 0 -17 26 c-16 26 -68 54 -95 54 -7
+-1 -27 -7 -43 -14z m75 -71 c26 -32 -13 -81 -47 -59 -35 22 -23 74 17 74 10 0
+23 -7 30 -15z"></path>
+                                                                            <path d="M618 929 c-10 -5 -21 -28 -24 -49 -9 -56 -26 -67 -63 -41 -46 33 -80
+27 -129 -22 -47 -48 -53 -80 -22 -120 31 -40 26 -56 -22 -63 -61 -10 -78 -32
+-78 -102 0 -72 17 -98 71 -107 49 -9 57 -25 30 -64 -32 -45 -27 -71 27 -124
+53 -53 70 -56 119 -26 43 27 59 20 66 -26 9 -58 20 -65 103 -65 64 0 75 3 88
+22 9 12 16 35 16 51 0 37 22 43 63 18 50 -30 67 -27 120 27 53 53 58 79 26
+123 -27 39 -19 55 31 64 57 10 74 38 68 116 -5 70 -16 83 -78 93 -45 7 -49 18
+-20 61 29 44 25 70 -21 120 -48 52 -82 58 -130 24 -24 -17 -33 -18 -44 -9 -8
+7 -15 21 -15 32 0 22 -18 60 -34 70 -16 11 -128 9 -148 -3z m118 -86 c11 -55
+22 -69 62 -82 37 -13 43 -12 77 9 l37 23 25 -25 25 -26 -25 -37 c-25 -36 -25
+-40 -11 -74 19 -47 22 -49 69 -59 37 -7 40 -11 43 -44 3 -36 3 -37 -44 -44
+-42 -6 -48 -10 -65 -48 -18 -41 -18 -41 6 -82 l24 -41 -24 -23 -24 -22 -36 22
+c-34 21 -40 22 -77 9 -40 -13 -51 -27 -62 -81 -6 -24 -11 -28 -41 -28 -30 0
+-35 4 -41 28 -11 54 -22 68 -62 81 -37 13 -43 12 -70 -8 -37 -26 -40 -26 -68
+0 l-23 22 22 38 c21 36 21 40 6 81 -15 40 -19 44 -63 52 -47 8 -47 9 -44 44 3
+34 6 37 46 45 36 7 45 14 57 44 20 47 19 59 -6 95 l-22 30 26 25 25 26 37 -23
+c34 -21 40 -22 77 -9 40 13 51 27 62 82 6 23 11 27 41 27 30 0 35 -4 41 -27z"></path>
+                                                                            <path d="M615 693 c-46 -24 -66 -45 -86 -88 -57 -125 29 -258 166 -258 131 0
+220 131 170 250 -20 48 -41 71 -87 94 -45 23 -122 24 -163 2z m119 -57 c68
+-28 95 -101 61 -166 -40 -78 -160 -78 -200 0 -33 64 -8 137 59 166 39 17 40
+17 80 0z"></path>
+                                                                            <path d="M1893 850 c-12 -5 -29 -20 -39 -34 l-16 -26 -197 0 c-108 0 -202 -4
+-209 -9 -8 -4 -12 -19 -10 -32 l3 -24 203 -3 204 -2 33 -35 c25 -28 40 -35 69
+-35 46 0 92 23 101 50 5 17 15 20 60 20 43 0 56 4 65 19 15 29 -12 51 -65 51
+-36 0 -49 6 -78 35 -37 37 -76 44 -124 25z m68 -60 c40 -22 13 -89 -30 -75
+-29 9 -36 42 -15 66 20 22 20 22 45 9z"></path>
+                                                                            <path d="M1420 564 c-36 -18 -82 -39 -102 -45 -42 -13 -52 -29 -34 -54 18 -24
+62 -15 156 33 57 29 76 44 78 61 3 20 -12 42 -28 40 -3 0 -34 -16 -70 -35z"></path>
+                                                                            <path d="M1910 398 c-119 -127 -252 -213 -415 -268 -114 -38 -183 -51 -330
+-59 -108 -5 -120 -8 -123 -25 -10 -48 71 -57 253 -31 141 20 234 48 351 105
+121 59 236 143 328 240 73 78 84 114 36 117 -19 1 -42 -17 -100 -79z"></path>
+                                                                        </g>
+                                                                    </svg>
+                                                                    Bulk SMS Campaigns
+                                                                    <small id="package-text-box-bsc">Select maximum one
+                                                                        package from this
+                                                                        section</small>
+                                                                    <a id="bSCHeading" class="changeBtn"
+                                                                        href="javascript:void(0);"
+                                                                        data-toggle="collapse"
+                                                                        data-target="#collapseInternet"
+                                                                        aria-expanded="true"
+                                                                        aria-controls="collapseInternet"
+                                                                        style="display: none;">Change</a>
+                                                                </h5>
+                                                            </div>
+
+                                                            <div id="collapseInternet" class="collapse"
+                                                                aria-labelledby="bSCHeading" data-parent="#packages">
+                                                                <div class="account-container text-left">
+                                                                    <div class="tab-cont">
+                                                                        <div class="row search-grids">
+                                                                            <ul class="pricingTables" id="BSC">
+                                                                                <!-- Purple Table -->
+                                                                                <li class="link"
+                                                                                    data-package-text="Package 4 selected from this section">
+                                                                                    <div class="pricing-table purple">
+                                                                                        <!-- Table Head -->
+                                                                                        <h2>Package 4</h2>
+                                                                                        <h5>Made for starters</h5>
+                                                                                        <!-- Features -->
+                                                                                        <div class="pricing-features">
+                                                                                            <div class="feature">
+                                                                                                On-Net
+                                                                                                Minutes<span>--</span>
+                                                                                            </div>
+                                                                                            <div class="feature">
+                                                                                                Off-Net
+                                                                                                Minutes<span>--</span>
+                                                                                            </div>
+                                                                                            <div class="feature">
+                                                                                                Internet<span>--</span>
+                                                                                            </div>
+                                                                                            <div class="feature">
+                                                                                                Validity<span>--</span>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <!-- Price -->
+                                                                                        <div class="price-tag">
+                                                                                            <span
+                                                                                                class="symbol">AED</span>
+                                                                                            <span
+                                                                                                class="amount">200</span>
+                                                                                            <span class="after">+5%
+                                                                                                VAT Exc</span>
+                                                                                        </div>
+                                                                                        <!-- Button -->
+                                                                                        <a class="price-button"
+                                                                                            href="javascript:void(0);"><span>SELECT
+                                                                                                NOW</span><i>SELECTED</i></a>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <!-- Turquoise Table -->
+                                                                                <li
+                                                                                    data-package-text="Package 5 selected from this section">
+                                                                                    <div class="pricing-table purple">
+                                                                                        <!-- Table Head -->
+                                                                                        <h2>Package 5</h2>
+                                                                                        <h5>Made for starters</h5>
+                                                                                        <!-- Features -->
+                                                                                        <div class="pricing-features">
+                                                                                            <div class="feature">
+                                                                                                On-Net
+                                                                                                Minutes<span>--</span>
+                                                                                            </div>
+                                                                                            <div class="feature">
+                                                                                                Off-Net
+                                                                                                Minutes<span>--</span>
+                                                                                            </div>
+                                                                                            <div class="feature">
+                                                                                                Internet<span>--</span>
+                                                                                            </div>
+                                                                                            <div class="feature">
+                                                                                                Validity<span>--</span>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <!-- Price -->
+                                                                                        <div class="price-tag">
+                                                                                            <span
+                                                                                                class="symbol">AED</span>
+                                                                                            <span
+                                                                                                class="amount">800</span>
+                                                                                            <span class="after">+5%
+                                                                                                VAT Exc</span>
+                                                                                        </div>
+                                                                                        <!-- Button -->
+                                                                                        <a class="price-button"
+                                                                                            href="javascript:void(0);"><span>SELECT
+                                                                                                NOW</span><i>SELECTED</i></a>
+                                                                                    </div>
+                                                                                </li>
+                                                                            </ul>
+                                                                            <div
+                                                                                class="col-sm-12s btn-box-alone text-right text-right">
+                                                                                <button
+                                                                                    class="default-btn next-btn skip-button-bsc"
+                                                                                    data-package-text="No package selected from this section">Skip</button>
+                                                                                <button
+                                                                                    class="default-btn next-btn wafbnext"
+                                                                                    disabled>Next</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card">
+                                                            <div class="card-header km-customicon">
+                                                                <h5 class="mb-0 internet collapsed">
+                                                                    <svg version="1.0"
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        width="223.000000pt" height="auto"
+                                                                        viewBox="0 0 223.000000 226.000000"
+                                                                        preserveAspectRatio="xMidYMid meet">
+
+                                                                        <g transform="translate(0.000000,226.000000) scale(0.100000,-0.100000)"
+                                                                            fill="#303030" stroke="none">
+                                                                            <path d="M1200 2245 c-6 -8 -10 -22 -8 -32 2 -14 24 -21 103 -34 130 -21 202
+-42 302 -89 117 -55 219 -128 315 -228 96 -100 152 -181 205 -299 34 -76 40
+-84 63 -81 39 5 36 33 -14 136 -58 118 -111 195 -194 284 -170 181 -401 302
+-655 343 -112 18 -102 18 -117 0z"></path>
+                                                                            <path d="M833 2136 c-84 -27 -169 -101 -199 -171 -11 -27 -20 -33 -54 -39 -55
+-9 -124 -75 -140 -134 -23 -87 20 -176 104 -217 l53 -26 340 3 340 3 40 27
+c51 33 81 82 89 141 13 89 -61 189 -149 204 -29 4 -38 12 -53 45 -57 127 -238
+208 -371 164z m151 -67 c80 -22 143 -81 172 -163 9 -25 18 -32 52 -38 87 -15
+132 -59 132 -133 0 -26 -9 -45 -34 -73 l-34 -37 -339 -3 c-325 -2 -339 -2
+-371 18 -32 20 -62 71 -62 106 0 59 72 124 139 124 26 0 33 7 55 53 29 61 39
+74 86 109 59 44 131 57 204 37z"></path>
+                                                                            <path d="M303 1873 c-19 -7 -108 -131 -151 -213 -148 -277 -173 -611 -68 -905
+48 -133 75 -180 106 -180 35 0 31 30 -14 131 -58 131 -78 220 -83 384 -9 267
+54 472 208 676 27 36 49 71 49 79 0 17 -30 34 -47 28z"></path>
+                                                                            <path d="M1476 1714 c-9 -8 -16 -19 -16 -23 0 -17 151 -133 166 -127 43 17 23
+53 -69 127 -55 44 -59 45 -81 23z"></path>
+                                                                            <path d="M1671 1496 c-8 -10 -2 -33 29 -100 35 -74 44 -86 65 -86 36 0 33 39
+-10 128 -35 74 -58 90 -84 58z"></path>
+                                                                            <path d="M471 1430 c-25 -41 -55 -145 -48 -164 7 -19 43 -21 53 -4 23 37 60
+167 52 182 -14 25 -36 19 -57 -14z"></path>
+                                                                            <path d="M1865 1275 l-33 -35 -204 -2 c-186 -3 -203 -4 -206 -21 -8 -43 9 -47
+218 -47 196 0 198 0 213 -23 37 -56 126 -59 171 -7 21 25 32 30 70 30 54 0 81
+21 66 51 -9 15 -22 19 -65 19 -45 0 -55 3 -60 20 -9 27 -55 50 -101 50 -29 0
+-44 -7 -69 -35z m105 -39 c19 -23 8 -61 -18 -64 -44 -7 -67 32 -36 62 19 20
+38 20 54 2z"></path>
+                                                                            <path d="M410 1155 c-9 -11 -11 -36 -6 -92 8 -91 19 -115 49 -111 21 3 22 7
+18 98 -2 52 -8 101 -13 108 -14 16 -33 15 -48 -3z"></path>
+                                                                            <path d="M1595 1076 c-17 -7 -39 -25 -48 -39 -14 -22 -26 -26 -69 -29 -49 -3
+-53 -5 -53 -28 0 -23 4 -25 55 -28 49 -3 57 -6 72 -32 33 -58 143 -58 176 0
+l17 30 205 2 205 3 3 28 3 27 -205 0 -206 0 -17 26 c-16 26 -68 54 -95 54 -7
+-1 -27 -7 -43 -14z m75 -71 c26 -32 -13 -81 -47 -59 -35 22 -23 74 17 74 10 0
+23 -7 30 -15z"></path>
+                                                                            <path d="M618 929 c-10 -5 -21 -28 -24 -49 -9 -56 -26 -67 -63 -41 -46 33 -80
+27 -129 -22 -47 -48 -53 -80 -22 -120 31 -40 26 -56 -22 -63 -61 -10 -78 -32
+-78 -102 0 -72 17 -98 71 -107 49 -9 57 -25 30 -64 -32 -45 -27 -71 27 -124
+53 -53 70 -56 119 -26 43 27 59 20 66 -26 9 -58 20 -65 103 -65 64 0 75 3 88
+22 9 12 16 35 16 51 0 37 22 43 63 18 50 -30 67 -27 120 27 53 53 58 79 26
+123 -27 39 -19 55 31 64 57 10 74 38 68 116 -5 70 -16 83 -78 93 -45 7 -49 18
+-20 61 29 44 25 70 -21 120 -48 52 -82 58 -130 24 -24 -17 -33 -18 -44 -9 -8
+7 -15 21 -15 32 0 22 -18 60 -34 70 -16 11 -128 9 -148 -3z m118 -86 c11 -55
+22 -69 62 -82 37 -13 43 -12 77 9 l37 23 25 -25 25 -26 -25 -37 c-25 -36 -25
+-40 -11 -74 19 -47 22 -49 69 -59 37 -7 40 -11 43 -44 3 -36 3 -37 -44 -44
+-42 -6 -48 -10 -65 -48 -18 -41 -18 -41 6 -82 l24 -41 -24 -23 -24 -22 -36 22
+c-34 21 -40 22 -77 9 -40 -13 -51 -27 -62 -81 -6 -24 -11 -28 -41 -28 -30 0
+-35 4 -41 28 -11 54 -22 68 -62 81 -37 13 -43 12 -70 -8 -37 -26 -40 -26 -68
+0 l-23 22 22 38 c21 36 21 40 6 81 -15 40 -19 44 -63 52 -47 8 -47 9 -44 44 3
+34 6 37 46 45 36 7 45 14 57 44 20 47 19 59 -6 95 l-22 30 26 25 25 26 37 -23
+c34 -21 40 -22 77 -9 40 13 51 27 62 82 6 23 11 27 41 27 30 0 35 -4 41 -27z"></path>
+                                                                            <path d="M615 693 c-46 -24 -66 -45 -86 -88 -57 -125 29 -258 166 -258 131 0
+220 131 170 250 -20 48 -41 71 -87 94 -45 23 -122 24 -163 2z m119 -57 c68
+-28 95 -101 61 -166 -40 -78 -160 -78 -200 0 -33 64 -8 137 59 166 39 17 40
+17 80 0z"></path>
+                                                                            <path d="M1893 850 c-12 -5 -29 -20 -39 -34 l-16 -26 -197 0 c-108 0 -202 -4
+-209 -9 -8 -4 -12 -19 -10 -32 l3 -24 203 -3 204 -2 33 -35 c25 -28 40 -35 69
+-35 46 0 92 23 101 50 5 17 15 20 60 20 43 0 56 4 65 19 15 29 -12 51 -65 51
+-36 0 -49 6 -78 35 -37 37 -76 44 -124 25z m68 -60 c40 -22 13 -89 -30 -75
+-29 9 -36 42 -15 66 20 22 20 22 45 9z"></path>
+                                                                            <path d="M1420 564 c-36 -18 -82 -39 -102 -45 -42 -13 -52 -29 -34 -54 18 -24
+62 -15 156 33 57 29 76 44 78 61 3 20 -12 42 -28 40 -3 0 -34 -16 -70 -35z"></path>
+                                                                            <path d="M1910 398 c-119 -127 -252 -213 -415 -268 -114 -38 -183 -51 -330
+-59 -108 -5 -120 -8 -123 -25 -10 -48 71 -57 253 -31 141 20 234 48 351 105
+121 59 236 143 328 240 73 78 84 114 36 117 -19 1 -42 -17 -100 -79z"></path>
+                                                                        </g>
+                                                                    </svg>
+                                                                    Bulk Email Campaigns
+                                                                    <small id="package-text-box-bec">Select maximum one
+                                                                        package from this
+                                                                        section</small>
+                                                                    <a id="BeCHeading" class="changeBtn"
+                                                                        href="javascript:void(0);"
+                                                                        data-toggle="collapse"
+                                                                        data-target="#BeCHeadingCollapse"
+                                                                        aria-expanded="true" aria-controls="BeCHeading"
+                                                                        style="display: none;">Change</a>
+                                                                </h5>
+                                                            </div>
+
+                                                            <div id="BeCHeadingCollapse" class="collapse"
+                                                                aria-labelledby="BeCHeading" data-parent="#packages">
+                                                                <div class="card-body">
+                                                                    <div class="account-container text-left">
+                                                                        <div class="tab-cont">
+                                                                            <div class="row search-grids">
+                                                                                <ul class="pricingTables" id="BEC">
+                                                                                    <!-- Purple Table -->
+                                                                                    <li class="link"
+                                                                                        data-package-text="Package 6 selected from this section">
+                                                                                        <div
+                                                                                            class="pricing-table purple">
+                                                                                            <!-- Table Head -->
+                                                                                            <h2>Package 6</h2>
+                                                                                            <h5>Made for starters</h5>
+                                                                                            <!-- Features -->
+                                                                                            <div
+                                                                                                class="pricing-features">
+                                                                                                <div class="feature">
+                                                                                                    On-Net
+                                                                                                    Minutes<span>--</span>
+                                                                                                </div>
+                                                                                                <div class="feature">
+                                                                                                    Off-Net
+                                                                                                    Minutes<span>--</span>
+                                                                                                </div>
+                                                                                                <div class="feature">
+                                                                                                    Internet<span>--</span>
+                                                                                                </div>
+                                                                                                <div class="feature">
+                                                                                                    Validity<span>--</span>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <!-- Price -->
+                                                                                            <div class="price-tag">
+                                                                                                <span
+                                                                                                    class="symbol">AED</span>
+                                                                                                <span
+                                                                                                    class="amount">200</span>
+                                                                                                <span class="after">+5%
+                                                                                                    VAT Exc</span>
+                                                                                            </div>
+                                                                                            <!-- Button -->
+                                                                                            <a class="price-button"
+                                                                                                href="javascript:void(0);"><span>SELECT
+                                                                                                    NOW</span><i>SELECTED</i></a>
+                                                                                        </div>
+                                                                                    </li>
+                                                                                    <!-- Turquoise Table -->
+                                                                                    <li
+                                                                                        data-package-text="Package 7 selected from this section">
+                                                                                        <div
+                                                                                            class="pricing-table purple">
+                                                                                            <!-- Table Head -->
+                                                                                            <h2>Package 7</h2>
+                                                                                            <h5>Made for starters</h5>
+                                                                                            <!-- Features -->
+                                                                                            <div
+                                                                                                class="pricing-features">
+                                                                                                <div class="feature">
+                                                                                                    On-Net
+                                                                                                    Minutes<span>--</span>
+                                                                                                </div>
+                                                                                                <div class="feature">
+                                                                                                    Off-Net
+                                                                                                    Minutes<span>--</span>
+                                                                                                </div>
+                                                                                                <div class="feature">
+                                                                                                    Internet<span>--</span>
+                                                                                                </div>
+                                                                                                <div class="feature">
+                                                                                                    Validity<span>--</span>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <!-- Price -->
+                                                                                            <div class="price-tag">
+                                                                                                <span
+                                                                                                    class="symbol">AED</span>
+                                                                                                <span
+                                                                                                    class="amount">800</span>
+                                                                                                <span class="after">+5%
+                                                                                                    VAT Exc</span>
+                                                                                            </div>
+                                                                                            <!-- Button -->
+                                                                                            <a class="price-button"
+                                                                                                href="javascript:void(0);"><span>SELECT
+                                                                                                    NOW</span><i>SELECTED</i></a>
+                                                                                        </div>
+                                                                                    </li>
+                                                                                </ul>
+                                                                                <div
+                                                                                    class="col-sm-12s btn-box-alone text-right text-right">
+                                                                                    <button
+                                                                                        class="default-btn next-btn skip-button-bec"
+                                                                                        data-package-text="No package selected from this section">Skip</button>
+                                                                                    <button
+                                                                                        class="default-btn next-btn wafbnext"
+                                                                                        disabled>Next</button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card">
+                                                            <div class="card-header km-customicon">
+                                                                <h5 class="mb-0 internet collapsed">
+                                                                    <svg version="1.0"
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        width="223.000000pt" height="auto"
+                                                                        viewBox="0 0 223.000000 226.000000"
+                                                                        preserveAspectRatio="xMidYMid meet">
+
+                                                                        <g transform="translate(0.000000,226.000000) scale(0.100000,-0.100000)"
+                                                                            fill="#303030" stroke="none">
+                                                                            <path d="M1200 2245 c-6 -8 -10 -22 -8 -32 2 -14 24 -21 103 -34 130 -21 202
+-42 302 -89 117 -55 219 -128 315 -228 96 -100 152 -181 205 -299 34 -76 40
+-84 63 -81 39 5 36 33 -14 136 -58 118 -111 195 -194 284 -170 181 -401 302
+-655 343 -112 18 -102 18 -117 0z"></path>
+                                                                            <path d="M833 2136 c-84 -27 -169 -101 -199 -171 -11 -27 -20 -33 -54 -39 -55
+-9 -124 -75 -140 -134 -23 -87 20 -176 104 -217 l53 -26 340 3 340 3 40 27
+c51 33 81 82 89 141 13 89 -61 189 -149 204 -29 4 -38 12 -53 45 -57 127 -238
+208 -371 164z m151 -67 c80 -22 143 -81 172 -163 9 -25 18 -32 52 -38 87 -15
+132 -59 132 -133 0 -26 -9 -45 -34 -73 l-34 -37 -339 -3 c-325 -2 -339 -2
+-371 18 -32 20 -62 71 -62 106 0 59 72 124 139 124 26 0 33 7 55 53 29 61 39
+74 86 109 59 44 131 57 204 37z"></path>
+                                                                            <path d="M303 1873 c-19 -7 -108 -131 -151 -213 -148 -277 -173 -611 -68 -905
+48 -133 75 -180 106 -180 35 0 31 30 -14 131 -58 131 -78 220 -83 384 -9 267
+54 472 208 676 27 36 49 71 49 79 0 17 -30 34 -47 28z"></path>
+                                                                            <path d="M1476 1714 c-9 -8 -16 -19 -16 -23 0 -17 151 -133 166 -127 43 17 23
+53 -69 127 -55 44 -59 45 -81 23z"></path>
+                                                                            <path d="M1671 1496 c-8 -10 -2 -33 29 -100 35 -74 44 -86 65 -86 36 0 33 39
+-10 128 -35 74 -58 90 -84 58z"></path>
+                                                                            <path d="M471 1430 c-25 -41 -55 -145 -48 -164 7 -19 43 -21 53 -4 23 37 60
+167 52 182 -14 25 -36 19 -57 -14z"></path>
+                                                                            <path d="M1865 1275 l-33 -35 -204 -2 c-186 -3 -203 -4 -206 -21 -8 -43 9 -47
+218 -47 196 0 198 0 213 -23 37 -56 126 -59 171 -7 21 25 32 30 70 30 54 0 81
+21 66 51 -9 15 -22 19 -65 19 -45 0 -55 3 -60 20 -9 27 -55 50 -101 50 -29 0
+-44 -7 -69 -35z m105 -39 c19 -23 8 -61 -18 -64 -44 -7 -67 32 -36 62 19 20
+38 20 54 2z"></path>
+                                                                            <path d="M410 1155 c-9 -11 -11 -36 -6 -92 8 -91 19 -115 49 -111 21 3 22 7
+18 98 -2 52 -8 101 -13 108 -14 16 -33 15 -48 -3z"></path>
+                                                                            <path d="M1595 1076 c-17 -7 -39 -25 -48 -39 -14 -22 -26 -26 -69 -29 -49 -3
+-53 -5 -53 -28 0 -23 4 -25 55 -28 49 -3 57 -6 72 -32 33 -58 143 -58 176 0
+l17 30 205 2 205 3 3 28 3 27 -205 0 -206 0 -17 26 c-16 26 -68 54 -95 54 -7
+-1 -27 -7 -43 -14z m75 -71 c26 -32 -13 -81 -47 -59 -35 22 -23 74 17 74 10 0
+23 -7 30 -15z"></path>
+                                                                            <path d="M618 929 c-10 -5 -21 -28 -24 -49 -9 -56 -26 -67 -63 -41 -46 33 -80
+27 -129 -22 -47 -48 -53 -80 -22 -120 31 -40 26 -56 -22 -63 -61 -10 -78 -32
+-78 -102 0 -72 17 -98 71 -107 49 -9 57 -25 30 -64 -32 -45 -27 -71 27 -124
+53 -53 70 -56 119 -26 43 27 59 20 66 -26 9 -58 20 -65 103 -65 64 0 75 3 88
+22 9 12 16 35 16 51 0 37 22 43 63 18 50 -30 67 -27 120 27 53 53 58 79 26
+123 -27 39 -19 55 31 64 57 10 74 38 68 116 -5 70 -16 83 -78 93 -45 7 -49 18
+-20 61 29 44 25 70 -21 120 -48 52 -82 58 -130 24 -24 -17 -33 -18 -44 -9 -8
+7 -15 21 -15 32 0 22 -18 60 -34 70 -16 11 -128 9 -148 -3z m118 -86 c11 -55
+22 -69 62 -82 37 -13 43 -12 77 9 l37 23 25 -25 25 -26 -25 -37 c-25 -36 -25
+-40 -11 -74 19 -47 22 -49 69 -59 37 -7 40 -11 43 -44 3 -36 3 -37 -44 -44
+-42 -6 -48 -10 -65 -48 -18 -41 -18 -41 6 -82 l24 -41 -24 -23 -24 -22 -36 22
+c-34 21 -40 22 -77 9 -40 -13 -51 -27 -62 -81 -6 -24 -11 -28 -41 -28 -30 0
+-35 4 -41 28 -11 54 -22 68 -62 81 -37 13 -43 12 -70 -8 -37 -26 -40 -26 -68
+0 l-23 22 22 38 c21 36 21 40 6 81 -15 40 -19 44 -63 52 -47 8 -47 9 -44 44 3
+34 6 37 46 45 36 7 45 14 57 44 20 47 19 59 -6 95 l-22 30 26 25 25 26 37 -23
+c34 -21 40 -22 77 -9 40 13 51 27 62 82 6 23 11 27 41 27 30 0 35 -4 41 -27z"></path>
+                                                                            <path d="M615 693 c-46 -24 -66 -45 -86 -88 -57 -125 29 -258 166 -258 131 0
+220 131 170 250 -20 48 -41 71 -87 94 -45 23 -122 24 -163 2z m119 -57 c68
+-28 95 -101 61 -166 -40 -78 -160 -78 -200 0 -33 64 -8 137 59 166 39 17 40
+17 80 0z"></path>
+                                                                            <path d="M1893 850 c-12 -5 -29 -20 -39 -34 l-16 -26 -197 0 c-108 0 -202 -4
+-209 -9 -8 -4 -12 -19 -10 -32 l3 -24 203 -3 204 -2 33 -35 c25 -28 40 -35 69
+-35 46 0 92 23 101 50 5 17 15 20 60 20 43 0 56 4 65 19 15 29 -12 51 -65 51
+-36 0 -49 6 -78 35 -37 37 -76 44 -124 25z m68 -60 c40 -22 13 -89 -30 -75
+-29 9 -36 42 -15 66 20 22 20 22 45 9z"></path>
+                                                                            <path d="M1420 564 c-36 -18 -82 -39 -102 -45 -42 -13 -52 -29 -34 -54 18 -24
+62 -15 156 33 57 29 76 44 78 61 3 20 -12 42 -28 40 -3 0 -34 -16 -70 -35z"></path>
+                                                                            <path d="M1910 398 c-119 -127 -252 -213 -415 -268 -114 -38 -183 -51 -330
+-59 -108 -5 -120 -8 -123 -25 -10 -48 71 -57 253 -31 141 20 234 48 351 105
+121 59 236 143 328 240 73 78 84 114 36 117 -19 1 -42 -17 -100 -79z"></path>
+                                                                        </g>
+                                                                    </svg>
+                                                                    Two Factor Authentication
+                                                                    <small id="package-text-box-tfa">Select maximum one
+                                                                        package from this
+                                                                        section</small>
+                                                                    <a id="tFaHeading" class="changeBtn"
+                                                                        href="javascript:void(0);"
+                                                                        data-toggle="collapse"
+                                                                        data-target="#tFaHeadingCollapse"
+                                                                        aria-expanded="true" aria-controls="tFaHeading"
+                                                                        style="display: none;">Change</a>
+                                                                </h5>
+                                                            </div>
+
+                                                            <div id="tFaHeadingCollapse" class="collapse"
+                                                                aria-labelledby="tFaHeading" data-parent="#packages">
+                                                                <div class="card-body">
+                                                                    <div class="account-container text-left">
+                                                                        <div class="tab-cont">
+                                                                            <div class="row search-grids">
+                                                                                <ul class="pricingTables" id="TFA">
+                                                                                    <!-- Purple Table -->
+                                                                                    <li class="link"
+                                                                                        data-package-text="Package 8 selected from this section">
+                                                                                        <div
+                                                                                            class="pricing-table purple">
+                                                                                            <!-- Table Head -->
+                                                                                            <h2>Package 8</h2>
+                                                                                            <h5>Made for starters</h5>
+                                                                                            <!-- Features -->
+                                                                                            <div
+                                                                                                class="pricing-features">
+                                                                                                <div class="feature">
+                                                                                                    On-Net
+                                                                                                    Minutes<span>--</span>
+                                                                                                </div>
+                                                                                                <div class="feature">
+                                                                                                    Off-Net
+                                                                                                    Minutes<span>--</span>
+                                                                                                </div>
+                                                                                                <div class="feature">
+                                                                                                    Internet<span>--</span>
+                                                                                                </div>
+                                                                                                <div class="feature">
+                                                                                                    Validity<span>--</span>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <!-- Price -->
+                                                                                            <div class="price-tag">
+                                                                                                <span
+                                                                                                    class="symbol">AED</span>
+                                                                                                <span
+                                                                                                    class="amount">200</span>
+                                                                                                <span class="after">+5%
+                                                                                                    VAT Exc</span>
+                                                                                            </div>
+                                                                                            <!-- Button -->
+                                                                                            <a class="price-button"
+                                                                                                href="javascript:void(0);"><span>SELECT
+                                                                                                    NOW</span><i>SELECTED</i></a>
+                                                                                        </div>
+                                                                                    </li>
+                                                                                    <!-- Turquoise Table -->
+                                                                                    <li
+                                                                                        data-package-text="Package 9 selected from this section">
+                                                                                        <div
+                                                                                            class="pricing-table purple">
+                                                                                            <!-- Table Head -->
+                                                                                            <h2>Package 9</h2>
+                                                                                            <h5>Made for starters</h5>
+                                                                                            <!-- Features -->
+                                                                                            <div
+                                                                                                class="pricing-features">
+                                                                                                <div class="feature">
+                                                                                                    On-Net
+                                                                                                    Minutes<span>--</span>
+                                                                                                </div>
+                                                                                                <div class="feature">
+                                                                                                    Off-Net
+                                                                                                    Minutes<span>--</span>
+                                                                                                </div>
+                                                                                                <div class="feature">
+                                                                                                    Internet<span>--</span>
+                                                                                                </div>
+                                                                                                <div class="feature">
+                                                                                                    Validity<span>--</span>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <!-- Price -->
+                                                                                            <div class="price-tag">
+                                                                                                <span
+                                                                                                    class="symbol">AED</span>
+                                                                                                <span
+                                                                                                    class="amount">800</span>
+                                                                                                <span class="after">+5%
+                                                                                                    VAT Exc</span>
+                                                                                            </div>
+                                                                                            <!-- Button -->
+                                                                                            <a class="price-button"
+                                                                                                href="javascript:void(0);"><span>SELECT
+                                                                                                    NOW</span><i>SELECTED</i></a>
+                                                                                        </div>
+                                                                                    </li>
+                                                                                </ul>
+                                                                                <div
+                                                                                    class="col-sm-12s btn-box-alone text-right text-right">
+                                                                                    <button
+                                                                                        class="default-btn next-btn skip-button-tfa"
+                                                                                        data-package-text="No package selected from this section">Skip</button>
+                                                                                    <button
+                                                                                        class="default-btn next-btn wafbnext"
+                                                                                        disabled>Next</button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card">
+                                                            <div class="card-header km-customicon">
+                                                                <h5 class="mb-0 internet collapsed">
+                                                                    <svg version="1.0"
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        width="223.000000pt" height="auto"
+                                                                        viewBox="0 0 223.000000 226.000000"
+                                                                        preserveAspectRatio="xMidYMid meet">
+
+                                                                        <g transform="translate(0.000000,226.000000) scale(0.100000,-0.100000)"
+                                                                            fill="#303030" stroke="none">
+                                                                            <path d="M1200 2245 c-6 -8 -10 -22 -8 -32 2 -14 24 -21 103 -34 130 -21 202
+-42 302 -89 117 -55 219 -128 315 -228 96 -100 152 -181 205 -299 34 -76 40
+-84 63 -81 39 5 36 33 -14 136 -58 118 -111 195 -194 284 -170 181 -401 302
+-655 343 -112 18 -102 18 -117 0z"></path>
+                                                                            <path d="M833 2136 c-84 -27 -169 -101 -199 -171 -11 -27 -20 -33 -54 -39 -55
+-9 -124 -75 -140 -134 -23 -87 20 -176 104 -217 l53 -26 340 3 340 3 40 27
+c51 33 81 82 89 141 13 89 -61 189 -149 204 -29 4 -38 12 -53 45 -57 127 -238
+208 -371 164z m151 -67 c80 -22 143 -81 172 -163 9 -25 18 -32 52 -38 87 -15
+132 -59 132 -133 0 -26 -9 -45 -34 -73 l-34 -37 -339 -3 c-325 -2 -339 -2
+-371 18 -32 20 -62 71 -62 106 0 59 72 124 139 124 26 0 33 7 55 53 29 61 39
+74 86 109 59 44 131 57 204 37z"></path>
+                                                                            <path d="M303 1873 c-19 -7 -108 -131 -151 -213 -148 -277 -173 -611 -68 -905
+48 -133 75 -180 106 -180 35 0 31 30 -14 131 -58 131 -78 220 -83 384 -9 267
+54 472 208 676 27 36 49 71 49 79 0 17 -30 34 -47 28z"></path>
+                                                                            <path d="M1476 1714 c-9 -8 -16 -19 -16 -23 0 -17 151 -133 166 -127 43 17 23
+53 -69 127 -55 44 -59 45 -81 23z"></path>
+                                                                            <path d="M1671 1496 c-8 -10 -2 -33 29 -100 35 -74 44 -86 65 -86 36 0 33 39
+-10 128 -35 74 -58 90 -84 58z"></path>
+                                                                            <path d="M471 1430 c-25 -41 -55 -145 -48 -164 7 -19 43 -21 53 -4 23 37 60
+167 52 182 -14 25 -36 19 -57 -14z"></path>
+                                                                            <path d="M1865 1275 l-33 -35 -204 -2 c-186 -3 -203 -4 -206 -21 -8 -43 9 -47
+218 -47 196 0 198 0 213 -23 37 -56 126 -59 171 -7 21 25 32 30 70 30 54 0 81
+21 66 51 -9 15 -22 19 -65 19 -45 0 -55 3 -60 20 -9 27 -55 50 -101 50 -29 0
+-44 -7 -69 -35z m105 -39 c19 -23 8 -61 -18 -64 -44 -7 -67 32 -36 62 19 20
+38 20 54 2z"></path>
+                                                                            <path d="M410 1155 c-9 -11 -11 -36 -6 -92 8 -91 19 -115 49 -111 21 3 22 7
+18 98 -2 52 -8 101 -13 108 -14 16 -33 15 -48 -3z"></path>
+                                                                            <path d="M1595 1076 c-17 -7 -39 -25 -48 -39 -14 -22 -26 -26 -69 -29 -49 -3
+-53 -5 -53 -28 0 -23 4 -25 55 -28 49 -3 57 -6 72 -32 33 -58 143 -58 176 0
+l17 30 205 2 205 3 3 28 3 27 -205 0 -206 0 -17 26 c-16 26 -68 54 -95 54 -7
+-1 -27 -7 -43 -14z m75 -71 c26 -32 -13 -81 -47 -59 -35 22 -23 74 17 74 10 0
+23 -7 30 -15z"></path>
+                                                                            <path d="M618 929 c-10 -5 -21 -28 -24 -49 -9 -56 -26 -67 -63 -41 -46 33 -80
+27 -129 -22 -47 -48 -53 -80 -22 -120 31 -40 26 -56 -22 -63 -61 -10 -78 -32
+-78 -102 0 -72 17 -98 71 -107 49 -9 57 -25 30 -64 -32 -45 -27 -71 27 -124
+53 -53 70 -56 119 -26 43 27 59 20 66 -26 9 -58 20 -65 103 -65 64 0 75 3 88
+22 9 12 16 35 16 51 0 37 22 43 63 18 50 -30 67 -27 120 27 53 53 58 79 26
+123 -27 39 -19 55 31 64 57 10 74 38 68 116 -5 70 -16 83 -78 93 -45 7 -49 18
+-20 61 29 44 25 70 -21 120 -48 52 -82 58 -130 24 -24 -17 -33 -18 -44 -9 -8
+7 -15 21 -15 32 0 22 -18 60 -34 70 -16 11 -128 9 -148 -3z m118 -86 c11 -55
+22 -69 62 -82 37 -13 43 -12 77 9 l37 23 25 -25 25 -26 -25 -37 c-25 -36 -25
+-40 -11 -74 19 -47 22 -49 69 -59 37 -7 40 -11 43 -44 3 -36 3 -37 -44 -44
+-42 -6 -48 -10 -65 -48 -18 -41 -18 -41 6 -82 l24 -41 -24 -23 -24 -22 -36 22
+c-34 21 -40 22 -77 9 -40 -13 -51 -27 -62 -81 -6 -24 -11 -28 -41 -28 -30 0
+-35 4 -41 28 -11 54 -22 68 -62 81 -37 13 -43 12 -70 -8 -37 -26 -40 -26 -68
+0 l-23 22 22 38 c21 36 21 40 6 81 -15 40 -19 44 -63 52 -47 8 -47 9 -44 44 3
+34 6 37 46 45 36 7 45 14 57 44 20 47 19 59 -6 95 l-22 30 26 25 25 26 37 -23
+c34 -21 40 -22 77 -9 40 13 51 27 62 82 6 23 11 27 41 27 30 0 35 -4 41 -27z"></path>
+                                                                            <path d="M615 693 c-46 -24 -66 -45 -86 -88 -57 -125 29 -258 166 -258 131 0
+220 131 170 250 -20 48 -41 71 -87 94 -45 23 -122 24 -163 2z m119 -57 c68
+-28 95 -101 61 -166 -40 -78 -160 -78 -200 0 -33 64 -8 137 59 166 39 17 40
+17 80 0z"></path>
+                                                                            <path d="M1893 850 c-12 -5 -29 -20 -39 -34 l-16 -26 -197 0 c-108 0 -202 -4
+-209 -9 -8 -4 -12 -19 -10 -32 l3 -24 203 -3 204 -2 33 -35 c25 -28 40 -35 69
+-35 46 0 92 23 101 50 5 17 15 20 60 20 43 0 56 4 65 19 15 29 -12 51 -65 51
+-36 0 -49 6 -78 35 -37 37 -76 44 -124 25z m68 -60 c40 -22 13 -89 -30 -75
+-29 9 -36 42 -15 66 20 22 20 22 45 9z"></path>
+                                                                            <path d="M1420 564 c-36 -18 -82 -39 -102 -45 -42 -13 -52 -29 -34 -54 18 -24
+62 -15 156 33 57 29 76 44 78 61 3 20 -12 42 -28 40 -3 0 -34 -16 -70 -35z"></path>
+                                                                            <path d="M1910 398 c-119 -127 -252 -213 -415 -268 -114 -38 -183 -51 -330
+-59 -108 -5 -120 -8 -123 -25 -10 -48 71 -57 253 -31 141 20 234 48 351 105
+121 59 236 143 328 240 73 78 84 114 36 117 -19 1 -42 -17 -100 -79z"></path>
+                                                                        </g>
+                                                                    </svg>
+                                                                    Number Masking
+                                                                    <small id="package-text-box-nm">Select maximum one
+                                                                        package from this
+                                                                        section</small>
+                                                                    <a id="numberMHeading" class="changeBtn"
+                                                                        href="javascript:void(0);"
+                                                                        data-toggle="collapse"
+                                                                        data-target="#numberMHeadingCollapse"
+                                                                        aria-expanded="true"
+                                                                        aria-controls="numberMHeading"
+                                                                        style="display: none;">Change</a>
+                                                                </h5>
+                                                            </div>
+
+                                                            <div id="numberMHeadingCollapse" class="collapse"
+                                                                aria-labelledby="numberMHeading"
+                                                                data-parent="#packages">
+                                                                <div class="card-body">
+                                                                    <div class="account-container text-left">
+                                                                        <div class="tab-cont">
+                                                                            <div class="row search-grids">
+                                                                                <ul class="pricingTables" id="NM">
+                                                                                    <!-- Purple Table -->
+                                                                                    <li class="link"
+                                                                                        data-package-text="Package 10 selected from this section">
+                                                                                        <div
+                                                                                            class="pricing-table purple">
+                                                                                            <!-- Table Head -->
+                                                                                            <h2>Package 10</h2>
+                                                                                            <h5>Made for starters</h5>
+                                                                                            <!-- Features -->
+                                                                                            <div
+                                                                                                class="pricing-features">
+                                                                                                <div class="feature">
+                                                                                                    On-Net
+                                                                                                    Minutes<span>--</span>
+                                                                                                </div>
+                                                                                                <div class="feature">
+                                                                                                    Off-Net
+                                                                                                    Minutes<span>--</span>
+                                                                                                </div>
+                                                                                                <div class="feature">
+                                                                                                    Internet<span>--</span>
+                                                                                                </div>
+                                                                                                <div class="feature">
+                                                                                                    Validity<span>--</span>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <!-- Price -->
+                                                                                            <div class="price-tag">
+                                                                                                <span
+                                                                                                    class="symbol">AED</span>
+                                                                                                <span
+                                                                                                    class="amount">200</span>
+                                                                                                <span class="after">+5%
+                                                                                                    VAT Exc</span>
+                                                                                            </div>
+                                                                                            <!-- Button -->
+                                                                                            <a class="price-button"
+                                                                                                href="javascript:void(0);"><span>SELECT
+                                                                                                    NOW</span><i>SELECTED</i></a>
+                                                                                        </div>
+                                                                                    </li>
+                                                                                    <!-- Turquoise Table -->
+                                                                                    <li
+                                                                                        data-package-text="Package 11 selected from this section">
+                                                                                        <div
+                                                                                            class="pricing-table purple">
+                                                                                            <!-- Table Head -->
+                                                                                            <h2>Package 11</h2>
+                                                                                            <h5>Made for starters</h5>
+                                                                                            <!-- Features -->
+                                                                                            <div
+                                                                                                class="pricing-features">
+                                                                                                <div class="feature">
+                                                                                                    On-Net
+                                                                                                    Minutes<span>--</span>
+                                                                                                </div>
+                                                                                                <div class="feature">
+                                                                                                    Off-Net
+                                                                                                    Minutes<span>--</span>
+                                                                                                </div>
+                                                                                                <div class="feature">
+                                                                                                    Internet<span>--</span>
+                                                                                                </div>
+                                                                                                <div class="feature">
+                                                                                                    Validity<span>--</span>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <!-- Price -->
+                                                                                            <div class="price-tag">
+                                                                                                <span
+                                                                                                    class="symbol">AED</span>
+                                                                                                <span
+                                                                                                    class="amount">800</span>
+                                                                                                <span class="after">+5%
+                                                                                                    VAT Exc</span>
+                                                                                            </div>
+                                                                                            <!-- Button -->
+                                                                                            <a class="price-button"
+                                                                                                href="javascript:void(0);"><span>SELECT
+                                                                                                    NOW</span><i>SELECTED</i></a>
+                                                                                        </div>
+                                                                                    </li>
+                                                                                </ul>
+                                                                                <div
+                                                                                    class="col-sm-12s btn-box-alone text-right text-right">
+                                                                                    <button
+                                                                                        class="default-btn next-btn skip-button-nm"
+                                                                                        data-package-text="No package selected from this section">Skip</button>
+                                                                                    <button
+                                                                                        class="default-btn next-btn wafbnext"
+                                                                                        disabled>Next</button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card">
+                                                            <div class="card-header km-customicon">
+                                                                <h5 class="mb-0 security collapsed">
+                                                                    <svg version="1.0"
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        width="223.000000pt" height="auto"
+                                                                        viewBox="0 0 223.000000 226.000000"
+                                                                        preserveAspectRatio="xMidYMid meet">
+
+                                                                        <g transform="translate(0.000000,226.000000) scale(0.100000,-0.100000)"
+                                                                            fill="#303030" stroke="none">
+                                                                            <path d="M1200 2245 c-6 -8 -10 -22 -8 -32 2 -14 24 -21 103 -34 130 -21 202
+-42 302 -89 117 -55 219 -128 315 -228 96 -100 152 -181 205 -299 34 -76 40
+-84 63 -81 39 5 36 33 -14 136 -58 118 -111 195 -194 284 -170 181 -401 302
+-655 343 -112 18 -102 18 -117 0z" />
+                                                                            <path d="M833 2136 c-84 -27 -169 -101 -199 -171 -11 -27 -20 -33 -54 -39 -55
+-9 -124 -75 -140 -134 -23 -87 20 -176 104 -217 l53 -26 340 3 340 3 40 27
+c51 33 81 82 89 141 13 89 -61 189 -149 204 -29 4 -38 12 -53 45 -57 127 -238
+208 -371 164z m151 -67 c80 -22 143 -81 172 -163 9 -25 18 -32 52 -38 87 -15
+132 -59 132 -133 0 -26 -9 -45 -34 -73 l-34 -37 -339 -3 c-325 -2 -339 -2
+-371 18 -32 20 -62 71 -62 106 0 59 72 124 139 124 26 0 33 7 55 53 29 61 39
+74 86 109 59 44 131 57 204 37z" />
+                                                                            <path d="M303 1873 c-19 -7 -108 -131 -151 -213 -148 -277 -173 -611 -68 -905
+48 -133 75 -180 106 -180 35 0 31 30 -14 131 -58 131 -78 220 -83 384 -9 267
+54 472 208 676 27 36 49 71 49 79 0 17 -30 34 -47 28z" />
+                                                                            <path d="M1476 1714 c-9 -8 -16 -19 -16 -23 0 -17 151 -133 166 -127 43 17 23
+53 -69 127 -55 44 -59 45 -81 23z" />
+                                                                            <path d="M1671 1496 c-8 -10 -2 -33 29 -100 35 -74 44 -86 65 -86 36 0 33 39
+-10 128 -35 74 -58 90 -84 58z" />
+                                                                            <path d="M471 1430 c-25 -41 -55 -145 -48 -164 7 -19 43 -21 53 -4 23 37 60
+167 52 182 -14 25 -36 19 -57 -14z" />
+                                                                            <path d="M1865 1275 l-33 -35 -204 -2 c-186 -3 -203 -4 -206 -21 -8 -43 9 -47
+218 -47 196 0 198 0 213 -23 37 -56 126 -59 171 -7 21 25 32 30 70 30 54 0 81
+21 66 51 -9 15 -22 19 -65 19 -45 0 -55 3 -60 20 -9 27 -55 50 -101 50 -29 0
+-44 -7 -69 -35z m105 -39 c19 -23 8 -61 -18 -64 -44 -7 -67 32 -36 62 19 20
+38 20 54 2z" />
+                                                                            <path d="M410 1155 c-9 -11 -11 -36 -6 -92 8 -91 19 -115 49 -111 21 3 22 7
+18 98 -2 52 -8 101 -13 108 -14 16 -33 15 -48 -3z" />
+                                                                            <path d="M1595 1076 c-17 -7 -39 -25 -48 -39 -14 -22 -26 -26 -69 -29 -49 -3
+-53 -5 -53 -28 0 -23 4 -25 55 -28 49 -3 57 -6 72 -32 33 -58 143 -58 176 0
+l17 30 205 2 205 3 3 28 3 27 -205 0 -206 0 -17 26 c-16 26 -68 54 -95 54 -7
+-1 -27 -7 -43 -14z m75 -71 c26 -32 -13 -81 -47 -59 -35 22 -23 74 17 74 10 0
+23 -7 30 -15z" />
+                                                                            <path d="M618 929 c-10 -5 -21 -28 -24 -49 -9 -56 -26 -67 -63 -41 -46 33 -80
+27 -129 -22 -47 -48 -53 -80 -22 -120 31 -40 26 -56 -22 -63 -61 -10 -78 -32
+-78 -102 0 -72 17 -98 71 -107 49 -9 57 -25 30 -64 -32 -45 -27 -71 27 -124
+53 -53 70 -56 119 -26 43 27 59 20 66 -26 9 -58 20 -65 103 -65 64 0 75 3 88
+22 9 12 16 35 16 51 0 37 22 43 63 18 50 -30 67 -27 120 27 53 53 58 79 26
+123 -27 39 -19 55 31 64 57 10 74 38 68 116 -5 70 -16 83 -78 93 -45 7 -49 18
+-20 61 29 44 25 70 -21 120 -48 52 -82 58 -130 24 -24 -17 -33 -18 -44 -9 -8
+7 -15 21 -15 32 0 22 -18 60 -34 70 -16 11 -128 9 -148 -3z m118 -86 c11 -55
+22 -69 62 -82 37 -13 43 -12 77 9 l37 23 25 -25 25 -26 -25 -37 c-25 -36 -25
+-40 -11 -74 19 -47 22 -49 69 -59 37 -7 40 -11 43 -44 3 -36 3 -37 -44 -44
+-42 -6 -48 -10 -65 -48 -18 -41 -18 -41 6 -82 l24 -41 -24 -23 -24 -22 -36 22
+c-34 21 -40 22 -77 9 -40 -13 -51 -27 -62 -81 -6 -24 -11 -28 -41 -28 -30 0
+-35 4 -41 28 -11 54 -22 68 -62 81 -37 13 -43 12 -70 -8 -37 -26 -40 -26 -68
+0 l-23 22 22 38 c21 36 21 40 6 81 -15 40 -19 44 -63 52 -47 8 -47 9 -44 44 3
+34 6 37 46 45 36 7 45 14 57 44 20 47 19 59 -6 95 l-22 30 26 25 25 26 37 -23
+c34 -21 40 -22 77 -9 40 13 51 27 62 82 6 23 11 27 41 27 30 0 35 -4 41 -27z" />
+                                                                            <path d="M615 693 c-46 -24 -66 -45 -86 -88 -57 -125 29 -258 166 -258 131 0
+220 131 170 250 -20 48 -41 71 -87 94 -45 23 -122 24 -163 2z m119 -57 c68
+-28 95 -101 61 -166 -40 -78 -160 -78 -200 0 -33 64 -8 137 59 166 39 17 40
+17 80 0z" />
+                                                                            <path d="M1893 850 c-12 -5 -29 -20 -39 -34 l-16 -26 -197 0 c-108 0 -202 -4
+-209 -9 -8 -4 -12 -19 -10 -32 l3 -24 203 -3 204 -2 33 -35 c25 -28 40 -35 69
+-35 46 0 92 23 101 50 5 17 15 20 60 20 43 0 56 4 65 19 15 29 -12 51 -65 51
+-36 0 -49 6 -78 35 -37 37 -76 44 -124 25z m68 -60 c40 -22 13 -89 -30 -75
+-29 9 -36 42 -15 66 20 22 20 22 45 9z" />
+                                                                            <path d="M1420 564 c-36 -18 -82 -39 -102 -45 -42 -13 -52 -29 -34 -54 18 -24
+62 -15 156 33 57 29 76 44 78 61 3 20 -12 42 -28 40 -3 0 -34 -16 -70 -35z" />
+                                                                            <path d="M1910 398 c-119 -127 -252 -213 -415 -268 -114 -38 -183 -51 -330
+-59 -108 -5 -120 -8 -123 -25 -10 -48 71 -57 253 -31 141 20 234 48 351 105
+121 59 236 143 328 240 73 78 84 114 36 117 -19 1 -42 -17 -100 -79z" />
+                                                                        </g>
+                                                                    </svg>
+                                                                    <!-- <svg xmlns="http://www.w3.org/2000/svg"
+                                                                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                                        style="enable-background:new 0 0 48 48;"
+                                                                        version="1.1" viewBox="0 0 48 48"
+                                                                        xml:space="preserve">
+                                                                        <style type="text/css">
+                                                                            .st0 {
+                                                                                display: none;
+                                                                            }
+
+                                                                            .st1 {
+                                                                                fill: none;
+                                                                                stroke: #303030;
+                                                                                stroke-width: 0.7;
+                                                                                stroke-linecap: round;
+                                                                                stroke-linejoin: round;
+                                                                                stroke-miterlimit: 10;
+                                                                            }
+
+                                                                            .st2 {
+                                                                                fill: #303030;
+                                                                            }
+                                                                        </style>
+                                                                        <g class="st0" id="Padding__x26__Artboard" />
+                                                                        <g id="Icons">
+                                                                            <g>
+                                                                                <path class="st1"
+                                                                                    d="M12.84042,15.48541c0.05371,7.23779,3.10059,14.10937,8.17383,18.41309l2.97559,2.52344l2.97607-2.52344    c5.07617-4.30664,8.12354-11.18408,8.17334-18.42676c-2.58398,0.43506-5.9165-0.40771-8.29346-1.57471    c-1.14502-0.55566-2.0957-1.18262-2.8335-1.85986c-0.71582,0.67432-1.6377,1.29932-2.74707,1.854    C18.92294,15.07378,15.49228,15.94293,12.84042,15.48541z" />
+                                                                                <path class="st1"
+                                                                                    d="M36.95987,13.15124l-0.02002,2.14001c0,7.85998-3.27002,15.27997-8.81,19.97998l-4.02067,3.40882    c-0.06886,0.05838-0.16984,0.05838-0.2387,0l-4.02067-3.40882c-5.53998-4.70001-8.81-12.12-8.81-19.97998l-0.00001-1.68753    c0-0.38642,0.42222-0.58507,0.75086-0.38179c1.83846,1.1372,5.85839,0.4789,8.6692-0.94069    c1.54999-0.77002,2.81-1.77997,3.29999-2.84998c0.09998-0.20001,0.37-0.21002,0.46002-0.01001    c0.50995,1.07001,1.81995,2.08997,3.41998,2.85999c3.13,1.53998,7.39996,2.22998,8.96997,0.72003    C36.73984,12.87127,36.96988,12.96124,36.95987,13.15124z" />
+                                                                                <line class="st1" x1="23.98984"
+                                                                                    x2="23.98984" y1="12.03716"
+                                                                                    y2="36.42193" />
+                                                                                <line class="st1" x1="14.34298"
+                                                                                    x2="33.56545" y1="24.03353"
+                                                                                    y2="24.03353" />
+                                                                            </g>
+                                                                        </g>
+                                                                    </svg> -->
+                                                                    Virtual Agent
+                                                                    <small id="package-text-box-va">Select maximum one
+                                                                        package from this
+                                                                        section</small>
+                                                                    <a id="VirtualAHeading" class="changeBtn"
+                                                                        href="javascript:void(0);"
+                                                                        data-toggle="collapse"
+                                                                        data-target="#VirtualAHeadingCollapse"
+                                                                        aria-expanded="true"
+                                                                        aria-controls="VirtualAHeading"
+                                                                        style="display: none;">Change</a>
+                                                                </h5>
+                                                            </div>
+
+                                                            <div id="VirtualAHeadingCollapse" class="collapse"
+                                                                aria-labelledby="VirtualAHeading"
+                                                                data-parent="#packages">
+                                                                <div class="card-body">
+                                                                    <div class="account-container text-left">
+                                                                        <div class="tab-cont">
+                                                                            <div class="row search-grids">
+                                                                                <ul class="pricingTables" id="VA">
+                                                                                    <!-- Purple Table -->
+                                                                                    <li class="link"
+                                                                                        data-package-text="Package 12 selected from this section">
+                                                                                        <div
+                                                                                            class="pricing-table purple">
+                                                                                            <!-- Table Head -->
+                                                                                            <h2>Package 12</h2>
+                                                                                            <h5>Made for starters</h5>
+                                                                                            <!-- Features -->
+                                                                                            <div
+                                                                                                class="pricing-features">
+                                                                                                <div class="feature">
+                                                                                                    On-Net
+                                                                                                    Minutes<span>--</span>
+                                                                                                </div>
+                                                                                                <div class="feature">
+                                                                                                    Off-Net
+                                                                                                    Minutes<span>--</span>
+                                                                                                </div>
+                                                                                                <div class="feature">
+                                                                                                    Internet<span>--</span>
+                                                                                                </div>
+                                                                                                <div class="feature">
+                                                                                                    Validity<span>--</span>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <!-- Price -->
+                                                                                            <div class="price-tag">
+                                                                                                <span
+                                                                                                    class="symbol">AED</span>
+                                                                                                <span
+                                                                                                    class="amount">200</span>
+                                                                                                <span class="after">+5%
+                                                                                                    VAT Exc</span>
+                                                                                            </div>
+                                                                                            <!-- Button -->
+                                                                                            <a class="price-button"
+                                                                                                href="javascript:void(0);"><span>SELECT
+                                                                                                    NOW</span><i>SELECTED</i></a>
+                                                                                        </div>
+                                                                                    </li>
+                                                                                    <!-- Turquoise Table -->
+                                                                                    <li
+                                                                                        data-package-text="Package 13 selected from this section">
+                                                                                        <div
+                                                                                            class="pricing-table purple">
+                                                                                            <!-- Table Head -->
+                                                                                            <h2>Package 13</h2>
+                                                                                            <h5>Made for starters</h5>
+                                                                                            <!-- Features -->
+                                                                                            <div
+                                                                                                class="pricing-features">
+                                                                                                <div class="feature">
+                                                                                                    On-Net
+                                                                                                    Minutes<span>--</span>
+                                                                                                </div>
+                                                                                                <div class="feature">
+                                                                                                    Off-Net
+                                                                                                    Minutes<span>--</span>
+                                                                                                </div>
+                                                                                                <div class="feature">
+                                                                                                    Internet<span>--</span>
+                                                                                                </div>
+                                                                                                <div class="feature">
+                                                                                                    Validity<span>--</span>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <!-- Price -->
+                                                                                            <div class="price-tag">
+                                                                                                <span
+                                                                                                    class="symbol">AED</span>
+                                                                                                <span
+                                                                                                    class="amount">800</span>
+                                                                                                <span class="after">+5%
+                                                                                                    VAT Exc</span>
+                                                                                            </div>
+                                                                                            <!-- Button -->
+                                                                                            <a class="price-button"
+                                                                                                href="javascript:void(0);"><span>SELECT
+                                                                                                    NOW</span><i>SELECTED</i></a>
+                                                                                        </div>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Collapse Items End -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-12  remove-padding-right text-right submit-button-container">
+                                    <button onclick="location.href = 'bib-03.2.html'">Previous</button>
+                                    <button>Save & Close</button>
+                                    <button class="nextscreen-btn" onclick="location.href = 'addon.5.html'"
+                                        disabled>Next</button>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <!-- End SmartWizard Content -->
+                        </div>
+                        <div class="clearfix"></div>
+                    </section>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+
+    </div>
+    <!-- /.etisalat -->
+    <!-- /.footer -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../assets/js/jquery-2.1.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../assets/js/bootstrap.js"></script>
+    <script src="../assets/js/bootstrap-select.js"></script>
+    <script src="../assets/js/dcalendar.picker.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery.matchHeight-min.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery.smartWizard.js"></script>
+    <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../assets/js/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.0/rangeslider.min.js"></script>
+    <script src="../assets/js/scripts.js"></script>
+    <script src="../assets/js/custom.js"></script>
+    <script>
+        $("#slider-range").slider({
+            range: true,
+            min: 0,
+            max: 5000,
+            step: 50,
+            values: ['50', '5000'],
+            slide: function (event, ui) {
+                $("#min-price").html(ui.values[0]);
+
+                suffix = '';
+                if (ui.values[1] == $("#max-price").data('max')) {
+                    suffix = ' +';
+                }
+                $("#max-price").html(ui.values[1] + suffix);
+            }
+        });
+
+        $("#slider-range01").slider({
+            range: true,
+            min: 1,
+            max: 25,
+            step: 1,
+            values: ['1', '25'],
+            slide: function (event, ui) {
+                $("#min-price01").html(ui.values[0]);
+
+                suffix = '';
+                if (ui.values[1] == $("#max-price01").data('max')) {
+                    suffix = '';
+                }
+                $("#max-price01").html(ui.values[1] + suffix);
+            }
+        });
+        $('.reset-btn').click(function () {
+            $('.offer-box-1').show();
+            $('.offer-box-2').show();
+            $('.offer-box-3').show();
+        });
+        $('#offer-select-01').change(function () {
+
+            $('.offer-box-1').show();
+            $('.offer-box-2').hide();
+            $('.offer-box-3').hide();
+        });
+        $('#offer-select-02').change(function () {
+
+            $('.offer-box-2').show();
+            $('.offer-box-1').hide();
+            $('.offer-box-3').hide();
+        });
+        $('#offer-select-03').change(function () {
+
+            $('.offer-box-3').show();
+            $('.offer-box-2').hide();
+            $('.offer-box-1').hide();
+        });
+        $('#manageEmail').change(function () {
+            if ($(this).find('input').prop('checked') == true) {
+                $('.manage-email').show();
+            }
+            else {
+                $('.manage-email').hide();
+            }
+        });
+        $('#manageDevice').change(function () {
+            if ($(this).find('input').prop('checked') == true) {
+                $('.manage-device').show();
+            }
+            else {
+                $('.manage-device').hide();
+            }
+        });
+        var valueBubble = '<output class="rangeslider__value-bubble" />';
+
+        function updateValueBubble(pos, value, context) {
+            pos = pos || context.position;
+            value = value || context.value;
+            var $valueBubble = $('.rangeslider__value-bubble', context.$range);
+            var tempPosition = pos + context.grabPos;
+            var position = (tempPosition <= context.handleDimension) ? context.handleDimension : (tempPosition >= context.maxHandlePos) ? context.maxHandlePos : tempPosition;
+
+            if ($valueBubble.length) {
+                $valueBubble[0].style.left = Math.ceil(position) + 'px';
+                $valueBubble[0].innerHTML = value;
+            }
+        }
+
+        var valueBubble = '<output class="rangeslider__value-bubble" />';
+
+        function updateValueBubble(pos, value, context) {
+            pos = pos || context.position;
+            value = value || context.value;
+            var $valueBubble = $('.rangeslider__value-bubble', context.$range);
+            var tempPosition = pos + context.grabPos;
+            var position = (tempPosition <= context.handleDimension) ? context.handleDimension : (tempPosition >= context.maxHandlePos) ? context.maxHandlePos : tempPosition;
+
+            if ($valueBubble.length) {
+                $valueBubble[0].style.left = Math.ceil(position) + 'px';
+                $valueBubble[0].innerHTML = value;
+            }
+        }
+        $('.tiles-box-title').click(function () {
+            $(this).toggleClass('open');
+            $(this).closest('[class^="offer-box-"]').siblings().find('.tiles-box-list').removeClass('show');
+            $(this).closest('[class^="offer-box-"]').siblings().find('.tiles-box-title').removeClass('open');
+            $(this).closest('.tiles-box').find('.tiles-box-list').toggleClass('show');
+        });
+        $('.next-btn').click(function () {
+            $(this).closest('.card').find('h5').addClass('collapsed');
+            $(this).closest('.card').next('.card').find('h5').removeClass('collapsed');
+            $(this).closest('.card').next('.card').find('.collapse').addClass('in');
+            $(this).closest('.card').find('.changeBtn').show();
+            $(this).closest('.collapse').removeClass('in');
+        });
+        $('.next-btn').click(function () {
+            var SelectValue = $(this).closest('.card').find('#securityProtocol').val();
+            if (SelectValue == "V-FW") {
+                $(this).closest('.card').find('h5 small').html('V-FW');
+            }
+            if (SelectValue == "Site to Site VPN") {
+                $(this).closest('.card').find('h5 small').html('Site to Site VPN');
+            }
+            if (SelectValue == "Client to Site VPN") {
+                $(this).closest('.card').find('h5 small').html('Client to Site VPN');
+            }
+        });
+
+        /*$('.slpone').click(function () {
+            $('.changetextwafbnext').html('Package 1 selected from this section');
+            $('.changetextwafbnext').addClass('activated');
+        });
+        $('.slpone2').click(function () {
+            $('.changetextwafbnext').html('Package 2 selected from this section');
+            $('.changetextwafbnext').addClass('activated');
+        });
+        $('.slpone3').click(function () {
+            $('.changetextwafbnext').html('Package 3 selected from this section');
+            $('.changetextwafbnext').addClass('activated');
+        });
+        $('.wafbnext').click(function () {
+            if ($('.changetextwafbnext').hasClass('activated')) {
+            } else {
+                $('.changetextwafbnext').html('No package selected from this section')
+            }
+        });
+
+        $('.slpone4').click(function () {
+            $('.changetextbscbnext').html('Package 4 selected from this section');
+            $('.changetextbscbnext').addClass('activated');
+        });
+        $('.slpone5').click(function () {
+            $('.changetextbscbnext').html('Package 5 selected from this section');
+            $('.changetextbscbnext').addClass('activated');
+        });
+        $('.bscbnext').click(function () {
+            if ($('.changetextbscbnext').hasClass('activated')) {
+            } else {
+                $('.changetextbscbnext').html('No package selected from this section')
+            }
+        });
+
+        $('.slpone6').click(function () {
+            $('.changetextbecbnext').html('Package 6 selected from this section');
+            $('.changetextbecbnext').addClass('activated');
+        });
+        $('.slpone7').click(function () {
+            $('.changetextbecbnext').html('Package 7 selected from this section');
+            $('.changetextbecbnext').addClass('activated');
+        });
+        $('.becbnext').click(function () {
+            if ($('.changetextbecbnext').hasClass('activated')) {
+            } else {
+                $('.changetextbecbnext').html('No package selected from this section')
+            }
+        });
+
+        $('.slpone8').click(function () {
+            $('.changetexttfabnext').html('Package 8 selected from this section');
+            $('.changetexttfabnext').addClass('activated');
+        });
+        $('.slpone9').click(function () {
+            $('.changetexttfabnext').html('Package 9 selected from this section');
+            $('.changetexttfabnext').addClass('activated');
+        });
+        $('.tfabnext').click(function () {
+            if ($('.changetexttfabnext').hasClass('activated')) {
+            } else {
+                $('.changetexttfabnext').html('No package selected from this section')
+            }
+        });
+
+        $('.slpone10').click(function () {
+            $('.changetextnmbnext').html('Package 10 selected from this section');
+            $('.changetextnmbnext').addClass('activated');
+        });
+        $('.slpone11').click(function () {
+            $('.changetextnmbnext').html('Package 11 selected from this section');
+            $('.changetextnmbnext').addClass('activated');
+        });
+        $('.nmbnext').click(function () {
+            if ($('.changetextnmbnext').hasClass('activated')) {
+            } else {
+                $('.changetextnmbnext').html('No package selected from this section')
+            }
+        });
+
+        $('.slpone12').click(function () {
+            $('.changetextvabnext').html('Package 12 selected from this section');
+            $('.changetextvabnext').addClass('activated');
+        });
+        $('.slpone13').click(function () {
+            $('.changetextvabnext').html('Package 13 selected from this section');
+            $('.changetextvabnext').addClass('activated');
+        });
+        $('.vabnext').click(function () {
+            if ($('.changetextvabnext').hasClass('activated')) {
+            } else {
+                $('.changetextvabnext').html('No package selected from this section')
+            }
+        });
+        $('.slpone,.slpone1,.slpone2,.slpone3,.slpone4,.slpone5,.slpone6,.slpone7,.slpone8,.slpone9,.slpone10,.slpone11,.slpone12,.slpone13').click(function () {
+            $(this).closest('.tab-cont').find('.next-btn').removeAttr('disabled');
+        });*/
+        $('.pricingTables li').on('click', function () {
+            $(this).toggleClass('active');
+            $(this).closest('.tab-cont').find('.next-btn').removeAttr('disabled');
+        });
+        $('.pricingTables#WAB li').on('click', function () {
+            var $el = $(this);
+            $('#package-text-box-wab').text($el.data('packageText'));
+        })
+        $('.pricingTables#BSC li').on('click', function () {
+            var $el = $(this);
+            $('#package-text-box-bsc').text($el.data('packageText'));
+        })
+        $('.pricingTables#BEC li').on('click', function () {
+            var $el = $(this);
+            $('#package-text-box-bec').text($el.data('packageText'));
+        })
+        $('.pricingTables#TFA li').on('click', function () {
+            var $el = $(this);
+            $('#package-text-box-tfa').text($el.data('packageText'));
+        })
+        $('.pricingTables#NM li').on('click', function () {
+            var $el = $(this);
+            $('#package-text-box-nm').text($el.data('packageText'));
+        })
+        $('.pricingTables#VA li').on('click', function () {
+            var $el = $(this);
+            $('#package-text-box-va').text($el.data('packageText'));
+            $('.submit-button-container').find('.nextscreen-btn').removeAttr('disabled');
+        })
+        $('.skip-button-wab').on('click', function () {
+            var $el = $(this);
+            $('#package-text-box-wab').text($el.data('packageText'));
+        })
+        $('.skip-button-bsc').on('click', function () {
+            var $el = $(this);
+            $('#package-text-box-bsc').text($el.data('packageText'));
+        })
+        $('.skip-button-bec').on('click', function () {
+            var $el = $(this);
+            $('#package-text-box-bec').text($el.data('packageText'));
+        })
+        $('.skip-button-tfa').on('click', function () {
+            var $el = $(this);
+            $('#package-text-box-tfa').text($el.data('packageText'));
+        })
+        $('.skip-button-nm').on('click', function () {
+            var $el = $(this);
+            $('#package-text-box-nm').text($el.data('packageText'));
+        })
+    </script>
+</body>
+
+</html>

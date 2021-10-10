@@ -1,0 +1,97 @@
+/*   
+  SmartWizard 2.0 plugin 
+  jQuery Wizard control Plugin
+  by Dipu
+  
+  http://www.techlaboratory.net
+  http://tech-laboratory.blogspot.com
+*/
+.swMain {
+
+}
+.swMain .stepContainer {
+
+}
+
+.swMain .stepContainer div.content {
+  display:block;
+}
+
+.swMain div.actionBar {
+  display:block;
+
+}
+
+.swMain .stepContainer .StepTitle { 
+}
+.swMain ul.anchor {
+}
+.swMain ul.anchor li{ 
+}
+/* Anchor Element Style */
+.swMain ul.anchor li a {
+}
+.swMain ul.anchor li a .stepNumber{
+}
+.swMain ul.anchor li a .stepDesc{
+}
+.swMain ul.anchor li a .stepDesc small{
+}
+.swMain ul.anchor li a.selected{
+}
+.swMain ul.anchor li a.selected:hover {
+}
+
+.swMain ul.anchor li a.done { 
+}
+.swMain ul.anchor li a.done:hover {
+}
+.swMain ul.anchor li a.disabled {
+}
+.swMain ul.anchor li a.disabled:hover {
+}
+
+.swMain ul.anchor li a.error {     
+}
+.swMain ul.anchor li a.error:hover {
+}
+
+.swMain .buttonNext {   
+}
+.swMain .buttonDisabled {
+}
+.swMain .buttonPrevious {    
+}
+.swMain .buttonFinish {  
+}
+
+/* Form Styles */
+
+.txtBox {
+}
+.txtBox:focus {
+  border:1px solid #EA8511;
+}
+
+.swMain .loader {
+  position:relative;  
+  display:none;
+  float:left;  
+  margin: 2px 0 0 2px;
+  padding:8px 10px 8px 40px;
+  border: 1px solid #FFD700; 
+  font: bold 13px Verdana, Arial, Helvetica, sans-serif; 
+  color:#5A5655;       
+  background: #FFF url(../images/loader.gif) no-repeat 5px;  
+  -moz-border-radius  : 5px;
+  -webkit-border-radius: 5px;
+  z-index:998;
+}
+.swMain .msgBox {
+}
+.swMain .msgBox .content {
+}
+.swMain .msgBox .close {
+}
+.swMain .msgBox .close:hover{
+}

@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Order builder:: Etisalat</title>
+  <!-- Bootstrap -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/bootstrap-select.min.css" />
+  <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+  <link href="assets/css/CEP-automation-css/custom.css" rel="stylesheet" type="text/css">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="loading">
+  <div id="loaderM"></div>
+  <div class="etisalat">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header col-sm-2">
+          <a class="navbar-brand" href="home.html">
+            <img src="assets/images/logo_white.png" alt="Etisalat">
+          </a>
+          <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button> -->
+        </div>
+        <!-- <div class="col-sm-8">
+                    <div id="navbar" class="col-md-12 custom-container nav-container navbar-collapse collapse">
+                        <ul>
+                            <li>
+                                <a class="show-mobile-content" href="javascript:void(0);">Mobile</a>
+                            </li>
+                            <li>
+                                <a class="show-fixed-content" href="javascript:void(0);">Fixed</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">ICT</a>
+                            </li>
+                            <li>
+                                <a href="product-cat/pc-00.html">Product Catalogue</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div> -->
+        <!--/.nav-collapse -->
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="page-container">
+            <section class="page-content inner-page">
+              <div class="clearfix"></div>
+              <div class="smart-wizard">
+                <!-- Tabs -->
+                <div class="swMain">
+                  <div class="builder-step-wrapper custom-container non-border-style">
+                    <div class="row">
+                      <div class="col-sm-9">
+                        <div class="orderdetail-card summary-box new">
+                          <div id="packages" class="packages component">
+                            <div class="card orderbuilder-tab">
+                              <div class="card-header">
+                                <h5 class="mb-0 main">
+                                  <svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <g id="UCaaS-_Web" stroke="none" fill="none" fill-rule="evenodd"
+                                      stroke-linecap="round" stroke-linejoin="round">
+                                      <g id="01.B2B---UCaaS-Config---Desktop-Copy"
+                                        transform="translate(-122.000000, -695.000000)">
+                                        <g id="Main-Number" transform="translate(120.000000, 689.000000)">
+                                          <g id="Icon/Outline-1pt/phone/phone_number_grey"
+                                            transform="translate(0.000000, 4.000000)">
+                                            <path d="M12.7644,17.875 L33.3894,17.875" id="Line"></path>
+                                            <path d="M11.26675,25.4375 L31.89175,25.4375" id="Line"></path>
+                                            <path d="M27.14195,9.96875 L24.046825,34.03125" id="Line"></path>
+                                            <path d="M19.953175,9.96875 L16.85805,34.03125" id="Line"></path>
+                                            <path
+                                              d="M41.25,22 C41.25,32.6313103 32.6319741,41.25 22,41.25 C11.3680259,41.25 2.75,32.6313103 2.75,22 C2.75,11.3680259 11.3680259,2.75 22,2.75 C32.6319741,2.75 41.25,11.3680259 41.25,22 L41.25,22 Z"
+                                              id="Line"></path>
+                                          </g>
+                                        </g>
+                                      </g>
+                                    </g>
+                                  </svg>
+                                  Select account(s)
+                                  <a id="headingMain" class="changeBtn" href="javascript:void(0);"
+                                    data-toggle="collapse" data-target="#collapseMain" aria-expanded="true"
+                                    aria-controls="collapseMain" style="display: none;">Change</a>
+                                </h5>
+                              </div>
+                              <div id="collapseMain" class="collapse in" aria-labelledby="headingMain"
+                                data-parent="#packages">
+                                <div class="card-body">
+                                  <div class="account-container order-service-tab text-left">
+                                    <div class="tab-cont">
+                                      <!-- <div class="row">
+                                              <div class="col-sm-5">
+                                                  <div class="form-group">
+                                                      <label>Main Number</label>
+                                                      <input id="filter01" type="text">
+                                                  </div>
+                                              </div>
+                                          </div> -->
+                                      <div class="row search-grid">
+                                        <div class="swMain">
+                                          <div class="col-md-12 corporate-accounts non-border-style">
+                                            <!-- <h3>Select Account(s)</h3> -->
+                                            <div class="package-selection-container">
+                                              <div class="row">
+                                                <div class="col-sm-5">
+                                                  <input type="text" class="main-search"
+                                                    placeholder="Fill Account Number and Press Enter for Search">
+                                                </div>
+                                                <div class="col-sm-7">
+                                                  <span class="control-fileupload order-builder-uploader">
+                                                    <label for="file1" class="text-left">Upload
+                                                      Excel
+                                                      File.</label>
+                                                    <input type="file" id="file1">
+                                                  </span>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="account-container order-builder-account">
+                                              <ul class="account-select">
+                                                <li>0466369735</li>
+                                                <li>0411110812</li>
+                                                <li>0466369735</li>
+                                                <li>0411110812</li>
+                                                <li>0466369735</li>
+                                                <li>0466369735</li>
+                                                <li>0466369735</li>
+                                                <li>0411110812</li>
+                                                <li>0466369735</li>
+                                                <li>0411110812</li>
+                                                <li>0411110812</li>
+                                                <li>0466369735</li>
+                                                <li>0466369735</li>
+                                                <li>0466369735</li>
+                                                <li>0411110812</li>
+                                                <li>0411110812</li>
+                                                <li>0466369735</li>
+                                                <li>0466369735</li>
+                                                <li>0466369735</li>
+                                                <li>0411110812</li>
+                                                <li>0466369735</li>
+                                                <li>0411110812</li>
+                                                <li>0466369735</li>
+                                                <li>0411110812</li>
+                                                <li>0466369735</li>
+                                                <li>0466369735</li>
+                                                <li>0466369735</li>
+                                              </ul>
+                                              <ul class="pagination">
+                                                <li title="Page 1" class="active"><a class="ng-binding"
+                                                    href="javascript:void(0);">1</a>
+                                                </li>
+                                                <li title="Page 2"><a class="ng-binding"
+                                                    href="javascript:void(0);">2</a>
+                                                </li>
+                                                <li title="Page 3"><a class="ng-binding"
+                                                    href="javascript:void(0);">3</a>
+                                                </li>
+                                              </ul>
+                                            </div>
+                                          </div>
+                                          <div class="col-md-12 corporate-accounts non-border-style">
+                                            <h3>Selected Account(s)</h3>
+                                            <div class="selected-accounts">
+                                              <ul>
+                                                <li>0566369735 <a class="remove" href="javascript:void(0);"><img
+                                                      src="assets/images/cross.png" alt=""></a>
+                                                </li>
+                                                <li>6411110812 <a class="remove" href="javascript:void(0);"><img
+                                                      src="assets/images/cross.png" alt=""></a>
+                                                </li>
+                                                <li>0566369735 <a class="remove" href="javascript:void(0);"><img
+                                                      src="assets/images/cross.png" alt=""></a>
+                                                </li>
+                                                <li>6411110812 <a class="remove" href="javascript:void(0);"><img
+                                                      src="assets/images/cross.png" alt=""></a>
+                                                </li>
+                                                <li>0566369735 <a class="remove" href="javascript:void(0);"><img
+                                                      src="assets/images/cross.png" alt=""></a>
+                                                </li>
+                                                <li>0566369735 <a class="remove" href="javascript:void(0);"><img
+                                                      src="assets/images/cross.png" alt=""></a>
+                                                </li>
+                                                <li>0566369735 <a class="remove" href="javascript:void(0);"><img
+                                                      src="assets/images/cross.png" alt=""></a>
+                                                </li>
+                                                <li>6411110812 <a class="remove" href="javascript:void(0);"><img
+                                                      src="assets/images/cross.png" alt=""></a>
+                                                </li>
+                                                <li>0566369735 <a class="remove" href="javascript:void(0);"><img
+                                                      src="assets/images/cross.png" alt=""></a>
+                                                </li>
+                                                <li>6411110812 <a class="remove" href="javascript:void(0);"><img
+                                                      src="assets/images/cross.png" alt=""></a>
+                                                </li>
+                                                <li>6411110812 <a class="remove" href="javascript:void(0);"><img
+                                                      src="assets/images/cross.png" alt=""></a>
+                                                </li>
+                                                <li>0566369735 <a class="remove" href="javascript:void(0);"><img
+                                                      src="assets/images/cross.png" alt=""></a>
+                                                </li>
+                                                <li>0566369735 <a class="remove" href="javascript:void(0);"><img
+                                                      src="assets/images/cross.png" alt=""></a>
+                                                </li>
+                                                <li>0566369735 <a class="remove" href="javascript:void(0);"><img
+                                                      src="assets/images/cross.png" alt=""></a>
+                                                </li>
+                                                <li>6411110812 <a class="remove" href="javascript:void(0);"><img
+                                                      src="assets/images/cross.png" alt=""></a>
+                                                </li>
+                                              </ul>
+                                            </div>
+                                          </div>
+
+                                        </div>
+                                        <div class="col-sm-12 btn-box-alone">
+                                          <button disabled id="headingInternet"
+                                            class="default-btn next-btn order-next-tab" data-toggle="collapse"
+                                            data-target="#collapseInternet" aria-expanded="false"
+                                            aria-controls="collapseInternet">Next</button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card orderbuilder-tab">
+                              <div class="card-header">
+                                <h5 class="mb-0 internet collapsed">
+                                  <svg enable-background="new -0.824 -0.825 141.732 141.732" height="40" id="Livello_1"
+                                    version="1.1" viewBox="-0.824 -0.825 141.732 141.732" width="40"
+                                    xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <g id="Livello_39">
+                                      <path
+                                        d="M134.631,72.609c-0.616,15.764-6.873,30.078-16.813,40.979c-5.521-5.15-11.873-9.42-18.836-12.583   c1.959-8.614,3.125-18.228,3.295-28.396H134.631z M134.631,67.473h-32.354c-0.198-12.014-1.793-23.256-4.438-32.988   c6.312-2.73,12.131-6.369,17.312-10.74C126.629,34.93,133.961,50.344,134.631,67.473 M111.099,20.107   c-4.479,3.686-9.457,6.781-14.824,9.168c-3.139-9.508-7.348-17.23-12.24-22.355C94.146,9.152,103.373,13.748,111.099,20.107    M91.504,31.17c-5.946,2.094-12.293,3.344-18.894,3.602V5.693C80.323,7.455,87.086,17.064,91.504,31.17 M72.61,40.171   c7.109-0.255,13.947-1.575,20.363-3.798c2.314,9.121,3.719,19.734,3.901,31.1H72.61V40.171z M72.61,72.609h24.268   c-0.152,9.459-1.15,18.395-2.816,26.385c-6.729-2.457-13.938-3.914-21.449-4.186V72.609H72.61z M72.61,100.209   c7.092,0.277,13.888,1.699,20.213,4.08c-4.319,16.607-11.686,28.152-20.213,30.1V100.209z M84.032,133.162   c5.642-5.907,10.373-15.27,13.604-26.832c6.029,2.852,11.545,6.605,16.375,11.092C105.739,125.102,95.453,130.643,84.032,133.162    M67.473,134.389c-8.527-1.947-15.894-13.492-20.213-30.1c6.326-2.381,13.122-3.803,20.213-4.08V134.389z M67.473,94.809   c-7.513,0.271-14.722,1.729-21.449,4.188c-1.666-7.99-2.663-16.929-2.817-26.388h24.267L67.473,94.809L67.473,94.809z    M67.473,67.473H43.206c0.185-11.363,1.586-21.975,3.903-31.096c6.416,2.221,13.255,3.537,20.363,3.794L67.473,67.473   L67.473,67.473z M67.473,34.771c-6.6-0.258-12.944-1.508-18.893-3.602C52.998,17.064,59.76,7.455,67.473,5.693V34.771z    M56.053,6.92c-4.895,5.125-9.104,12.85-12.242,22.355c-5.367-2.387-10.347-5.482-14.823-9.168   C36.711,13.748,45.938,9.152,56.053,6.92 M24.93,23.748c5.185,4.369,11.011,8.002,17.318,10.732   c-2.646,9.733-4.239,20.977-4.438,32.992H5.453C6.123,50.346,13.453,34.934,24.93,23.748 M5.453,72.609H37.81   c0.169,10.168,1.335,19.781,3.294,28.396c-6.963,3.163-13.316,7.433-18.838,12.583C12.326,102.688,6.07,88.373,5.453,72.609    M26.072,117.422c4.83-4.486,10.346-8.24,16.375-11.092c3.232,11.562,7.962,20.925,13.604,26.832   C44.631,130.643,34.344,125.102,26.072,117.422 M140.032,72.609h0.052v-5.137h-0.052C138.71,30.833,109.25,1.372,72.61,0.05V0   h-5.138v0.051C30.834,1.373,1.373,30.834,0.052,67.473H0v5.136h0.052c0.622,17.261,7.487,32.929,18.408,44.812   c-0.03,0.033-0.062,0.065-0.093,0.101h0.186c12.258,13.285,29.59,21.813,48.92,22.512v0.053h2.565h0.004h0.004h2.564v-0.053   c19.332-0.695,36.664-9.227,48.92-22.512h0.187c-0.03-0.033-0.062-0.064-0.093-0.101   C132.545,105.537,139.409,89.869,140.032,72.609" />
+                                    </g>
+                                    <g id="Livello_1_1_" />
+                                  </svg>
+                                  Request Details
+                                  <a id="headingInternet" class="changeBtn" href="javascript:void(0);"
+                                    data-toggle="collapse" data-target="#collapseInternet" aria-expanded="true"
+                                    aria-controls="collapseInternet" style="display: none;">Change</a>
+
+                                </h5>
+                              </div>
+                              <div id="collapseInternet" class="collapse" aria-labelledby="headingInternet"
+                                data-parent="#packages">
+                                <div class="card-body">
+                                  <div class="account-container order-service-tab text-left">
+                                    <div class="tab-cont">
+                                      <div class="package-selection-container">
+                                        <div class="row form-group">
+                                          <!-- <div class="col-sm-6 reason">
+                                            <label for="">I want to Cease the selected accounts because 
+                                              <span class="req">*</span></label>
+                                            <select id="serviceTypethree" class="selectpicker">
+                                              <option value="">Please
+                                                Select
+                                              </option>
+                                              <option value="Leaving Current Company">
+                                                Leaving Current Company
+                                              </option>
+                                              <option value="Leaving Current Company">
+                                                Leaving Current Company
+                                              </option>
+                                              <option value="Cassese account">
+                                                Leaving Current Company
+                                              </option>
+                                            </select>
+                                          </div> -->
+                                          <div class="col-sm-6 reason">
+                                            <label for="">I want to set the Usage Limit to 
+                                              <span class="req">*</span></label>
+                                            <select id="useagelimit" class="selectpicker">
+                                              <option value="">Please
+                                                Select
+                                              </option>
+                                              <option value="0">
+                                                0 AED 
+                                              </option>
+                                              <option value="0">
+                                                25 AED 
+                                              </option>
+                                              <option value="0">
+                                                50 AED
+                                              </option>
+                                              <option value="0">
+                                                75 AED
+                                              </option>
+                                              <option value="0">
+                                                100 AED
+                                              </option>
+                                              <option value="0">
+                                                150 AED
+                                              </option>
+                                              <option value="0">
+                                                200 AED
+                                              </option>
+                                              <option value="0">
+                                                No Limit
+                                              </option>
+                                            </select>
+                                          </div>
+                                          <div class="col-sm-12 reason">
+                                            <label for="">Details </label> 
+                                            <!-- <span class="req">*</span> -->
+                                            <div class="custom-box form-group basic-textarea rounded-corners">
+                                              <textarea class="form-control"
+                                                placeholder="Write your comment..."></textarea>
+                                            </div>
+                                          </div>
+                                          <div class="col-sm-12 btn-box-alone">
+                                              <button disabled id="headingVoice"
+                                              class="default-btn next-btn service-tab-btn"
+                                              data-toggle="collapse"
+                                              data-target="#collapseVoice"
+                                              aria-expanded="false"
+                                              aria-controls="collapseVoice">Next</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card orderbuilder-tab">
+                              <!-- <div class="card-header">
+                                <h5 class="mb-0 voice custom-term-svg collapsed">
+                                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="64px" height="64px" viewBox="0 0 64 64" version="1.1"
+                                    class="icon replaced-svg">
+                                    <!- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch ->
+                                    <desc>Created with Sketch.</desc>
+                                    <g id="icon-bill" stroke="none" stroke-width="2" fill="none" fill-rule="evenodd"
+                                      stroke-linecap="round" stroke-linejoin="round">
+                                      <g id="Icon/Outline-1pt/bill/bill_black" stroke="#242424">
+                                        <path d="M19,20 L33,20" id="Line">
+                                        </path>
+                                        <path d="M19,28 L29,28" id="Line"
+                                          transform="translate(24.000000, 28.000000) scale(-1, 1) translate(-24.000000, -28.000000) ">
+                                        </path>
+                                        <path d="M19,36 L31,36" id="Line">
+                                        </path>
+                                        <path d="M19,44 L27,44" id="Line">
+                                        </path>
+                                        <path d="M42,20 L45,20" id="Line">
+                                        </path>
+                                        <path d="M42,28 L45,28" id="Line">
+                                        </path>
+                                        <path d="M42,36 L45,36" id="Line">
+                                        </path>
+                                        <path d="M42,44 L45,44" id="Line">
+                                        </path>
+                                        <polygon id="Line"
+                                          points="12 60 17.0442168 55.1373089 22.0004996 59.9151632 27.1286535 55.1373089 31.9990007 59.9151632 36.9992506 55.0948905 41.9995004 59.9151632 46.9997502 55.0948905 52 60 52 4.0848368 46.9997502 8.82027269 41.9995004 4 36.9992506 8.82027269 31.9990007 4 26.9987509 8.82027269 22.0004996 4 17.0002498 8.82027269 12 4.0848368">
+                                        </polygon>
+                                      </g>
+                                    </g>
+                                  </svg>
+                                  Terms & Conditions
+                                  <a id="headingVoice" class="changeBtn" href="javascript:void(0);"
+                                    data-toggle="collapse" data-target="#collapseVoice" aria-expanded="true"
+                                    aria-controls="collapseVoice" style="display: none;">Change</a>
+                                </h5>
+                              </div> -->
+                              <div id="collapseVoice" class="collapse" aria-labelledby="headingVoice"
+                                data-parent="#packages">
+                                <div class="card-body order-service-tab">
+                                  <div class="tab-cont">
+                                    <div class="row">
+                                      <div class="col-sm-12">
+                                        <div class="termsCond">
+                                          <!-- <form id="tandC">
+                                            <label class="container col-sm-12 small-check tc-check">I
+                                              agree to the
+                                              <a href="javascript:void(0);" data-toggle="modal"
+                                                data-target="#tcModal">terms
+                                                and conditions</a>
+                                              <input disabled value="Terms and Condition" name="tandc" type="checkbox">
+                                              <span class="checkmark"></span>
+                                            </label>
+                                          </form> -->
+                                          <div class="modal" id="tcModal" tabindex="-1" role="dialog"
+                                            aria-labelledby="tcModalLabel">
+                                            <div class="modal-dialog" role="document">
+                                              <div class="modal-content">
+                                                <div class="modal-header">
+                                                  <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                  <h4 class="modal-title" id="tcModalLabel">
+                                                    Terms
+                                                    &
+                                                    Conditions</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                  <div class="tandc">
+                                                    <div class="row">
+                                                      <div class="col-sm-6">
+                                                        <h4>1.
+                                                          Introduction
+                                                        </h4>
+                                                        <ul class="tc-content">
+                                                          <li>These Terms and Condetions shall govern of supply of all
+                                                            of supply the govern shall Conditions and Terms These.
+                                                            a “offer Promotion “the under services and products
+                                                            telecommunications Telecommunications Emirates between and
+                                                            by”)
+                                                            Service “the (product .(“Customer “the (Service the using
+                                                            party any and”) Etisalat
+                                                            (“Corporation Etisalat between agreement an constitute
+                                                            Conditions and Terms These Customer the, Service the of use
+                                                            commencing Upon. Customer the and and Terms these accepted
+                                                            and understood, read have to deemed is .Conditions
+                                                          </li>
+                                                          <li>
+                                                            This agreement is subject to Etisalat's General Terms and
+                                                            Conditions, published at etisalat.ae (the "Website").
+                                                            In the event of any discrepancy between the terms of this
+                                                            agreement, and the General Terms and Conditions,
+                                                            the terms of this agreement shall prevail.
+                                                          </li>
+                                                        </ul>
+                                                        <h4>2. The Service provided</h4>
+                                                        <ul class="tc-content">
+                                                          <li>
+                                                            Etisalat will provide the Service subject to this agreement.
+                                                          </li>
+                                                          <li>
+                                                            The Customer acknowledges they have taken the effort to
+                                                            familiarise themselves with all the Terms and Conditions of
+                                                            the Service being purchased,
+                                                            This includes details of the prices and the benefits
+                                                            provided under the Service as stipulated on the Website.
+                                                            In particular, the Customer is aware of the cost of any
+                                                            additional benefits and/or services over and above those
+                                                            allocated under the Service.
+                                                          </li>
+                                                          <li>
+                                                            The Customer any have not does and use to right the has only
+                                                            Customer The. c reserves Etisalat. Etisalat by allocated
+                                                            number
+                                                            phone mobile a to rights ,technical for number Customer
+                                                            allocated an change to right the the with provided card SIM
+                                                            The.
+                                                            reasons other or legal, operational the remain shall
+                                                            Customer the of possession the in already or Service card
+                                                            SIM the use to entitled
+                                                            only is Customer the and Etisalat of property Services other
+                                                            any or/and Service the utilising of purpose the for provided
+                                                            .Etisalat by provided
+                                                          </li>
+                                                        </ul>
+                                                        <h4>3.Introduction
+                                                        </h4>
+                                                        <ul class="tc-content">
+                                                          <li>These Terms and Condetions shall govern of supply of all
+                                                            of supply the govern shall Conditions and Terms These.
+                                                            a “offer Promotion “the under services and products
+                                                            telecommunications Telecommunications Emirates between and
+                                                            by”)
+                                                            Service “the (product .(“Customer “the (Service the using
+                                                            party any and”) Etisalat (“Corporation Etisalat between
+                                                            agreement an constitute Conditions and Terms These Customer
+                                                            the, Service the of use commencing Upon. Customer the
+                                                            and and Terms these accepted and understood, read have to
+                                                            deemed is .Conditions
+                                                          </li>
+                                                          <li>
+                                                            This agreement is subject to Etisalat's General Terms and
+                                                            Conditions, published at etisalat.ae (the "Website").
+                                                            In the event of any discrepancy between the terms of this
+                                                            agreement, and the General Terms and Conditions,
+                                                            the terms of this agreement shall prevail.
+                                                          </li>
+                                                        </ul>
+                                                        <h4>4.The Service provided
+                                                        </h4>
+                                                        <ul class="tc-content">
+                                                          <li>
+                                                            Etisalat will provide the Service subject to this agreement.
+                                                          </li>
+                                                          <li>
+                                                            The Customer acknowledges they have taken the effort to
+                                                            familiarise themselves with all the Terms and Conditions of
+                                                            the Service being purchased, This includes details of the
+                                                            prices and the benefits provided under the Service as
+                                                            stipulated on the Website. In particular, the Customer is
+                                                            aware of the cost of any additional benefits and/or services
+                                                            over and above those allocated under the Service.
+                                                          </li>
+                                                          <li>
+                                                            The Customer any have not does and use to right the has only
+                                                            Customer The. c reserves Etisalat. Etisalat by allocated
+                                                            number phone mobile a to rights ,technical for number
+                                                            Customer allocated an change to right the the with provided
+                                                            card SIM The. reasons other or legal, operational the remain
+                                                            shall Customer the of possession the in already or Service
+                                                            card SIM the use to entitled only is Customer the and
+                                                            Etisalat of property Services other any or/and Service the
+                                                            utilising of purpose the for provided .Etisalat by provided
+                                                          </li>
+                                                        </ul>
+                                                      </div>
+                                                      <div class="col-sm-6">
+                                                        <h4>5.
+                                                          Network
+                                                          interruptions
+                                                        </h4>
+                                                        <ul class="tc-content">
+                                                          <li>These Terms and Condetions shall govern of supply of all
+                                                            of supply the govern shall Conditions and Terms These. a
+                                                            “offer Promotion “the under services and products
+                                                            telecommunications Telecommunications Emirates between and
+                                                            by”) Service “the (product .(“Customer “the (Service the
+                                                            using party any and”) Etisalat (“Corporation Etisalat
+                                                            between agreement an constitute Conditions and Terms These
+                                                            Customer the, Service the of use commencing Upon. Customer
+                                                            the and and Terms these accepted and understood, read have
+                                                            to deemed is .Conditions
+                                                          </li>
+                                                          <li>
+                                                            This agreement is subject to Etisalat's General Terms and
+                                                            Conditions, published at etisalat.ae (the "Website"). In the
+                                                            event of any discrepancy between the terms of this
+                                                            agreement, and the General Terms and Conditions, the terms
+                                                            of this agreement shall prevail.
+                                                          </li>
+                                                        </ul>
+                                                        <h4>6.
+                                                          Billing
+                                                        </h4>
+                                                        <ul class="tc-content">
+                                                          <li>
+                                                            Etisalat will provide the Service subject to this agreement.
+                                                          </li>
+                                                          <li>
+                                                            The Customer acknowledges they have taken the effort to
+                                                            familiarise themselves with all the Terms and Conditions of
+                                                            the Service being purchased, This includes details of the
+                                                            prices and the benefits provided under the Service as
+                                                            stipulated on the Website. In particular, the Customer is
+                                                            aware of the cost of any additional benefits and/or services
+                                                            over and above those allocated under the Service.
+                                                          </li>
+                                                          <li>
+                                                            The Customer any have not does and use to right the has only
+                                                            Customer The. c reserves Etisalat. Etisalat by allocated
+                                                            number phone mobile a to rights ,technical for number
+                                                            Customer allocated an change to right the the with provided
+                                                            card SIM The. reasons other or legal, operational the remain
+                                                            shall Customer the of possession the in already or Service
+                                                            card SIM the use to entitled only is Customer the and
+                                                            Etisalat of property Services other any or/and Service the
+                                                            utilising of purpose the for provided .Etisalat by provided
+                                                          </li>
+                                                        </ul>
+                                                        <h4>7.
+                                                          Network
+                                                          interruptions
+                                                        </h4>
+                                                        <ul class="tc-content">
+                                                          <li>These Terms and Condetions shall govern of supply of all
+                                                            of supply the govern shall Conditions and Terms These. a
+                                                            “offer Promotion “the under services and products
+                                                            telecommunications Telecommunications Emirates between and
+                                                            by”) Service “the (product .(“Customer “the (Service the
+                                                            using party any and”) Etisalat (“Corporation Etisalat
+                                                            between agreement an constitute Conditions and Terms These
+                                                            Customer the, Service the of use commencing Upon. Customer
+                                                            the and and Terms these accepted and understood, read have
+                                                            to deemed is .Conditions
+                                                          </li>
+                                                          <li>
+                                                            This agreement is subject to Etisalat's General Terms and
+                                                            Conditions, published at etisalat.ae (the "Website"). In the
+                                                            event of any discrepancy between the terms of this
+                                                            agreement, and the General Terms and Conditions, the terms
+                                                            of this agreement shall prevail.
+                                                          </li>
+                                                        </ul>
+                                                        <h4>8.
+                                                          Billing
+                                                        </h4>
+                                                        <ul class="tc-content">
+                                                          <li>
+                                                            Etisalat will provide the Service subject to this agreement.
+                                                          </li>
+                                                          <li>
+                                                            The Customer acknowledges they have taken the effort to
+                                                            familiarise themselves with all the Terms and Conditions of
+                                                            the Service being purchased, This includes details of the
+                                                            prices and the benefits provided under the Service as
+                                                            stipulated on the Website. In particular, the Customer is
+                                                            aware of the cost of any additional benefits and/or services
+                                                            over and above those allocated under the Service.
+                                                          </li>
+                                                          <li>
+                                                            The Customer any have not does and use to right the has only
+                                                            Customer The. c reserves Etisalat. Etisalat by allocated
+                                                            number phone mobile a to rights ,technical for number
+                                                            Customer allocated an change to right the the with provided
+                                                            card SIM The. reasons other or legal, operational the remain
+                                                            shall Customer the of possession the in already or Service
+                                                            card SIM the use to entitled only is Customer the and
+                                                            Etisalat of property Services other any or/and Service the
+                                                            utilising of purpose the for provided .Etisalat by provided
+                                                          </li>
+                                                        </ul>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                  <button type="button" disabled class="btn btn-default tc-accept"
+                                                    data-dismiss="modal" data-scroll-to="#collapseSign"
+                                                    data-scroll-focus="#collapseSign" data-scroll-speed="700"
+                                                    data-scroll-offset="200">Accept</button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!-- <div class="col-sm-12 btn-box-alone text-left">
+                                        <button id="headingDevice" class="default-btn next-btn" data-toggle="collapse"
+                                          data-target="#collapseDevice" aria-expanded="false"
+                                          aria-controls="collapseDevice">Next</button>
+                                      </div> -->
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- <div class="col-md-12 remove-padding-right text-right submit-button-container">
+                          <button onclick="location.href = 'orderbuilder-page-v1.html'">Previous</button>
+                          <!- onclick="location.href = 'new-screen-01.html'" ->
+                          <button class="next-btn submit-btn" disabled>Submit</button>
+
+                          <!- onclick="location.href = 'new-screen-04-4.html'" ->
+                        </div> -->
+                      </div>
+                      <div class="col-sm-3">
+                          <div class="summary-box req-summary-box">
+                            <div class="custom-req-heading">
+                                <h3>Request Summary</h3>
+                            </div>
+                              <div class="price-box">
+                                  <h5>Request Number</h5>
+                                  <strong>TKT-010172</strong>
+                                  <!-- AED
+                                  <br>
+                                  <small>5% VAT Exc.</small> -->
+                              </div>
+                              <div class="req-ticket-box">
+                                  <span class="custom-tooltip"> ?
+                                      <span class="tooltiptext">Please use this REF no when you follow up with your sales manager</span></span>
+                              </div>
+                              <div class="termsCond custom-tc">
+                                  <form id="tandC" class="req-disabled">
+                                    <label class="container col-sm-12 small-check tc-check">I
+                                      agree to the
+                                      <a href="javascript:void(0);" data-toggle="modal"
+                                        data-target="#tcModal">terms
+                                        and conditions</a>
+                                      <input disabled value="Terms and Condition" name="tandc" type="checkbox">
+                                      <span class="checkmark"></span>
+                                    </label>
+                                  </form>
+                              </div>
+                              <div class="order-btn text-right submit-button-container">
+                                  <button disabled class="order-btn"
+                                      onclick="location.href = 'request-success.html'">Confirm request</button>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+                <!-- End SmartWizard Content -->
+              </div>
+              <div class="clearfix"></div>
+            </section>
+          </div>
+        </div>
+
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+
+  </div>
+  <!-- /.etisalat -->
+  <!-- /.footer -->
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="assets/js/jquery-2.1.3.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="assets/js/bootstrap.js"></script>
+  <script src="assets/js/bootstrap-select.js"></script>
+  <script src="assets/js/dcalendar.picker.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.matchHeight-min.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.smartWizard.js"></script>
+  <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="assets/js/slick.min.js"></script>
+  <script src="assets/js/scripts.js"></script>
+  <script src="assets/js/custom.js"></script>
+  <script>
+
+
+    $('.account-select li').click(function () {
+      $(this).toggleClass('selected');
+      $('.order-next-tab').removeAttr('disabled');
+    });
+
+    $('#useagelimit').change(function () {
+      if (this.value == '0') {
+        $('.service-tab-btn').removeAttr('disabled');
+      }
+      
+    });
+
+    $('.service-tab-btn').click(function () {
+      $('#tandC').removeClass('req-disabled');
+    });
+
+    // $('.account-select li').click(function () {
+    //   $(this).toggleClass('selected');
+    //   $('.order-next-tab').removeAttr('disabled');
+    // });
+
+    $('.next-btn').click(function () {
+        $(this).closest('.card').find('h5').addClass('collapsed');
+        $(this).closest('.card').next('.card').find('h5').removeClass('collapsed');
+        $(this).closest('.card').find('.changeBtn').show();
+        $(this).closest('.collapse').removeClass('in');
+    });
+
+    $('.changeBtn').click(function () {
+        $(this).parents('.card').siblings('.card').find('h5').addClass('collapsed');
+        $(this).parents('.card').siblings('.card').find('.collapse').removeClass('in');
+
+    });
+
+    $('.mainNum li').click(function () {
+      $(this).closest('ul').find('li').removeClass('selected');
+      $(this).toggleClass('selected');
+      $(this).closest('.card').find('h5 small').html($(this).html());
+      $(this).closest('.search-grid').find('button').removeAttr('disabled');
+
+      //$(this).closest('.card').find('#filter01').prop('value', $(this).html());
+    });
+    $(document).ready(function () {
+            $('input[name=tandc]').change(function () {
+                if ($(this).prop('checked') == true) {
+                    $('.order-btn button').removeAttr('disabled');
+                }
+                else {
+                    $('.order-btn button').attr('disabled', 'disabled');
+                }
+            });
+        });
+        $('.tc-accept').click(function (e) {
+            $('.tc-check input[type=checkbox]').removeAttr('disabled');
+            $('.tc-check input[type=checkbox]').prop('checked', 'checked');
+            //$('.order-btn').removeAttr('disabled');
+            $('#headingCustomer h3').removeClass('collapsed');
+            $('#collapseCustomer').addClass('in');            
+            e.preventDefault();
+            $('#collapseCustomer').focus();
+            $('#collapsetermsCond').removeClass('in');
+            $('#headingtermsCond h3').addClass('collapsed');
+            
+            $('#headingtermsCond h3 small').html('Terms & Conditions accepted!');
+            $('.contract .changeBtn').show();
+        });
+        $('#partySelect').change(function(){
+            $('#collapseCustomer').removeClass('in');
+            $('#headingCustomer h3').addClass('collapsed');
+            $('#headingCustomer h3 small').html('Party Selected!');
+            $('#collapseSign').addClass('in');
+            $('#headingSign h3').removeClass('collapsed');
+            $('#headingCustomer .changeBtn').show();
+        });
+        // $('.party-btn').click(function () {
+        //     $('#collapseCustomer').removeClass('in');
+        //     $('#headingCustomer h3').addClass('collapsed');
+        //     $('#headingCustomer h3 small').html('Party Selected!');
+        //     $('#collapseSign').addClass('in');
+        //     $('#headingSign h3').removeClass('collapsed');
+        //     $('#headingCustomer .changeBtn').show();
+        // });
+        
+        $('.sign-btn').click(function () {
+            $('.order-btn').removeAttr('disabled');
+            $('#collapseSign').removeClass('in');
+            $('#headingSign h3').addClass('collapsed');
+            $('#headingSign h3 small').html('Signature Accepted!');
+            $('.sign .changeBtn').show();
+        });
+        $('.modal-body').scroll(function () {
+            var scroll = $('.modal-body').scrollTop();
+
+            //>=, not <=
+            if (scroll >= 300) {
+                //clearHeader, not clearheader - caps H
+                $(".tc-accept").removeAttr('disabled');
+            }
+        });
+        $('.sign-btn').click(function () {
+            $('.order-btn').removeAttr('disabled');
+            $('#collapseSign').removeClass('in');
+            $('#headingSign h3').addClass('collapsed');
+            $('#headingSign h3 small').html('Signature Accepted!');
+            $('.sign .changeBtn').show();
+        });
+        $('.modal-body').scroll(function () {
+            var scroll = $('.modal-body').scrollTop();
+
+            //>=, not <=
+            if (scroll >= 300) {
+                //clearHeader, not clearheader - caps H
+                $(".tc-accept").removeAttr('disabled');
+                $(".order-btn").removeAttr('disabled');
+            }
+        });
+    // $('.changeBtn').click(function () {
+    //   $(this).parents('.card').siblings('.card').find('h5').addClass('collapsed');
+    //   $(this).parents('.card').siblings('.card').find('.collapse').removeClass('in');
+
+    // });
+
+
+
+
+  </script>
+</body>
+
+</html>

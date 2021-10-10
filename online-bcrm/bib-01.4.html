@@ -1,0 +1,1761 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sales Order Request :: Etisalat</title>
+    <!-- Bootstrap -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="../assets/css/font-awesome.min.css" />
+    <link href="../assets/css/CEP-automation-css/custom.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.0/rangeslider.min.css" rel="stylesheet"
+        type="text/css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="loading">
+    <div id="loaderM"></div>
+    <div class="etisalat">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header col-sm-2">
+                    <a class="navbar-brand" href="home.html">
+                        <img src="../assets/images/logo_white.png" alt="Etisalat">
+                    </a>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="col-sm-8">
+                    <div id="navbar" class="col-md-12 custom-container nav-container navbar-collapse collapse">
+                        <ul>
+                            <li>
+                                <a href="javascript:void(0);">Mobile</a>
+                            </li>
+                            <li>
+                                <a class="show-fixed-content" href="../index.html">Fixed</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">ICT</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Product Catalogue</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--/.nav-collapse -->
+                <div class="col-sm-2">
+                    <div class="navbar-right">
+                        <div class="dropdown">
+                            <a id="oSummary" class="summary-btn" data-target="#" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">
+                                Order Summary
+                                <span class="caret"></span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="oSummary">
+                                <div class="item-list">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Order ID</th>
+                                                <th>Customer Name</th>
+                                                <th>Party ID</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>ORD-212-2323</td>
+                                                <td>Aster Pharmacy</td>
+                                                <td>17567</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Order Status</th>
+                                                <th>Service Type</th>
+                                                <th>Sales Manager</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Draft</td>
+                                                <td>New Account</td>
+                                                <td>Jordan</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Authorized Contact Name</th>
+                                                <th>Authorized Contact Email</th>
+                                                <th>Authorized Contact Mobile</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Minal Doongarwal</td>
+                                                <td>mdoongarwal@etisalat.ae</td>
+                                                <td>971569629141</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="total collapsed">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <span id="breakDown" class="collapsed" data-toggle="collapse"
+                                                data-target="#collapseBreakdown" aria-expanded="false"
+                                                aria-controls="collapseBreakdown">
+                                                Break Down
+                                                <span>
+                                                    <img src="../assets/images/down-arrow.png" alt="">
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <h4>Grand Total</h4>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <h5 class="price">
+                                                1,713 AED
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapseBreakdown" class="collapse" aria-labelledby="breakDown">
+                                    <div class="card-body">
+                                        <div id="packages" class="packages">
+                                            <div class="card">
+                                                <div class="card-header" id="headingOne">
+                                                    <h5 class="mb-0 internet">
+                                                        <span class="icon">
+                                                            <img src="../assets/images/icon-green/opt13.png" alt="">
+                                                        </span>
+                                                        Package Details
+                                                    </h5>
+                                                    <!-- <h5 class="mb-0 internet"data-toggle="collapse"
+                                                                        data-target="#collapseOne" aria-expanded="false"
+                                                                        aria-controls="collapseOne">
+                                                                        <span class="icon">
+                                                                            <img src="../assets/images/icon-green/opt13.png" alt="">
+                                                                        </span>
+                                                                        Package Details
+                                                                        <span>
+                                                                            <img src="../assets/images/down-arrow.png" alt="">
+                                                                        </span>
+                                                                    </h5> -->
+                                                </div>
+                                                <div id="collapseOne" class="collapse in" aria-labelledby="headingOne"
+                                                    data-parent="#packages" aria-expanded="false">
+                                                    <div class="card-body">
+                                                        <table class="table review-grid">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th></th>
+                                                                    <th>QTY</th>
+                                                                    <th>Unit Price</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td style="width:70%;">
+                                                                        <span>Business in a box</span>
+                                                                        <h4>Security Essential Plan</h4>
+                                                                        <small>12 Month Contract</small>
+                                                                    </td>
+                                                                    <td>x 1</td>
+                                                                    <td>1095 AED/Month</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div class="card-header" id="headingTwo">
+                                                    <h5 class="mb-0 internet">
+                                                        <span class="icon">
+                                                            <img src="../assets/images/icon-green/addon-icon.png"
+                                                                alt="">
+                                                        </span>
+                                                        Add-On Details
+                                                    </h5>
+                                                    <!-- <h5 class="mb-0 internet" data-toggle="collapse"
+                                                                        data-target="#collapseTwo" aria-expanded="false"
+                                                                        aria-controls="collapseTwo">
+                                                                        <span class="icon">
+                                                                            <img src="../assets/images/icon-green/addon-icon.png"
+                                                                                alt="">
+                                                                        </span>
+                                                                        Add-On Details
+                                                                        <span>
+                                                                            <img src="../assets/images/down-arrow.png" alt="">
+                                                                        </span>
+                                                                    </h5> -->
+                                                </div>
+                                                <div id="collapseTwo" class="collapse in" aria-labelledby="headingTwo"
+                                                    data-parent="#packages" aria-expanded="false">
+                                                    <div class="card-body">
+                                                        <table class="table review-grid">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th></th>
+                                                                    <th>QTY</th>
+                                                                    <th>Unit Price</th>
+                                                                    <th></th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td style="width:70%;">
+                                                                        <h4>User Voice Line</h4>
+                                                                        <small>12 Month Contract</small>
+                                                                    </td>
+                                                                    <td>x 10</td>
+                                                                    <td>1000 AED</td>
+                                                                    <td><a class="removeBtn"
+                                                                            href="javascript:void(0)">Remove</a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width:70%;">
+                                                                        <h4>User Email</h4>
+                                                                        <small>Description of Email</small>
+                                                                    </td>
+                                                                    <td>x 10</td>
+                                                                    <td>150 AED</td>
+                                                                    <td><a class="removeBtn"
+                                                                            href="javascript:void(0)">Remove</a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width:70%;">
+                                                                        <h4>User Data Backup (1TB)</h4>
+                                                                        <small>Description of User Data Backup</small>
+                                                                    </td>
+                                                                    <td>x 10</td>
+                                                                    <td>200 AED</td>
+                                                                    <td><a class="removeBtn"
+                                                                            href="javascript:void(0)">Remove</a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width:70%;">
+                                                                        <h4>User Endpoint Security</h4>
+                                                                        <small>Description of User Data Backup</small>
+                                                                    </td>
+                                                                    <td>x 10</td>
+                                                                    <td>100 AED</td>
+                                                                    <td><a class="removeBtn"
+                                                                            href="javascript:void(0)">Remove</a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width:70%;">
+                                                                        <h4>Cordless Phone</h4>
+                                                                    </td>
+                                                                    <td>x 1</td>
+                                                                    <td>13 AED</td>
+                                                                    <td><a class="removeBtn"
+                                                                            href="javascript:void(0)">Remove</a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width:70%;">
+                                                                        <h4>Video Phone</h4>
+                                                                    </td>
+                                                                    <td>x 1</td>
+                                                                    <td>95 AED</td>
+                                                                    <td><a class="removeBtn"
+                                                                            href="javascript:void(0)">Remove</a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width:70%;">
+                                                                        <h4>Deluse Phone</h4>
+                                                                    </td>
+                                                                    <td>x 1</td>
+                                                                    <td>15 AED</td>
+                                                                    <td><a class="removeBtn"
+                                                                            href="javascript:void(0)">Remove</a></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="page-container">
+                    <section class="page-content inner-page">
+                        <div class="clearfix"></div>
+                        <div class="smart-wizard">
+                            <!-- Tabs -->
+                            <div class="swMain">
+                                <div class="col-md-12 item custom-container progress-container">
+                                    <ul class="item  slickslider largeul">
+                                        <li>
+                                            <a href="customer-details.html" class="selected">
+                                                <span class="stepDesc">Customer Details</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>1
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="bib-01.4.html" class="selected">
+                                                <span class="stepDesc">Package Selection</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>2
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="bib-03.3.html">
+                                                <span class="stepDesc">Site Location</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>3
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="bundle-comp.html">
+                                                <span class="stepDesc">Bundle Components</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>4
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="addon.5.html">
+                                                <span class="stepDesc">Add-Ons</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>5
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="saas.html">
+                                                <span class="stepDesc">SAAS</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>6
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="docs.html">
+                                                <span class="stepDesc">Documents &amp; Notes</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>7
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="billing.4.html">
+                                                <span class="stepDesc">Contact & Billing</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>8
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="review.5.html">
+                                                <span class="stepDesc">Review</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>9
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="tandc-1.html">
+                                                <span class="stepDesc">Terms & Condition</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>10
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-12 custom-container corporate-accounts">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <div class="filter-col">
+                                                <h3>
+                                                    <img src="../assets/images/icon-green/opt07.png" alt=""> Filter
+                                                </h3>
+                                                <button class="custom-btn reset-btn">Reset</button>
+                                                <h4>Package Code </h4>
+                                                <input type="text">
+                                                <h4>User Voice Line</h4>
+                                                <div class="range-slider selector">
+                                                    <div class="price-slider">
+                                                        <div id="slider-range01"
+                                                            class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+                                                            <div class="ui-slider-range ui-corner-all ui-widget-header">
+                                                            </div>
+                                                            <span tabindex="0"
+                                                                class="ui-slider-handle ui-corner-all ui-state-default"></span>
+                                                            <span tabindex="0"
+                                                                class="ui-slider-handle ui-corner-all ui-state-default"></span>
+                                                        </div>
+                                                        <span id="min-price01" data-currency="User"
+                                                            class="slider-price">1</span>
+                                                        <span class="seperator">-</span>
+                                                        <span id="max-price01" data-currency="User" data-max="25"
+                                                            class="slider-price">25</span>
+                                                    </div>
+                                                </div>
+                                                <div class="manage-device" style="display:none;">
+                                                    <h4>No. of Devices </h4>
+                                                    <select class="selectpicker" id="offer-select-03">
+                                                        <option id="set-00" value="">Please Select</option>
+                                                        <option id="set-01" value="">1</option>
+                                                        <option id="set-02" value="">2</option>
+                                                        <option id="set-03" value="">3</option>
+                                                    </select>
+                                                </div>
+                                                <div class="manage-email" style="display:none;">
+                                                    <h4>No. of SAAS users </h4>
+                                                    <select class="selectpicker" id="offer-select-03">
+                                                        <option value="">Please Select</option>
+                                                        <option value="">1</option>
+                                                        <option value="">3</option>
+                                                        <option value="">7</option>
+                                                        <option value="">12</option>
+                                                        <option value="">18</option>
+                                                        <option value="">25</option>
+                                                    </select>
+                                                </div>
+                                                <h4>Monthly Price</h4>
+                                                <div class="range-slider selector">
+                                                    <div class="price-slider">
+                                                        <div id="slider-range"
+                                                            class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+                                                            <div class="ui-slider-range ui-corner-all ui-widget-header">
+                                                            </div>
+                                                            <span tabindex="0"
+                                                                class="ui-slider-handle ui-corner-all ui-state-default"></span>
+                                                            <span tabindex="0"
+                                                                class="ui-slider-handle ui-corner-all ui-state-default"></span>
+                                                        </div>
+                                                        <span id="min-price" data-currency="AED"
+                                                            class="slider-price">0</span>
+                                                        <span class="seperator">-</span>
+                                                        <span id="max-price" data-currency="AED" data-max="5000"
+                                                            class="slider-price">5000</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <div class="bg-cards sdwan-wrap">
+                                                <div class="row row-tiles-table ">
+                                                    <div class="offer-box-1 col-xs-12">
+                                                        <div class="tile-table plan-card ">
+                                                            <div class="tile-card effect__click">
+                                                                <div class="tile">
+                                                                    <div class="tile-card__front">
+                                                                        <div class="tiles-box content body-standard">
+                                                                            <div class="tiles-box-title">
+                                                                                <div class="catagory">
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                    <div class="col-sm-4">
+                                                                                        <h2>Basic <small>1 User</small>
+                                                                                        </h2>
+                                                                                    </div>
+                                                                                    <div class="col-sm-4">
+                                                                                        <div class="bandwidth">
+                                                                                            <strong>Bandwidth</strong>
+                                                                                            <span class="txt-right">200
+                                                                                                Mbps</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div
+                                                                                        class="detail-info-wrap detail-info-wrap-pricetag">
+                                                                                        <div class="detail-price-new">
+                                                                                            <div class="main-part">
+
+                                                                                                <div dir="ltr"
+                                                                                                    class="price">995
+                                                                                                </div>
+                                                                                                <small>AED</small>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <p class="bottom-text">
+                                                                                            5% VAT Exc.
+                                                                                        </p>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                            </div>
+                                                                            <div class="tiles-box-list">
+                                                                                <div class="row">
+                                                                                    <div class="col-sm-6">
+                                                                                        <ul class="featureList">
+                                                                                            <li>
+                                                                                                <ul>
+                                                                                                    <li>
+                                                                                                        <strong>100
+                                                                                                            landline
+                                                                                                            minutes</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">each
+                                                                                                            employee</span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <strong>Anti-virus</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">for
+                                                                                                            3
+                                                                                                            users</span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <strong>Microsoft
+                                                                                                            One Drive
+                                                                                                            Backup</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">for
+                                                                                                            3
+                                                                                                            users</span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <strong>Email +
+                                                                                                            Microsoft
+                                                                                                            Business
+                                                                                                            Essentials</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">for
+                                                                                                            3
+                                                                                                            users</span>
+                                                                                                    </li>
+
+                                                                                                </ul>
+                                                                                            </li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                    <div class="col-sm-6">
+                                                                                        <ul class="featureList">
+                                                                                            <li>
+                                                                                                <ul>
+                                                                                                    <li>
+                                                                                                        <strong>Toll-free</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">Each
+                                                                                                            Site</span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <strong>.ae or
+                                                                                                            .com</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">Each
+                                                                                                            Site</span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <strong>Web
+                                                                                                            hosting</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">Each
+                                                                                                            Site</span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <strong>1
+                                                                                                            managed
+                                                                                                            device (per
+                                                                                                            site
+                                                                                                            location)</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">Each
+                                                                                                            Site</span>
+                                                                                                    </li>
+
+                                                                                                </ul>
+                                                                                            </li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="tile-block"
+                                                                                    title="Local"></a>
+
+                                                                            </div>
+                                                                            <div class="read-more select-product-from-grid select-product-from-grid-without-close"
+                                                                                data-extra-container=".extra-options-02">
+                                                                                <span class="subtext">SELECT
+                                                                                    NOW</span>
+                                                                                <span class="unsubtext">DESELECT
+                                                                                    NOW</span>
+                                                                            </div>
+                                                                            <a href="javascript:void(0)" class="tile-block"
+                                                                                title="1 User(s) Plan"></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="offer-box-1 col-xs-12 active">
+                                                        <div class="tile-table plan-card ">
+                                                            <div class="tile-card effect__click">
+                                                                <div class="tile">
+                                                                    <div class="tile-card__front">
+                                                                        <div class="tiles-box content body-standard">
+                                                                            <div class="tiles-box-title">
+                                                                                <div class="catagory">
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                    <div class="col-sm-4">
+                                                                                        <h2>Security Essential <small>3
+                                                                                                Users</small></h2>
+                                                                                    </div>
+                                                                                    <div class="col-sm-4">
+                                                                                        <div class="bandwidth">
+                                                                                            <strong>Bandwidth</strong>
+                                                                                            <span class="txt-right">300
+                                                                                                Mbps</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div
+                                                                                    class="detail-info-wrap detail-info-wrap-pricetag">
+                                                                                    <div class="detail-price-new">
+                                                                                        <div class="main-part">
+
+                                                                                            <div dir="ltr"
+                                                                                                class="price">1095</div>
+                                                                                            <small>AED</small>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <p class="bottom-text">
+                                                                                        5% VAT Exc.
+                                                                                    </p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="tiles-box-list">
+                                                                                <div class="row">
+                                                                                    <div class="col-sm-6">
+                                                                                        <ul class="featureList">
+                                                                                            <li>
+                                                                                                <ul>
+                                                                                                    <li>
+                                                                                                        <strong>100
+                                                                                                            landline
+                                                                                                            minutes</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">each
+                                                                                                            employee</span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <strong>Anti-virus</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">for
+                                                                                                            3
+                                                                                                            users</span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <strong>Microsoft
+                                                                                                            One Drive
+                                                                                                            Backup</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">for
+                                                                                                            3
+                                                                                                            users</span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <strong>Email +
+                                                                                                            Microsoft
+                                                                                                            Business
+                                                                                                            Essentials</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">for
+                                                                                                            3
+                                                                                                            users</span>
+                                                                                                    </li>
+
+                                                                                                </ul>
+                                                                                            </li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                    <div class="col-sm-6">
+                                                                                        <ul class="featureList">
+                                                                                            <li>
+                                                                                                <ul>
+                                                                                                    <li>
+                                                                                                        <strong>Toll-free</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">Each
+                                                                                                            Site</span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <strong>.ae or
+                                                                                                            .com</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">Each
+                                                                                                            Site</span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <strong>Web
+                                                                                                            hosting</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">Each
+                                                                                                            Site</span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <strong>1
+                                                                                                            managed
+                                                                                                            device (per
+                                                                                                            site
+                                                                                                            location)</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">Each
+                                                                                                            Site</span>
+                                                                                                    </li>
+
+                                                                                                </ul>
+                                                                                            </li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="tile-block"
+                                                                                    title="Local"></a>
+
+                                                                            </div>
+                                                                            <div class="read-more select-product-from-grid select-product-from-grid-without-close"
+                                                                                data-extra-container=".extra-options-02">
+                                                                                <span class="subtext">SELECT
+                                                                                    NOW</span>
+                                                                                <span class="unsubtext">DESELECT
+                                                                                    NOW</span>
+                                                                            </div>
+                                                                            <a href="javascript:void(0)" class="tile-block"
+                                                                                title="1 User(s) Plan"></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="offer-box-1 col-xs-12">
+                                                        <div class="tile-table plan-card ">
+                                                            <div class="tile-card effect__click">
+                                                                <div class="tile">
+                                                                    <div class="tile-card__front">
+                                                                        <div class="tiles-box content body-standard">
+                                                                            <div class="tiles-box-title">
+                                                                                <div class="catagory">
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                    <div class="col-sm-4">
+                                                                                        <h2>Security Premium <small>7
+                                                                                                Users</small></h2>
+                                                                                    </div>
+                                                                                    <div class="col-sm-4">
+                                                                                        <div class="bandwidth">
+                                                                                            <strong>Bandwidth</strong>
+                                                                                            <span class="txt-right">400
+                                                                                                Mbps</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div
+                                                                                    class="detail-info-wrap detail-info-wrap-pricetag">
+                                                                                    <div class="detail-price-new">
+                                                                                        <div class="main-part">
+
+                                                                                            <div dir="ltr"
+                                                                                                class="price">1475</div>
+                                                                                            <small>AED</small>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <p class="bottom-text">
+                                                                                        5% VAT Exc.
+                                                                                    </p>
+                                                                                </div>
+                                                                                <h2></h2>
+                                                                            </div>
+                                                                            <div class="tiles-box-list">
+                                                                                <div class="row">
+                                                                                    <div class="col-sm-6">
+                                                                                        <ul class="featureList">
+                                                                                            <li>
+                                                                                                <ul>
+                                                                                                    <li>
+                                                                                                        <strong>100
+                                                                                                            landline
+                                                                                                            minutes</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">each
+                                                                                                            employee</span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <strong>Anti-virus</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">for
+                                                                                                            3
+                                                                                                            users</span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <strong>Microsoft
+                                                                                                            One Drive
+                                                                                                            Backup</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">for
+                                                                                                            3
+                                                                                                            users</span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <strong>Email +
+                                                                                                            Microsoft
+                                                                                                            Business
+                                                                                                            Essentials</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">for
+                                                                                                            3
+                                                                                                            users</span>
+                                                                                                    </li>
+
+                                                                                                </ul>
+                                                                                            </li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                    <div class="col-sm-6">
+                                                                                        <ul class="featureList">
+                                                                                            <li>
+                                                                                                <ul>
+                                                                                                    <li>
+                                                                                                        <strong>Toll-free</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">Each
+                                                                                                            Site</span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <strong>.ae or
+                                                                                                            .com</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">Each
+                                                                                                            Site</span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <strong>Web
+                                                                                                            hosting</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">Each
+                                                                                                            Site</span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <strong>1
+                                                                                                            managed
+                                                                                                            device (per
+                                                                                                            site
+                                                                                                            location)</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">Each
+                                                                                                            Site</span>
+                                                                                                    </li>
+
+                                                                                                </ul>
+                                                                                            </li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="tile-block"
+                                                                                    title="4 Users Plan"></a>
+
+                                                                                <p class="bottom-text">
+                                                                                    5% VAT Exc.
+                                                                                </p>
+                                                                            </div>
+                                                                            <div class="read-more select-product-from-grid select-product-from-grid-without-close"
+                                                                                data-extra-container=".extra-options-02">
+                                                                                <span class="subtext">SELECT
+                                                                                    NOW</span>
+                                                                                <span class="unsubtext">DESELECT
+                                                                                    NOW</span>
+                                                                            </div>
+                                                                            <a href="javascript:void(0)" class="tile-block"
+                                                                                title="1 User(s) Plan"></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="offer-box-1 col-xs-12">
+                                                        <div class="tile-table plan-card ">
+                                                            <div class="tile-card effect__click">
+                                                                <div class="tile">
+                                                                    <div class="tile-card__front">
+                                                                        <div class="tiles-box content body-standard">
+                                                                            <div class="tiles-box-title">
+                                                                                <div class="catagory">
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                    <div class="col-sm-4">
+                                                                                        <h2>Ultrafast <small>12
+                                                                                                Users</small></h2>
+                                                                                    </div>
+                                                                                    <div class="col-sm-4">
+                                                                                        <div class="bandwidth">
+                                                                                            <strong>Bandwidth</strong>
+                                                                                            <span class="txt-right">600
+                                                                                                Mbps</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div
+                                                                                    class="detail-info-wrap detail-info-wrap-pricetag">
+                                                                                    <div class="detail-price-new">
+                                                                                        <div class="main-part">
+
+                                                                                            <div dir="ltr"
+                                                                                                class="price">1875</div>
+                                                                                            <small>AED</small>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <p class="bottom-text">
+                                                                                        5% VAT Exc.
+                                                                                    </p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="tiles-box-list">
+                                                                                <div class="row">
+                                                                                    <div class="col-sm-6">
+                                                                                        <ul class="featureList">
+                                                                                            <li>
+                                                                                                <ul>
+                                                                                                    <li>
+                                                                                                        <strong>100
+                                                                                                            landline
+                                                                                                            minutes</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">each
+                                                                                                            employee</span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <strong>Anti-virus</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">for
+                                                                                                            3
+                                                                                                            users</span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <strong>Microsoft
+                                                                                                            One Drive
+                                                                                                            Backup</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">for
+                                                                                                            3
+                                                                                                            users</span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <strong>Email +
+                                                                                                            Microsoft
+                                                                                                            Business
+                                                                                                            Essentials</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">for
+                                                                                                            3
+                                                                                                            users</span>
+                                                                                                    </li>
+
+                                                                                                </ul>
+                                                                                            </li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                    <div class="col-sm-6">
+                                                                                        <ul class="featureList">
+                                                                                            <li>
+                                                                                                <ul>
+                                                                                                    <li>
+                                                                                                        <strong>Toll-free</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">Each
+                                                                                                            Site</span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <strong>.ae or
+                                                                                                            .com</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">Each
+                                                                                                            Site/span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <strong>Web
+                                                                                                            hosting</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">Each
+                                                                                                            Site</span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <strong>1
+                                                                                                            managed
+                                                                                                            device (per
+                                                                                                            site
+                                                                                                            location)</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">Each
+                                                                                                            Site</span>
+                                                                                                    </li>
+
+                                                                                                </ul>
+                                                                                            </li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="tile-block"
+                                                                                    title="12 Users Plan"></a>
+
+
+                                                                            </div>
+                                                                            <div class="read-more select-product-from-grid select-product-from-grid-without-close"
+                                                                                data-extra-container=".extra-options-02">
+                                                                                <span class="subtext">SELECT
+                                                                                    NOW</span>
+                                                                                <span class="unsubtext">DESELECT
+                                                                                    NOW</span>
+                                                                            </div>
+                                                                            <a href="javascript:void(0)" class="tile-block"
+                                                                                title="1 User(s) Plan"></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="offer-box-1 col-xs-12">
+                                                        <div class="tile-table plan-card ">
+                                                            <div class="tile-card effect__click">
+                                                                <div class="tile">
+                                                                    <div class="tile-card__front">
+                                                                        <div class="tiles-box content body-standard">
+                                                                            <div class="tiles-box-title">
+                                                                                <div class="catagory">
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                    <div class="col-sm-4">
+                                                                                        <h2>Productivity Essential
+                                                                                            <small>18 Users</small></h2>
+                                                                                    </div>
+                                                                                    <div class="col-sm-4">
+                                                                                        <div class="bandwidth">
+                                                                                            <strong>Bandwidth</strong>
+                                                                                            <span class="txt-right">600
+                                                                                                Mbps</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div
+                                                                                    class="detail-info-wrap detail-info-wrap-pricetag">
+                                                                                    <div class="detail-price-new">
+                                                                                        <div class="main-part">
+
+                                                                                            <div dir="ltr"
+                                                                                                class="price">2475</div>
+                                                                                            <small>AED</small>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <p class="bottom-text">
+                                                                                        5% VAT Exc.
+                                                                                    </p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="tiles-box-list">
+                                                                                <div class="row">
+                                                                                    <div class="col-sm-6">
+                                                                                        <ul class="featureList">
+                                                                                            <li>
+                                                                                                <ul>
+                                                                                                    <li>
+                                                                                                        <strong>100
+                                                                                                            landline
+                                                                                                            minutes</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">each
+                                                                                                            employee</span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <strong>Anti-virus</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">for
+                                                                                                            3
+                                                                                                            users</span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <strong>Microsoft
+                                                                                                            One Drive
+                                                                                                            Backup</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">for
+                                                                                                            3
+                                                                                                            users</span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <strong>Email +
+                                                                                                            Microsoft
+                                                                                                            Business
+                                                                                                            Essentials</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">for
+                                                                                                            3
+                                                                                                            users</span>
+                                                                                                    </li>
+
+                                                                                                </ul>
+                                                                                            </li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                    <div class="col-sm-6">
+                                                                                        <ul class="featureList">
+                                                                                            <li>
+                                                                                                <ul>
+                                                                                                    <li>
+                                                                                                        <strong>Toll-free</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">Each
+                                                                                                            Site</span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <strong>.ae or
+                                                                                                            .com</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">Each
+                                                                                                            Site</span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <strong>Web
+                                                                                                            hosting</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">Each
+                                                                                                            Site</span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <strong>1
+                                                                                                            managed
+                                                                                                            device (per
+                                                                                                            site
+                                                                                                            location)</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">Each
+                                                                                                            Site</span>
+                                                                                                    </li>
+
+                                                                                                </ul>
+                                                                                            </li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="tile-block"
+                                                                                    title="18 Users Plan"></a>
+                                                                            </div>
+                                                                            <div class="read-more select-product-from-grid select-product-from-grid-without-close"
+                                                                                data-extra-container=".extra-options-02">
+                                                                                <span class="subtext">SELECT
+                                                                                    NOW</span>
+                                                                                <span class="unsubtext">DESELECT
+                                                                                    NOW</span>
+                                                                            </div>
+                                                                            <a href="javascript:void(0)" class="tile-block"
+                                                                                title="1 User(s) Plan"></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="offer-box-1 col-xs-12">
+                                                        <div class="tile-table plan-card ">
+                                                            <div class="tile-card effect__click">
+                                                                <div class="tile">
+                                                                    <div class="tile-card__front">
+                                                                        <div class="tiles-box content body-standard">
+                                                                            <div class="tiles-box-title">
+                                                                                <div class="catagory">
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                    <div class="col-sm-4">
+                                                                                        <h2>Productivity Premium
+                                                                                            <small>25 Users</small></h2>
+                                                                                    </div>
+                                                                                    <div class="col-sm-4">
+                                                                                        <div class="bandwidth">
+                                                                                            <strong>Bandwidth</strong>
+                                                                                            <span class="txt-right">2000
+                                                                                                Mbps</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div
+                                                                                    class="detail-info-wrap detail-info-wrap-pricetag">
+                                                                                    <div class="detail-price-new">
+                                                                                        <div class="main-part">
+
+                                                                                            <div dir="ltr"
+                                                                                                class="price">3375</div>
+                                                                                            <small>AED</small>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <p class="bottom-text">
+                                                                                        5% VAT Exc.
+                                                                                    </p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="tiles-box-list">
+                                                                                <div class="row">
+                                                                                    <div class="col-sm-6">
+                                                                                        <ul class="featureList">
+                                                                                            <li>
+                                                                                                <ul>
+                                                                                                    <li>
+                                                                                                        <strong>100
+                                                                                                            landline
+                                                                                                            minutes</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">each
+                                                                                                            employee</span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <strong>Anti-virus</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">for
+                                                                                                            3
+                                                                                                            users</span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <strong>Microsoft
+                                                                                                            One Drive
+                                                                                                            Backup</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">for
+                                                                                                            3
+                                                                                                            users</span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <strong>Email +
+                                                                                                            Microsoft
+                                                                                                            Business
+                                                                                                            Essentials</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">for
+                                                                                                            3
+                                                                                                            users</span>
+                                                                                                    </li>
+
+                                                                                                </ul>
+                                                                                            </li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                    <div class="col-sm-6">
+                                                                                        <ul class="featureList">
+                                                                                            <li>
+                                                                                                <ul>
+                                                                                                    <li>
+                                                                                                        <strong>Toll-free</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">Each
+                                                                                                            Site</span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <strong>.ae or
+                                                                                                            .com</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">Each
+                                                                                                            Site</span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <strong>Web
+                                                                                                            hosting</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">Each
+                                                                                                            Site</span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <strong>1
+                                                                                                            managed
+                                                                                                            device (per
+                                                                                                            site
+                                                                                                            location)</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">Each
+                                                                                                            Site</span>
+                                                                                                    </li>
+
+                                                                                                </ul>
+                                                                                            </li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="tile-block"
+                                                                                    title="25 Users Plan"></a>
+
+                                                                            </div>
+                                                                            <div class="read-more select-product-from-grid select-product-from-grid-without-close"
+                                                                                data-extra-container=".extra-options-02">
+                                                                                <span class="subtext">SELECT
+                                                                                    NOW</span>
+                                                                                <span class="unsubtext">DESELECT
+                                                                                    NOW</span>
+                                                                            </div>
+                                                                            <a href="javascript:void(0)" class="tile-block"
+                                                                                title="1 User(s) Plan"></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="offer-box-1 col-xs-12">
+                                                        <div class="tile-table plan-card ">
+                                                            <div class="tile-card effect__click">
+                                                                <div class="tile">
+                                                                    <div class="tile-card__front">
+                                                                        <div class="tiles-box content body-standard">
+                                                                            <div class="tiles-box-title">
+                                                                                <div class="catagory">
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                    <div class="col-sm-4">
+                                                                                        <h2>Business Identity Single
+                                                                                            line</h2>
+                                                                                    </div>
+                                                                                    <div class="col-sm-4">
+                                                                                        <div style="display: none;"
+                                                                                            class="bandwidth">
+                                                                                            <strong>Bandwidth</strong>
+                                                                                            <span class="txt-right">200
+                                                                                                Mbps</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div
+                                                                                        class="detail-info-wrap detail-info-wrap-pricetag">
+                                                                                        <div class="detail-price-new">
+                                                                                            <div class="main-part">
+
+                                                                                                <div dir="ltr"
+                                                                                                    class="price">100
+                                                                                                </div>
+                                                                                                <small>AED</small>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <p class="bottom-text">
+                                                                                            5% VAT Exc.
+                                                                                        </p>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                            </div>
+                                                                            <div class="tiles-box-list">
+                                                                                <div class="row">
+                                                                                    <div class="col-sm-6">
+                                                                                        <ul class="featureList">
+                                                                                            <li>
+                                                                                                <ul>
+                                                                                                    <li>
+                                                                                                        <strong>1
+                                                                                                            Virtual
+                                                                                                            Landline
+                                                                                                            with
+                                                                                                        </strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">(100
+                                                                                                            Flexi
+                                                                                                            Minutes)</span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <strong>Business
+                                                                                                            Domain</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right"></span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <strong>eStore</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">(DIY)</span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <strong>SIP
+                                                                                                            Phone
+                                                                                                        </strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">(Optional)</span>
+                                                                                                    </li>
+
+                                                                                                </ul>
+                                                                                            </li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                    <div class="col-sm-6">
+                                                                                        <ul class="featureList">
+                                                                                            <li>
+                                                                                                <ul>
+                                                                                                    <li>
+                                                                                                        <strong>UCaaS
+                                                                                                            Main
+                                                                                                            number</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">1</span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <strong>UCaaS
+                                                                                                            User Voice
+                                                                                                            Number</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">1</span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <strong>Ucaas
+                                                                                                            Cloud Talk
+                                                                                                            Application</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right"></span>
+                                                                                                    </li>
+
+                                                                                                </ul>
+                                                                                            </li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="tile-block"
+                                                                                    title="Local"></a>
+
+                                                                            </div>
+                                                                            <div class="read-more select-product-from-grid select-product-from-grid-without-close"
+                                                                                data-extra-container=".extra-options-02">
+                                                                                <span class="subtext">SELECT
+                                                                                    NOW</span>
+                                                                                <span class="unsubtext">DESELECT
+                                                                                    NOW</span>
+                                                                            </div>
+                                                                            <a href="javascript:void(0)" class="tile-block"
+                                                                                title="1 User(s) Plan"></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="offer-box-1 col-xs-12">
+                                                        <div class="tile-table plan-card ">
+                                                            <div class="tile-card effect__click">
+                                                                <div class="tile">
+                                                                    <div class="tile-card__front">
+                                                                        <div class="tiles-box content body-standard">
+                                                                            <div class="tiles-box-title">
+                                                                                <div class="catagory">
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                    <div class="col-sm-4">
+                                                                                        <h2>Business Identity Multi line
+                                                                                        </h2>
+                                                                                    </div>
+                                                                                    <div class="col-sm-4">
+                                                                                        <div style="display: none;"
+                                                                                            class="bandwidth">
+                                                                                            <strong>Bandwidth</strong>
+                                                                                            <span class="txt-right">300
+                                                                                                Mbps</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div
+                                                                                    class="detail-info-wrap detail-info-wrap-pricetag">
+                                                                                    <div class="detail-price-new">
+                                                                                        <div class="main-part">
+
+                                                                                            <div dir="ltr"
+                                                                                                class="price">0</div>
+                                                                                            <small>AED</small>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <p class="bottom-text">
+                                                                                        5% VAT Exc.
+                                                                                    </p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="tiles-box-list">
+                                                                                <div class="row">
+                                                                                    <div class="col-sm-6">
+                                                                                        <ul class="featureList">
+                                                                                            <li>
+                                                                                                <ul>
+                                                                                                    <li>
+                                                                                                        <strong>1
+                                                                                                            Virtual
+                                                                                                            Landline
+                                                                                                            with
+                                                                                                        </strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">(100
+                                                                                                            Flexi
+                                                                                                            Minutes)</span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <strong>Business
+                                                                                                            Domain</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right"></span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <strong>eStore</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">(DIY)</span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <strong>SIP
+                                                                                                            Phone
+                                                                                                        </strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">(Optional)</span>
+                                                                                                    </li>
+
+                                                                                                </ul>
+                                                                                            </li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                    <div class="col-sm-6">
+                                                                                        <ul class="featureList">
+                                                                                            <li>
+                                                                                                <ul>
+                                                                                                    <li>
+                                                                                                        <strong>UCaaS
+                                                                                                            Main
+                                                                                                            number</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">1</span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <strong>UCaaS
+                                                                                                            User Voice
+                                                                                                            Number</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">1</span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <strong>Ucaas
+                                                                                                            Cloud Talk
+                                                                                                            Application</strong>
+                                                                                                        <span
+                                                                                                            class="txt-right"></span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <strong>Additional
+                                                                                                            Line
+                                                                                                        </strong>
+                                                                                                        <span
+                                                                                                            class="txt-right">at
+                                                                                                            85
+                                                                                                            AED</span>
+                                                                                                    </li>
+                                                                                                </ul>
+                                                                                            </li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <a href="javascript:void(0)"
+                                                                                    class="tile-block"
+                                                                                    title="Local"></a>
+
+                                                                            </div>
+                                                                            <div class="read-more select-product-from-grid select-product-from-grid-without-close"
+                                                                                data-extra-container=".extra-options-02">
+                                                                                <span class="subtext">SELECT
+                                                                                    NOW</span>
+                                                                                <span class="unsubtext">DESELECT
+                                                                                    NOW</span>
+                                                                            </div>
+                                                                            <a href="javascript:void(0)" class="tile-block"
+                                                                                title="1 User(s) Plan"></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-12  remove-padding-right text-right submit-button-container">
+                                    <button onclick="location.href = 'customer-details.html'">Previous</button>
+                                    <button>Save & Close</button>
+                                    <button onclick="location.href = 'bib-03.3.html'">Next</button>
+                                    <!-- <button onclick="location.href = 'bib-04.1.html'">Next</button> -->
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <!-- End SmartWizard Content -->
+                        </div>
+                        <div class="clearfix"></div>
+                    </section>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+
+    </div>
+    <!-- /.etisalat -->
+    <!-- /.footer -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../assets/js/jquery-2.1.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../assets/js/bootstrap.js"></script>
+    <script src="../assets/js/bootstrap-select.js"></script>
+    <script src="../assets/js/dcalendar.picker.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery.matchHeight-min.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery.smartWizard.js"></script>
+    <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../assets/js/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.0/rangeslider.min.js"></script>
+    <script src="../assets/js/scripts.js"></script>
+    <script src="../assets/js/custom.js"></script>
+    <script>
+        $("#slider-range").slider({
+            range: true,
+            min: 0,
+            max: 5000,
+            step: 50,
+            values: ['50', '5000'],
+            slide: function (event, ui) {
+                $("#min-price").html(ui.values[0]);
+
+                suffix = '';
+                if (ui.values[1] == $("#max-price").data('max')) {
+                    suffix = ' +';
+                }
+                $("#max-price").html(ui.values[1] + suffix);
+            }
+        });
+
+        $("#slider-range01").slider({
+            range: true,
+            min: 1,
+            max: 25,
+            step: 1,
+            values: ['1', '25'],
+            slide: function (event, ui) {
+                $("#min-price01").html(ui.values[0]);
+
+                suffix = '';
+                if (ui.values[1] == $("#max-price01").data('max')) {
+                    suffix = '';
+                }
+                $("#max-price01").html(ui.values[1] + suffix);
+            }
+        });
+        $('.reset-btn').click(function () {
+            $('.offer-box-1').show();
+            $('.offer-box-2').show();
+            $('.offer-box-3').show();
+        });
+        $('#offer-select-01').change(function () {
+
+            $('.offer-box-1').show();
+            $('.offer-box-2').hide();
+            $('.offer-box-3').hide();
+        });
+        $('#offer-select-02').change(function () {
+
+            $('.offer-box-2').show();
+            $('.offer-box-1').hide();
+            $('.offer-box-3').hide();
+        });
+        $('#offer-select-03').change(function () {
+
+            $('.offer-box-3').show();
+            $('.offer-box-2').hide();
+            $('.offer-box-1').hide();
+        });
+        $('#manageEmail').change(function () {
+            if ($(this).find('input').prop('checked') == true) {
+                $('.manage-email').show();
+            }
+            else {
+                $('.manage-email').hide();
+            }
+        });
+        $('#manageDevice').change(function () {
+            if ($(this).find('input').prop('checked') == true) {
+                $('.manage-device').show();
+            }
+            else {
+                $('.manage-device').hide();
+            }
+        });
+        var valueBubble = '<output class="rangeslider__value-bubble" />';
+
+        function updateValueBubble(pos, value, context) {
+            pos = pos || context.position;
+            value = value || context.value;
+            var $valueBubble = $('.rangeslider__value-bubble', context.$range);
+            var tempPosition = pos + context.grabPos;
+            var position = (tempPosition <= context.handleDimension) ? context.handleDimension : (tempPosition >= context.maxHandlePos) ? context.maxHandlePos : tempPosition;
+
+            if ($valueBubble.length) {
+                $valueBubble[0].style.left = Math.ceil(position) + 'px';
+                $valueBubble[0].innerHTML = value;
+            }
+        }
+
+        var valueBubble = '<output class="rangeslider__value-bubble" />';
+
+        function updateValueBubble(pos, value, context) {
+            pos = pos || context.position;
+            value = value || context.value;
+            var $valueBubble = $('.rangeslider__value-bubble', context.$range);
+            var tempPosition = pos + context.grabPos;
+            var position = (tempPosition <= context.handleDimension) ? context.handleDimension : (tempPosition >= context.maxHandlePos) ? context.maxHandlePos : tempPosition;
+
+            if ($valueBubble.length) {
+                $valueBubble[0].style.left = Math.ceil(position) + 'px';
+                $valueBubble[0].innerHTML = value;
+            }
+        }
+        $('.tiles-box-title').click(function () {
+            $(this).toggleClass('open');
+            $(this).closest('[class^="offer-box-"]').siblings().find('.tiles-box-list').removeClass('show');
+            $(this).closest('[class^="offer-box-"]').siblings().find('.tiles-box-title').removeClass('open');
+            $(this).closest('.tiles-box').find('.tiles-box-list').toggleClass('show');
+        });
+        $('.tile-block').click(function () {
+            $(this).toggleClass('open');
+            $(this).closest('.offer-box-1').toggleClass('active');
+            if ($('.offer-box-1').hasClass('active')) {
+                $('.next-scbtn').removeAttr('disabled');
+            } else {
+                $('.next-scbtn').attr('disabled');
+            }
+        });
+    </script>
+</body>
+
+</html>

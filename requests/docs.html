@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sales Order Request :: Etisalat</title>
+    <!-- Bootstrap -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="../assets/css/font-awesome.min.css" />
+    <link href="../assets/css/CEP-automation-css/custom.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        a.btn.btn-default {
+            width: 100%;
+            border-radius: 0;
+        }
+    </style>
+</head>
+
+<body class="loading">
+    <div id="loaderM"></div>
+    <div class="etisalat">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header col-sm-2">
+                    <a class="navbar-brand" href="home.html">
+                        <img src="../assets/images/logo_white.png" alt="Etisalat">
+                    </a>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="col-sm-8">
+                    <div id="navbar" class="col-md-12 custom-container nav-container navbar-collapse collapse">
+                        <ul>
+                            <li>
+                                <a href="javascript:void(0);">Mobile</a>
+                            </li>
+                            <li>
+                                <a class="show-fixed-content" href="index.html">Fixed</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">ICT</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Product Catalogue</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--/.nav-collapse -->
+                <div class="col-sm-2">
+                    <div class="navbar-right">
+                        <div class="dropdown">
+                            <a id="oSummary" class="summary-btn" data-target="#" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">
+                                Order Summary
+                                <span class="caret"></span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="oSummary">
+                                <div class="item-list">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Order ID</th>
+                                                <th>Customer Name</th>
+                                                <th>Party ID</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>ORD-212-2323</td>
+                                                <td>Aster Pharmacy</td>
+                                                <td>17567</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Order Status</th>
+                                                <th>Service Type</th>
+                                                <th>Sales Manager</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Draft</td>
+                                                <td>New Account</td>
+                                                <td>Jordan</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Authorized Contact Name</th>
+                                                <th>Authorized Contact Email</th>
+                                                <th>Authorized Contact Mobile</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Minal Doongarwal</td>
+                                                <td>mdoongarwal@etisalat.ae</td>
+                                                <td>971569629141</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="total collapsed">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <span id="breakDown" class="collapsed" data-toggle="collapse"
+                                                data-target="#collapseBreakdown" aria-expanded="false"
+                                                aria-controls="collapseBreakdown">
+                                                Break Down
+                                                <span>
+                                                    <img src="../assets/images/down-arrow.png" alt="">
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <h4>Grand Total</h4>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <h5 class="price">
+                                                1,713 AED
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapseBreakdown" class="collapse" aria-labelledby="breakDown">
+                                    <div class="card-body">
+                                        <div id="packages" class="packages">
+                                            <div class="card">
+                                                <div class="card-header" id="headingOne">
+                                                    <h5 class="mb-0 internet">
+                                                        <span class="icon">
+                                                            <img src="../assets/images/icon-green/opt13.png" alt="">
+                                                        </span>
+                                                        Package Details
+                                                    </h5>
+                                                    <!-- <h5 class="mb-0 internet"data-toggle="collapse"
+                                                                        data-target="#collapseOne" aria-expanded="false"
+                                                                        aria-controls="collapseOne">
+                                                                        <span class="icon">
+                                                                            <img src="../assets/images/icon-green/opt13.png" alt="">
+                                                                        </span>
+                                                                        Package Details
+                                                                        <span>
+                                                                            <img src="../assets/images/down-arrow.png" alt="">
+                                                                        </span>
+                                                                    </h5> -->
+                                                </div>
+                                                <div id="collapseOne" class="collapse in" aria-labelledby="headingOne"
+                                                    data-parent="#packages" aria-expanded="false">
+                                                    <div class="card-body">
+                                                        <table class="table review-grid">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th></th>
+                                                                    <th>QTY</th>
+                                                                    <th>Unit Price</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td style="width:70%;">
+                                                                        <span>Business in a box</span>
+                                                                        <h4>Security Essential Plan</h4>
+                                                                        <small>12 Month Contract</small>
+                                                                    </td>
+                                                                    <td>x 1</td>
+                                                                    <td>1095 AED/Month</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div class="card-header" id="headingTwo">
+                                                    <h5 class="mb-0 internet">
+                                                        <span class="icon">
+                                                            <img src="../assets/images/icon-green/addon-icon.png"
+                                                                alt="">
+                                                        </span>
+                                                        Add-On Details
+                                                    </h5>
+                                                    <!-- <h5 class="mb-0 internet" data-toggle="collapse"
+                                                                        data-target="#collapseTwo" aria-expanded="false"
+                                                                        aria-controls="collapseTwo">
+                                                                        <span class="icon">
+                                                                            <img src="../assets/images/icon-green/addon-icon.png"
+                                                                                alt="">
+                                                                        </span>
+                                                                        Add-On Details
+                                                                        <span>
+                                                                            <img src="../assets/images/down-arrow.png" alt="">
+                                                                        </span>
+                                                                    </h5> -->
+                                                </div>
+                                                <div id="collapseTwo" class="collapse in" aria-labelledby="headingTwo"
+                                                    data-parent="#packages" aria-expanded="false">
+                                                    <div class="card-body">
+                                                        <table class="table review-grid">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th></th>
+                                                                    <th>QTY</th>
+                                                                    <th>Unit Price</th>
+                                                                    <th></th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td style="width:70%;">
+                                                                        <h4>User Voice Line</h4>
+                                                                        <small>12 Month Contract</small>
+                                                                    </td>
+                                                                    <td>x 10</td>
+                                                                    <td>1000 AED</td>
+                                                                    <td><a class="removeBtn"
+                                                                            href="javascript:void(0)">Remove</a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width:70%;">
+                                                                        <h4>User Email</h4>
+                                                                        <small>Description of Email</small>
+                                                                    </td>
+                                                                    <td>x 10</td>
+                                                                    <td>150 AED</td>
+                                                                    <td><a class="removeBtn"
+                                                                            href="javascript:void(0)">Remove</a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width:70%;">
+                                                                        <h4>User Data Backup (1TB)</h4>
+                                                                        <small>Description of User Data Backup</small>
+                                                                    </td>
+                                                                    <td>x 10</td>
+                                                                    <td>200 AED</td>
+                                                                    <td><a class="removeBtn"
+                                                                            href="javascript:void(0)">Remove</a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width:70%;">
+                                                                        <h4>User Endpoint Security</h4>
+                                                                        <small>Description of User Data Backup</small>
+                                                                    </td>
+                                                                    <td>x 10</td>
+                                                                    <td>100 AED</td>
+                                                                    <td><a class="removeBtn"
+                                                                            href="javascript:void(0)">Remove</a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width:70%;">
+                                                                        <h4>Cordless Phone</h4>
+                                                                    </td>
+                                                                    <td>x 1</td>
+                                                                    <td>13 AED</td>
+                                                                    <td><a class="removeBtn"
+                                                                            href="javascript:void(0)">Remove</a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width:70%;">
+                                                                        <h4>Video Phone</h4>
+                                                                    </td>
+                                                                    <td>x 1</td>
+                                                                    <td>95 AED</td>
+                                                                    <td><a class="removeBtn"
+                                                                            href="javascript:void(0)">Remove</a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width:70%;">
+                                                                        <h4>Deluse Phone</h4>
+                                                                    </td>
+                                                                    <td>x 1</td>
+                                                                    <td>15 AED</td>
+                                                                    <td><a class="removeBtn"
+                                                                            href="javascript:void(0)">Remove</a></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="page-container">
+                    <section class="page-content inner-page">
+                        <div class="clearfix"></div>
+                        <div class="smart-wizard">
+                            <!-- Tabs -->
+                            <div class="swMain">
+                                <div class="col-md-12 item custom-container progress-container">
+                                    <ul class="item  slickslider">
+                                        <li>
+                                            <a href="package-request.html" class="selected">
+                                                <span class="stepDesc">Package Request</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>1
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="docs.html" class="selected">
+                                                <span class="stepDesc">Documents & Notes</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>2
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="review.html" class="">
+                                                <span class="stepDesc">Review</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>3
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-12 custom-container corporate-accounts">
+                                    <div class="row">
+                                        <div class="col-sm-10 col-sm-offset-1">
+
+                                            <div id="packages" class="packages noTagLine">
+                                                <div class="card">
+                                                    <div class="card-header" id="headingNumber">
+                                                        <h5 class="mb-0 docs" data-toggle="collapse"
+                                                            data-target="#collapseNumber" aria-expanded="true"
+                                                            aria-controls="collapseNumber">
+                                                            <svg height="32px" version="1.1" viewBox="0 0 32 32"
+                                                                width="32px" xmlns="http://www.w3.org/2000/svg"
+                                                                xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+                                                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                                <title />
+                                                                <desc />
+                                                                <defs />
+                                                                <g fill="none" fill-rule="evenodd" id="Page-1"
+                                                                    stroke="none" stroke-width="0">
+                                                                    <g fill="#929292" id="icon-56-document-text">
+                                                                        <path
+                                                                            d="M19.5,3 L9.00276013,3 C7.89666625,3 7,3.89833832 7,5.00732994 L7,27.9926701 C7,29.1012878 7.89092539,30 8.99742191,30 L24.0025781,30 C25.1057238,30 26,29.1017876 26,28.0092049 L26,10.5 L26,10 L20,3 L19.5,3 L19.5,3 L19.5,3 Z M19,4 L8.9955775,4 C8.44573523,4 8,4.45526288 8,4.99545703 L8,28.004543 C8,28.5543187 8.45470893,29 8.9999602,29 L24.0000398,29 C24.5523026,29 25,28.5550537 25,28.0066023 L25,11 L20.9979131,11 C19.8944962,11 19,10.1134452 19,8.99408095 L19,4 L19,4 Z M20,4.5 L20,8.99121523 C20,9.54835167 20.4506511,10 20.9967388,10 L24.6999512,10 L20,4.5 L20,4.5 Z M10,10 L10,11 L15,11 L15,10 L10,10 L10,10 Z M10,7 L10,8 L17,8 L17,7 L10,7 L10,7 Z M10,13 L10,14 L23,14 L23,13 L10,13 L10,13 Z M10,16 L10,17 L20,17 L20,16 L10,16 L10,16 Z M10,19 L10,20 L23,20 L23,19 L10,19 L10,19 Z M10,22 L10,23 L19,23 L19,22 L10,22 L10,22 Z M10,25 L10,26 L23,26 L23,25 L10,25 L10,25 Z"
+                                                                            id="document-text" />
+                                                                    </g>
+                                                                </g>
+                                                            </svg>
+                                                            Documents
+                                                            <small></small>
+                                                            <a id="headingMain" class="changeBtn"
+                                                                href="javascript:void(0);" data-toggle="collapse"
+                                                                data-target="#collapseMain" aria-expanded="true"
+                                                                aria-controls="collapseMain"
+                                                                style="display: none;">Change</a>
+                                                        </h5>
+                                                    </div>
+                                                    <div id="collapseMain" class="collapse in"
+                                                        aria-labelledby="headingMain" data-parent="#packages">
+                                                        <div class="card-body">
+                                                            <div class="tab-cont">
+                                                                <div class="row">
+                                                                    <div class="col-sm-6">
+                                                                        <div class="form-group">
+                                                                            <label>Document Type</label>
+                                                                            <select name="" id="" class="selectpicker">
+                                                                                <option>Gathering form</option>
+                                                                                <option>Signed Proposal</option>
+                                                                                <option>Third Party Proposal</option>
+                                                                                <option>CIQ Form</option>
+                                                                                <option>Domain SSL Certificate</option>
+                                                                                <option>Customer Active Directory
+                                                                                    Details</option>
+                                                                                <option>Business Case Document</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-3">
+                                                                        <div class="noc-btn eid-btn inputfilebtn">
+                                                                            <button class="btn default-btn btn-alone"><i
+                                                                                    class="fa fa-upload"
+                                                                                    aria-hidden="true"></i>Upload</button><input
+                                                                                type="file" name="file" />
+                                                                        </div>
+                                                                        <div id="uploadModal" class="modal"
+                                                                            role="dialog">
+                                                                            <div class="modal-dialog">
+
+                                                                                <!-- Modal content-->
+                                                                                <div class="modal-content">
+                                                                                    <div class="modal-header">
+                                                                                        <button type="button"
+                                                                                            class="close"
+                                                                                            data-dismiss="modal">&times;</button>
+                                                                                        <h4 class="modal-title">
+                                                                                            Upload
+                                                                                        </h4>
+                                                                                    </div>
+                                                                                    <div class="modal-body"
+                                                                                        style="overflow:visible;">
+                                                                                        <div class="row flex-box">
+                                                                                            <div class="col-sm-8">
+                                                                                                <div class="captureBox">
+                                                                                                    <img class="frontImg"
+                                                                                                        style="display: none;"
+                                                                                                        src="../assets/images/poa-doc.jpg"
+                                                                                                        alt="">
+                                                                                                </div>
+                                                                                                <div class="flex-box">
+                                                                                                    <div class="mached">
+                                                                                                        NOC document
+                                                                                                        uploaded
+                                                                                                        successfully
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="col-sm-4">
+                                                                                                <button
+                                                                                                    class="white-btn upload-btn poaUploadBtn">
+                                                                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                                                                        data-name="Design Convert"
+                                                                                                        id="Design_Convert"
+                                                                                                        viewBox="0 0 64 64">
+                                                                                                        <title />
+                                                                                                        <path
+                                                                                                            class="cls-1"
+                                                                                                            d="M50,52H14a7,7,0,0,1-7-7V41a1,1,0,0,1,2,0v4a5,5,0,0,0,5,5H50a5,5,0,0,0,5-5V41a1,1,0,0,1,2,0v4A7,7,0,0,1,50,52Z" />
+                                                                                                        <path
+                                                                                                            class="cls-1"
+                                                                                                            d="M32,42a1,1,0,0,1-1-1V14a1,1,0,0,1,2,0V41A1,1,0,0,1,32,42Z" />
+                                                                                                        <path
+                                                                                                            class="cls-1"
+                                                                                                            d="M42,24a1,1,0,0,1-.71-.29L32,14.41l-9.29,9.3a1,1,0,0,1-1.42-1.42l10-10a1,1,0,0,1,1.42,0l10,10a1,1,0,0,1,0,1.42A1,1,0,0,1,42,24Z" />
+                                                                                                    </svg>
+                                                                                                    Upload
+                                                                                                </button>
+
+                                                                                                <div
+                                                                                                    class="btn-box flex-box">
+                                                                                                    <button
+                                                                                                        style="width:100%"
+                                                                                                        class="default-btn resetBtn"
+                                                                                                        disabled>Reset</button>
+                                                                                                </div>
+                                                                                                <!-- <div class="form-group">
+                                                                                                <label>Document No. <span class="req">*</span></label>
+                                                                                                
+                                                                                                <input value=""  type="text">
+                                                                                            </div>
+                                                                                            <div class="form-group">
+                                                                                                <label>Expiry Date <span class="req">*</span></label>
+                                                                                                
+                                                                                                <input  type="text" value="" placeholder="DD/MM/YYYY" id="datepicker1">
+                                                                                            </div>
+                                                                                            <div class="form-group">
+                                                                                                <label>Issue Date <span class="req">*</span></label>
+                                                                                                
+                                                                                                <input  type="text" value="" placeholder="DD/MM/YYYY" id="datepicker2">
+                                                                                            </div> -->
+
+                                                                                            </div>
+                                                                                        </div>
+
+                                                                                    </div>
+                                                                                    <div class="modal-footer">
+                                                                                        <button type="button"
+                                                                                            class="btn btn-default showGrid"
+                                                                                            data-dismiss="modal">Save</button>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                            </div>
+                                                                        </div>
+                                                                        <div id="scanModal" class="modal" role="dialog">
+                                                                            <div class="modal-dialog">
+                                                                                <!-- Modal content-->
+                                                                                <div class="modal-content">
+                                                                                    <div class="modal-header">
+                                                                                        <button type="button"
+                                                                                            class="close"
+                                                                                            data-dismiss="modal">&times;</button>
+                                                                                        <h4 class="modal-title">
+                                                                                            Scan
+                                                                                        </h4>
+                                                                                    </div>
+                                                                                    <div class="modal-body"
+                                                                                        style="overflow:visible;">
+                                                                                        <div class="row flex-box">
+                                                                                            <div class="col-sm-2">
+                                                                                                <button
+                                                                                                    class="white-btn">Page
+                                                                                                    01</button><br><br>
+                                                                                                <button
+                                                                                                    class="white-btn">Page
+                                                                                                    02</button><br><br>
+                                                                                                <button
+                                                                                                    class="white-btn">Page
+                                                                                                    03</button>
+                                                                                            </div>
+                                                                                            <div class="col-sm-6">
+                                                                                                <div class="captureBox">
+                                                                                                    <img class="frontImg"
+                                                                                                        style="display: none;"
+                                                                                                        src="images/poa-doc.jpg"
+                                                                                                        alt="">
+                                                                                                </div>
+                                                                                                <div class="flex-box">
+                                                                                                    <div class="mached">
+                                                                                                        NOC document
+                                                                                                        scanned
+                                                                                                        successfully
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="col-sm-4">
+                                                                                                <button
+                                                                                                    class="white-btn upload-btn poaUploadBtn">
+                                                                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                                                                        data-name="Design Convert"
+                                                                                                        id="Design_Convert"
+                                                                                                        viewBox="0 0 64 64">
+                                                                                                        <title />
+                                                                                                        <path
+                                                                                                            class="cls-1"
+                                                                                                            d="M50,52H14a7,7,0,0,1-7-7V41a1,1,0,0,1,2,0v4a5,5,0,0,0,5,5H50a5,5,0,0,0,5-5V41a1,1,0,0,1,2,0v4A7,7,0,0,1,50,52Z" />
+                                                                                                        <path
+                                                                                                            class="cls-1"
+                                                                                                            d="M32,42a1,1,0,0,1-1-1V14a1,1,0,0,1,2,0V41A1,1,0,0,1,32,42Z" />
+                                                                                                        <path
+                                                                                                            class="cls-1"
+                                                                                                            d="M42,24a1,1,0,0,1-.71-.29L32,14.41l-9.29,9.3a1,1,0,0,1-1.42-1.42l10-10a1,1,0,0,1,1.42,0l10,10a1,1,0,0,1,0,1.42A1,1,0,0,1,42,24Z" />
+                                                                                                    </svg>
+                                                                                                    Scan
+                                                                                                </button>
+
+                                                                                                <div
+                                                                                                    class="btn-box flex-box">
+                                                                                                    <button
+                                                                                                        style="width:100%"
+                                                                                                        class="default-btn resetBtn"
+                                                                                                        disabled>Reset</button>
+                                                                                                </div>
+                                                                                                <!-- <div class="form-group">
+                                                                                                <label>Document No. <span class="req">*</span></label>
+                                                                                                <input value=""  type="text">
+                                                                                            </div>
+                                                                                            <div class="form-group">
+                                                                                                <label>Expiry Date <span class="req">*</span></label>
+                                                                                                <input  type="text" value="" placeholder="DD/MM/YYYY" id="datepicker3">
+                                                                                            </div>
+                                                                                            <div class="form-group">
+                                                                                                <label>Issue Date <span class="req">*</span></label>
+                                                                                                <input  type="text" value="" placeholder="DD/MM/YYYY" id="datepicker4">
+                                                                                            </div> -->
+
+                                                                                            </div>
+                                                                                        </div>
+
+                                                                                    </div>
+                                                                                    <div class="modal-footer">
+                                                                                        <button type="button"
+                                                                                            class="btn btn-default showGrid"
+                                                                                            data-dismiss="modal">Save</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div id="captureModal" class="modal"
+                                                                            role="dialog">
+                                                                            <div class="modal-dialog">
+
+                                                                                <!-- Modal content-->
+                                                                                <div class="modal-content">
+                                                                                    <div class="modal-header">
+                                                                                        <button type="button"
+                                                                                            class="close"
+                                                                                            data-dismiss="modal">&times;</button>
+                                                                                        <h4 class="modal-title">
+                                                                                            Capture
+                                                                                        </h4>
+                                                                                    </div>
+                                                                                    <div class="modal-body"
+                                                                                        style="overflow:visible;">
+                                                                                        <div class="row flex-box">
+                                                                                            <div class="col-sm-8">
+                                                                                                <div class="captureBox">
+                                                                                                    <img class="frontImg"
+                                                                                                        style="display: none;"
+                                                                                                        src="images/poa-doc.jpg"
+                                                                                                        alt="">
+                                                                                                </div>
+                                                                                                <div class="flex-box">
+                                                                                                    <div class="mached">
+                                                                                                        NOC document
+                                                                                                        captured
+                                                                                                        successfully
+                                                                                                    </div>
+                                                                                                </div>
+
+                                                                                            </div>
+                                                                                            <div class="col-sm-4">
+                                                                                                <button
+                                                                                                    class="white-btn poaUploadBtn">
+                                                                                                    <svg style="enable-background:new 0 0 512 512;"
+                                                                                                        version="1.1"
+                                                                                                        viewBox="0 0 512 512"
+                                                                                                        xml:space="preserve"
+                                                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                                                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                                                                        <g
+                                                                                                            id="_x31_51_x2C__Twitter_x2C__Image_x2C__Picture_x2C__Camera">
+                                                                                                            <g
+                                                                                                                id="XMLID_5076_">
+                                                                                                                <path
+                                                                                                                    d="M255,370c-55.14,0-100-44.859-100-100c0-55.14,44.86-100,100-100    c55.141,0,100,44.86,100,100C355,325.141,310.141,370,255,370z M255,190c-44.112,0-80,35.888-80,80s35.888,80,80,80    s80-35.888,80-80S299.112,190,255,190z"
+                                                                                                                    id="XMLID_8505_"
+                                                                                                                    style="fill:#F05026;">
+                                                                                                                </path>
+                                                                                                            </g>
+                                                                                                            <g
+                                                                                                                id="XMLID_5077_">
+                                                                                                                <path
+                                                                                                                    d="M400,210c-16.542,0-30-13.458-30-30s13.458-30,30-30s30,13.458,30,30    S416.542,210,400,210z M400,170c-5.514,0-10,4.486-10,10s4.486,10,10,10s10-4.486,10-10S405.514,170,400,170z"
+                                                                                                                    id="XMLID_8502_"
+                                                                                                                    style="fill:#F05026;">
+                                                                                                                </path>
+                                                                                                            </g>
+                                                                                                            <g
+                                                                                                                id="XMLID_5078_">
+                                                                                                                <path
+                                                                                                                    d="M422,428H88c-26.467,0-48-21.532-48-48V158c0-26.467,21.533-48,48-48h62V97.5    c0-20.678,16.822-37.5,37.5-37.5h135c20.678,0,37.5,16.822,37.5,37.5V110h62c26.468,0,48,21.533,48,48v222    C470,406.468,448.468,428,422,428z M88,130c-15.439,0-28,12.561-28,28v222c0,15.439,12.561,28,28,28h334c15.439,0,28-12.561,28-28    V158c0-15.439-12.561-28-28-28h-72c-5.522,0-10-4.477-10-10V97.5c0-9.649-7.851-17.5-17.5-17.5h-135    c-9.649,0-17.5,7.851-17.5,17.5V120c0,5.523-4.477,10-10,10H88z"
+                                                                                                                    id="XMLID_8499_"
+                                                                                                                    style="fill:#3E3C3C;">
+                                                                                                                </path>
+                                                                                                            </g>
+                                                                                                        </g>
+                                                                                                        <g id="Layer_1">
+                                                                                                        </g>
+                                                                                                    </svg>
+                                                                                                    Capture
+                                                                                                </button>
+                                                                                                <div
+                                                                                                    class="btn-box flex-box">
+                                                                                                    <button
+                                                                                                        style="width:100%;"
+                                                                                                        class="default-btn resetBtn"
+                                                                                                        disabled>Reset</button>
+                                                                                                </div>
+                                                                                                <!-- <div class="form-group">
+                                                                                                <label>Document No. <span class="req">*</span></label>
+                                                                                                
+                                                                                                <input value=""  type="text">
+                                                                                            </div>
+                                                                                            <div class="form-group">
+                                                                                                <label>Expiry Date <span class="req">*</span></label>
+                                                                                                
+                                                                                                <input  type="text" value="" placeholder="DD/MM/YYYY" id="datepicker5">
+                                                                                            </div>
+                                                                                            <div class="form-group">
+                                                                                                <label>Issue Date <span class="req">*</span></label>
+                                                                                                
+                                                                                                <input  type="text" value="" placeholder="DD/MM/YYYY" id="datepicker6">
+                                                                                            </div> -->
+
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="modal-footer">
+                                                                                        <button type="button"
+                                                                                            class="btn btn-default showGrid"
+                                                                                            data-dismiss="modal">Save</button>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div style="display:none;"
+                                                                    class="custom-container table-container small-table offer-detail">
+                                                                    <div class="data-container">
+
+                                                                        <div class="child-grid-05">
+                                                                            <table class="table myTable table-striped">
+                                                                                <thead>
+                                                                                    <tr>
+                                                                                        <th scope="col">
+                                                                                            Document
+                                                                                        </th>
+
+                                                                                        <th width="200" scope="col">
+                                                                                            Action
+                                                                                        </th>
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td>XXXX</td>
+                                                                                        <td>
+                                                                                            <a title=""
+                                                                                                class="removeBtn removeAll"
+                                                                                                href="javascript:void(0);">Delete</a>
+                                                                                            <a title="" class="viewBtn"
+                                                                                                href="javascript:void(0);">Delete</a>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>XXXX</td>
+                                                                                        <td>
+                                                                                            <a title=""
+                                                                                                class="removeBtn"
+                                                                                                href="javascript:void(0);">Delete</a>
+                                                                                            <a title="" class="viewBtn"
+                                                                                                href="javascript:void(0);">Delete</a>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="btn-box-alone text-right">
+                                                                    <button id="headingNumber"
+                                                                        class="default-btn next-btn"
+                                                                        data-toggle="collapse"
+                                                                        data-target="#collapseNumber"
+                                                                        aria-expanded="false"
+                                                                        aria-controls="collapseNumber">Skip</button>
+                                                                    <button id="headingNumber"
+                                                                        class="default-btn next-btn"
+                                                                        data-toggle="collapse"
+                                                                        data-target="#collapseNumber"
+                                                                        aria-expanded="false"
+                                                                        aria-controls="collapseNumber">Next</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card">
+                                                    <div class="card-header" id="headingNumber">
+                                                        <h5 class="mb-0 notes" data-toggle="collapse"
+                                                            data-target="#collapseNumber" aria-expanded="true"
+                                                            aria-controls="collapseNumber">
+                                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                                xmlns:xlink="http://www.w3.org/1999/xlink" width="64px"
+                                                                height="64px" viewBox="0 0 64 64" version="1.1"
+                                                                class="icon replaced-svg">
+                                                                <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+                                                                <desc>Created with Sketch.</desc>
+                                                                <g id="icon-bill" stroke="none" stroke-width="2"
+                                                                    fill="none" fill-rule="evenodd"
+                                                                    stroke-linecap="round" stroke-linejoin="round">
+                                                                    <g id="Icon/Outline-1pt/bill/bill_black"
+                                                                        stroke="#242424">
+                                                                        <path d="M19,20 L33,20" id="Line"></path>
+                                                                        <path d="M19,28 L29,28" id="Line"
+                                                                            transform="translate(24.000000, 28.000000) scale(-1, 1) translate(-24.000000, -28.000000) ">
+                                                                        </path>
+                                                                        <path d="M19,36 L31,36" id="Line"></path>
+                                                                        <path d="M19,44 L27,44" id="Line"></path>
+                                                                        <path d="M42,20 L45,20" id="Line"></path>
+                                                                        <path d="M42,28 L45,28" id="Line"></path>
+                                                                        <path d="M42,36 L45,36" id="Line"></path>
+                                                                        <path d="M42,44 L45,44" id="Line"></path>
+                                                                        <polygon id="Line"
+                                                                            points="12 60 17.0442168 55.1373089 22.0004996 59.9151632 27.1286535 55.1373089 31.9990007 59.9151632 36.9992506 55.0948905 41.9995004 59.9151632 46.9997502 55.0948905 52 60 52 4.0848368 46.9997502 8.82027269 41.9995004 4 36.9992506 8.82027269 31.9990007 4 26.9987509 8.82027269 22.0004996 4 17.0002498 8.82027269 12 4.0848368">
+                                                                        </polygon>
+                                                                    </g>
+                                                                </g>
+                                                            </svg>
+                                                            Notes
+                                                            <small></small>
+                                                            <a id="headingNumber" class="changeBtn"
+                                                                href="javascript:void(0);" data-toggle="collapse"
+                                                                data-target="#collapseNumber" aria-expanded="true"
+                                                                aria-controls="collapseNumber"
+                                                                style="display: none;">Change</a>
+                                                        </h5>
+                                                    </div>
+                                                    <div id="collapseNumber" class="collapse"
+                                                        aria-labelledby="headingNumber" data-parent="#packages">
+                                                        <div class="card-body">
+                                                            <div class="tab-cont">
+                                                                <div class="row">
+                                                                    <div class="col-sm-6">
+                                                                        <div class="form-group">
+                                                                            <label>Notes Type</label>
+                                                                            <select class="selectpicker">
+                                                                                <option>Pricing Notes</option>
+                                                                                <option>Business Marketing Notes
+                                                                                </option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-12">
+                                                                        <div class="form-group">
+                                                                            <label>Notes</label>
+                                                                            <textarea name="" id="" cols="30"
+                                                                                rows="10"></textarea>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-12 text-right">
+                                                                        <button class="default-btn">Add</button>
+                                                                    </div>
+                                                                </div>
+                                                                <div
+                                                                    class="custom-container table-container small-table offer-detail">
+                                                                    <div class="data-container">
+
+                                                                        <div class="child-grid-05">
+                                                                            <table class="table myTable table-striped">
+                                                                                <thead>
+                                                                                    <tr>
+                                                                                        <th scope="col">
+                                                                                            Notes Type
+                                                                                        </th>
+
+                                                                                        <th width="200" scope="col">
+                                                                                            Action
+                                                                                        </th>
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td>XXXX</td>
+                                                                                        <td>
+                                                                                            <a title=""
+                                                                                                class="removeBtn"
+                                                                                                href="javascript:void(0);">Delete</a>
+                                                                                            <a title="" class="viewBtn"
+                                                                                                href="javascript:void(0);">Delete</a>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>XXXX</td>
+                                                                                        <td>
+                                                                                            <a title=""
+                                                                                                class="removeBtn"
+                                                                                                href="javascript:void(0);">Delete</a>
+                                                                                            <a title="" class="viewBtn"
+                                                                                                href="javascript:void(0);">Delete</a>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="btn-box-alone text-right">
+                                                                    <button id="headingInternet"
+                                                                        class="default-btn next-btn"
+                                                                        data-toggle="collapse"
+                                                                        data-target="#collapseInternet"
+                                                                        aria-expanded="false"
+                                                                        aria-controls="collapseInternet">Next</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-12  remove-padding-right text-right submit-button-container">
+                                    <button onclick="location.href = 'package-request.html'">Previous</button>
+                                    <button onclick="location.href = 'index.html'">Save & Close</button>
+                                    <button onclick="location.href = 'review.html'">Next</button>
+                                </div>
+                            </div>
+
+                            <div class="clearfix"></div>
+                            <!-- End SmartWizard Content -->
+                        </div>
+                        <div class="clearfix"></div>
+                    </section>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+
+    </div>
+
+    <!-- /.etisalat -->
+    <!-- /.footer -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../assets/js/jquery-2.1.3.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../assets/js/bootstrap.js"></script>
+    <script src="../assets/js/bootstrap-select.js"></script>
+    <script src="../assets/js/dcalendar.picker.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery.matchHeight-min.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery.smartWizard.js"></script>
+    <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../assets/js/slick.min.js"></script>
+    <script src="../assets/js/scripts.js"></script>
+    <script src="../assets/js/custom.js"></script>
+    <script>
+        $('.next-btn').click(function () {
+            $(this).closest('.card').siblings('.card').find('h5').removeClass('collapsed');
+            $(this).closest('.card').find('h5').addClass('collapsed');
+            $(this).closest('.card').find('.changeBtn').show();
+            $(this).closest('.collapse').removeClass('in');
+
+        });
+    </script>
+</body>
+
+</html>
