@@ -8575,6 +8575,7 @@ input[type="text"][readonly]{margin-bottom:0;}
   text-align: center;
   border-radius: 8px;
   box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
+  cursor: pointer;
 }
 .company-list label.container span.checkmark {
   left: 10px;
@@ -10624,12 +10625,17 @@ body.new-etisalat .empty-form button.proceed.btn09 {
   margin-top: 30px;
 }
 #tabs-AR09 .nav-tabs>li>a {
-  padding: 35px 25px 30px;
+  padding: 25px 25px 20px;
   font-size: 15px;
 }
 #tabs-AR09 .nav-tabs {
   margin: 0;
   border: none;
+}
+#tabs-AR09 .nav-tabs>li>a img {
+  display: block;
+  margin: 0 auto 5px;
+  height: 30px;
 }
 .km-customDetails {
   box-shadow: 0 5px 10px 0 rgb(0 0 0 / 10%);
@@ -10648,14 +10654,15 @@ body.new-etisalat .empty-form button.proceed.btn09 {
 body.new-etisalat button.proceed.btn09 {
   margin-top: -10px;
 }
+.km-infoTexts {
+  box-shadow: 0 5px 10px 0 rgb(0 0 0 / 10%);
+  margin: 15px 0 0;
+  margin: 0 0 40px;
+}
 .km-infoTexts .scenarioMsg {
   padding: 25px 25px 25px 75px;
-  border-radius: 8px;
-  box-shadow: 0 5px 10px 0 rgb(0 0 0 / 10%);
-  border: 1px solid #ddd;
   line-height: 1.5;
   background: url(../../images/info-icon.png) no-repeat 20px center / 40px #f4f4f4;
-  margin: 15px 0 40px;
 }
 .km-infoTexts .scenarioMsg h3 {
   margin: 0;
@@ -10663,12 +10670,49 @@ body.new-etisalat button.proceed.btn09 {
   font-size: 17px;
 }
 .km-infoTexts .scenarioMsg ul {
-  font-size: 17px;
-  margin-top: 7px;
+  margin: 5px 0 0;
+  line-height: 1.5;
+  font-size: 16px;
 }
-.km-infoTexts .scenarioMsg ul li {
+.km-infoTexts .km-choicesbox ul,
+.km-infoTexts .km-choicesbox p {
+  font-size: 15px;
+  margin-top: 7px;
+  color: #666;
+}
+.km-infoTexts .km-choicesbox ul {
+  margin-bottom: 0;
+}
+.km-infoTexts .km-choicesbox ul li {
   margin-top: 0;
 }
-.km-infoTexts .scenarioMsg .company-list {
+.km-infoTexts .km-choicesbox {
+  padding: 25px;
+  background: #f4f4f4;
+  border-top: 1px solid #ddd;
+}
+.km-infoTexts .company-list {
+  padding: 0;
+}
+.km-customDetails#newcustom h5 {
+  font-size: 18px;
+  line-height: 1.75;
+  margin: 30px 0 0;
+  text-align: left;
+}
+.km-customDetails#newcustom .company-list form {
+  padding: 0;
+}
+.km-customDetails#newcustom .company-list {
   padding-top: 20px;
+}
+.km-customDetails#newcustom .company-list label.container:last-child {
+  margin-right: 0;
+}
+body.new-etisalat .km-customDetails#newcustom button.proceed {
+  max-width: 285px;
+  margin: 20px 0;
+}
+.km-infoTexts .km-choicesbox .company-list label.container {
+  background: #fff;
 }
