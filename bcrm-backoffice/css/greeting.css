@@ -38,6 +38,9 @@
     color: #719e19;
     text-transform: uppercase;
 }
+.card-head.headbox-withparty button.scan-btn {
+    background: url(../../assets/images/scan.png) no-repeat #ffffff 8px 13px / 25px auto;
+}
 .card-head button.scan-btn.disabled{
     pointer-events: none;
     background-color: #ccc;
@@ -426,7 +429,7 @@ a.resend {
     border-bottom: 1px solid #ddd;
 }
 
-.card-head .btn-group.bootstrap-select {
+.card-head .scenariobox {
     position: absolute;
     width: 150px !important;
     right: 130px;

@@ -28,7 +28,14 @@
             margin-top: -13px;
             height: 60px;
         }
-        
+        .bootstrap-select.btn-group .dropdown-menu {
+            z-index: 2000;
+        }
+        .bootstrap-select.btn-group .dropdown-menu.inner {
+            position: static;
+        }
+        .modal { overflow: visible; }
+        .modal-body { overflow-y: visible !important; }
     </style>
 </head>
 
@@ -101,9 +108,8 @@
                                
                             <div class="col-md-12 custom-container corporate-accounts">
                                 <div class="row">
-
                                     <div class="col-sm-12">
-                                        <div class="card-head">
+                                        <div class="card-head headbox-withparty">
                                             <span class="icon-box">
                                                 <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="273.000000pt" height="273.000000pt" viewBox="0 0 273.000000 273.000000" preserveAspectRatio="xMidYMid meet">
                                                     <metadata>
@@ -117,19 +123,127 @@
                                             </span>
                                             <h3>Authorized Contact Verification</h3>
                                             <small>Please insert your Emirates ID and click scan button</small>
-                                            <select id="scenario" class="selectpicker">
-                                                <option value="Select Emirates ID">Select Emirates ID</option>
-                                                <option value="scenario01">XXX-XXXX-001</option>
-                                                <option value="scenario02">XXX-XXXX-002</option>
-                                                <option value="scenario03">XXX-XXXX-003</option>
-                                                <option value="scenario04">XXX-XXXX-004</option>
-                                                <option value="scenario05">XXX-XXXX-005</option>
-                                                <option value="scenario06">XXX-XXXX-006</option>
-                                                <option value="scenario07">XXX-XXXX-007</option>
-                                                <option value="scenario08">XXX-XXXX-008</option>
-                                                <option value="scenario09">XXX-XXXX-009</option>
-                                                <option value="scenario10">XXX-XXXX-010</option>
-                                            </select>
+                                            <div class="scenariobox">
+                                                <select id="scenario" class="selectpicker">
+                                                    <option value="Select Emirates ID">Select Emirates ID</option>
+                                                    <option value="scenario01">XXX-XXXX-001</option>
+                                                    <option value="scenario02">XXX-XXXX-002</option>
+                                                    <option value="scenario03">XXX-XXXX-003</option>
+                                                    <option value="scenario04">XXX-XXXX-004</option>
+                                                    <option value="scenario05">XXX-XXXX-005</option>
+                                                    <option value="scenario06">XXX-XXXX-006</option>
+                                                    <option value="scenario07">XXX-XXXX-007</option>
+                                                    <option value="scenario09">XXX-XXXX-009</option>
+                                                    <option value="scenario11">XXX-XXXX-011</option>
+                                                    <option value="scenario12">XXX-XXXX-012</option>
+                                                    <option value="scenario13">XXX-XXXX-013</option>
+                                                    <option value="scenario14">XXX-XXXX-014</option>
+                                                </select>
+                                            </div>
+                                            <div class="sparty">
+                                                <div class="form-group">
+                                                    <label for="">Select Party <span class="req">*</span></label>
+                                                    <input class="partyField5" readonly="" value="" type="text">
+                                                    <a id="cusModal" data-toggle="modal" data-target="#customerModalCC" href="javascript:void(0)"></a>
+                                                    <div class="modal" id="customerModalCC" tabindex="-1" role="dialog" aria-labelledby="customerModalLabel">
+                                                        <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                Look Up Record
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <div class="row">
+                                                                    <div class="col-sm-5">
+                                                                        <div class="form-group">
+                                                                            <label>Search</label>
+                                                                            <input class="search-field" type="text">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-5">
+                                                                        <div class="form-group">
+                                                                            <label>Filter By</label>
+                                                                            <select class="selectpicker">
+                                                                                <option value="01">None</option>
+                                                                                <option value="02">Customer</option>
+                                                                                <option value="01">Contact</option>
+                                                                                <option value="02">Opportunity</option>
+                                                                                <option value="01">Quote</option>
+                                                                                <option value="02">Order</option>
+                                                                                <option value="01">Account</option>
+                                                                                <option value="02">Party</option>
+                                                                                <option value="01">Order Product Request ID</option>
+                                                                                <option value="02">Ticket</option>
+                                                                                <option value="01">Agreement</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-2">
+                                                                        <button class="btn default-btn party-search-btn">Search</button>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="custom-container table-container small-table cusSelectGrid">
+                                                                    <div class="data-container">
+                                                                        <table class="table filled-table table-striped">
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th width="10%" scope="col">
+                                                                                    </th>
+                                                                                    <th scope="col">
+                                                                                        Party ID
+                                                                                    </th>
+                                                                                    <th scope="col">
+                                                                                        Party Name
+                                                                                    </th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <a class="selectBtn" href="javascript:void(0)"></a>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        B2141878
+                                                                                    </td>
+                                                                                    <td>
+                                                                                    Aster Pharmacy
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <a class="selectBtn" href="javascript:void(0)"></a>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        B2141878
+                                                                                    </td>
+                                                                                    <td>
+                                                                                    Emirates
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <a class="selectBtn" href="javascript:void(0)"></a>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        B2141878
+                                                                                    </td>
+                                                                                    <td>
+                                                                                    Carrefour
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>                                 
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" data-dismiss="modal" aria-label="Close" class="add-btn btn btn-primary add-party-btn5">Select</button>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <button class="scan-btn scan01 disabled">Scan</button>
                                             <button style="display:none;" class="scan-btn scan02 disabled">Scan</button>
                                             <button style="display:none;" class="scan-btn scan03 disabled">Scan</button>
@@ -140,31 +254,32 @@
                                             <button style="display:none;" class="scan-btn scan08 disabled">Scan</button>
                                             <button style="display:none;" class="scan-btn scan09 disabled">Scan</button>
                                             <button style="display:none;" class="scan-btn scan10 disabled">Scan</button>
+                                            <button style="display:none;" class="scan-btn scan11 disabled">Scan</button>
+                                            <button style="display:none;" class="scan-btn scan12 disabled">Scan</button>
+                                            <button style="display:none;" class="scan-btn scan13 disabled">Scan</button>
+                                            <button style="display:none;" class="scan-btn scan14 disabled">Scan</button>
                                         </div>
                                         <div style="display:none;" class="text-left scenarioMsg hiddenMsg01">
-                                            <h3>We found that you are an authorized person for&nbsp;<span>ASTER Pharmacy</span>&nbsp;customer, To place an order, you can simply click on Proceed now</h3>
+                                            <h3>We found that you are an authorized contact for <span>ASTER Pharmacy</span> customer, To place an order, you can simply select the party and click on <b>Proceed now</b>.</h3>
                                         </div>
                                         <div style="display:none;" class="text-left scenarioMsg hiddenMsg02">
                                             <h3>
-                                                We found that you are an authorized person for&nbsp;<span>ASTER Pharmacy</span>&nbsp;customer, However you cant place an order as your registered Mobile Number or Registered Email Address is not verified yet. To verify your registered Mobile Number and Registered Email Address, You can simply click on Update Now
+                                                We found that you are an authorized contact for <span>ASTER Pharmacy</span> customer, However you can’t place an order as your registered Mobile Number / Email Address is not verified yet. To verify your registered Mobile Number / Email Address, You can simply click on <b>Verify Now</b>.
                                             </h3>
                                         </div>
                                         <div style="display:none;" class="text-left scenarioMsg hiddenMsg03">
                                             <h3>
-                                                We found that you are an authorized person for <span>ASTER Pharmacy</span> customer. However you cant place an order as your LOA is expired with Etisalat on 22-SEP-2020.
-                                                To create a new LOA, You can Simply click on Create New LOA Now
+                                                We found that you are an authorized contact for <span>ASTER Pharmacy</span> customer. However you can’t place an order as your LOA is expired with Etisalat on 22-SEP-2020. To create a new LOA, You can Simply click on <b>Create New LOA Now</b>.
                                             </h3>
                                         </div>
                                         <div style="display:none;" class="text-left scenarioMsg hiddenMsg04">
                                             <h3>
-                                                We found that you are an authorized person for <span>ASTER Pharmacy</span> customer, However you cant place an order as your LOA is expired with Etisalat on 22-SEP-2020.<br>
-                                                Trade License is NOT verified but still you can proceed to create a new LOA, however, the request will be send to QA for verification. To Create New LOA Now You can Simply click create a new LOA
+                                                We found that you are an authorized contact for <span>ASTER Pharmacy</span> customer. However you can’t place an order as your LOA is expired with Etisalat on 22-SEP-2020. To create a new LOA, You can Simply click on <b>Create New LOA Now</b>.
                                             </h3>
                                         </div>
                                         <div style="display:none;" class="text-left scenarioMsg hiddenMsg05">
                                             <h3>
-                                                We found that you are an authorized person for <span>ASTER Pharmacy</span> customer, However you cant place an order as your LOA is expired with Etisalat on 22-SEP-2020.<br>
-                                                Trade License is already verified and found that you are NOT the owner of this company. You will need a legal POA in order to be onbaorded as authorized contact for ASTER Pharmacy. To Create New LOA Now You can Simply click create a new LOA
+                                                We found that you are an authorized contact for ASTER Pharmacy customer, However you can’t place an order as your trade license is expired. To update the trade license, you can simply click on <b>Manage Customer</b>.
                                             </h3>
                                         </div>
                                         <div style="display:none;" class="text-left scenarioMsg hiddenMsg06">
@@ -224,9 +339,7 @@
                                         </div>
                                         <div style="display:none;" class="text-left scenarioMsg hiddenMsg09">
                                             <h3>
-                                                We didn’t find find any record about you or your company in our database. MOHRE didn’t show any Company under your name.<br>
-                                                However you can still continue and register your company, request will be sent for Document Approval<br>
-                                                To create a new LOA and Register your company you can Simply click on Register New Company &amp; Create LOA Now
+                                                We didn’t find any record about you in our database. Kindly let us to know what are you looking for?
                                             </h3>
                                         </div>
                                         <div style="display:none;" class="text-left scenarioMsg hiddenMsg10">
@@ -236,329 +349,27 @@
                                                 To create a new LOA and Register your company you can Simply click on Register New Company &amp; Create LOA Now
                                             </h3>
                                         </div>
-                                        <div class="empty-form" style="display: none;">
-                                            <h4>Contact Details</h4>
-                                            <div class="contactdetails">
-                                                <div class="flex-box">
-                                                    <div class="col-sm-3">
-                                                        <div class="form-group">
-                                                            <label for="">Select Customer
-                                                                <span class="req">*</span></label>
-                                                            <input id="cusField" type="text">
-                                                            <a id="cusModal" data-toggle="modal" data-target="#customerModal" href="javascript:void(0)"></a>
-                                                            <div class="modal" id="customerModal" tabindex="-1" role="dialog" aria-labelledby="customerModalLabel" style="display: none;">
-                                                                <div class="modal-dialog" role="document">
-                                                                    <div class="modal-content">
-                                                                        <div class="modal-header">
-                                                                            Look Up Record
-                                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                                                                        </div>
-                                                                        <div class="modal-body">
-                                                                            <div class="row">
-                                                                                <div class="col-sm-6">
-                                                                                    <div class="form-group">
-                                                                                        <label>Search</label>
-                                                                                        <input class="search-field" type="text">
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="custom-container table-container small-table cusSelectGrid">
-                                                                                <div class="data-container">
-                                                                                    <table class="table table-striped">
-                                                                                        <thead>
-                                                                                            <tr>
-                                                                                                <th width="10%" scope="col">
-
-                                                                                                </th>
-                                                                                                <th scope="col">
-                                                                                                    Customer
-                                                                                                    Name
-                                                                                                </th>
-                                                                                                <th scope="col">
-                                                                                                    Customer
-                                                                                                    ID
-                                                                                                </th>
-
-                                                                                            </tr>
-                                                                                        </thead>
-                                                                                        <tbody>
-                                                                                            <tr>
-                                                                                                <td>
-                                                                                                    <a class="selectBtn" href="javascript:void(0)"></a>
-                                                                                                </td>
-                                                                                                <td>
-                                                                                                    Aster
-                                                                                                    Pharmacy
-                                                                                                </td>
-                                                                                                <td>
-                                                                                                    B2141878
-                                                                                                </td>
-                                                                                            </tr>
-                                                                                            <tr>
-                                                                                                <td>
-                                                                                                    <a class="selectBtn" href="javascript:void(0)"></a>
-                                                                                                </td>
-                                                                                                <td>
-                                                                                                    Emirates
-                                                                                                </td>
-                                                                                                <td>
-                                                                                                    B2141878
-                                                                                                </td>
-                                                                                            </tr>
-                                                                                            <tr>
-                                                                                                <td>
-                                                                                                    <a class="selectBtn" href="javascript:void(0)"></a>
-                                                                                                </td>
-                                                                                                <td>
-                                                                                                    Carrefour
-                                                                                                </td>
-                                                                                                <td>
-                                                                                                    B2141878
-                                                                                                </td>
-                                                                                            </tr>
-                                                                                        </tbody>
-                                                                                    </table>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="modal-footer">
-                                                                            <button type="button" data-dismiss="modal" aria-label="Close" class="add-btn btn btn-primary">Select</button>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-3">
-                                                        <div class="form-group">
-                                                            <label for="">Select Party <span class="req">*</span></label>
-                                                            <input id="cusField2" type="text">
-                                                            <a id="cusModal" data-toggle="modal" data-target="#customerModal22" href="javascript:void(0)"></a>
-                                                            <div class="modal" id="customerModal22" tabindex="-1" role="dialog" aria-labelledby="customerModal02Label" style="display: none;">
-                                                                <div class="modal-dialog" role="document">
-                                                                    <div class="modal-content">
-                                                                        <div class="modal-header">
-                                                                            Party Look Up
-                                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                                                                        </div>
-                                                                        <div class="modal-body">
-                                                                            <div class="row">
-                                                                                <div class="col-sm-6">
-                                                                                    <div class="form-group">
-                                                                                        <label>Search</label>
-                                                                                        <input class="search-field" type="text">
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="custom-container table-container small-table cusSelectGrid">
-                                                                                <div class="data-container">
-                                                                                    <table class="table table-striped">
-                                                                                        <thead>
-                                                                                            <tr>
-                                                                                                <th width="10%" scope="col">
-
-                                                                                                </th>
-                                                                                                <th scope="col">
-                                                                                                    Contact
-                                                                                                    Name
-                                                                                                </th>
-                                                                                                <th scope="col">
-                                                                                                    Mobile
-                                                                                                    Number
-                                                                                                </th>
-                                                                                                <th>
-                                                                                                    Email
-                                                                                                </th>
-                                                                                                <th>
-                                                                                                    Gender
-                                                                                                </th>
-                                                                                            </tr>
-                                                                                        </thead>
-                                                                                        <tbody>
-                                                                                            <tr>
-                                                                                                <td>
-                                                                                                    <a class="selectBtn" href="javascript:void(0)"></a>
-                                                                                                </td>
-                                                                                                <td>
-                                                                                                    Minal
-                                                                                                    Doongarwal
-                                                                                                </td>
-                                                                                                <td>
-                                                                                                    0401856396
-                                                                                                </td>
-                                                                                                <td>
-                                                                                                    minal@etisalat.ae
-                                                                                                </td>
-                                                                                                <td>
-                                                                                                    Male
-                                                                                                </td>
-                                                                                            </tr>
-                                                                                            <tr>
-                                                                                                <td>
-                                                                                                    <a class="selectBtn" href="javascript:void(0)"></a>
-                                                                                                </td>
-                                                                                                <td>
-                                                                                                    Ahmed
-                                                                                                    Al
-                                                                                                    Amiri
-                                                                                                </td>
-                                                                                                <td>
-                                                                                                    0501856396
-                                                                                                </td>
-                                                                                                <td>
-                                                                                                    ahmed@etisalat.ae
-                                                                                                </td>
-                                                                                                <td>
-                                                                                                    Male
-                                                                                                </td>
-                                                                                            </tr>
-                                                                                            <tr>
-                                                                                                <td>
-                                                                                                    <a class="selectBtn" href="javascript:void(0)"></a>
-                                                                                                </td>
-                                                                                                <td>
-                                                                                                    Mustafa
-                                                                                                    Kamal
-                                                                                                </td>
-                                                                                                <td>
-                                                                                                    0501856396
-                                                                                                </td>
-                                                                                                <td>
-                                                                                                    mkamal@etisalat.ae
-                                                                                                </td>
-                                                                                                <td>
-                                                                                                    Male
-                                                                                                </td>
-                                                                                            </tr>
-                                                                                        </tbody>
-                                                                                    </table>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="modal-footer">
-                                                                            <button type="button" data-dismiss="modal" aria-label="Close" class="add-btn2 btn btn-primary">Select</button>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-3">
-                                                        <div class="form-group">
-                                                            <label for="">Authorized Contact <span class="req">*</span></label>
-                                                            <input id="cusField3" type="text">
-                                                            <a id="cusModal" data-toggle="modal" data-target="#customerModal33" href="javascript:void(0)"></a>
-                                                            <div class="modal" id="customerModal33" tabindex="-1" role="dialog" aria-labelledby="customerModal02Label" style="display: none;">
-                                                                <div class="modal-dialog" role="document">
-                                                                    <div class="modal-content">
-                                                                        <div class="modal-header">
-                                                                            Contact Look Up
-                                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                                                                        </div>
-                                                                        <div class="modal-body">
-                                                                            <div class="row">
-                                                                                <div class="col-sm-6">
-                                                                                    <div class="form-group">
-                                                                                        <label>Search</label>
-                                                                                        <input class="search-field" type="text">
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="custom-container table-container small-table cusSelectGrid">
-                                                                                <div class="data-container">
-                                                                                    <table class="table table-striped">
-                                                                                        <thead>
-                                                                                            <tr>
-                                                                                                <th width="10%" scope="col">
-
-                                                                                                </th>
-                                                                                                <th scope="col">
-                                                                                                    Contact
-                                                                                                    Name
-                                                                                                </th>
-                                                                                                <th scope="col">
-                                                                                                    Mobile
-                                                                                                    Number
-                                                                                                </th>
-                                                                                                <th>
-                                                                                                    Email
-                                                                                                </th>
-                                                                                                <th>
-                                                                                                    Gender
-                                                                                                </th>
-                                                                                            </tr>
-                                                                                        </thead>
-                                                                                        <tbody>
-                                                                                            <tr>
-                                                                                                <td>
-                                                                                                    <a class="selectBtn" href="javascript:void(0)"></a>
-                                                                                                </td>
-                                                                                                <td>
-                                                                                                    Minal
-                                                                                                    Doongarwal
-                                                                                                </td>
-                                                                                                <td>
-                                                                                                    0401856396
-                                                                                                </td>
-                                                                                                <td>
-                                                                                                    minal@etisalat.ae
-                                                                                                </td>
-                                                                                                <td>
-                                                                                                    Male
-                                                                                                </td>
-                                                                                            </tr>
-                                                                                            <tr>
-                                                                                                <td>
-                                                                                                    <a class="selectBtn" href="javascript:void(0)"></a>
-                                                                                                </td>
-                                                                                                <td>
-                                                                                                    Ahmed
-                                                                                                    Al
-                                                                                                    Amiri
-                                                                                                </td>
-                                                                                                <td>
-                                                                                                    0501856396
-                                                                                                </td>
-                                                                                                <td>
-                                                                                                    ahmed@etisalat.ae
-                                                                                                </td>
-                                                                                                <td>
-                                                                                                    Male
-                                                                                                </td>
-                                                                                            </tr>
-                                                                                            <tr>
-                                                                                                <td>
-                                                                                                    <a class="selectBtn" href="javascript:void(0)"></a>
-                                                                                                </td>
-                                                                                                <td>
-                                                                                                    Mustafa
-                                                                                                    Kamal
-                                                                                                </td>
-                                                                                                <td>
-                                                                                                    0501856396
-                                                                                                </td>
-                                                                                                <td>
-                                                                                                    mkamal@etisalat.ae
-                                                                                                </td>
-                                                                                                <td>
-                                                                                                    Male
-                                                                                                </td>
-                                                                                            </tr>
-                                                                                        </tbody>
-                                                                                    </table>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="modal-footer">
-                                                                            <button type="button" data-dismiss="modal" aria-label="Close" class="add-btn3 btn btn-primary">Select</button>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                        <div style="display:none;" class="text-left scenarioMsg  hiddenMsg11">
+                                            <h3>
+                                                We didn’t find any record about you in our database. Kindly let us to know what are you looking for?
+                                            </h3>
+                                        </div>
+                                        <div style="display:none;" class="text-left scenarioMsg hiddenMsg12">
+                                            <h3>
+                                                We didn’t find any record about you in our database. Kindly let us to know what are you looking for?
+                                            </h3>
+                                        </div>
+                                        <div style="display:none;" class="text-left scenarioMsg hiddenMsg13">
+                                            <h3>
+                                                We didn’t find any record about you in our database. Kindly let us to know what are you looking for?
+                                            </h3>
+                                        </div>
+                                        <div style="display:none;" class="text-left scenarioMsg hiddenMsg14">
+                                            <h3>
+                                                We didn’t find any record about you in our database. Kindly let us to know what are you looking for?
+                                            </h3>
+                                        </div>
+                                        <!-- <div class="empty-form">
                                             <h4>EID Details</h4>
                                             <div class="flex-box">
                                                 <div class="col-sm-10">
@@ -628,6 +439,490 @@
                                                 </div> 
                                             </div>  
                                             <div class="clearfix"></div>
+                                                                                
+                                        </div> -->
+                                        <div class="tabs-area" id="tabs-AR09" style="display: none;">
+                                            <ul class="nav nav-tabs" role="tablist">
+                                                <li role="presentation" class="active">
+                                                    <a href="#exitscustom" aria-controls="exitscustom" role="tab" data-toggle="tab">
+                                                        <img src="../../assets/images/icon-green/opt23.png" alt="">
+                                                        <span>Create a new LOA for an Existing Etisalat Customer</span>
+                                                    </a>
+                                                </li>
+                                                <li role="presentation">
+                                                    <a href="#newcustom" aria-controls="newcustom" role="tab" data-toggle="tab">
+                                                        <img src="../../assets/images/icon-green/opt22.png" alt="">
+                                                        <span>Register a new customer and create a new LOA</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="tab-content" style="display: none;">
+                                            <div class="tab-pane active km-customDetails" role="tabpanel" id="exitscustom">
+                                                <!-- <div class="km-optionbox">
+                                                    <label class="container col-sm-12 small-check show-all">I am the owner of this customer
+                                                        <input value="all" checked name="cat" type="radio">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div> -->
+                                                <h4><span class="cusDetails">Customer Details</span></h4>
+                                                <div class="col-sm-12">
+                                                    <div class="row"> 
+                                                        <div class="cusDetails">
+                                                            <div class="col-sm-4">
+                                                                <div class="form-group removeSce03">
+                                                                    <label for="">Select Party <span class="req">*</span></label>
+                                                                    <input class="partyField3" readonly value="" type="text">
+                                                                    <a id="cusModal" data-toggle="modal" data-target="#customerModal" href="javascript:void(0)"></a>
+                                                                    <div class="modal" id="customerModal" tabindex="-1" role="dialog" aria-labelledby="customerModalLabel">
+                                                                        <div class="modal-dialog" role="document">
+                                                                        <div class="modal-content">
+                                                                            <div class="modal-header">
+                                                                                Look Up Record
+                                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                                                            </div>
+                                                                            <div class="modal-body">
+                                                                                <div class="row">
+                                                                                    <div class="col-sm-5">
+                                                                                        <div class="form-group">
+                                                                                            <label>Search</label>
+                                                                                            <input class="search-field" type="text">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-sm-5">
+                                                                                        <div class="form-group">
+                                                                                            <label>Filter By</label>
+                                                                                            <select class="selectpicker">
+                                                                                                <option value="01">None</option>
+                                                                                                <option value="02">Customer</option>
+                                                                                                <option value="01">Contact</option>
+                                                                                                <option value="02">Opportunity</option>
+                                                                                                <option value="01">Quote</option>
+                                                                                                <option value="02">Order</option>
+                                                                                                <option value="01">Account</option>
+                                                                                                <option value="02">Party</option>
+                                                                                                <option value="01">Order Product Request ID</option>
+                                                                                                <option value="02">Ticket</option>
+                                                                                                <option value="01">Agreement</option>
+                                                                                            </select>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-sm-2">
+                                                                                        <button class="btn default-btn party-search-btn3">Search</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="custom-container table-container small-table cusSelectGrid">
+                                                                                    <div class="data-container">
+                                                                                        <table class="table filled-table3 table-striped" style="display: none;">
+                                                                                            <thead>
+                                                                                                <tr>
+                                                                                                    <th width="10%" scope="col">
+                                                                                                    </th>
+                                                                                                    <th scope="col">
+                                                                                                        Party ID
+                                                                                                    </th>
+                                                                                                    <th scope="col">
+                                                                                                        Party Name
+                                                                                                    </th>
+                                                                                                </tr>
+                                                                                            </thead>
+                                                                                            <tbody>
+                                                                                                <tr>
+                                                                                                    <td>
+                                                                                                        <a class="selectBtn" href="javascript:void(0)"></a>
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                        B2141878
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                    Aster Pharmacy
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td>
+                                                                                                        <a class="selectBtn" href="javascript:void(0)"></a>
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                        B2141878
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                    Emirates
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td>
+                                                                                                        <a class="selectBtn" href="javascript:void(0)"></a>
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                        B2141878
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                    Carrefour
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </tbody>
+                                                                                        </table>                             
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="modal-footer">
+                                                                                <button type="button" data-dismiss="modal" aria-label="Close" class="add-btn btn btn-primary add-party-btn3">Select</button>
+                                                                            </div>
+                                                                        </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-3 hiddenField">
+                                                            <button onclick="location.href = 'scenario01-2.html'" class="proceed btn01">
+                                                                Proceed Now
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
+                                                                    <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
+                                                                    <path id="Path_2684" data-name="Path 2684" d="M7.5,18h21" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+                                                                    <path id="Path_2685" data-name="Path 2685" d="M18,7.5,28.5,18,18,28.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+                                                                    </g>
+                                                                </svg>
+                                                            </button>
+                                                            <button onclick="location.href = 'scenario02/pc-00.html'" class="proceed btn02">
+                                                                Verify Now
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
+                                                                    <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
+                                                                    <path id="Path_2684" data-name="Path 2684" d="M7.5,18h21" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                    <path id="Path_2685" data-name="Path 2685" d="M18,7.5,28.5,18,18,28.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                    </g>
+                                                                </svg>
+                                                            </button>
+                                                            <button onclick="location.href = 'scenario03/3.1/loa-step01.html'" class="proceed btn03">
+                                                                Create a new LOA for an Existing Etisalat Customer
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
+                                                                    <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
+                                                                        <path id="Path_2684" data-name="Path 2684" d="M7.5,18h21" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                        <path id="Path_2685" data-name="Path 2685" d="M18,7.5,28.5,18,18,28.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                    </g>
+                                                                </svg>
+                                                            </button>
+                                                            <button onclick="location.href = 'scenario03/3.2/loa-step01.html'" class="proceed btn04">
+                                                                Create a new LOA for an Existing Etisalat Customer
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
+                                                                    <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
+                                                                        <path id="Path_2684" data-name="Path 2684" d="M7.5,18h21" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                        <path id="Path_2685" data-name="Path 2685" d="M18,7.5,28.5,18,18,28.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                    </g>
+                                                                </svg>
+                                                            </button>
+                                                            <button onclick="location.href = 'scenario03/3.3/loa-step01.html'" class="proceed btn05">
+                                                                Create a new LOA for an Existing Etisalat Customer
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
+                                                                    <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
+                                                                        <path id="Path_2684" data-name="Path 2684" d="M7.5,18h21" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                        <path id="Path_2685" data-name="Path 2685" d="M18,7.5,28.5,18,18,28.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                    </g>
+                                                                </svg>
+                                                            </button>
+                                                            <button onclick="location.href = 'scenario04/4.1/loa-step01.html'" class="proceed btn08">
+                                                                Create a new LOA for an Existing Etisalat Customer
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
+                                                                    <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
+                                                                        <path id="Path_2684" data-name="Path 2684" d="M7.5,18h21" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                        <path id="Path_2685" data-name="Path 2685" d="M18,7.5,28.5,18,18,28.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                    </g>
+                                                                </svg>
+                                                            </button>
+                                                            <button onclick="location.href = 'scenario04/4.2/loa-step01.html'" class="proceed btn09">
+                                                                Create a new LOA for an Existing Etisalat Customer
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
+                                                                    <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
+                                                                        <path id="Path_2684" data-name="Path 2684" d="M7.5,18h21" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                        <path id="Path_2685" data-name="Path 2685" d="M18,7.5,28.5,18,18,28.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                    </g>
+                                                                </svg>
+                                                            </button>
+                                                            <button onclick="location.href = 'scenario04/4.2/loa-step01.html'" class="proceed btn10">
+                                                                Create a new LOA for an Existing Etisalat Customer
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
+                                                                    <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
+                                                                        <path id="Path_2684" data-name="Path 2684" d="M7.5,18h21" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                        <path id="Path_2685" data-name="Path 2685" d="M18,7.5,28.5,18,18,28.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                    </g>
+                                                                </svg>
+                                                            </button>
+                                                            <button onclick="location.href = 'scenario04/4.11/loa-step01.html'" class="proceed btn11">
+                                                                Create a new LOA for an Existing Etisalat Customer
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
+                                                                    <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
+                                                                        <path id="Path_2684" data-name="Path 2684" d="M7.5,18h21" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                        <path id="Path_2685" data-name="Path 2685" d="M18,7.5,28.5,18,18,28.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                    </g>
+                                                                </svg>
+                                                            </button>
+                                                            <button onclick="location.href = 'scenario04/4.2/loa-step01.html'" class="proceed btn12">
+                                                                Create a new LOA for an Existing Etisalat Customer
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
+                                                                    <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
+                                                                        <path id="Path_2684" data-name="Path 2684" d="M7.5,18h21" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                        <path id="Path_2685" data-name="Path 2685" d="M18,7.5,28.5,18,18,28.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                    </g>
+                                                                </svg>
+                                                            </button>
+                                                            <button onclick="location.href = 'scenario04/4.2/loa-step01.html'" class="proceed btn13">
+                                                                Create a new LOA for an Existing Etisalat Customer
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
+                                                                    <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
+                                                                        <path id="Path_2684" data-name="Path 2684" d="M7.5,18h21" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                        <path id="Path_2685" data-name="Path 2685" d="M18,7.5,28.5,18,18,28.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                    </g>
+                                                                </svg>
+                                                            </button>
+                                                            <button onclick="location.href = 'scenario04/4.2/loa-step01.html'" class="proceed btn14">
+                                                                Create a new LOA for an Existing Etisalat Customer
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
+                                                                    <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
+                                                                        <path id="Path_2684" data-name="Path 2684" d="M7.5,18h21" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                        <path id="Path_2685" data-name="Path 2685" d="M18,7.5,28.5,18,18,28.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                    </g>
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div> 
+                                                <div class="clearfix"></div>
+                                            </div>
+                                            <div class="tab-pane km-customDetails" role="tabpanel" id="newcustom">
+                                                <div class="col-sm-12">
+                                                    <h5>We found that you are the owner of Below Companies, To create a new LOA and Register your company you can Simply select your company from the list below and click on Register New Company & Create LOA Now.</h5>
+                                                    <div class="company-list">
+                                                        <form action="compList" id="othersoption">
+                                                            <div class="row">
+                                                                <div class="col-md-3">
+                                                                    <label class="container">
+                                                                        ASTER Pharmacy (ADDA)
+                                                                        <input name="compList" type="radio">
+                                                                        <span class="checkmark"></span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                    <label class="container">
+                                                                        Manara Pharmacy (ADDA)
+                                                                        <input name="compList" type="radio">
+                                                                        <span class="checkmark"></span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                    <label class="container">
+                                                                        Marina Pharmacy (ADDA)
+                                                                        <input name="compList" type="radio">
+                                                                        <span class="checkmark"></span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                    <label class="container">
+                                                                        Non of these
+                                                                        <input name="compList" type="radio">
+                                                                        <span class="checkmark"></span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                        <form action="compList" id="thisoption">
+                                                            <div class="row">
+                                                                <div class="col-md-3">
+                                                                    <label class="container">
+                                                                        No Company Information Available
+                                                                        <input checked name="compList" type="radio">
+                                                                        <span class="checkmark"></span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                    <div class="row"> 
+                                                        <div class="fRight col-sm-12 hiddenField">
+                                                            <button onclick="location.href = 'scenario01-2.html'" class="proceed btn01">
+                                                                Proceed Now
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
+                                                                    <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
+                                                                    <path id="Path_2684" data-name="Path 2684" d="M7.5,18h21" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+                                                                    <path id="Path_2685" data-name="Path 2685" d="M18,7.5,28.5,18,18,28.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+                                                                    </g>
+                                                                </svg>
+                                                            </button>
+                                                            <button onclick="location.href = 'scenario02/pc-00.html'" class="proceed btn02">
+                                                                Update Now
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
+                                                                    <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
+                                                                    <path id="Path_2684" data-name="Path 2684" d="M7.5,18h21" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                    <path id="Path_2685" data-name="Path 2685" d="M18,7.5,28.5,18,18,28.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                    </g>
+                                                                </svg>
+                                                            </button>
+                                                            <button onclick="location.href = 'scenario03/3.1/loa-step01.html'" class="proceed btn03">
+                                                                Register a new customer and create a new LOA
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
+                                                                    <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
+                                                                        <path id="Path_2684" data-name="Path 2684" d="M7.5,18h21" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                        <path id="Path_2685" data-name="Path 2685" d="M18,7.5,28.5,18,18,28.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                    </g>
+                                                                </svg>
+                                                            </button>
+                                                            <button onclick="location.href = 'scenario03/3.2/loa-step01.html'" class="proceed btn04">
+                                                                Register a new customer and create a new LOA
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
+                                                                    <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
+                                                                        <path id="Path_2684" data-name="Path 2684" d="M7.5,18h21" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                        <path id="Path_2685" data-name="Path 2685" d="M18,7.5,28.5,18,18,28.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                    </g>
+                                                                </svg>
+                                                            </button>
+                                                            <button onclick="location.href = 'scenario03/3.3/loa-step01.html'" class="proceed btn05">
+                                                                Register a new customer and create a new LOA
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
+                                                                    <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
+                                                                        <path id="Path_2684" data-name="Path 2684" d="M7.5,18h21" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                        <path id="Path_2685" data-name="Path 2685" d="M18,7.5,28.5,18,18,28.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                    </g>
+                                                                </svg>
+                                                            </button>
+                                                            <button onclick="location.href = 'scenario04/4.1/loa-step01.html'" class="proceed btn08">
+                                                                Register a new customer and create a new LOA
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
+                                                                    <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
+                                                                        <path id="Path_2684" data-name="Path 2684" d="M7.5,18h21" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                        <path id="Path_2685" data-name="Path 2685" d="M18,7.5,28.5,18,18,28.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                    </g>
+                                                                </svg>
+                                                            </button>
+                                                            <button onclick="location.href = 'scenario04/4.2/loa-step01.html'" class="proceed btn09">
+                                                                Register a new customer and create a new LOA
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
+                                                                    <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
+                                                                        <path id="Path_2684" data-name="Path 2684" d="M7.5,18h21" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                        <path id="Path_2685" data-name="Path 2685" d="M18,7.5,28.5,18,18,28.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                    </g>
+                                                                </svg>
+                                                            </button>
+                                                            <button onclick="location.href = 'scenario04/4.2/loa-step01.html'" class="proceed btn10">
+                                                                Register a new customer and create a new LOA
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
+                                                                    <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
+                                                                        <path id="Path_2684" data-name="Path 2684" d="M7.5,18h21" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                        <path id="Path_2685" data-name="Path 2685" d="M18,7.5,28.5,18,18,28.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                    </g>
+                                                                </svg>
+                                                            </button>
+                                                            <button onclick="location.href = 'scenario04/4.11/loa-step01.html'" class="proceed btn11">
+                                                                Register a new customer and create a new LOA
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
+                                                                    <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
+                                                                        <path id="Path_2684" data-name="Path 2684" d="M7.5,18h21" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                        <path id="Path_2685" data-name="Path 2685" d="M18,7.5,28.5,18,18,28.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                    </g>
+                                                                </svg>
+                                                            </button>
+                                                            <button onclick="location.href = 'scenario04/4.12/customer-details.html'" class="proceed btn12">
+                                                                Register a new customer and create a new LOA
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
+                                                                    <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
+                                                                        <path id="Path_2684" data-name="Path 2684" d="M7.5,18h21" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                        <path id="Path_2685" data-name="Path 2685" d="M18,7.5,28.5,18,18,28.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                    </g>
+                                                                </svg>
+                                                            </button>
+                                                            <button onclick="location.href = 'scenario04/4.13/customer-details.html'" class="proceed btn13">
+                                                                Register a new customer and create a new LOA
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
+                                                                    <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
+                                                                        <path id="Path_2684" data-name="Path 2684" d="M7.5,18h21" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                        <path id="Path_2685" data-name="Path 2685" d="M18,7.5,28.5,18,18,28.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                    </g>
+                                                                </svg>
+                                                            </button>
+                                                            <button onclick="location.href = 'scenario04/4.13/customer-details.html'" class="proceed btn14">
+                                                                Register a new customer and create a new LOA
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
+                                                                    <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
+                                                                        <path id="Path_2684" data-name="Path 2684" d="M7.5,18h21" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                        <path id="Path_2685" data-name="Path 2685" d="M18,7.5,28.5,18,18,28.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                    </g>
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div> 
+                                                <div class="clearfix"></div>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="empty-form" id="hide9111213" style="display: none;">
+                                            <h4>EID Details</h4>
+                                            <div class="flex-box">
+                                                <div class="col-sm-10">
+                                                    <div class="row"> 
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label for="">First Name</label>
+                                                                <input readonly="" value="" class="form-field visibleField" type="text" style="display: none;">
+                                                                <input readonly="" value="Minal" class="hiddenField form-field" type="text" style="display: inline-block;">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label for="">Last Name</label>
+                                                                <input readonly="" value="" class="form-field visibleField" type="text" style="display: none;">
+                                                                <input readonly="" value="Doongarwal" class="hiddenField form-field" type="text" style="display: inline-block;">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label>EID Number</label>
+                                                                <input class="hiddenField" readonly="" value="789-1987-3866106-0" type="text" style="display: inline-block;">
+                                                                <input class="visibleField" readonly="" value="" type="text" style="display: none;">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label>EID Expiry</label>
+                                                                <input class="hiddenField" readonly="" value="02/04/20" type="text" style="display: inline-block;">
+                                                                <input class="visibleField" readonly="" value="" type="text" style="display: none;">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label for="">Gender</label>
+                                                                <input class="hiddenField" readonly="" value="Male" type="text" style="display: inline-block;">
+                                                                <input class="visibleField" readonly="" value="" type="text" style="display: none;">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label for="">Nationality</label>
+                                                                <input class="hiddenField" readonly="" value="UAE" type="text" style="display: inline-block;">
+                                                                <input class="visibleField" readonly="" value="" type="text" style="display: none;">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label>Passport Number</label>
+                                                                <input class="hiddenField" readonly="" value="XXXXXX" type="text" style="display: inline-block;">
+                                                                <input class="visibleField" readonly="" value="" type="text" style="display: none;">                                                                                                        
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label>Passport Expiry</label>
+                                                                <input class="hiddenField" readonly="" value="02/04/20" type="text" style="display: inline-block;">
+                                                                <input class="visibleField" readonly="" value="" type="text" style="display: none;">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-2">
+                                                    <div class="photo-box">
+                                                        <img class="hidden-pic" src="../images/Passport.jpg" alt="" style="display: inline;">
+                                                    </div>
+                                                </div> 
+                                            </div>  
+                                            <div class="clearfix"></div>
                                             
                                             <h4><span class="cusDetails">Customer Details</span></h4>
                                             <div class="col-sm-12">
@@ -635,10 +930,10 @@
                                                     <div class="cusDetails">
                                                         <div class="col-sm-5">
                                                             <div class="form-group">
-                                                                <label for="">Select Customer</label>
-                                                                <input readonly="" value="Aster Pharmacy" class="form-field" type="text">
-                                                                <a id="cusModal" data-toggle="modal" data-target="#customerModal01" href="javascript:void(0)"></a>
-                                                                <div class="modal" id="customerModal01" tabindex="-1" role="dialog" aria-labelledby="customerModal01Label">
+                                                                <label for="">Select Party <span class="req">*</span></label>
+                                                                <input class="partyField2" readonly="" value="" type="text">
+                                                                <a id="cusModal" data-toggle="modal" data-target="#customerModalAA" href="javascript:void(0)"></a>
+                                                                <div class="modal" id="customerModalAA" tabindex="-1" role="dialog" aria-labelledby="customerModalLabel">
                                                                     <div class="modal-dialog" role="document">
                                                                     <div class="modal-content">
                                                                         <div class="modal-header">
@@ -647,24 +942,47 @@
                                                                         </div>
                                                                         <div class="modal-body">
                                                                             <div class="row">
-                                                                                <div class="col-sm-6">
+                                                                                <div class="col-sm-5">
                                                                                     <div class="form-group">
                                                                                         <label>Search</label>
                                                                                         <input class="search-field" type="text">
                                                                                     </div>
                                                                                 </div>
+                                                                                <div class="col-sm-5">
+                                                                                    <div class="form-group">
+                                                                                        <label>Filter By</label>
+                                                                                        <select class="selectpicker">
+                                                                                            <option value="01">None</option>
+                                                                                            <option value="02">Customer</option>
+                                                                                            <option value="01">Contact</option>
+                                                                                            <option value="02">Opportunity</option>
+                                                                                            <option value="01">Quote</option>
+                                                                                            <option value="02">Order</option>
+                                                                                            <option value="01">Account</option>
+                                                                                            <option value="02">Party</option>
+                                                                                            <option value="01">Order Product Request ID</option>
+                                                                                            <option value="02">Ticket</option>
+                                                                                            <option value="01">Agreement</option>
+                                                                                        </select>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-sm-2">
+                                                                                    <button class="btn default-btn party-search-btn">Search</button>
+                                                                                </div>
                                                                             </div>
                                                                             <div class="custom-container table-container small-table cusSelectGrid">
                                                                                 <div class="data-container">
-                                                                                    <table class="table table-striped">
+                                                                                    <table class="table filled-table table-striped">
                                                                                         <thead>
                                                                                             <tr>
                                                                                                 <th width="10%" scope="col">
                                                                                                 </th>
                                                                                                 <th scope="col">
-                                                                                                    Customer Name
+                                                                                                    Party ID
                                                                                                 </th>
-                                                                                                
+                                                                                                <th scope="col">
+                                                                                                    Party Name
+                                                                                                </th>
                                                                                             </tr>
                                                                                         </thead>
                                                                                         <tbody>
@@ -672,7 +990,9 @@
                                                                                                 <td>
                                                                                                     <a class="selectBtn" href="javascript:void(0)"></a>
                                                                                                 </td>
-                                                                                                
+                                                                                                <td>
+                                                                                                    B2141878
+                                                                                                </td>
                                                                                                 <td>
                                                                                                 Aster Pharmacy
                                                                                                 </td>
@@ -681,7 +1001,9 @@
                                                                                                 <td>
                                                                                                     <a class="selectBtn" href="javascript:void(0)"></a>
                                                                                                 </td>
-                                                                                                
+                                                                                                <td>
+                                                                                                    B2141878
+                                                                                                </td>
                                                                                                 <td>
                                                                                                 Emirates
                                                                                                 </td>
@@ -690,94 +1012,20 @@
                                                                                                 <td>
                                                                                                     <a class="selectBtn" href="javascript:void(0)"></a>
                                                                                                 </td>
-                                                                                            
+                                                                                                <td>
+                                                                                                    B2141878
+                                                                                                </td>
                                                                                                 <td>
                                                                                                 Carrefour
                                                                                                 </td>
                                                                                             </tr>
                                                                                         </tbody>
-                                                                                    </table>                                
+                                                                                    </table>                                 
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                         <div class="modal-footer">
-                                                                            <button type="button" data-dismiss="modal" aria-label="Close" class="add-btn btn btn-primary">Select</button>
-                                                                        </div>
-                                                                    </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-5">
-                                                            <div class="form-group removeSce03">
-                                                                <label for="">Select Party <span class="req">*</span></label>
-                                                                <input id="partyField" readonly value="B2141878" type="text">
-                                                                <a id="cusModal" data-toggle="modal" data-target="#customerModal33" href="javascript:void(0)"></a>
-                                                                <div class="modal" id="customerModal33" tabindex="-1" role="dialog" aria-labelledby="customerModalLabel">
-                                                                    <div class="modal-dialog" role="document">
-                                                                    <div class="modal-content">
-                                                                        <div class="modal-header">
-                                                                            Look Up Record
-                                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                                                                        </div>
-                                                                        <div class="modal-body">
-                                                                            <div class="row">
-                                                                                <div class="col-sm-6">
-                                                                                    <div class="form-group">
-                                                                                        <label>Search</label>
-                                                                                        <input class="search-field" type="text">
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="custom-container table-container small-table cusSelectGrid">
-                                                                                <div class="data-container">
-                                                                                    <table class="table table-striped">
-                                                                                        <thead>
-                                                                                            <tr>
-                                                                                                <th width="10%" scope="col">
-                                                                                                    
-                                                                                                </th>
-                                                                                                <th scope="col">
-                                                                                                    Customer ID
-                                                                                                </th>
-                                                                                                
-                                                                                            </tr>
-                                                                                        </thead>
-                                                                                        <tbody>
-                                                                                            <tr>
-                                                                                                <td>
-                                                                                                    <a class="selectBtn" href="javascript:void(0)"></a>
-                                                                                                </td>
-                                                                                                
-                                                                                                <td>
-                                                                                                B2141878
-                                                                                                </td>
-                                                                                            </tr>
-                                                                                            <tr>
-                                                                                                <td>
-                                                                                                    <a class="selectBtn" href="javascript:void(0)"></a>
-                                                                                                </td>
-                                                                                                
-                                                                                                <td>
-                                                                                                B2141878
-                                                                                                </td>
-                                                                                            </tr>
-                                                                                            <tr>
-                                                                                                <td>
-                                                                                                    <a class="selectBtn" href="javascript:void(0)"></a>
-                                                                                                </td>
-                                                                                            
-                                                                                                <td>
-                                                                                                B2141878
-                                                                                                </td>
-                                                                                            </tr>
-                                                                                        </tbody>
-                                                                                    </table>                                
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="modal-footer">
-                                                                            <button type="button" data-dismiss="modal" aria-label="Close" class="add-btn btn btn-primary">Select</button>
+                                                                            <button type="button" data-dismiss="modal" aria-label="Close" class="add-btn btn btn-primary add-party-btn">Select</button>
                                                                         </div>
                                                                     </div>
                                                                     </div>
@@ -785,18 +1033,9 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="fRight col-sm-2 hiddenField">
-                                                        <button onclick="location.href = 'scenario01-2.html'" class="proceed btn01">
+                                                    <div class="col-sm-3 hiddenField" style="display: block;">
+                                                        <button onclick="location.href = 'scenario1.html'" class="proceed btn01" style="display: none;">
                                                             Proceed Now
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
-                                                                <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
-                                                                  <path id="Path_2684" data-name="Path 2684" d="M7.5,18h21" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-                                                                  <path id="Path_2685" data-name="Path 2685" d="M18,7.5,28.5,18,18,28.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-                                                                </g>
-                                                              </svg>
-                                                        </button>
-                                                        <button onclick="location.href = 'scenario02/pc-00.html'" class="proceed btn02">
-                                                            Update Now
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
                                                                 <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
                                                                   <path id="Path_2684" data-name="Path 2684" d="M7.5,18h21" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
@@ -804,7 +1043,16 @@
                                                                 </g>
                                                               </svg>
                                                         </button>
-                                                        <button onclick="location.href = 'scenario03/3.1/loa-step01.html'" class="proceed btn03">
+                                                        <button onclick="location.href = 'scenario04/4.2-a/loa-step01.html'" class="proceed btn02" style="display: none;">
+                                                            Verify Now
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
+                                                                <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
+                                                                  <path id="Path_2684" data-name="Path 2684" d="M7.5,18h21" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                  <path id="Path_2685" data-name="Path 2685" d="M18,7.5,28.5,18,18,28.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                </g>
+                                                              </svg>
+                                                        </button>
+                                                        <button onclick="location.href = 'scenario04/4.2/loa-step01.html'" class="proceed btn03" style="display: none;">
                                                             Create New LOA Now
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
                                                                 <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
@@ -813,7 +1061,7 @@
                                                                 </g>
                                                             </svg>
                                                         </button>
-                                                        <button onclick="location.href = 'scenario03/3.2/loa-step01.html'" class="proceed btn04">
+                                                        <button onclick="location.href = 'scenario04/4.11/loa-step01.html'" class="proceed btn04" style="display: none;">
                                                             Create New LOA Now
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
                                                                 <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
@@ -822,8 +1070,8 @@
                                                                 </g>
                                                             </svg>
                                                         </button>
-                                                        <button onclick="location.href = 'scenario03/3.3/loa-step01.html'" class="proceed btn05">
-                                                            Create New LOA Now
+                                                        <button disabled onclick="location.href = 'scenario1.html'" class="proceed btn05" style="display: none;">
+                                                            Manage Customer
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
                                                                 <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
                                                                     <path id="Path_2684" data-name="Path 2684" d="M7.5,18h21" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
@@ -831,7 +1079,7 @@
                                                                 </g>
                                                             </svg>
                                                         </button>
-                                                        <button onclick="location.href = 'scenario04/4.1/loa-step01.html'" class="proceed btn08">
+                                                        <button onclick="location.href = 'scenario04/4.1/loa-step01.html'" class="proceed btn08" style="display: none;">
                                                             Create New LOA Now
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
                                                                 <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
@@ -849,7 +1097,7 @@
                                                                 </g>
                                                             </svg>
                                                         </button>
-                                                        <button onclick="location.href = 'scenario04/4.2/loa-step01.html'" class="proceed btn10">
+                                                        <button onclick="location.href = 'scenario04/4.2/loa-step01.html'" class="proceed btn10" style="display: none;">
                                                             Register New Company &amp; Create LOA Now
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
                                                                 <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
@@ -860,9 +1108,13 @@
                                                         </button>
                                                     </div>
                                                 </div>
-                                            </div> 
-                                        
-                                                                                   
+                                                <div class="row">
+                                                    <div style="display:none;" class="col-md-12 ErrorMsg05 text-left hiddenMsg05">
+                                                        <img src="../../assets/images/error.png" />
+                                                        <span>You can’t place an order as the trade license of selected party is expired. To update the trade license, you can simply click Manage Customer.</span>
+                                                    </div>
+                                                </div>
+                                            </div>                                 
                                         </div>
                                     </div>
                                     
@@ -954,6 +1206,22 @@
                 $('.scan10').show();
                 $('.scan10').siblings('.scan-btn').hide();
             }
+            if($(this).val() === "scenario11"){
+                $('.scan11').show();
+                $('.scan11').siblings('.scan-btn').hide();
+            }
+            if($(this).val() === "scenario12"){
+                $('.scan12').show();
+                $('.scan12').siblings('.scan-btn').hide();
+            }
+            if($(this).val() === "scenario13"){
+                $('.scan13').show();
+                $('.scan13').siblings('.scan-btn').hide();
+            }
+            if($(this).val() === "scenario14"){
+                $('.scan14').show();
+                $('.scan14').siblings('.scan-btn').hide();
+            }
         });
         $('.scan01').click(function(){
             $('.empty-form').show();
@@ -961,6 +1229,13 @@
             $('.hiddenMsg01').siblings('.scenarioMsg').hide();
             $('.btn01').show();
             $('.btn01').siblings('.proceed').hide();
+            $('.company-list form#othersoption').show();
+            $('.company-list form#thisoption').hide();
+            $('#hide9111213').show();
+            $('.cusDetails').show();
+            $('.tabs-area').hide();
+            $('.tab-content').hide();
+            $('.ErrorMsg05').hide();
         });
         $('.scan02').click(function(){
             $('.empty-form').show();
@@ -968,6 +1243,13 @@
             $('.hiddenMsg02').siblings('.scenarioMsg').hide();
             $('.btn02').show();
             $('.btn02').siblings('.proceed').hide();
+            $('.company-list form#othersoption').show();
+            $('.company-list form#thisoption').hide();
+            $('#hide9111213').show();
+            $('.cusDetails').show();
+            $('.tabs-area').hide();
+            $('.tab-content').hide();
+            $('.ErrorMsg05').hide();
         });
         $('.scan03').click(function(){
             $('.empty-form').show();
@@ -975,6 +1257,13 @@
             $('.hiddenMsg03').siblings('.scenarioMsg').hide();
             $('.btn03').show();
             $('.btn03').siblings('.proceed').hide();
+            $('.company-list form#othersoption').show();
+            $('.company-list form#thisoption').hide();
+            $('#hide9111213').show();
+            $('.cusDetails').show();
+            $('.tabs-area').hide();
+            $('.tab-content').hide();
+            $('.ErrorMsg05').hide();
         });
         $('.scan04').click(function(){
             $('.empty-form').show();
@@ -982,25 +1271,53 @@
             $('.hiddenMsg04').siblings('.scenarioMsg').hide();
             $('.btn04').show();
             $('.btn04').siblings('.proceed').hide();
+            $('.company-list form#othersoption').show();
+            $('.company-list form#thisoption').hide();
+            $('#hide9111213').show();
+            $('.cusDetails').show();
+            $('.tabs-area').hide();
+            $('.tab-content').hide();
+            $('.ErrorMsg05').hide();
         });
         $('.scan05').click(function(){
             $('.empty-form').show();
             $('.hiddenMsg05').show();
+            $('.ErrorMsg05').hide();
             $('.hiddenMsg05').siblings('.scenarioMsg').hide();
-            $('.btn05').show();
+            $('.btn05').hide();
             $('.btn05').siblings('.proceed').hide();
+            $('.company-list form#othersoption').show();
+            $('.company-list form#thisoption').hide();
+            $('#hide9111213').show();
+            $('.cusDetails').show();
+            $('.tabs-area').hide();
+            $('.tab-content').hide();
         });
         $('.scan06').click(function(){
             $('.empty-form').show();
             $('.hiddenMsg06').show();
             $('.hiddenMsg06').siblings('.scenarioMsg').hide();
             $('.proceed').hide();
+            $('.company-list form#othersoption').show();
+            $('.company-list form#thisoption').hide();
+            $('#hide9111213').show();
+            $('.cusDetails').show();
+            $('.tabs-area').hide();
+            $('.tab-content').hide();
+            $('.ErrorMsg05').hide();
         });
         $('.scan07').click(function(){
             $('.empty-form').show();
             $('.hiddenMsg07').show();
             $('.hiddenMsg07').siblings('.scenarioMsg').hide();
             $('.proceed').hide();
+            $('.company-list form#othersoption').show();
+            $('.company-list form#thisoption').hide();
+            $('#hide9111213').show();
+            $('.cusDetails').show();
+            $('.tabs-area').hide();
+            $('.tab-content').hide();
+            $('.ErrorMsg05').hide();
         });
         $('.scan08').click(function(){
             $('.empty-form').show();
@@ -1008,6 +1325,13 @@
             $('.hiddenMsg08').siblings('.scenarioMsg').hide();
             $('.btn08').show();
             $('.btn08').siblings('.proceed').hide();
+            $('.company-list form#othersoption').show();
+            $('.company-list form#thisoption').hide();
+            $('#hide9111213').show();
+            $('.cusDetails').show();
+            $('.tabs-area').hide();
+            $('.tab-content').hide();
+            $('.ErrorMsg05').hide();
         });
         $('.scan09').click(function(){
             $('.empty-form').show();
@@ -1015,6 +1339,12 @@
             $('.hiddenMsg09').siblings('.scenarioMsg').hide();
             $('.btn09').show();
             $('.btn09').siblings('.proceed').hide();
+            $('.tabs-area').show();
+            $('.tab-content').show();
+            $('.company-list form#othersoption').show();
+            $('.company-list form#thisoption').hide();
+            $('#hide9111213').hide();
+            $('.ErrorMsg05').hide();
         });
         $('.scan10').click(function(){
             $('.empty-form').show();
@@ -1022,22 +1352,105 @@
             $('.hiddenMsg10').siblings('.scenarioMsg').hide();
             $('.btn10').show();
             $('.btn10').siblings('.proceed').hide();
+            $('.tabs-area').hide();
+            $('.tab-content').hide();
+            $('.company-list form#othersoption').show();
+            $('.company-list form#thisoption').hide();
+            $('#hide9111213').show();
+            $('.cusDetails').show();
+            $('.tabs-area').hide();
+            $('.tab-content').hide();
+            $('.ErrorMsg05').hide();
         });
-        var divWidth = $('.photo-box').width(); 
-        $(window).load(function(){
-            $('.photo-box').height(divWidth);
+        $('.scan11').click(function(){
+            $('.empty-form').show();
+            $('.hiddenMsg11').show();
+            $('.hiddenMsg11').siblings('.scenarioMsg').hide();
+            $('.proceed').siblings('.proceed').hide();
+            $('.btn11').show();
+            $('.tabs-area').show();
+            $('.tab-content').show();
+            $('.company-list form#othersoption').show();
+            $('.company-list form#thisoption').hide();
+            $('#hide9111213').hide();
+            $('.ErrorMsg05').hide();
         });
-        $(window).resize(function(){
-            $('.photo-box').height(divWidth);
+        $('.scan12').click(function(){
+            $('.empty-form').show();
+            $('.hiddenMsg12').show();
+            $('.hiddenMsg12').siblings('.scenarioMsg').hide();
+            $('.proceed').siblings('.proceed').hide();
+            $('.btn12').show();
+            $('.tabs-area').show();
+            $('.tab-content').show();
+            $('.company-list form#othersoption').show();
+            $('.company-list form#thisoption').hide();
+            $('#hide9111213').hide();
+            $('.ErrorMsg05').hide();
         });
-        $('.add-btn').click(function(){
-            $('#cusField').val('Aster Pharmacy');
+        $('.scan13').click(function(){
+            $('.empty-form').show();
+            $('.hiddenMsg13').show();
+            $('.hiddenMsg13').siblings('.scenarioMsg').hide();
+            $('.proceed').siblings('.proceed').hide();
+            $('.btn13').show();
+            $('.tabs-area').show();
+            $('.tab-content').show();
+            $('.company-list form#othersoption').show();
+            $('.company-list form#thisoption').hide();
+            $('#hide9111213').hide();
+            $('.ErrorMsg05').hide();
         });
-        $('.add-btn2').click(function(){
-            $('#cusField2').val('B2141878');
+        $('.scan14').click(function(){
+            $('.empty-form').show();
+            $('.hiddenMsg14').show();
+            $('.hiddenMsg14').siblings('.scenarioMsg').hide();
+            $('.proceed').siblings('.proceed').hide();
+            $('.btn14').show();
+            $('.tabs-area').show();
+            $('.tab-content').show();
+            $('.company-list form#othersoption').hide();
+            $('.company-list form#thisoption').show();
+            $('#hide9111213').hide();
+            $('.ErrorMsg05').hide();
         });
-        $('.add-btn3').click(function(){
-            $('#cusField3').val('Minal Doongarwal');
+        // var divWidth = $('.photo-box').width(); 
+        // $(window).load(function(){
+        //     $('.photo-box').height(divWidth);
+        // });
+        // $(window).resize(function(){
+        //     $('.photo-box').height(divWidth);
+        // });
+        $('#cat').click(function () {
+            var newloa = $("input[value='newloa']:checked").val();
+            var exiseti = $("input[value='existingeti']:checked").val();
+            if (newloa) {
+                $('#newloa').show();
+                $('#existingeti').hide();
+            }
+            if (exiseti) {
+                $('#newloa').hide();
+                $('#existingeti').hide();
+            }
+        });
+        $('.party-search-btn').click(function(){
+            $('.filled-table').fadeIn();
+
+        });
+        $('.party-search-btn3').click(function(){
+            $('.filled-table3').fadeIn();
+        });
+        $('.add-party-btn3').click(function(){
+            $('.partyField3').val('F2141878');
+        });
+        $('.add-party-btn').click(function(){
+            $('.partyField2').val('C214187');
+            $('.proceed.btn05').removeAttr('disabled');
+            $('.proceed.btn05').show();
+            $('.ErrorMsg05').show();
+        });
+        $('.add-party-btn5').click(function(){
+            $('.partyField5').val('G2141878');
         });
     </script>
 </body>

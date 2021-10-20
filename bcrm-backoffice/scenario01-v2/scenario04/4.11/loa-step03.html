@@ -136,12 +136,45 @@
                                                             <div class="col-sm-12">
                                                                 <div class="km-infoTexts">
                                                                     <div class="text-left scenarioMsg">
-                                                                        <h3>As per our digital record, we find that you are the owner of selected Etisalat customer, you need to upload only following documents..
-                                                                            <ul>
-                                                                                <li>EID</li>
-                                                                                <li>Trade License or Establishment Card</li>
-                                                                            </ul>
+                                                                        <h3>
+                                                                            As per our digital record, we couldn’t identify if you are the owner of selected customer or not. Kindly let us know how you want to proceed with this request ?
                                                                         </h3>
+                                                                    </div>
+                                                                    <div class="km-choicesbox">
+                                                                        <div class="row">
+                                                                            <div class="company-list">
+                                                                                <form id="compList">
+                                                                                    <div class="col-md-4">
+                                                                                        <label class="container">
+                                                                                            I am authorized contact with valid LOA/POA
+                                                                                            <input name="compList" type="radio" value="ownerofcomp">
+                                                                                            <span class="checkmark"></span>
+                                                                                        </label>
+                                                                                    </div>
+                                                                                    <div class="col-md-4">
+                                                                                        <label class="container">
+                                                                                            I am the owner of selected customer
+                                                                                            <input name="compList" type="radio" value="notownerofcomp">
+                                                                                            <span class="checkmark"></span>
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </form>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="col-md-12">
+                                                                                <p id="ownermsgpara" style="display: none;margin-top: 5px;">You need to upload following documents.</p>
+                                                                                <ul id="ownerofcompany" style="display: none;">
+                                                                                    <li>Emirates ID</li>
+                                                                                    <li>LOA or POA</li>
+                                                                                </ul>
+                                                                                <ul id="notownerofcompany" style="display: none;">
+                                                                                    <li>Emirates ID</li>
+                                                                                    <li>Trade License or Establishment Card</li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                             <div class="col-sm-4">
@@ -1440,9 +1473,10 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        
                         
                         <div class="clearfix"></div>
+                    
                     </section>
                 </div>
             </div>
@@ -1657,6 +1691,20 @@
         });
         $('#reasonDD2').change(function () {
             $('.CaptureSaveBtn').removeAttr('disabled');
+        });
+        $('#compList').click(function () {
+            var ownerofcomp = $("input[value='ownerofcomp']:checked").val();
+            var notownerofcomp = $("input[value='notownerofcomp']:checked").val();
+            if (ownerofcomp) {
+                $('#ownerofcompany').show();
+                $('#notownerofcompany').hide();
+                $('#ownermsgpara').show();
+            }
+            if (notownerofcomp) {
+                $('#ownerofcompany').hide();
+                $('#notownerofcompany').show();
+                $('#ownermsgpara').show();
+            }
         });
     </script>
 </body>

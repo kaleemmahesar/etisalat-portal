@@ -7,27 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sales Order Request :: Etisalat</title>
     <!-- Bootstrap -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/bootstrap-select.min.css" />
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
-    <link href="assets/css/CEP-automation-css/custom.css" rel="stylesheet" type="text/css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.0/rangeslider.min.css" rel="stylesheet"
-        type="text/css">
-    <link href="assets/css/CEP-automation-css/new-custom.css" rel="stylesheet" type="text/css">
+    <link href="../../../../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../../assets/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="../../../../assets/css/font-awesome.min.css" />
+    <link href="../../../../assets/css/CEP-automation-css/custom.css" rel="stylesheet" type="text/css">
+    <link href="../../../../assets/css/CEP-automation-css/new-custom.css" rel="stylesheet" type="text/css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <style>
-        .scenario{padding:0;list-style: none;margin-bottom:0;}
-        .scenario li{display:inline-block;padding:0 15px;}
-    </style>
 </head>
 
-<body class="loading new-etisalat no-step">
+<body class="loading new-etisalat">
     <div id="loaderM"></div>
     <div class="">
         <header class="main-head">
@@ -59,8 +52,7 @@
                                 </g>
                             </svg>
                         </a>
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                            aria-expanded="false" aria-controls="navbar">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
@@ -69,58 +61,226 @@
                     </div>
                     <div class="col-sm-6">
                         <div id="navbar" class="col-md-12 custom-container nav-container navbar-collapse collapse">
-                            
+                            <ul>
+                                <li>
+                                    <a class="retail" href="../../../retail_landing_v2.html">BCRM For Retail</a>
+                                </li>
+                                
+                            </ul>
                         </div>
                     </div>
                     <!--/.nav-collapse -->
                     <div class="col-sm-3">
                         
-                        
                     </div>
                 </div>
             </nav>
+            <div class="smart-wizard">
+                <!-- Tabs -->
+                <div class="swMain">
+                    <div class="col-md-12 item custom-container progress-container">
+                        <ul class="item  slickslider">
+                            <li>
+                                <a href="loa-step01.html" class="selected">
+                                    <span class="stepDesc">Contact Details</span>
+                                    <div class="stepIcon">
+                                        <i class="icon-check"></i>1
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="review.html" class="selected">
+                                    <span class="stepDesc">Review</span>
+                                    <div class="stepIcon">
+                                        <i class="icon-check"></i>2
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="loa-step04.html">
+                                    <span class="stepDesc">Verification</span>
+                                    <div class="stepIcon">
+                                        <i class="icon-check"></i>3
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </header>
         <div class="container-fluid">
             <div class="row">
                 <div class="page-container">
                     <section class="page-content inner-page">
                         <div class="clearfix"></div>
-                        
                         <div class="smart-wizard">
                             <!-- Tabs -->
-                            
                             <div class="swMain">
-                                
                                 <div class="col-md-12 custom-container corporate-accounts">
-                                    
                                     <div class="row">
-                                        <ul class="menu-nav">
-                                            <li>
-                                                <a href="bcrm-retail/landing.html">
-                                                    BCRM / Retail
-                                                </a>
-                                            </li>
-                                            
-                                            <li>
-                                                <a href="bcrm-backoffice/landing.html">
-                                                    BCRM / Back Office
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="bcrm-sales/landing.html">
-                                                    BCRM / Sales Planning
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="bcrm-cpp/landing.html">
-                                                    CPP
-                                                </a>
-                                            </li>
-                                        </ul>
+
+                                        <div class="col-sm-9">
+                                            <div class="summary-box">
+                                                <h3>Review</h3>
+                                                <div id="packages" class="packages">
+                                                    <div class="card">
+                                                        <div class="card-header" id="headingPackage">
+                                                            <h5 class="mb-0 internet" data-toggle="collapse"
+                                                                data-target="#collapsePackage" aria-expanded="false"
+                                                                aria-controls="collapsePackage">
+                                                                <span class="icon">
+                                                                    <img src="../../../../assets/images/icon-green/opt13.png"
+                                                                        alt="">
+                                                                </span>
+                                                                Authorized Contact Details
+                                                                <span>
+                                                                    <img src="../../../../assets/images/down-arrow.png" alt="">
+                                                                </span>
+                                                            </h5>
+                                                        </div>
+                                                        <div id="collapsePackage" class="collapse in"
+                                                            aria-labelledby="headingPackage" data-parent="#packages"
+                                                            aria-expanded="false">
+                                                            <div class="card-body">
+                                                                <div class="row">
+                                                                    <div class="km-mt-15">
+                                                                        <div class="col-sm-4">
+                                                                            <div class="form-group">
+                                                                                <label>First Name</label>
+                                                                                <input type="text" value="Minal" readonly>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-4">
+                                                                            <div class="form-group">
+                                                                                <label>Last Name</label>
+                                                                                <input type="text" value="Doongarwal"
+                                                                                    readonly>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-4">
+                                                                            <div class="form-group">
+                                                                                <label>EID Number</label>
+                                                                                <input type="text"
+                                                                                    value="789-1987-3866106-0" readonly>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-header" id="headingVoice">
+                                                            <h5 class="mb-0 internet" data-toggle="collapse"
+                                                                data-target="#collapseVoice" aria-expanded="false"
+                                                                aria-controls="collapseVoice">
+                                                                <span class="icon">
+                                                                    <img src="../../../../assets/images/icon-green/contact-icon.png"
+                                                                        alt="">
+                                                                </span>
+                                                                Party Details
+                                                                <span>
+                                                                    <img src="../../../../assets/images/down-arrow.png" alt="">
+                                                                </span>
+                                                            </h5>
+                                                        </div>
+                                                        <div id="collapseVoice" class="collapse in"
+                                                            aria-labelledby="headingVoice" data-parent="#packages"
+                                                            aria-expanded="false">
+                                                            <div class="card-body">
+                                                                <div class="km-mt-15">
+                                                                    <div class="row">
+                                                                        <div class="col-sm-4">
+                                                                            <div class="form-group">
+                                                                                <label>Customer ID</label>
+                                                                                <input type="text" value="12345" readonly>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-4">
+                                                                            <div class="form-group">
+                                                                                <div class="form-group">
+                                                                                    <label>Customer Name</label>
+                                                                                    <input type="text" value="Carrefour" readonly>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-4">
+                                                                            <div class="form-group">
+                                                                                <label>Party ID</label>
+                                                                                <input type="text" value="B2141878" readonly>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-4">
+                                                                            <div class="form-group">
+                                                                                <div class="form-group">
+                                                                                    <label>Party Name</label>
+                                                                                    <input type="text" value="Aster Pharmacy" readonly>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-header" id="headingAccount">
+                                                            <h5 class="mb-0 internet" data-toggle="collapse"
+                                                                data-target="#collapseAccount" aria-expanded="false"
+                                                                aria-controls="collapseAccount">
+                                                                <span class="icon">
+                                                                    <img src="../../../../assets/images/icon-green/voice-icon.png"
+                                                                        alt="">
+                                                                </span>
+                                                                Registered Mobile and Email
+                                                                <span>
+                                                                    <img src="../../../../assets/images/down-arrow.png" alt="">
+                                                                </span>
+                                                            </h5>
+                                                        </div>
+                                                        <div id="collapseAccount" class="collapse in"
+                                                            aria-labelledby="headingAccount" data-parent="#packages"
+                                                            aria-expanded="false">
+                                                            <div class="card-body">
+                                                                <div class="BandD-box">
+                                                                    <div class="row">
+                                                                        <div class="col-sm-6">
+                                                                            <div class="form-group">
+                                                                                <label for="">Mobile Number</label>
+                                                                                <input readonly="" value="+971501856393"
+                                                                                    class="form-field" type="text">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-6">
+                                                                            <div class="form-group">
+                                                                                <label for="">Email</label>
+                                                                                <input readonly=""
+                                                                                    value="minal@mysite.ae"
+                                                                                    class="form-field" type="text">
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="summary-box">
+                                                <h3>Request Summary</h3>
+                                                <div class="order-btn text-right submit-button-container">
+                                                    <button class="order-btn"
+                                                        onclick="location.href = 'loa-step04.html'">Confirm LOA Request</button>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
 
                             </div>
+
                             <div class="clearfix"></div>
                             <!-- End SmartWizard Content -->
                         </div>
@@ -133,298 +293,37 @@
         <!-- /.container-fluid -->
 
     </div>
+
     <!-- /.etisalat -->
     <!-- /.footer -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="assets/js/jquery-2.1.3.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="../../../../assets/js/jquery-2.1.3.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="assets/js/bootstrap.js"></script>
-    <script src="assets/js/bootstrap-select.js"></script>
-    <script src="assets/js/dcalendar.picker.js"></script>
-    <script type="text/javascript" src="assets/js/jquery.matchHeight-min.js"></script>
-    <script type="text/javascript" src="assets/js/jquery.smartWizard.js"></script>
-    <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="assets/js/slick.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.0/rangeslider.min.js"></script>
-    <script src="assets/js/scripts.js"></script>
-    <script src="assets/js/custom.js"></script>
+    <script src="../../../../assets/js/bootstrap.js"></script>
+    <script src="../../../../assets/js/bootstrap-select.js"></script>
+    <script src="../../../../assets/js/dcalendar.picker.js"></script>
+    <script type="text/javascript" src="../../../../assets/js/jquery.matchHeight-min.js"></script>
+    <script type="text/javascript" src="../../../../assets/js/jquery.smartWizard.js"></script>
+    <script src="../../../../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../../../../assets/js/slick.min.js"></script>
+    <script src="../../../../assets/js/scripts.js"></script>
+    <script src="../../../../assets/js/custom.js"></script>
     <script>
-        $('#serviceType').change(function(){
-            if ($(this).val() == 'Migration') {
-                $('.typeChnage').html('Migrate Now');
-                $('.hide-migrate').hide();
-                $('.tile-block.button').attr('href', 'bcrm/migrate/pc-01.1.html');
-                $('.cond-next').attr('href', 'bcrm/migrate/pc-01.1.html');
-                $('.tiles-box-list').css('height', '200px');
-            }
-            if ($(this).val() == 'New') {
-                $('.typeChnage').html('Subscribe Now');
-                $('.hide-migrate').show();
-                $('.tile-block.button').attr('href', 'pc-01.1.html');
-                $('.cond-next').attr('href', 'pc-01.1.html');
-                $('.tiles-box-list').removeAttr('style');
-            }
-        });
-        $('.number-spinner .input-group-btn').click(function(){
-            $(this).closest('.bg-cards').find('.number-spinner').removeClass('highlight');
-            $(this).closest('.bg-cards').find('.tile-card').removeClass('highlight');
-            $(this).closest('.plan-card').parent().siblings().find('.form-control').prop('value', '1'); 
-            $(this).parent().addClass('highlight');
-            $(this).closest('.tile-card').addClass('highlight');
-        });
-        $("#slider-range").slider({
-            range: true,
-            min: 50,
-            max: 5000,
-            step: 50,
-            values: [ 50, 5000 ],
-            slide: function (event, ui) {
-                $("#min-price").html(ui.values[0]);
-
-                suffix = '';
-                if (ui.values[1] == $("#max-price").data('max')) {
-                    suffix = ' +';
+        $(document).ready(function () {
+            $('input[name=tandc]').change(function () {
+                if ($(this).prop('checked') == true) {
+                    $('.order-btn button').removeAttr('disabled');
                 }
-                $("#max-price").html(ui.values[1] + suffix);
-            }
-        });
-        $("#slider-range01").slider({
-            range: true,
-            min: 50,
-            max: 2000,
-            step: 50,
-            values: [ 50, 2000 ],
-            slide: function (event, ui) {
-                $("#min-price01").html(ui.values[0]);
-
-                suffix = '';
-                if (ui.values[1] == $("#max-price01").data('max')) {
-                    suffix = ' +';
+                else {
+                    $('.order-btn button').attr('disabled', 'disabled');
                 }
-                $("#max-price01").html(ui.values[1] + suffix);
-            }
-        });
-        $("#slider-range02").slider({
-            range: true,
-            min: 50,
-            max: 2000,
-            step: 50,
-            values: [ 50, 2000 ],
-            slide: function (event, ui) {
-                $("#min-price02").html(ui.values[0]);
-
-                suffix = '';
-                if (ui.values[1] == $("#max-price02").data('max')) {
-                    suffix = ' +';
-                }
-                $("#max-price02").html(ui.values[1] + suffix);
-            }
-        });
-        $('.more-btn').click (function (){
-            $(this).hide();
-            $('.load-more-box').slideDown();
-        });
-        $(document).on('click', '.number-spinner button', function () {
-            var btn = $(this),
-                oldValue = btn.closest('.number-spinner').find('input').val().trim(),
-                newVal = 0;
-
-            if (btn.attr('data-dir') == 'up') {
-                newVal = parseInt(oldValue) + 1;
-            } else {
-                if (oldValue > 1) {
-                    newVal = parseInt(oldValue) - 1;
-                } else {
-                    newVal = 1;
-                }
-            }
-            btn.closest('.number-spinner').find('input').val(newVal);
-        });
-        $('.reset-btn').click(function () {
-            $('.offer-box-1').show();
-            $('.offer-box-2').show();
-            $('.offer-box-3').show();
-        });
-        $('#offer-select-01').change(function () {
-
-            $('.offer-box-1').show();
-            $('.offer-box-2').hide();
-            $('.offer-box-3').hide();
-        });
-        $('#offer-select-02').change(function () {
-
-            $('.offer-box-2').show();
-            $('.offer-box-1').hide();
-            $('.offer-box-3').hide();
-        });
-        $('#offer-select-03').change(function () {
-
-            $('.offer-box-3').show();
-            $('.offer-box-2').hide();
-            $('.offer-box-1').hide();
-        });
-        $('#manageEmail').change(function () {
-            if ($(this).find('input').prop('checked') == true) {
-                $('.manage-email').show();
-            }
-            else {
-                $('.manage-email').hide();
-            }
-        });
-        $('#manageDevice').change(function () {
-            if ($(this).find('input').prop('checked') == true) {
-                $('.manage-device').show();
-            }
-            else {
-                $('.manage-device').hide();
-            }
-        });
-        var valueBubble = '<output class="rangeslider__value-bubble" />';
-
-        function updateValueBubble(pos, value, context) {
-            pos = pos || context.position;
-            value = value || context.value;
-            var $valueBubble = $('.rangeslider__value-bubble', context.$range);
-            var tempPosition = pos + context.grabPos;
-            var position = (tempPosition <= context.handleDimension) ? context.handleDimension : (tempPosition >= context.maxHandlePos) ? context.maxHandlePos : tempPosition;
-
-            if ($valueBubble.length) {
-                $valueBubble[0].style.left = Math.ceil(position) + 'px';
-                $valueBubble[0].innerHTML = value;
-            }
-        }
-
-        var valueBubble = '<output class="rangeslider__value-bubble" />';
-
-        function updateValueBubble(pos, value, context) {
-            pos = pos || context.position;
-            value = value || context.value;
-            var $valueBubble = $('.rangeslider__value-bubble', context.$range);
-            var tempPosition = pos + context.grabPos;
-            var position = (tempPosition <= context.handleDimension) ? context.handleDimension : (tempPosition >= context.maxHandlePos) ? context.maxHandlePos : tempPosition;
-
-            if ($valueBubble.length) {
-                $valueBubble[0].style.left = Math.ceil(position) + 'px';
-                $valueBubble[0].innerHTML = value;
-            }
-        }
-
-        function toggleSelectAll(control) {
-        var allOptionIsSelected = (control.val() || []).indexOf("All") > -1;
-        function valuesOf(elements) {
-            return $.map(elements, function(element) {
-                return element.value;
             });
-        }
-
-        if (control.data('allOptionIsSelected') != allOptionIsSelected) {
-            // User clicked 'All' option
-            if (allOptionIsSelected) {
-                // Can't use .selectpicker('selectAll') because multiple "change" events will be triggered
-                control.selectpicker('val', valuesOf(control.find('option')));
-            } else {
-                control.selectpicker('val', []);
-            }
-        } else {
-            // User clicked other option
-            if (allOptionIsSelected && control.val().length != control.find('option').length) {
-                // All options were selected, user deselected one option
-                // => unselect 'All' option
-                control.selectpicker('val', valuesOf(control.find('option:selected[value!=All]')));
-                allOptionIsSelected = false;
-            } else if (!allOptionIsSelected && control.val().length == control.find('option').length - 1) {
-                // Not all options were selected, user selected all options except 'All' option
-                // => select 'All' option too
-                control.selectpicker('val', valuesOf(control.find('option')));
-                allOptionIsSelected = true;
-            }
-        }
-        control.data('allOptionIsSelected', allOptionIsSelected);
-    }
-
-    $('#offerSelect').selectpicker().change(function(){toggleSelectAll($(this));}).trigger('change');
-
-    $('.open-login input[type="checkbox"]').on('change', function(e){
-    if(e.target.checked){
-        $('#loginModal').modal();
-    }
-    });  
-
-    $('.otp-send').click(function(){
-        $(this).closest('.email-number').hide();
-        $(this).closest('.login-wrap').find('.otp-field').show();
-    });
-
-    $('.scan-btn').click(function(){
-        $(this).closest('.card-scan').hide();
-        $('.finger-print').show();
-
-        setTimeout(function() {
-            $(".finger-btn").trigger('click');
-        }, 5000);
-    });
-    $('.finger-btn').click(function(){
-        $(this).closest('.finger-print').hide();
-        $('.thank-you').show();
-    });
-    $('.verify-btn').click(function(){
-        $(this).closest('.otp-field').hide();
-        $('.verify-box').show();
-    });
-    $('.login-btn').click(function(){
-        $('select').removeAttr('disabled');
-        $('.bootstrap-select').removeClass('disabled');
-        $('.dropdown-toggle').removeClass('disabled');
-        $('.bootstrap-select .dropdown-menu li[data-original-index="1"]').addClass('selected');
-        $('select option[value="01"]').attr('selected', 'selected');
-        $('.form-group .filter-option').html('UAT TEST B2B ACCOUNT INQUIRY ES - 37800781');
-        $('.govt-plan').show();
-        $(this).closest('.action-box').find('h5').html('');
-        $('.tile-block').attr('href', 'login/pc-01.1.html');
-        $('.cond-next').attr('onclick', 'location.href = "login/pc-01.1.html"');        
-    });
-    $('.send-otp-btn').click(function(){
-        $('.verify-btn').removeAttr('disabled');
-    });
+        });
+        $('.expandIcon').click(function () {
+            $(this).toggleClass('open');
+            $(this).closest('.addon-box').find('.hidden-fields').toggle('slow');
+        });
     </script>
-<!-- Code injected by live-server -->
-<script type="text/javascript">
-	// <![CDATA[  <-- For SVG support
-	if ('WebSocket' in window) {
-		(function () {
-			function refreshCSS() {
-				var sheets = [].slice.call(document.getElementsByTagName("link"));
-				var head = document.getElementsByTagName("head")[0];
-				for (var i = 0; i < sheets.length; ++i) {
-					var elem = sheets[i];
-					var parent = elem.parentElement || head;
-					parent.removeChild(elem);
-					var rel = elem.rel;
-					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-					}
-					parent.appendChild(elem);
-				}
-			}
-			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-			var address = protocol + window.location.host + window.location.pathname + '/ws';
-			var socket = new WebSocket(address);
-			socket.onmessage = function (msg) {
-				if (msg.data == 'reload') window.location.reload();
-				else if (msg.data == 'refreshcss') refreshCSS();
-			};
-			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-				console.log('Live reload enabled.');
-				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-			}
-		})();
-	}
-	else {
-		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-	}
-	// ]]>
-</script></body>
+</body>
 
 </html>

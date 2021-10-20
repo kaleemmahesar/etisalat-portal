@@ -1077,7 +1077,8 @@ button.default-btn.big-btn {
 button[disabled] {
   background-color: #999 !important;
   color: #ccc !important;
-  border: 1px solid #999;
+  border: 1px solid #999 !important;
+  pointer-events: none;
 }
 .status-container label {
   color: #333333;
@@ -8503,7 +8504,7 @@ button.proceed:hover svg g path{
 }
 .submit-button-container button{
   min-width:0;
-  padding: 10px 20px;
+  padding: 10px 15px;
 }
 .scenario-box .small-table th{
   background-color:#fff !important;
@@ -10715,4 +10716,124 @@ body.new-etisalat .km-customDetails#newcustom button.proceed {
 }
 .km-infoTexts .km-choicesbox .company-list label.container {
   background: #fff;
+}
+.cusDetails .modal-body .bootstrap-select .btn-default {
+  color: #999;
+}
+.cusDetails .modal-body .default-btn {
+  margin-top: 16px;
+}
+.km-mt-15 {
+  margin-top: 15px !important;
+}
+.ErrorMsg05 {
+  font-size: 15px;
+}
+.ErrorMsg05 img {
+  max-width: 30px;
+  position: relative;
+  top: -5px;
+}
+.headbox-withparty .sparty .form-group {
+  margin: 0;
+}
+.headbox-withparty .sparty {
+  position: absolute;
+  width: 220px !important;
+  right: 310px;
+  top: 20px;
+}
+.headbox-withparty .sparty input {
+  padding: 0;
+}
+.card-head.headbox-withparty {
+  padding: 15px 145px 15px 75px;
+}
+.card-head.headbox-withparty .scenariobox {
+  top: 25px;
+}
+.card-head.headbox-withparty .sparty .modal-body .bootstrap-select .btn-default {
+  color: #999;
+}
+.headbox-withparty .sparty input.search-field {
+  padding: 5px;
+}
+.bitstream-fields {
+  margin: 35px 0 20px;
+}
+.bitstream-fields .note-label {
+  margin-bottom: 5px;
+}
+.bitstream-fields h4 {
+  display: inline-block;
+  margin: 0 0 30px;
+  padding: 0 15px 12px;
+  border-bottom: 1px solid #bfbfbf;
+} 
+.bitstream-fields.filled-fields span.req {
+  color: #727272;
+}
+.bitstream-fields.filled-fields span.req.red {
+  color: red;
+}
+.bitstream-fields.filled-fields {
+  margin-top: 0;
+}
+.default-btn.loading-error {
+  background: #e93131;
+  border-color: #e93131;
+}
+.error-field .alert-danger {
+  margin: 20px 0 0;
+  text-align: left;
+}
+.filled-fields .alert-success {
+  margin: 20px 0 0;
+  text-align: left;
+}
+.km-checkbox-row {
+  text-align: left;
+  background: #ebebeb;
+  margin: 0 0 25px;
+  padding: 12px 15px;
+  color: #777;
+}
+.km-checkbox-row input[type="checkbox"] { display: none; }
+.km-checkbox-row input[type="checkbox"] + label {
+  display: block;
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.km-checkbox-row input[type="checkbox"] + label:last-child { margin-bottom: 0; }
+
+.km-checkbox-row input[type="checkbox"] + label:before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #719e19;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: .6;
+  -webkit-transition: all .22s, border-color .08s;
+  transition: all .22s, border-color .08s;
+}
+
+.km-checkbox-row input[type="checkbox"]:checked + label:before {
+  width: 10px;
+  top: -3px;
+  left: 8px;
+  border-radius: 0;
+  opacity: 1;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
 }

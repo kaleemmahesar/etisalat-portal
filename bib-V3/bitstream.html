@@ -324,10 +324,18 @@
                                             </a>
                                         </li>
                                         <li>
+                                            <a href="bitstream.html" class="selected">
+                                                <span class="stepDesc">Bit-stream</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>3
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
                                             <a href="bundle-comp.html" class="">
                                                 <span class="stepDesc">Bundle Components</span>
                                                 <div class="stepIcon">
-                                                    <i class="icon-check"></i>3
+                                                    <i class="icon-check"></i>4
                                                 </div>
                                             </a>
                                         </li>
@@ -335,7 +343,7 @@
                                             <a href="addon.5.html" class="">
                                                 <span class="stepDesc">Add-Ons</span>
                                                 <div class="stepIcon">
-                                                    <i class="icon-check"></i>4
+                                                    <i class="icon-check"></i>5
                                                 </div>
                                             </a>
                                         </li>
@@ -343,7 +351,7 @@
                                             <a href="saas.html" class="">
                                                 <span class="stepDesc">SAAS</span>
                                                 <div class="stepIcon">
-                                                    <i class="icon-check"></i>5
+                                                    <i class="icon-check"></i>6
                                                 </div>
                                             </a>
                                         </li>
@@ -351,7 +359,7 @@
                                             <a href="docs.html" class="">
                                                 <span class="stepDesc">Documents &amp; Notes</span>
                                                 <div class="stepIcon">
-                                                    <i class="icon-check"></i>6
+                                                    <i class="icon-check"></i>7
                                                 </div>
                                             </a>
                                         </li>
@@ -359,7 +367,7 @@
                                             <a href="billing.4.html" class="">
                                                 <span class="stepDesc">Contact & Billing</span>
                                                 <div class="stepIcon">
-                                                    <i class="icon-check"></i>7
+                                                    <i class="icon-check"></i>8
                                                 </div>
                                             </a>
                                         </li>
@@ -367,7 +375,7 @@
                                             <a href="review.5.html">
                                                 <span class="stepDesc">Review</span>
                                                 <div class="stepIcon">
-                                                    <i class="icon-check"></i>8
+                                                    <i class="icon-check"></i>9
                                                 </div>
                                             </a>
                                         </li>
@@ -375,311 +383,209 @@
                                             <a href="tandc-1.html" class="">
                                                 <span class="stepDesc">Terms & Condition</span>
                                                 <div class="stepIcon">
-                                                    <i class="icon-check"></i>9
+                                                    <i class="icon-check"></i>10
                                                 </div>
                                             </a>
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="swMain">
-                                    <div class="col-md-12 custom-container package-selection-container flex-box">
-                                        <div class="col-sm-12">
-                                            <div class="row">
-                                                <div class="custom-heading">
-                                                    <h4>Site Location</h4>
-                                                    <small>Please use the map to drop a pin or enter site location
-                                                        details to check availability</small>
-                                                </div>
-                                            </div>
-                                            <div class="party-search">
-                                                <div class="col-md-12 env-img-box">
-                                                    <div class="search-criteria">
-                                                        <div class="col-sm-4">
-                                                            <select id="cond-select" class="selectpicker">
-                                                                <option value="EID">Search by EID</option>
-                                                                <option value="Account Number">Search by Account Number
-                                                                </option>
-                                                                <option value="Address">Search by Address</option>
-                                                            </select>
-                                                        </div>
-                                                        <div class="col-sm-5">
-                                                            <input id="cond-number" type="text"
-                                                                placeholder="Enter EID Number">
-                                                        </div>
-                                                        <div class="col-sm-2">
-                                                            <button id="cond-field" class="default-btn">Search</button>
+                                <div class="col-md-12 custom-container corporate-accounts">
+                                    <div class="row">
+                                        <div class="col-sm-6 col-sm-offset-3">
+                                            <div class="bitstream-fields">
+                                                <h4>Validate Eligibility</h4>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <div class="form-group">
+                                                            <label class="top-label">MainDN number
+                                                                <span class="req">*</span>
+                                                            </label>
+                                                            <input type="text">
                                                         </div>
                                                     </div>
-                                                    <img class="img-responsive" src="../assets/images/map1.jpg" alt="">
+                                                    <div class="col-sm-12">
+                                                        <div class="form-group">
+                                                            <label class="top-label note-label">Notes
+                                                                <span class="req">*</span>
+                                                            </label>
+                                                            <textarea></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 text-left">
+                                                        <button id='loading-button' class="btn default-btn">Validate at Du</button>
+                                                        <button class="btn default-btn" id='loading-section' style='display: none;'>
+                                                            <span>
+                                                                <i class="fa fa-spinner fa-spin fa-fw"></i> Validating...
+                                                            </span>
+                                                        </button>
+                                                        <button id='loading-button-error' class="btn default-btn">Error at Du</button>
+                                                        <button class="btn default-btn" id='loading-section-error' style='display: none;'>
+                                                            <span>
+                                                                <i class="fa fa-spinner fa-spin fa-fw"></i> Validating...
+                                                            </span>
+                                                        </button>
+                                                    </div>
                                                 </div>
+                                                <div class="error-field" style="display: none;">
+                                                    <div class="alert alert-danger"><strong>Rejected:</strong>
+                                                        Please update and try again.</div>
+                                                </div>
+                                                <div class="filled-fields" style="display: none;">
+                                                    <div class="alert alert-success"><strong>Success:</strong>
+                                                        Getting the response for Request ID:8504182.</div>
+                                                </div>
+                                                
                                             </div>
-                                            <div
-                                                class="col-md-12 black-field custom-container selection-container sim-serial-container btm-container">
-                                                <div class="col-md-12">
-                                                    <div class="party-search">
-                                                        <div class="row">
-                                                            <div class="col-sm-3">
-                                                                <div class="form-group">
-                                                                    <label class="col-sm-12 top-label">Network Type
-                                                                        <span class="req">*</span>
-                                                                    </label>
-                                                                    <select id="network-type" class="selectpicker">
-                                                                        <option></option>
-                                                                        <option value="Bit Stream">Bit Stream</option>
-                                                                        <option value="Etisalat">Etisalat</option>
-                                                                        <option value="du">Du</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-3">
-                                                                <div class="form-group">
-                                                                    <label class="col-sm-12 top-label">Region
-                                                                        <span class="req">*</span>
-                                                                    </label>
-                                                                    <input readonly="" value="" type="text">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-3">
-                                                                <div class="form-group">
-                                                                    <label class="col-sm-12 top-label">Longitude
-                                                                        <span class="req">*</span>
-                                                                    </label>
-                                                                    <input readonly="" value="" type="text">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-3">
-                                                                <div class="form-group">
-                                                                    <label class="col-sm-12 top-label">Latitude
-                                                                        <span class="req">*</span>
-                                                                    </label>
-                                                                    <input readonly="" value="" type="text">
-                                                                </div>
-                                                            </div>
+                                        </div>
+                                        <div class="col-sm-10 col-sm-offset-1">
+                                            <div class="bitstream-fields filled-fields" style="display: none;">
+                                                <h4>Validation Result</h4>
+                                                <div class="km-checkbox-row">
+                                                    <input type="checkbox" id="transferfrom">
+                                                    <label for="transferfrom">
+                                                        <span>Transfer from access provider ?</span>
+                                                    </label>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label class="top-label">Region
+                                                                <span class="req">*</span>
+                                                            </label>
+                                                            <input readonly="" value="Centeral" type="text">
                                                         </div>
-                                                        <div class="row">
-                                                            <div class="col-sm-3">
-                                                                <div class="form-group">
-                                                                    <label class="col-sm-12 top-label">EID
-                                                                        <span class="req">*</span>
-                                                                    </label>
-                                                                    <input value="" readonly="" type="text">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-3">
-                                                                <div class="form-group">
-                                                                    <label class="col-sm-12 top-label">City
-                                                                        <span class="req">*</span>
-                                                                    </label>
-                                                                    <input readonly="" value="" type="text">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-3">
-                                                                <div class="form-group">
-                                                                    <label class="col-sm-12 top-label">Flat No.
-                                                                        <span class="req">*</span>
-                                                                    </label>
-                                                                    <input id="flatno" readonly="" value="" type="text">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-3">
-                                                                <div class="form-group">
-                                                                    <label class="col-sm-12 top-label">Building N0.
-                                                                        <span class="req">*</span>
-                                                                    </label>
-                                                                    <input readonly="" value="" type="text">
-                                                                </div>
-                                                            </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label class="top-label">Longitude
+                                                                <span class="req">*</span>
+                                                            </label>
+                                                            <input readonly="" value="125.55.56.22" type="text">
                                                         </div>
-                                                        <div class="row">
-                                                            <div class="col-sm-3">
-                                                                <div class="form-group">
-                                                                    <label class="col-sm-12 top-label">ONT Serial
-                                                                        <span class="req">*</span>
-                                                                    </label>
-                                                                    <input value="" readonly="" type="text">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-3">
-                                                                <div class="form-group">
-                                                                    <label class="col-sm-12 top-label">ONT Type
-                                                                        <span class="req">*</span>
-                                                                    </label>
-                                                                    <input readonly="" value="" type="text">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-3">
-                                                                <div class="form-group">
-                                                                    <label class="col-sm-12 top-label">Building Name
-                                                                        <span class="req">*</span>
-                                                                    </label>
-                                                                    <input readonly="" value="" type="text">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-3">
-                                                                <div class="form-group">
-                                                                    <label class="col-sm-12 top-label">Street
-                                                                        <span class="req">*</span>
-                                                                    </label>
-                                                                    <input readonly="" value="" type="text">
-                                                                </div>
-                                                            </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label class="top-label">Latitude
+                                                                <span class="req">*</span>
+                                                            </label>
+                                                            <input readonly="" value="125.55.56.22" type="text">
                                                         </div>
-                                                        <div class="row">
-                                                            <div class="col-sm-3">
-                                                                <div class="form-group">
-                                                                    <label class="col-sm-12 top-label">Site Name
-                                                                        <span class="req">*</span>
-                                                                    </label>
-                                                                    <input value="" readonly="" type="text">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-3">
-                                                                <div class="form-group">
-                                                                    <label class="col-sm-12 top-label">Emirate
-                                                                        <span class="req">*</span>
-                                                                    </label>
-                                                                    <input readonly="" value="" type="text">
-                                                                </div>
-                                                            </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label class="top-label">EID
+                                                                <span class="req">*</span>
+                                                            </label>
+                                                            <input value="000-000-000545" readonly=""
+                                                                type="text">
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div style="display:none;"
-                                                class="col-md-12 filled-field custom-container selection-container sim-serial-container btm-container">
-                                                <div class="col-md-12">
-                                                    <div class="party-search">
-                                                        <div class="row">
-                                                            <div class="col-sm-3">
-                                                                <div class="form-group">
-                                                                    <label class="col-sm-12 top-label">Network Type
-                                                                        <span class="req">*</span>
-                                                                    </label>
-                                                                    <input value="GSM" readonly="" type="text">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-3">
-                                                                <div class="form-group">
-                                                                    <label class="col-sm-12 top-label">Region
-                                                                        <span class="req">*</span>
-                                                                    </label>
-                                                                    <input readonly="" value="Centeral" type="text">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-3">
-                                                                <div class="form-group">
-                                                                    <label class="col-sm-12 top-label">Longitude
-                                                                        <span class="req">*</span>
-                                                                    </label>
-                                                                    <input readonly="" value="125.55.56.22" type="text">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-3">
-                                                                <div class="form-group">
-                                                                    <label class="col-sm-12 top-label">Latitude
-                                                                        <span class="req">*</span>
-                                                                    </label>
-                                                                    <input readonly="" value="125.55.56.22" type="text">
-                                                                </div>
-                                                            </div>
+                                                <div class="row">
+                                                    
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label class="top-label">ONT Type
+                                                                <span class="req">*</span>
+                                                            </label>
+                                                            <input readonly="" value="Active" type="text">
                                                         </div>
-                                                        <div class="row">
-                                                            <div class="col-sm-3">
-                                                                <div class="form-group">
-                                                                    <label class="col-sm-12 top-label">EID
-                                                                        <span class="req">*</span>
-                                                                    </label>
-                                                                    <input value="000-000-000545" readonly=""
-                                                                        type="text">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-3">
-                                                                <div class="form-group">
-                                                                    <label class="col-sm-12 top-label">City
-                                                                        <span class="req">*</span>
-                                                                    </label>
-                                                                    <input readonly="" value="Dubai" type="text">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-3">
-                                                                <div class="form-group">
-                                                                    <label class="col-sm-12 top-label">Flat No.
-                                                                        <span class="req">*</span>
-                                                                    </label>
-                                                                    <input readonly="" value="609" type="text">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-3">
-                                                                <div class="form-group">
-                                                                    <label class="col-sm-12 top-label">Building N0.
-                                                                        <span class="req">*</span>
-                                                                    </label>
-                                                                    <input readonly="" value="E-36" type="text">
-                                                                </div>
-                                                            </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label class="top-label">City
+                                                                <span class="req">*</span>
+                                                            </label>
+                                                            <input readonly="" value="Dubai" type="text">
                                                         </div>
-                                                        <div class="row">
-                                                            <div class="col-sm-3">
-                                                                <div class="form-group">
-                                                                    <label class="col-sm-12 top-label">ONT Serial
-                                                                        <span class="req">*</span>
-                                                                    </label>
-                                                                    <input value="000545" readonly="" type="text">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-3">
-                                                                <div class="form-group">
-                                                                    <label class="col-sm-12 top-label">ONT Type
-                                                                        <span class="req">*</span>
-                                                                    </label>
-                                                                    <input readonly="" value="Active" type="text">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-3">
-                                                                <div class="form-group">
-                                                                    <label class="col-sm-12 top-label">Building Name
-                                                                        <span class="req">*</span>
-                                                                    </label>
-                                                                    <input readonly="" value="Al-Kifaf" type="text">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-3">
-                                                                <div class="form-group">
-                                                                    <label class="col-sm-12 top-label">Street
-                                                                        <span class="req">*</span>
-                                                                    </label>
-                                                                    <input readonly="" value="Al-Mankhool" type="text">
-                                                                </div>
-                                                            </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label class="top-label">Flat No.
+                                                                <span class="req">*</span>
+                                                            </label>
+                                                            <input readonly="" value="609" type="text">
                                                         </div>
-                                                        <div class="row">
-                                                            <div class="col-sm-3">
-                                                                <div class="form-group">
-                                                                    <label class="col-sm-12 top-label">Site Name
-                                                                        <span class="req">*</span>
-                                                                    </label>
-                                                                    <input value="Barsha" readonly="" type="text">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-3">
-                                                                <div class="form-group">
-                                                                    <label class="col-sm-12 top-label">Emirate
-                                                                        <span class="req">*</span>
-                                                                    </label>
-                                                                    <input readonly="" value="West" type="text">
-                                                                </div>
-                                                            </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label class="top-label">Building N0.
+                                                                <span class="req">*</span>
+                                                            </label>
+                                                            <input readonly="" value="E-36" type="text">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label class="top-label">Building Name
+                                                                <span class="req">*</span>
+                                                            </label>
+                                                            <input readonly="" value="Al-Kifaf" type="text">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label class="top-label">Site Name
+                                                                <span class="req">*</span>
+                                                            </label>
+                                                            <input value="Barsha" readonly="" type="text">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label class="top-label">Emirate
+                                                                <span class="req">*</span>
+                                                            </label>
+                                                            <input readonly="" value="West" type="text">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label class="top-label">Makani number
+                                                                <span class="req red">*</span>
+                                                            </label>
+                                                            <input value="" type="text">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label class="top-label">Street
+                                                                <span class="req">*</span>
+                                                            </label>
+                                                            <input readonly="" value="Al-Mankhool" type="text">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label class="top-label">Address 1
+                                                                <span class="req red">*</span>
+                                                            </label>
+                                                            <input type="text">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <label class="top-label">Address 2
+                                                                <span class="req red">*</span>
+                                                            </label>
+                                                            <input type="text">
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
+                                            
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-12  remove-padding-right text-right submit-button-container">
                                     <button onclick="location.href = 'bib-01.4.html'">Previous</button>
                                     <button>Save & Close</button>
-                                    <button id="nextstep-btn" onclick="location.href = 'bundle-comp.html'">Next</button>
+                                    <button disabled id="nextstep-btn" onclick="location.href = 'bundle-comp.html'">Next</button>
                                 </div>
                             </div>
 
@@ -693,7 +599,7 @@
             <!-- /.row -->
         </div>
         <!-- /.container-fluid -->
-
+        
     </div>
 
     <!-- /.etisalat -->
@@ -711,41 +617,32 @@
     <script src="../assets/js/scripts.js"></script>
     <script src="../assets/js/custom.js"></script>
     <script>
-        $(document).ready(function () {
-            $('#cond-select').change(function () {
-                if ($(this).val() == 'EID') {
-                    $('#cond-number').attr('placeholder', 'Enter EID Number');
-                }
-                if ($(this).val() == 'osn') {
-                    $('.osn-box').show();
-                    $('.alpha-box').hide();
-                    $('.bein-box').hide();
-                }
-                if ($(this).val() == 'Account Number') {
-                    //$('#cond-number').attr('placeholder', 'Enter Account Number');
-                    $('#cond-number').attr('placeholder', '');
-                    $('#cond-field').click(function () {
-                        $('.black-field').hide();
-                        $('.filled-field').show();
-                    });
-                }
-                if ($(this).val() == 'Address') {
-                    $('#cond-number').attr('placeholder', '');
-                    $('#cond-field').click(function () {
-                        $('.black-field').hide();
-                        $('.filled-field').show();
-                    });
-                }
-            });
+        $('#loading-button').click(function(){
+            var $this = $(this);
+            $('#loading-section').show();
+            $this.hide();
+            $('#loading-button-error').hide();
+            setInterval(function(){
+                $('#loading-section').hide();
+                $this.show();
+                $this.attr("disabled","disabled");
+                $this.text('Validated');
+                $('.filled-fields').fadeIn();
+                $('#nextstep-btn').removeAttr('disabled');
+            },4000);
         });
-        
-        $('#network-type').change(function () {
-            if ($(this).val() == 'Bit Stream') {
-                $('#flatno').attr('placeholder', 'Enter Flat No:');
-                $('#flatno').removeAttr('readonly');
-                $('#flatno').focus();
-                $('#nextstep-btn').attr('onclick','location.href="bitstream.html"');
-            }
+        $('#loading-button-error').click(function(){
+            var $this = $(this);
+            $('#loading-button').hide();
+            $('#loading-section-error').show();
+            $this.hide();
+            setInterval(function(){
+                $('#loading-section-error').hide();
+                $this.show();
+                $this.text('Error');
+                $this.addClass('loading-error');
+                $('.error-field').fadeIn();
+            },4000);
         });
     </script>
 </body>
