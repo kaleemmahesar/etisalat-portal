@@ -3035,6 +3035,10 @@ label.top-level {
   font-size: 16px;
   margin-bottom: 0;
   font-family: 'neotech-regular', Arial;
+  line-height: 1.35;
+}
+.addon-box h4.km-mt-10 {
+  margin-top: 10px;
 }
 .summary-box .addon-box h4{
   display:block;
@@ -10232,6 +10236,7 @@ a.sku-iconBtn {
 }
 .supplymentary-addon.added a.sku-iconBtn {
   display: block !important;
+  right: 92px;
 }
 .tab-cont .supplymentary-addon .form-group label {
   margin-bottom: 0;
@@ -10765,11 +10770,12 @@ body.new-etisalat .km-customDetails#newcustom button.proceed {
   margin-bottom: 5px;
 }
 .bitstream-fields h4 {
-  display: inline-block;
-  margin: 0 0 30px;
-  padding: 0 15px 12px;
-  border-bottom: 1px solid #bfbfbf;
-} 
+  margin: 7px 0 25px;
+  text-align: left;
+  font-size: 16px;
+  font-family: 'neotech-medium', Arial;
+  color: #666;
+}
 .bitstream-fields.filled-fields span.req {
   color: #727272;
 }
@@ -10836,4 +10842,38 @@ body.new-etisalat .km-customDetails#newcustom button.proceed {
   border-left-color: transparent;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+.saction-check {
+  margin: 25px 0;
+  float: left;
+  width: 100%;
+}
+.gbordere-btn-full {
+  border: 1px solid #719e19;
+  font-size: 12px;
+  margin-top: 5px;
+  padding: 5px 10px;
+  width: 100%;
+  display: block;
+  text-align: center;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+.gbordere-btn-full:hover {
+  background-color: #719e19;
+  color: #fff;
+}
+.gbordere-btn-full[disabled] {
+  opacity: 0.65;
+  color: #333;
+  border-color: #d7d7d7;
+  background: #d7d7d7;
+  pointer-events: none;
+}
+#switchipdrop[disabled] {
+  opacity: 0.65;
+  pointer-events: none;
+}
+.km-nopadding {
+  padding: 0;
 }

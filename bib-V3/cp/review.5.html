@@ -600,6 +600,22 @@
                                                     <br>
                                                     <small>Monthly + 5% VAT</small>
                                                 </div>
+                                                <div id="saction-box">
+                                                    <div class="plus">+</div>
+                                                    <div class="price-box">
+                                                        <h5>Action Charge</h5>
+                                                        <strong>100</strong>
+                                                        AED
+                                                        <br>
+                                                        <small>+ 5% VAT</small>
+                                                    </div>
+                                                </div>
+                                                <div class="km-checkbox-row saction-check">
+                                                    <input checked type="checkbox" id="transferfrom">
+                                                    <label for="transferfrom">
+                                                        <span>Action Charge</span>
+                                                    </label>
+                                                </div>
                                                 <br><br><br>
                                                 <div class="order-btn text-right submit-button-container">
                                                     <button class="order-btn" onclick="location.href = 'tandc-1.html'">Place Order</button>
@@ -648,6 +664,13 @@
                     $('.order-btn button').attr('disabled', 'disabled');
                 }
             });
+        });
+        $('#transferfrom').click(function() {
+            if($(this).prop("checked") == true){
+                $('#saction-box').fadeIn();
+            } else if($(this).prop("checked") == false){
+                $('#saction-box').hide();
+            }
         });
     </script>
 </body>

@@ -306,7 +306,7 @@
                             <!-- Tabs -->
                             <div class="swMain">
                                 <div class="col-md-12 item custom-container progress-container">
-                                    <ul class="item  slickslider">
+                                    <ul class="item  slickslider" id="bitstream-not">
                                         <li>
                                             <a href="bib-01.4.html" class="selected">
                                                 <span class="stepDesc">Package Selection</span>
@@ -376,6 +376,88 @@
                                                 <span class="stepDesc">Terms & Condition</span>
                                                 <div class="stepIcon">
                                                     <i class="icon-check"></i>9
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <ul class="item  slickslider" id="bitstream-nav" style="display: none;">
+                                        <li>
+                                            <a href="bib-01.4.html" class="selected">
+                                                <span class="stepDesc">Package Selection</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>1
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="bib-03.3.html" class="selected">
+                                                <span class="stepDesc">Site Location</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>2
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="bitstream.html" class="selected">
+                                                <span class="stepDesc">Bit-stream</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>3
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="bundle-comp.html" class="">
+                                                <span class="stepDesc">Bundle Components</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>4
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="addon.5.html" class="">
+                                                <span class="stepDesc">Add-Ons</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>5
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="saas.html" class="">
+                                                <span class="stepDesc">SAAS</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>6
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="docs.html" class="">
+                                                <span class="stepDesc">Documents &amp; Notes</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>7
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="billing.4.html" class="">
+                                                <span class="stepDesc">Contact & Billing</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>8
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="review.5.html">
+                                                <span class="stepDesc">Review</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>9
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="tandc-1.html" class="">
+                                                <span class="stepDesc">Terms & Condition</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>10
                                                 </div>
                                             </a>
                                         </li>
@@ -745,6 +827,15 @@
                 $('#flatno').removeAttr('readonly');
                 $('#flatno').focus();
                 $('#nextstep-btn').attr('onclick','location.href="bitstream.html"');
+                $('ul#bitstream-not').hide();
+                $('ul#bitstream-nav').show();
+            } else {
+                $('#flatno').removeAttr('placeholder');
+                $('#flatno').attr('readonly', 'readonly');
+                $('#flatno').focusout();
+                $('#nextstep-btn').attr('onclick','location.href="bundle-comp.html"');
+                $('ul#bitstream-not').show();
+                $('ul#bitstream-nav').hide();
             }
         });
     </script>
