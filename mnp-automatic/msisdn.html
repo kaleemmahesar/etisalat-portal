@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sales Order Request :: Etisalat</title>
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <style>
+        .img-wrap-full .continue {
+            position: absolute;
+            bottom: 2px;
+            right: 45px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="img-wrap-bcrm">
+        <nav>
+            <ul class="item  slickslider">
+                <li>
+                    <a href="product-selection.html">
+                        <div class="stepIcon">
+                            <i class="icon-check"></i>
+                        </div>
+                        <span class="stepDesc">Product Selection</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="add-ons.html">
+                        <div class="stepIcon">
+                            <i class="icon-check"></i>
+                        </div>
+                        <span class="stepDesc">Add-Ons</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="bill-delivery.html">
+                        <div class="stepIcon">
+                            <i class="icon-check"></i>
+                        </div>
+                        <span class="stepDesc">Billing & Delivery</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="msisdn.html" class="selected">
+                        <div class="stepIcon">
+                            <i class="icon-check"></i>
+                        </div>
+                        <span class="stepDesc">MSISDNs</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="reserve-devices.html">
+                        <div class="stepIcon">
+                            <i class="icon-check"></i>
+                        </div>
+                        <span class="stepDesc">Reserve Devices</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="review.html">
+                        <div class="stepIcon">
+                            <i class="icon-check"></i>
+                        </div>
+                        <span class="stepDesc">Review</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="form-area">
+        <h3>Network Porting MSISDN<span>*</span></h3>
+        <div class="upload-section">
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <h5>Upload Excel File.</h5>
+                    <div class="d-flex">
+                        <span class="control-fileupload">
+                            <label>Choose a file :</label>
+                            <input type="file" class="btn">
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 p0">
+                    <button class="btn" id="addvalues">Apply Filter</button>
+                </div>
+            </div>
+        </div>
+        <table class="table table-bordered" id="tbUser">
+            <thead>
+                <tr>
+                    <th>Operator ID</th>
+                    <th>Area Code</th>
+                    <th>Account Number</th>
+                    <th>Application Form</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="default-rows">
+                <tr>
+                    <td>
+                        <select class="form-control">
+                            <option>Du</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select class="form-control">
+                            <option>055</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control">
+                    </td>
+                    <td>
+                        <div class="d-flex">
+                            <span class="control-fileupload">
+                                <label>Choose a file :</label>
+                                <input type="file" class="btn">
+                            </span>
+                            <a href="images/dummy.pdf" title="Application Form"><img src="images/pdf-icon.png" class="pdficon" style="display: none;" /></a>
+                        </div>
+                    </td>
+                    <td>
+                        <img src="images/delete.png" class="del" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select class="form-control">
+                            <option>Du</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select class="form-control">
+                            <option>055</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control">
+                    </td>
+                    <td>
+                        <div class="d-flex">
+                            <span class="control-fileupload">
+                                <label>Choose a file :</label>
+                                <input type="file" class="btn">
+                            </span>
+                            <a href="images/dummy.pdf" title="Application Form"><img src="images/pdf-icon.png" class="pdficon" style="display: none;" /></a>
+                        </div>
+                    </td>
+                    <td>
+                        <img src="images/delete.png" class="del" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select class="form-control">
+                            <option>Du</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select class="form-control">
+                            <option>055</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control">
+                    </td>
+                    <td>
+                        <div class="d-flex">
+                            <span class="control-fileupload">
+                                <label>Choose a file :</label>
+                                <input type="file" class="btn">
+                            </span>
+                            <a href="images/dummy.pdf" title="Application Form"><img src="images/pdf-icon.png" class="pdficon" style="display: none;" /></a>
+                        </div>
+                    </td>
+                    <td>
+                        <img src="images/delete.png" class="del" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select class="form-control">
+                            <option>Du</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select class="form-control">
+                            <option>055</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control">
+                    </td>
+                    <td>
+                        <div class="d-flex">
+                            <span class="control-fileupload">
+                                <label>Choose a file :</label>
+                                <input type="file" class="btn">
+                            </span>
+                            <a href="images/dummy.pdf" title="Application Form"><img src="images/pdf-icon.png" class="pdficon" style="display: none;" /></a>
+                        </div>
+                    </td>
+                    <td>
+                        <img src="images/delete.png" class="del" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select class="form-control">
+                            <option>Du</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select class="form-control">
+                            <option>055</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control">
+                    </td>
+                    <td>
+                        <div class="d-flex">
+                            <span class="control-fileupload">
+                                <label>Choose a file :</label>
+                                <input type="file" class="btn">
+                            </span>
+                            <a href="images/dummy.pdf" title="Application Form"><img src="images/pdf-icon.png" class="pdficon" style="display: none;" /></a>
+                        </div>
+                    </td>
+                    <td>
+                        <img src="images/delete.png" class="del" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select class="form-control">
+                            <option>Du</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select class="form-control">
+                            <option>055</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control">
+                    </td>
+                    <td>
+                        <div class="d-flex">
+                            <span class="control-fileupload">
+                                <label>Choose a file :</label>
+                                <input type="file" class="btn">
+                            </span>
+                            <a href="images/dummy.pdf" title="Application Form"><img src="images/pdf-icon.png" class="pdficon" style="display: none;" /></a>
+                        </div>
+                    </td>
+                    <td>
+                        <img src="images/delete.png" class="del" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select class="form-control">
+                            <option>Du</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select class="form-control">
+                            <option>055</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control">
+                    </td>
+                    <td>
+                        <div class="d-flex">
+                            <span class="control-fileupload">
+                                <label>Choose a file :</label>
+                                <input type="file" class="btn">
+                            </span>
+                            <a href="images/dummy.pdf" title="Application Form"><img src="images/pdf-icon.png" class="pdficon" style="display: none;" /></a>
+                        </div>
+                    </td>
+                    <td>
+                        <img src="images/delete.png" class="del" />
+                    </td>
+                </tr>
+            </tbody>
+            <tbody id="browse-rows" style="display: none;">
+                <tr>
+                    <td>
+                        <select class="form-control" disabled>
+                            <option>Du</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select class="form-control" disabled>
+                            <option>055</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" readonly value="123456789">
+                    </td>
+                    <td>
+                        <img src="images/pdf-icon.png" class="pdficon" />
+                    </td>
+                    <td>
+                        <img src="images/delete.png" class="del" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select class="form-control" disabled>
+                            <option>Du</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select class="form-control" disabled>
+                            <option>055</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" readonly value="123456789">
+                    </td>
+                    <td>
+                        <img src="images/pdf-icon.png" class="pdficon" />
+                    </td>
+                    <td>
+                        <img src="images/delete.png" class="del" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select class="form-control" disabled>
+                            <option>Du</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select class="form-control" disabled>
+                            <option>055</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" readonly value="123456789">
+                    </td>
+                    <td>
+                        <img src="images/pdf-icon.png" class="pdficon" />
+                    </td>
+                    <td>
+                        <img src="images/delete.png" class="del" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select class="form-control" disabled>
+                            <option>Du</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select class="form-control" disabled>
+                            <option>055</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" readonly value="123456789">
+                    </td>
+                    <td>
+                        <img src="images/pdf-icon.png" class="pdficon" />
+                    </td>
+                    <td>
+                        <img src="images/delete.png" class="del" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select class="form-control" disabled>
+                            <option>Du</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select class="form-control" disabled>
+                            <option>055</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" readonly value="123456789">
+                    </td>
+                    <td>
+                        <img src="images/pdf-icon.png" class="pdficon" />
+                    </td>
+                    <td>
+                        <img src="images/delete.png" class="del" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select class="form-control" disabled>
+                            <option>Du</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select class="form-control" disabled>
+                            <option>055</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" readonly value="123456789">
+                    </td>
+                    <td>
+                        <img src="images/pdf-icon.png" class="pdficon" />
+                    </td>
+                    <td>
+                        <img src="images/delete.png" class="del" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select class="form-control" disabled>
+                            <option>Du</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select class="form-control" disabled>
+                            <option>055</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" readonly value="123456789">
+                    </td>
+                    <td>
+                        <img src="images/pdf-icon.png" class="pdficon" />
+                    </td>
+                    <td>
+                        <img src="images/delete.png" class="del" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select class="form-control" disabled>
+                            <option>Du</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select class="form-control" disabled>
+                            <option>055</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" readonly value="123456789">
+                    </td>
+                    <td>
+                        <img src="images/pdf-icon.png" class="pdficon" />
+                    </td>
+                    <td>
+                        <img src="images/delete.png" class="del" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select class="form-control" disabled>
+                            <option>Du</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select class="form-control" disabled>
+                            <option>055</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" readonly value="123456789">
+                    </td>
+                    <td>
+                        <img src="images/pdf-icon.png" class="pdficon" />
+                    </td>
+                    <td>
+                        <img src="images/delete.png" class="del" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select class="form-control" disabled>
+                            <option>Du</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select class="form-control" disabled>
+                            <option>055</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" readonly value="123456789">
+                    </td>
+                    <td>
+                        <img src="images/pdf-icon.png" class="pdficon" />
+                    </td>
+                    <td>
+                        <img src="images/delete.png" class="del" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select class="form-control" disabled>
+                            <option>Du</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select class="form-control" disabled>
+                            <option>055</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" readonly value="123456789">
+                    </td>
+                    <td>
+                        <img src="images/pdf-icon.png" class="pdficon" />
+                    </td>
+                    <td>
+                        <img src="images/delete.png" class="del" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select class="form-control" disabled>
+                            <option>Du</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select class="form-control" disabled>
+                            <option>055</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" readonly value="123456789">
+                    </td>
+                    <td>
+                        <img src="images/pdf-icon.png" class="pdficon" />
+                    </td>
+                    <td>
+                        <img src="images/delete.png" class="del" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="img-wrap-full">
+        <img src="images/bottom-bar.jpg" />
+        <a href="reserve-devices.html"><img src="images/save-con.jpg" class="continue" /></a>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.btn').on('click', function() {
+                //$('.file').trigger('click');
+            });
+            $('table input[type="file"]').change(function(e) {
+                $(this).closest('.d-flex').addClass('showpdficon');
+                $(this).closest('.control-fileupload').remove();
+            });
+        });
+        $("#tbUser").on('click', '.del', function () {
+            $(this).closest('tr').remove();
+        });
+        $('#addvalues').click(function(){
+            $('#default-rows').hide();
+            $('#browse-rows').show();
+            $('#tbUser').addClass('browse-rows');
+            $(this).text('Added');
+        });
+        $(function() {
+            $('input[type=file]').change(function(){
+                var t = $(this).val();
+                var labelText = 'File : ' + t.substr(12, t.length);
+                $(this).prev('label').text(labelText);
+            })
+        });
+    </script>
+</body>
+</html>
