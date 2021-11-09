@@ -1,0 +1,1739 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sales Order Request :: Etisalat</title>
+    <!-- Bootstrap -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="../assets/css/font-awesome.min.css" />
+    <link href="../assets/css/CEP-automation-css/custom.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .km-mt-7 {
+            margin-top: 7px !important;
+        }
+    </style>
+</head>
+
+<body class="loading">
+    <div id="loaderM"></div>
+    <div class="etisalat">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header col-sm-2">
+                    <a class="navbar-brand" href="home.html">
+                        <img src="../assets/images/logo_white.png" alt="Etisalat">
+                    </a>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="col-sm-8">
+                    <div id="navbar" class="col-md-12 custom-container nav-container navbar-collapse collapse">
+                        <ul>
+                            <li>
+                                <a href="javascript:void(0);">Mobile</a>
+                            </li>
+                            <li>
+                                <a class="show-fixed-content" href="../index.html">Fixed</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">ICT</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">Product Catalogue</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--/.nav-collapse -->
+                <div class="col-sm-2">
+                    <div class="navbar-right">
+                        <div class="dropdown">
+                            <a id="oSummary" class="summary-btn" data-target="#" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">
+                                Order Summary
+                                <span class="caret"></span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="oSummary">
+                                <div class="item-list">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Order ID</th>
+                                                <th>Customer Name</th>
+                                                <th>Party ID</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>ORD-212-2323</td>
+                                                <td>Aster Pharmacy</td>
+                                                <td>17567</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Order Status</th>
+                                                <th>Service Type</th>
+                                                <th>Sales Manager</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Draft</td>
+                                                <td>New Account</td>
+                                                <td>Jordan</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>  
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Authorized Contact Name</th>
+                                                <th>Authorized Contact Email</th>
+                                                <th>Authorized Contact Mobile</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Minal Doongarwal</td>
+                                                <td>mdoongarwal@etisalat.ae</td>
+                                                <td>971569629141</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>                                  
+                                </div>
+                                <div class="total collapsed">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <span id="breakDown" class="collapsed" data-toggle="collapse"
+                                                data-target="#collapseBreakdown" aria-expanded="false"
+                                                aria-controls="collapseBreakdown">
+                                                Break Down
+                                                <span>
+                                                    <img src="../assets/images/down-arrow.png" alt="">
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <h4>Grand Total</h4>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <h5 class="price">
+                                                1,713 AED
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="collapseBreakdown" class="collapse" aria-labelledby="breakDown">
+                                    <div class="card-body">
+                                        <div id="packages" class="packages">
+                                            <div class="card">
+                                                <div class="card-header" id="headingOne">
+                                                    <h5 class="mb-0 internet">
+                                                        <span class="icon">
+                                                            <img src="../assets/images/icon-green/opt13.png" alt="">
+                                                        </span>
+                                                        Package Details
+                                                    </h5>
+                                                    <!-- <h5 class="mb-0 internet"data-toggle="collapse"
+                                                                        data-target="#collapseOne" aria-expanded="false"
+                                                                        aria-controls="collapseOne">
+                                                                        <span class="icon">
+                                                                            <img src="../assets/images/icon-green/opt13.png" alt="">
+                                                                        </span>
+                                                                        Package Details
+                                                                        <span>
+                                                                            <img src="../assets/images/down-arrow.png" alt="">
+                                                                        </span>
+                                                                    </h5> -->
+                                                </div>
+                                                <div id="collapseOne" class="collapse in" aria-labelledby="headingOne"
+                                                    data-parent="#packages" aria-expanded="false">
+                                                    <div class="card-body">
+                                                        <table class="table review-grid">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th></th>
+                                                                    <th>QTY</th>
+                                                                    <th>Unit Price</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td style="width:70%;">
+                                                                        <span>Business in a box</span>
+                                                                        <h4>Security Essential Plan</h4>
+                                                                        <small>12 Month Contract</small>
+                                                                    </td>
+                                                                    <td>x 1</td>
+                                                                    <td>1095 AED/Month</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div class="card-header" id="headingTwo">
+                                                    <h5 class="mb-0 internet">
+                                                        <span class="icon">
+                                                            <img src="../assets/images/icon-green/addon-icon.png"
+                                                                alt="">
+                                                        </span>
+                                                        Add-On Details
+                                                    </h5>
+                                                    <!-- <h5 class="mb-0 internet" data-toggle="collapse"
+                                                                        data-target="#collapseTwo" aria-expanded="false"
+                                                                        aria-controls="collapseTwo">
+                                                                        <span class="icon">
+                                                                            <img src="../assets/images/icon-green/addon-icon.png"
+                                                                                alt="">
+                                                                        </span>
+                                                                        Add-On Details
+                                                                        <span>
+                                                                            <img src="../assets/images/down-arrow.png" alt="">
+                                                                        </span>
+                                                                    </h5> -->
+                                                </div>
+                                                <div id="collapseTwo" class="collapse in" aria-labelledby="headingTwo"
+                                                    data-parent="#packages" aria-expanded="false">
+                                                    <div class="card-body">
+                                                        <table class="table review-grid">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th></th>
+                                                                    <th>QTY</th>
+                                                                    <th>Unit Price</th>
+                                                                    <th></th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td style="width:70%;">
+                                                                        <h4>User Voice Line</h4>
+                                                                        <small>12 Month Contract</small>
+                                                                    </td>
+                                                                    <td>x 10</td>
+                                                                    <td>1000 AED</td>
+                                                                    <td><a class="removeBtn" href="javascript:void(0)">Remove</a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width:70%;">
+                                                                        <h4>User Email</h4>
+                                                                        <small>Description of Email</small>
+                                                                    </td>
+                                                                    <td>x 10</td>
+                                                                    <td>150 AED</td>
+                                                                    <td><a class="removeBtn" href="javascript:void(0)">Remove</a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width:70%;">
+                                                                        <h4>User Data Backup (1TB)</h4>
+                                                                        <small>Description of User Data Backup</small>
+                                                                    </td>
+                                                                    <td>x 10</td>
+                                                                    <td>200 AED</td>
+                                                                    <td><a class="removeBtn" href="javascript:void(0)">Remove</a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width:70%;">
+                                                                        <h4>User Endpoint Security</h4>
+                                                                        <small>Description of User Data Backup</small>
+                                                                    </td>
+                                                                    <td>x 10</td>
+                                                                    <td>100 AED</td>
+                                                                    <td><a class="removeBtn" href="javascript:void(0)">Remove</a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width:70%;">
+                                                                        <h4>Cordless Phone</h4>
+                                                                    </td>
+                                                                    <td>x 1</td>
+                                                                    <td>13 AED</td>
+                                                                    <td><a class="removeBtn" href="javascript:void(0)">Remove</a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width:70%;">
+                                                                        <h4>Video Phone</h4>
+                                                                    </td>
+                                                                    <td>x 1</td>
+                                                                    <td>95 AED</td>
+                                                                    <td><a class="removeBtn" href="javascript:void(0)">Remove</a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width:70%;">
+                                                                        <h4>Deluse Phone</h4>
+                                                                    </td>
+                                                                    <td>x 1</td>
+                                                                    <td>15 AED</td>
+                                                                    <td><a class="removeBtn" href="javascript:void(0)">Remove</a></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+        
+        <div class="container-fluid">
+            <div class="row">
+                <div class="page-container">
+                    <section class="page-content inner-page">
+                        <div class="clearfix"></div>
+                        <div class="smart-wizard">
+                            <!-- Tabs -->
+                            <div class="swMain">
+                                <div class="swMain">
+                                    <div class="col-md-12 custom-container flex-box">
+                                        <div class="col-sm-12">
+                                            
+                                            <div class="col-md-12 custom-container corporate-accounts">
+                                                <div class="row">
+                                                    <div class="col-sm-10 col-sm-offset-1">
+                                                        <div id="packages" class="packages noTagLine">
+                                                            <div class="card">
+                                                                <div class="card-header">
+                                                                    <h5 class="mb-0 block">
+                                                                        <svg data-name="Слой 1" id="Слой_1" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg"><title/><path d="M64,24A12,12,0,1,1,76,12,12,12,0,0,1,64,24ZM64,4a8,8,0,1,0,8,8A8,8,0,0,0,64,4Z"/><path d="M64,128a12,12,0,1,1,12-12A12,12,0,0,1,64,128Zm0-20a8,8,0,1,0,8,8A8,8,0,0,0,64,108Z"/><path d="M64,58.67a12,12,0,1,1,12-12A12,12,0,0,1,64,58.67Zm0-20a8,8,0,1,0,8,8A8,8,0,0,0,64,38.67Z"/><path d="M64,93.33a12,12,0,1,1,12-12A12,12,0,0,1,64,93.33Zm0-20a8,8,0,1,0,8,8A8,8,0,0,0,64,73.33Z"/><path d="M29,24A12,12,0,1,1,41,12,12,12,0,0,1,29,24ZM29,4a8,8,0,1,0,8,8A8,8,0,0,0,29,4Z"/><path d="M29,58.67a12,12,0,1,1,12-12A12,12,0,0,1,29,58.67Zm0-20a8,8,0,1,0,8,8A8,8,0,0,0,29,38.67Z"/><path d="M29,93.33a12,12,0,1,1,12-12A12,12,0,0,1,29,93.33Zm0-20a8,8,0,1,0,8,8A8,8,0,0,0,29,73.33Z"/><path d="M99,24a12,12,0,1,1,12-12A12,12,0,0,1,99,24ZM99,4a8,8,0,1,0,8,8A8,8,0,0,0,99,4Z"/><path d="M99,58.67a12,12,0,1,1,12-12A12,12,0,0,1,99,58.67Zm0-20a8,8,0,1,0,8,8A8,8,0,0,0,99,38.67Z"/><path d="M99,93.33a12,12,0,1,1,12-12A12,12,0,0,1,99,93.33Zm0-20a8,8,0,1,0,8,8A8,8,0,0,0,99,73.33Z"/></svg>
+                                                                        Site Addon
+                                                                        <small></small>    
+                                                                        <a class="changeBtn" href="javascript:void(0);" style="display: none;">Change</a>                                                    
+                                                                    </h5>
+                                                                </div>
+                                                                <div class="collapse in">
+                                                                    <div class="card-body">
+                                                                        <div class="account-container text-left">
+                                                                            <div class="tab-cont">
+                                                                                <ul class="nav nav-tabs" role="tablist">
+                                                                                    <li role="presentation" id="underlayTab" class="active"><a href="#blocks-grid" aria-controls="home" role="tab" data-toggle="tab">BLOCKS</a></li>
+                                                                                </ul>
+                                                                                <!-- Tab panes -->
+                                                                                <div class="tab-content">
+                                                                                    <div role="tabpanel" class="tab-pane active" id="blocks-grid">
+                                                                                        <div class="tab-cont">
+                                                                                            <div class="row">
+                                                                                                <div class="col-sm-12">
+                                                                                                    <div class="alert alert-info" style="margin:20px 0; padding:10px;">
+                                                                                                        Number Range Start must with End digit as 00 eg. 0XXXX X00
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="col-sm-4">
+                                                                                                    <div class="form-group">
+                                                                                                        <label>Number Range Start</label>
+                                                                                                        <input value="" type="text">
+                                                                                                    </div>                                                                            
+                                                                                                </div>
+                                                                                                <div class="col-sm-4">
+                                                                                                    <div class="form-group">
+                                                                                                        <label>Region</label>
+                                                                                                        <select class="selectpicker">
+                                                                                                            <option>Dubai</option>
+                                                                                                            <option>AbuDhabi</option>
+                                                                                                        </select>
+                                                                                                    </div>                                                                            
+                                                                                                </div>
+                                                                                                <div class="col-sm-4">
+                                                                                                    <div class="form-group">
+                                                                                                        <label>Region</label>
+                                                                                                        <select class="selectpicker">
+                                                                                                            <option>50 Number Blocks</option>
+                                                                                                            <option>1</option>
+                                                                                                            <option>2</option>
+                                                                                                            <option>5</option>
+                                                                                                            <option>10</option>
+                                                                                                            <option>20</option>
+                                                                                                            <option>30</option>
+                                                                                                            <option>50</option>
+                                                                                                        </select>
+                                                                                                    </div>                                                                            
+                                                                                                </div>
+                                                                                                <div class="col-sm-12">
+                                                                                                    <div class="btn-box-alone text-right btn-box-alone">
+                                                                                                        <button class="default-btn">Search</button>
+                                                                                                        <button class="default-btn">Refresh</button>
+                                                                                                    </div>
+                                                                                                    
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="search-grid">                                                                        
+                                                                                                <ul class="number-list">
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432100
+                                                                                                            <small>(100 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">Free</span>
+                                                                                                        </span>                                                                                
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432200
+                                                                                                            <small>(100 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">+225 AED</span>
+                                                                                                        </span>                                                                            
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432300
+                                                                                                            <small>(50 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">+325 AED</span>
+                                                                                                        </span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432400
+                                                                                                            <small>(100 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">+425 AED</span>
+                                                                                                        </span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432200
+                                                                                                            <small>(50 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">+525 AED</span>
+                                                                                                        </span>
+                                                                                                        
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432200
+                                                                                                            <small>(100 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">+625 AED</span>
+                                                                                                        </span>                                                                                
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432200
+                                                                                                            <small>(100 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">+725 AED</span>
+                                                                                                        </span>
+                                                                                                        
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432200
+                                                                                                            <small>(50 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">+825 AED</span>
+                                                                                                        </span>                                                                                
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432200
+                                                                                                            <small>(100 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">+725 AED</span>
+                                                                                                        </span>
+                                                                                                        
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432200
+                                                                                                            <small>(100 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">+825 AED</span>
+                                                                                                        </span>                                                                                
+                                                                                                    </li>
+                        
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432100
+                                                                                                            <small>(50 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">Free</span>
+                                                                                                        </span>                                                                                
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432200
+                                                                                                            <small>(100 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">+225 AED</span>
+                                                                                                        </span>                                                                            
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432300
+                                                                                                            <small>(100 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">+325 AED</span>
+                                                                                                        </span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432400
+                                                                                                            <small>(50 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">+425 AED</span>
+                                                                                                        </span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432200
+                                                                                                            <small>(50 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">+525 AED</span>
+                                                                                                        </span>
+                                                                                                        
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432200
+                                                                                                            <small>(100 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">+625 AED</span>
+                                                                                                        </span>                                                                                
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432200
+                                                                                                            <small>(100 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">+725 AED</span>
+                                                                                                        </span>
+                                                                                                        
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432200
+                                                                                                            <small>(100 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">+825 AED</span>
+                                                                                                        </span>                                                                                
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432200
+                                                                                                            <small>(100 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">+725 AED</span>
+                                                                                                        </span>
+                                                                                                        
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432200
+                                                                                                            <small>(100 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">+825 AED</span>
+                                                                                                        </span>                                                                                
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432100
+                                                                                                            <small>(100 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">Free</span>
+                                                                                                        </span>                                                                                
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432200
+                                                                                                            <small>(100 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">+225 AED</span>
+                                                                                                        </span>                                                                            
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432300
+                                                                                                            <small>(100 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">+325 AED</span>
+                                                                                                        </span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432400
+                                                                                                            <small>(100 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">+425 AED</span>
+                                                                                                        </span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432200
+                                                                                                            <small>(100 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">+525 AED</span>
+                                                                                                        </span>
+                                                                                                        
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432200
+                                                                                                            <small>(100 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">+625 AED</span>
+                                                                                                        </span>                                                                                
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432200
+                                                                                                            <small>(100 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">+725 AED</span>
+                                                                                                        </span>
+                                                                                                        
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432200
+                                                                                                            <small>(100 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">+825 AED</span>
+                                                                                                        </span>                                                                                
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432200
+                                                                                                            <small>(100 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">+725 AED</span>
+                                                                                                        </span>
+                                                                                                        
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432200
+                                                                                                            <small>(100 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">+825 AED</span>
+                                                                                                        </span>                                                                                
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432100
+                                                                                                            <small>(100 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">Free</span>
+                                                                                                        </span>                                                                                
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432200
+                                                                                                            <small>(100 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">+225 AED</span>
+                                                                                                        </span>                                                                            
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432300
+                                                                                                            <small>(100 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">+325 AED</span>
+                                                                                                        </span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432400
+                                                                                                            <small>(100 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">+425 AED</span>
+                                                                                                        </span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432200
+                                                                                                            <small>(100 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">+525 AED</span>
+                                                                                                        </span>
+                                                                                                        
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432200
+                                                                                                            <small>(100 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">+625 AED</span>
+                                                                                                        </span>                                                                                
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432200
+                                                                                                            <small>(100 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">+725 AED</span>
+                                                                                                        </span>
+                                                                                                        
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432200
+                                                                                                            <small>(100 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">+825 AED</span>
+                                                                                                        </span>                                                                                
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432200
+                                                                                                            <small>(100 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">+725 AED</span>
+                                                                                                        </span>
+                                                                                                        
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432200
+                                                                                                            <small>(100 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">+825 AED</span>
+                                                                                                        </span>                                                                                
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432100
+                                                                                                            <small>(100 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">Free</span>
+                                                                                                        </span>                                                                                
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432200
+                                                                                                            <small>(100 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">+225 AED</span>
+                                                                                                        </span>                                                                            
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432300
+                                                                                                            <small>(100 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">+325 AED</span>
+                                                                                                        </span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432400
+                                                                                                            <small>(100 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">+425 AED</span>
+                                                                                                        </span>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432200
+                                                                                                            <small>(100 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">+525 AED</span>
+                                                                                                        </span>
+                                                                                                        
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432200
+                                                                                                            <small>(100 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">+625 AED</span>
+                                                                                                        </span>                                                                                
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432200
+                                                                                                            <small>(100 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">+725 AED</span>
+                                                                                                        </span>
+                                                                                                        
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432200
+                                                                                                            <small>(100 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">+825 AED</span>
+                                                                                                        </span>                                                                                
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432200
+                                                                                                            <small>(100 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">+725 AED</span>
+                                                                                                        </span>
+                                                                                                        
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <span>
+                                                                                                            04321 XXX- 0432200
+                                                                                                            <small>(100 Numbers)</small>
+                                                                                                            <span style="display:none;" class="price-box">+825 AED</span>
+                                                                                                        </span>                                                                                
+                                                                                                    </li>
+                                                                                                </ul>
+                                                                                                
+                                                                                            </div>
+                                                                                            <div class="btn-box-alone text-right">
+                                                                                                <button disabled="" class="default-btn next-btn">Next</button>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>                                                              
+                                                                                </div> 
+                                                                                
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="card">
+                                                                <div class="card-header">
+                                                                    <h5 class="mb-0 block collapsed">
+                                                                        <svg data-name="Слой 1" id="Слой_1" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg"><title/><path d="M64,24A12,12,0,1,1,76,12,12,12,0,0,1,64,24ZM64,4a8,8,0,1,0,8,8A8,8,0,0,0,64,4Z"/><path d="M64,128a12,12,0,1,1,12-12A12,12,0,0,1,64,128Zm0-20a8,8,0,1,0,8,8A8,8,0,0,0,64,108Z"/><path d="M64,58.67a12,12,0,1,1,12-12A12,12,0,0,1,64,58.67Zm0-20a8,8,0,1,0,8,8A8,8,0,0,0,64,38.67Z"/><path d="M64,93.33a12,12,0,1,1,12-12A12,12,0,0,1,64,93.33Zm0-20a8,8,0,1,0,8,8A8,8,0,0,0,64,73.33Z"/><path d="M29,24A12,12,0,1,1,41,12,12,12,0,0,1,29,24ZM29,4a8,8,0,1,0,8,8A8,8,0,0,0,29,4Z"/><path d="M29,58.67a12,12,0,1,1,12-12A12,12,0,0,1,29,58.67Zm0-20a8,8,0,1,0,8,8A8,8,0,0,0,29,38.67Z"/><path d="M29,93.33a12,12,0,1,1,12-12A12,12,0,0,1,29,93.33Zm0-20a8,8,0,1,0,8,8A8,8,0,0,0,29,73.33Z"/><path d="M99,24a12,12,0,1,1,12-12A12,12,0,0,1,99,24ZM99,4a8,8,0,1,0,8,8A8,8,0,0,0,99,4Z"/><path d="M99,58.67a12,12,0,1,1,12-12A12,12,0,0,1,99,58.67Zm0-20a8,8,0,1,0,8,8A8,8,0,0,0,99,38.67Z"/><path d="M99,93.33a12,12,0,1,1,12-12A12,12,0,0,1,99,93.33Zm0-20a8,8,0,1,0,8,8A8,8,0,0,0,99,73.33Z"/></svg>
+                                                                        User Addon
+                                                                        <small></small>    
+                                                                        <a class="changeBtn" href="javascript:void(0);" style="display: none;">Change</a>                                                    
+                                                                    </h5>
+                                                                </div>
+                                                                <div class="collapse">
+                                                                    <div class="card-body">
+                                                                        <div class="account-container text-left">
+                                                                            <div class="tab-cont">
+                                                                                <ul class="nav nav-tabs" role="tablist">
+                                                                                    <li role="presentation" class="active"><a href="#userpack" aria-controls="userpack" role="tab" data-toggle="tab">USER PACKAGE</a></li>
+                                                                                    <li role="presentation"><a href="#phonedevi" aria-controls="phonedevi" role="tab" data-toggle="tab">PHONE DEVICE</a></li>
+                                                                                    <li role="presentation"><a href="#optin" aria-controls="optin" role="tab" data-toggle="tab">OPTP IN PLAN</a></li>
+                                                                                </ul>
+                                                                                <!-- Tab panes -->
+                                                                                <div class="tab-content" style="padding: 25px 0 0;">
+                                                                                    <div role="tabpanel" class="tab-pane active" id="userpack">
+                                                                                        <div class="row">
+                                                                                            <div class="col-md-12">
+                                                                                                <div class="addon-box Devices expanable">
+                                                                                                    <div class="row">
+                                                                                                        <div class="col-sm-6">
+                                                                                                            <h4 class="km-mt-7">Cloud Talk Enterprise Conference 100</h4>
+                                                                                                            <small class="added-item">Add-On has been added to the cart</small>
+                                                                                                        </div>
+                                                                                                        <div class="col-sm-2">
+                                                                                                            <div title="User Voice Line" class="input-group number-spinner">
+                                                                                                                <span class="input-group-btn">
+                                                                                                                    <button class="btn btn-default row-btn" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                                                                </span>
+                                                                                                                <input max="10" type="text" class="form-control text-center" value="0">
+                                                                                                                <span class="input-group-btn">
+                                                                                                                    <button class="btn btn-default row-btn" data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                                                                </span>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-sm-4">
+                                                                                                            <div class="price-box">
+                                                                                                                <strong>7</strong>
+                                                                                                                AED / Month
+                                                                                                                <br>
+                                                                                                                <small>5% VAT Exc.</small>
+                                                                                                                
+                                                                                                            </div>
+                                                                                                            <a style="display: none;" href="javascript:void(0);" title="Modify Add-On" class="modifyBtn">
+                                                                                                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                                                                                            </a>
+                                                                                                            <a class="cart-btn-icon" href="javascript:void(0);">Add
+                                                                                                                to Cart</a>
+                                                                                                            <a style="display: none;" class="remove-btn-icon-pop" data-toggle="modal" data-target="#confModal02" href="javascript:void(0);" title="Add-On has been added to the cart">Remove</a>
+                                                                                                            <a class="expandIcon" href="javascript:void(0);"></a>
+                                                                                                            
+                                                                                                            <div class="modal" id="confModal02" tabindex="-1" role="dialog" aria-labelledby="confModalLabel">
+                                                                                                                <div class="modal-dialog" role="document">
+                                                                                                                    <div class="modal-content">
+                                                                                                                        <div class="modal-header">
+                                                                                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                                                                                                            <h4 class="modal-title" id="tcModalLabel">Warning</h4>
+                                                                                                                        </div>
+                                                                                                                        <div class="modal-body">
+                                                                                                                            <h4 class="text-center">
+                                                                                                                                <span class="success">
+                                                                                                                                 <i class="fa fa-warning" aria-hidden="true"></i>
+                                                                                                                                </span>
+                                                                                                                                Are you sure you want to delete this Add-On?
+                                                                                                                             </h4>
+                                                                                                                             <small class="red-text text-center"></small>
+                                                                                                                        </div>
+                                                                                                                        <div class="modal-footer">
+                                                                                                                            <button type="button" class="btn btn-default" data-dismiss="modal" data-scroll-to="#collapseSign" data-scroll-focus="#collapseSign">Cancel</button>
+                                                                                                                            <button type="button" class="btn btn-default confBtn" data-dismiss="modal" data-scroll-to="#collapseSign" data-scroll-focus="#collapseSign">Proceed</button>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="hidden-fields">
+                                                                                                        <div class="btn-box text-right">
+                                                                                                            <button class="cancelBtn default-btn">Cancel</button>
+                                                                                                            <button class="saveBtn default-btn">Save</button>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="addon-box Devices expanable">
+                                                                                                    <div class="row">
+                                                                                                        <div class="col-sm-6">
+                                                                                                            <h4 class="km-mt-7">Cloud Talk Enterprise Communicate</h4>
+                                                                                                            <small class="added-item">Add-On has been added to the cart</small>
+                                                                                                        </div>
+                                                                                                        <div class="col-sm-2">
+                                                                                                            <div title="User Voice Line" class="input-group number-spinner">
+                                                                                                                <span class="input-group-btn">
+                                                                                                                    <button class="btn btn-default row-btn" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                                                                </span>
+                                                                                                                <input max="10" type="text" class="form-control text-center" value="0">
+                                                                                                                <span class="input-group-btn">
+                                                                                                                    <button class="btn btn-default row-btn" data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                                                                </span>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-sm-4">
+                                                                                                            <div class="price-box">
+                                                                                                                <strong>10</strong>
+                                                                                                                AED / Month
+                                                                                                                <br>
+                                                                                                                <small>5% VAT Exc.</small>
+                                                                                                                
+                                                                                                            </div>
+                                                                                                            <a style="display: none;" href="javascript:void(0);" title="Modify Add-On" class="modifyBtn">
+                                                                                                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                                                                                            </a>
+                                                                                                            <a class="cart-btn-icon" href="javascript:void(0);">Add
+                                                                                                                to Cart</a>
+                                                                                                            <a style="display: none;" class="remove-btn-icon-pop" data-toggle="modal" data-target="#confModal22" href="javascript:void(0);" title="Add-On has been added to the cart">Remove</a>
+                                                                                                            <a class="expandIcon" href="javascript:void(0);"></a>
+                                                                                                            
+                                                                                                            <div class="modal" id="confModal22" tabindex="-1" role="dialog" aria-labelledby="confModalLabel">
+                                                                                                                <div class="modal-dialog" role="document">
+                                                                                                                    <div class="modal-content">
+                                                                                                                        <div class="modal-header">
+                                                                                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                                                                                                            <h4 class="modal-title" id="tcModalLabel">Warning</h4>
+                                                                                                                        </div>
+                                                                                                                        <div class="modal-body">
+                                                                                                                            <h4 class="text-center">
+                                                                                                                                <span class="success">
+                                                                                                                                 <i class="fa fa-warning" aria-hidden="true"></i>
+                                                                                                                                </span>
+                                                                                                                                Are you sure you want to delete this Add-On?
+                                                                                                                             </h4>
+                                                                                                                             <small class="red-text text-center"></small>
+                                                                                                                        </div>
+                                                                                                                        <div class="modal-footer">
+                                                                                                                            <button type="button" class="btn btn-default" data-dismiss="modal" data-scroll-to="#collapseSign" data-scroll-focus="#collapseSign">Cancel</button>
+                                                                                                                            <button type="button" class="btn btn-default confBtn" data-dismiss="modal" data-scroll-to="#collapseSign" data-scroll-focus="#collapseSign">Proceed</button>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="hidden-fields">
+                                                                                                        <div class="btn-box text-right">
+                                                                                                            <button class="cancelBtn default-btn">Cancel</button>
+                                                                                                            <button class="saveBtn default-btn">Save</button>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="addon-box Devices expanable">
+                                                                                                    <div class="row">
+                                                                                                        <div class="col-sm-6">
+                                                                                                            <h4 class="km-mt-7">Cloud Talk Enterprise Basic</h4>
+                                                                                                            <small class="added-item">Add-On has been added to the cart</small>
+                                                                                                        </div>
+                                                                                                        <div class="col-sm-2">
+                                                                                                            <div title="User Voice Line" class="input-group number-spinner">
+                                                                                                                <span class="input-group-btn">
+                                                                                                                    <button class="btn btn-default row-btn" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                                                                </span>
+                                                                                                                <input max="10" type="text" class="form-control text-center" value="0">
+                                                                                                                <span class="input-group-btn">
+                                                                                                                    <button class="btn btn-default row-btn" data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                                                                </span>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-sm-4">
+                                                                                                            <div class="price-box">
+                                                                                                                <strong>28</strong>
+                                                                                                                AED / Month
+                                                                                                                <br>
+                                                                                                                <small>5% VAT Exc.</small>
+                                                                                                                
+                                                                                                            </div>
+                                                                                                            <a style="display: none;" href="javascript:void(0);" title="Modify Add-On" class="modifyBtn">
+                                                                                                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                                                                                            </a>
+                                                                                                            <a class="cart-btn-icon" href="javascript:void(0);">Add
+                                                                                                                to Cart</a>
+                                                                                                            <a style="display: none;" class="remove-btn-icon-pop" data-toggle="modal" data-target="#confModal33" href="javascript:void(0);" title="Add-On has been added to the cart">Remove</a>
+                                                                                                            <a class="expandIcon" href="javascript:void(0);"></a>
+                                                                                                            
+                                                                                                            <div class="modal" id="confModal33" tabindex="-1" role="dialog" aria-labelledby="confModalLabel">
+                                                                                                                <div class="modal-dialog" role="document">
+                                                                                                                    <div class="modal-content">
+                                                                                                                        <div class="modal-header">
+                                                                                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                                                                                                            <h4 class="modal-title" id="tcModalLabel">Warning</h4>
+                                                                                                                        </div>
+                                                                                                                        <div class="modal-body">
+                                                                                                                            <h4 class="text-center">
+                                                                                                                                <span class="success">
+                                                                                                                                 <i class="fa fa-warning" aria-hidden="true"></i>
+                                                                                                                                </span>
+                                                                                                                                Are you sure you want to delete this Add-On?
+                                                                                                                             </h4>
+                                                                                                                             <small class="red-text text-center"></small>
+                                                                                                                        </div>
+                                                                                                                        <div class="modal-footer">
+                                                                                                                            <button type="button" class="btn btn-default" data-dismiss="modal" data-scroll-to="#collapseSign" data-scroll-focus="#collapseSign">Cancel</button>
+                                                                                                                            <button type="button" class="btn btn-default confBtn" data-dismiss="modal" data-scroll-to="#collapseSign" data-scroll-focus="#collapseSign">Proceed</button>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="hidden-fields">
+                                                                                                        <div class="btn-box text-right">
+                                                                                                            <button class="cancelBtn default-btn">Cancel</button>
+                                                                                                            <button class="saveBtn default-btn">Save</button>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="addon-box Devices expanable">
+                                                                                                    <div class="row">
+                                                                                                        <div class="col-sm-6">
+                                                                                                            <h4 class="km-mt-7">IVR</h4>
+                                                                                                            <small class="added-item">Add-On has been added to the cart</small>
+                                                                                                        </div>
+                                                                                                        <div class="col-sm-2">
+                                                                                                            <div title="User Voice Line" class="input-group number-spinner">
+                                                                                                                <span class="input-group-btn">
+                                                                                                                    <button class="btn btn-default row-btn" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                                                                </span>
+                                                                                                                <input max="10" type="text" class="form-control text-center" value="0">
+                                                                                                                <span class="input-group-btn">
+                                                                                                                    <button class="btn btn-default row-btn" data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                                                                </span>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-sm-4">
+                                                                                                            <div class="price-box">
+                                                                                                                <strong>318</strong>
+                                                                                                                AED / Month
+                                                                                                                <br>
+                                                                                                                <small>5% VAT Exc.</small>
+                                                                                                                
+                                                                                                            </div>
+                                                                                                            <a style="display: none;" href="javascript:void(0);" title="Modify Add-On" class="modifyBtn">
+                                                                                                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                                                                                            </a>
+                                                                                                            <a class="cart-btn-icon" href="javascript:void(0);">Add
+                                                                                                                to Cart</a>
+                                                                                                            <a style="display: none;" class="remove-btn-icon-pop" data-toggle="modal" data-target="#confModal44" href="javascript:void(0);" title="Add-On has been added to the cart">Remove</a>
+                                                                                                            <a class="expandIcon" href="javascript:void(0);"></a>
+                                                                                                            
+                                                                                                            <div class="modal" id="confModal44" tabindex="-1" role="dialog" aria-labelledby="confModalLabel">
+                                                                                                                <div class="modal-dialog" role="document">
+                                                                                                                    <div class="modal-content">
+                                                                                                                        <div class="modal-header">
+                                                                                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                                                                                                            <h4 class="modal-title" id="tcModalLabel">Warning</h4>
+                                                                                                                        </div>
+                                                                                                                        <div class="modal-body">
+                                                                                                                            <h4 class="text-center">
+                                                                                                                                <span class="success">
+                                                                                                                                 <i class="fa fa-warning" aria-hidden="true"></i>
+                                                                                                                                </span>
+                                                                                                                                Are you sure you want to delete this Add-On?
+                                                                                                                             </h4>
+                                                                                                                             <small class="red-text text-center"></small>
+                                                                                                                        </div>
+                                                                                                                        <div class="modal-footer">
+                                                                                                                            <button type="button" class="btn btn-default" data-dismiss="modal" data-scroll-to="#collapseSign" data-scroll-focus="#collapseSign">Cancel</button>
+                                                                                                                            <button type="button" class="btn btn-default confBtn" data-dismiss="modal" data-scroll-to="#collapseSign" data-scroll-focus="#collapseSign">Proceed</button>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="hidden-fields">
+                                                                                                        <div class="btn-box text-right">
+                                                                                                            <button class="cancelBtn default-btn">Cancel</button>
+                                                                                                            <button class="saveBtn default-btn">Save</button>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div> 
+                                                                                    </div>   
+                                                                                    <div role="tabpanel" class="tab-pane" id="phonedevi">
+                                                                                        <div class="ctLink-forms">
+                                                                                            <div class="row">
+                                                                                                <div class="col-sm-12">
+                                                                                                    <div class="addon-box Devices expanable">
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-sm-6">
+                                                                                                                <h4 class="km-mt-7">IP Phone - Yealink - T24S For 5 Years</h4>
+                                                                                                                <small class="added-item">Add-On has been added to the cart</small>
+                                                                                                            </div>
+                                                                                                            <div class="col-sm-2">
+                                                                                                                <div title="User Voice Line" class="input-group number-spinner">
+                                                                                                                    <span class="input-group-btn">
+                                                                                                                        <button class="btn btn-default row-btn" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                                                                    </span>
+                                                                                                                    <input max="10" type="text" class="form-control text-center" value="0">
+                                                                                                                    <span class="input-group-btn">
+                                                                                                                        <button class="btn btn-default row-btn" data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                                                                    </span>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                            <div class="col-sm-4">
+                                                                                                                <div class="price-box">
+                                                                                                                    <strong>7</strong>
+                                                                                                                    AED / Month
+                                                                                                                    <br>
+                                                                                                                    <small>5% VAT Exc.</small>
+                                                                                                                    
+                                                                                                                </div>
+                                                                                                                <a style="display: none;" href="javascript:void(0);" title="Modify Add-On" class="modifyBtn">
+                                                                                                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                                                                                                </a>
+                                                                                                                <a class="cart-btn-icon" href="javascript:void(0);">Add
+                                                                                                                    to Cart</a>
+                                                                                                                <a style="display: none;" class="remove-btn-icon-pop" data-toggle="modal" data-target="#confModal55" href="javascript:void(0);" title="Add-On has been added to the cart">Remove</a>
+                                                                                                                <a class="expandIcon" href="javascript:void(0);"></a>
+                                                                                                                
+                                                                                                                <div class="modal" id="confModal55" tabindex="-1" role="dialog" aria-labelledby="confModalLabel">
+                                                                                                                    <div class="modal-dialog" role="document">
+                                                                                                                        <div class="modal-content">
+                                                                                                                            <div class="modal-header">
+                                                                                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                                                                                                                <h4 class="modal-title" id="tcModalLabel">Warning</h4>
+                                                                                                                            </div>
+                                                                                                                            <div class="modal-body">
+                                                                                                                                <h4 class="text-center">
+                                                                                                                                    <span class="success">
+                                                                                                                                     <i class="fa fa-warning" aria-hidden="true"></i>
+                                                                                                                                    </span>
+                                                                                                                                    Are you sure you want to delete this Add-On?
+                                                                                                                                 </h4>
+                                                                                                                                 <small class="red-text text-center"></small>
+                                                                                                                            </div>
+                                                                                                                            <div class="modal-footer">
+                                                                                                                                <button type="button" class="btn btn-default" data-dismiss="modal" data-scroll-to="#collapseSign" data-scroll-focus="#collapseSign">Cancel</button>
+                                                                                                                                <button type="button" class="btn btn-default confBtn" data-dismiss="modal" data-scroll-to="#collapseSign" data-scroll-focus="#collapseSign">Proceed</button>
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="hidden-fields">
+                                                                                                            <div class="btn-box text-right">
+                                                                                                                <button class="cancelBtn default-btn">Cancel</button>
+                                                                                                                <button class="saveBtn default-btn">Save</button>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="addon-box Devices expanable">
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-sm-6">
+                                                                                                                <h4 class="km-mt-7">IP Phone - Yealink - T48S For 5 Years</h4>
+                                                                                                                <small class="added-item">Add-On has been added to the cart</small>
+                                                                                                            </div>
+                                                                                                            <div class="col-sm-2">
+                                                                                                                <div title="User Voice Line" class="input-group number-spinner">
+                                                                                                                    <span class="input-group-btn">
+                                                                                                                        <button class="btn btn-default row-btn" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                                                                    </span>
+                                                                                                                    <input max="10" type="text" class="form-control text-center" value="0">
+                                                                                                                    <span class="input-group-btn">
+                                                                                                                        <button class="btn btn-default row-btn" data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                                                                    </span>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                            <div class="col-sm-4">
+                                                                                                                <div class="price-box">
+                                                                                                                    <strong>10</strong>
+                                                                                                                    AED / Month
+                                                                                                                    <br>
+                                                                                                                    <small>5% VAT Exc.</small>
+                                                                                                                    
+                                                                                                                </div>
+                                                                                                                <a style="display: none;" href="javascript:void(0);" title="Modify Add-On" class="modifyBtn">
+                                                                                                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                                                                                                </a>
+                                                                                                                <a class="cart-btn-icon" href="javascript:void(0);">Add
+                                                                                                                    to Cart</a>
+                                                                                                                <a style="display: none;" class="remove-btn-icon-pop" data-toggle="modal" data-target="#confModal66" href="javascript:void(0);" title="Add-On has been added to the cart">Remove</a>
+                                                                                                                <a class="expandIcon" href="javascript:void(0);"></a>
+                                                                                                                
+                                                                                                                <div class="modal" id="confModal66" tabindex="-1" role="dialog" aria-labelledby="confModalLabel">
+                                                                                                                    <div class="modal-dialog" role="document">
+                                                                                                                        <div class="modal-content">
+                                                                                                                            <div class="modal-header">
+                                                                                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                                                                                                                <h4 class="modal-title" id="tcModalLabel">Warning</h4>
+                                                                                                                            </div>
+                                                                                                                            <div class="modal-body">
+                                                                                                                                <h4 class="text-center">
+                                                                                                                                    <span class="success">
+                                                                                                                                     <i class="fa fa-warning" aria-hidden="true"></i>
+                                                                                                                                    </span>
+                                                                                                                                    Are you sure you want to delete this Add-On?
+                                                                                                                                 </h4>
+                                                                                                                                 <small class="red-text text-center"></small>
+                                                                                                                            </div>
+                                                                                                                            <div class="modal-footer">
+                                                                                                                                <button type="button" class="btn btn-default" data-dismiss="modal" data-scroll-to="#collapseSign" data-scroll-focus="#collapseSign">Cancel</button>
+                                                                                                                                <button type="button" class="btn btn-default confBtn" data-dismiss="modal" data-scroll-to="#collapseSign" data-scroll-focus="#collapseSign">Proceed</button>
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="hidden-fields">
+                                                                                                            <div class="btn-box text-right">
+                                                                                                                <button class="cancelBtn default-btn">Cancel</button>
+                                                                                                                <button class="saveBtn default-btn">Save</button>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="addon-box Devices expanable">
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-sm-6">
+                                                                                                                <h4 class="km-mt-7">IP Phone - Yealink - T64S For 5 Years</h4>
+                                                                                                                <small class="added-item">Add-On has been added to the cart</small>
+                                                                                                            </div>
+                                                                                                            <div class="col-sm-2">
+                                                                                                                <div title="User Voice Line" class="input-group number-spinner">
+                                                                                                                    <span class="input-group-btn">
+                                                                                                                        <button class="btn btn-default row-btn" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                                                                    </span>
+                                                                                                                    <input max="10" type="text" class="form-control text-center" value="0">
+                                                                                                                    <span class="input-group-btn">
+                                                                                                                        <button class="btn btn-default row-btn" data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                                                                    </span>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                            <div class="col-sm-4">
+                                                                                                                <div class="price-box">
+                                                                                                                    <strong>28</strong>
+                                                                                                                    AED / Month
+                                                                                                                    <br>
+                                                                                                                    <small>5% VAT Exc.</small>
+                                                                                                                    
+                                                                                                                </div>
+                                                                                                                <a style="display: none;" href="javascript:void(0);" title="Modify Add-On" class="modifyBtn">
+                                                                                                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                                                                                                </a>
+                                                                                                                <a class="cart-btn-icon" href="javascript:void(0);">Add
+                                                                                                                    to Cart</a>
+                                                                                                                <a style="display: none;" class="remove-btn-icon-pop" data-toggle="modal" data-target="#confModal77" href="javascript:void(0);" title="Add-On has been added to the cart">Remove</a>
+                                                                                                                <a class="expandIcon" href="javascript:void(0);"></a>
+                                                                                                                
+                                                                                                                <div class="modal" id="confModal77" tabindex="-1" role="dialog" aria-labelledby="confModalLabel">
+                                                                                                                    <div class="modal-dialog" role="document">
+                                                                                                                        <div class="modal-content">
+                                                                                                                            <div class="modal-header">
+                                                                                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                                                                                                                <h4 class="modal-title" id="tcModalLabel">Warning</h4>
+                                                                                                                            </div>
+                                                                                                                            <div class="modal-body">
+                                                                                                                                <h4 class="text-center">
+                                                                                                                                    <span class="success">
+                                                                                                                                     <i class="fa fa-warning" aria-hidden="true"></i>
+                                                                                                                                    </span>
+                                                                                                                                    Are you sure you want to delete this Add-On?
+                                                                                                                                 </h4>
+                                                                                                                                 <small class="red-text text-center"></small>
+                                                                                                                            </div>
+                                                                                                                            <div class="modal-footer">
+                                                                                                                                <button type="button" class="btn btn-default" data-dismiss="modal" data-scroll-to="#collapseSign" data-scroll-focus="#collapseSign">Cancel</button>
+                                                                                                                                <button type="button" class="btn btn-default confBtn" data-dismiss="modal" data-scroll-to="#collapseSign" data-scroll-focus="#collapseSign">Proceed</button>
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="hidden-fields">
+                                                                                                            <div class="btn-box text-right">
+                                                                                                                <button class="cancelBtn default-btn">Cancel</button>
+                                                                                                                <button class="saveBtn default-btn">Save</button>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="addon-box Devices expanable">
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-sm-6">
+                                                                                                                <h4 class="km-mt-7">Yealink - T31G 1 Year</h4>
+                                                                                                                <small class="added-item">Add-On has been added to the cart</small>
+                                                                                                            </div>
+                                                                                                            <div class="col-sm-2">
+                                                                                                                <div title="User Voice Line" class="input-group number-spinner">
+                                                                                                                    <span class="input-group-btn">
+                                                                                                                        <button class="btn btn-default row-btn" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                                                                    </span>
+                                                                                                                    <input max="10" type="text" class="form-control text-center" value="0">
+                                                                                                                    <span class="input-group-btn">
+                                                                                                                        <button class="btn btn-default row-btn" data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                                                                    </span>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                            <div class="col-sm-4">
+                                                                                                                <div class="price-box">
+                                                                                                                    <strong>318</strong>
+                                                                                                                    AED / Month
+                                                                                                                    <br>
+                                                                                                                    <small>5% VAT Exc.</small>
+                                                                                                                    
+                                                                                                                </div>
+                                                                                                                <a style="display: none;" href="javascript:void(0);" title="Modify Add-On" class="modifyBtn">
+                                                                                                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                                                                                                </a>
+                                                                                                                <a class="cart-btn-icon" href="javascript:void(0);">Add
+                                                                                                                    to Cart</a>
+                                                                                                                <a style="display: none;" class="remove-btn-icon-pop" data-toggle="modal" data-target="#confModal88" href="javascript:void(0);" title="Add-On has been added to the cart">Remove</a>
+                                                                                                                <a class="expandIcon" href="javascript:void(0);"></a>
+                                                                                                                
+                                                                                                                <div class="modal" id="confModal88" tabindex="-1" role="dialog" aria-labelledby="confModalLabel">
+                                                                                                                    <div class="modal-dialog" role="document">
+                                                                                                                        <div class="modal-content">
+                                                                                                                            <div class="modal-header">
+                                                                                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                                                                                                                <h4 class="modal-title" id="tcModalLabel">Warning</h4>
+                                                                                                                            </div>
+                                                                                                                            <div class="modal-body">
+                                                                                                                                <h4 class="text-center">
+                                                                                                                                    <span class="success">
+                                                                                                                                     <i class="fa fa-warning" aria-hidden="true"></i>
+                                                                                                                                    </span>
+                                                                                                                                    Are you sure you want to delete this Add-On?
+                                                                                                                                 </h4>
+                                                                                                                                 <small class="red-text text-center"></small>
+                                                                                                                            </div>
+                                                                                                                            <div class="modal-footer">
+                                                                                                                                <button type="button" class="btn btn-default" data-dismiss="modal" data-scroll-to="#collapseSign" data-scroll-focus="#collapseSign">Cancel</button>
+                                                                                                                                <button type="button" class="btn btn-default confBtn" data-dismiss="modal" data-scroll-to="#collapseSign" data-scroll-focus="#collapseSign">Proceed</button>
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="hidden-fields">
+                                                                                                            <div class="btn-box text-right">
+                                                                                                                <button class="cancelBtn default-btn">Cancel</button>
+                                                                                                                <button class="saveBtn default-btn">Save</button>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div> 
+                                                                                    </div>  
+                                                                                    <div role="tabpanel" class="tab-pane" id="optin">
+                                                                                        <div class="row">
+                                                                                            <div class="col-sm-12">
+                                                                                                <div class="addon-box Devices expanable">
+                                                                                                    <div class="row">
+                                                                                                        <div class="col-sm-6">
+                                                                                                            <h4 class="km-mt-7">Unlimited National + Unlimited International Calls to 131 Countries</h4>
+                                                                                                            <small class="added-item">Add-On has been added to the cart</small>
+                                                                                                        </div>
+                                                                                                        <div class="col-sm-2">
+                                                                                                            <div title="User Voice Line" class="input-group number-spinner">
+                                                                                                                <span class="input-group-btn">
+                                                                                                                    <button class="btn btn-default row-btn" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                                                                </span>
+                                                                                                                <input max="10" type="text" class="form-control text-center" value="0">
+                                                                                                                <span class="input-group-btn">
+                                                                                                                    <button class="btn btn-default row-btn" data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                                                                </span>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-sm-4">
+                                                                                                            <div class="price-box">
+                                                                                                                <strong>7</strong>
+                                                                                                                AED / Month
+                                                                                                                <br>
+                                                                                                                <small>5% VAT Exc.</small>
+                                                                                                                
+                                                                                                            </div>
+                                                                                                            <a style="display: none;" href="javascript:void(0);" title="Modify Add-On" class="modifyBtn">
+                                                                                                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                                                                                            </a>
+                                                                                                            <a class="cart-btn-icon" href="javascript:void(0);">Add
+                                                                                                                to Cart</a>
+                                                                                                            <a style="display: none;" class="remove-btn-icon-pop" data-toggle="modal" data-target="#confModal99" href="javascript:void(0);" title="Add-On has been added to the cart">Remove</a>
+                                                                                                            <a class="expandIcon" href="javascript:void(0);"></a>
+                                                                                                            
+                                                                                                            <div class="modal" id="confModal99" tabindex="-1" role="dialog" aria-labelledby="confModalLabel">
+                                                                                                                <div class="modal-dialog" role="document">
+                                                                                                                    <div class="modal-content">
+                                                                                                                        <div class="modal-header">
+                                                                                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                                                                                                            <h4 class="modal-title" id="tcModalLabel">Warning</h4>
+                                                                                                                        </div>
+                                                                                                                        <div class="modal-body">
+                                                                                                                            <h4 class="text-center">
+                                                                                                                                <span class="success">
+                                                                                                                                 <i class="fa fa-warning" aria-hidden="true"></i>
+                                                                                                                                </span>
+                                                                                                                                Are you sure you want to delete this Add-On?
+                                                                                                                             </h4>
+                                                                                                                             <small class="red-text text-center"></small>
+                                                                                                                        </div>
+                                                                                                                        <div class="modal-footer">
+                                                                                                                            <button type="button" class="btn btn-default" data-dismiss="modal" data-scroll-to="#collapseSign" data-scroll-focus="#collapseSign">Cancel</button>
+                                                                                                                            <button type="button" class="btn btn-default confBtn" data-dismiss="modal" data-scroll-to="#collapseSign" data-scroll-focus="#collapseSign">Proceed</button>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="hidden-fields">
+                                                                                                        <div class="btn-box text-right">
+                                                                                                            <button class="cancelBtn default-btn">Cancel</button>
+                                                                                                            <button class="saveBtn default-btn">Save</button>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="addon-box Devices expanable">
+                                                                                                    <div class="row">
+                                                                                                        <div class="col-sm-6">
+                                                                                                            <h4 class="km-mt-7">Unlimited National Calls to Mobile</h4>
+                                                                                                            <small class="added-item">Add-On has been added to the cart</small>
+                                                                                                        </div>
+                                                                                                        <div class="col-sm-2">
+                                                                                                            <div title="User Voice Line" class="input-group number-spinner">
+                                                                                                                <span class="input-group-btn">
+                                                                                                                    <button class="btn btn-default row-btn" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                                                                </span>
+                                                                                                                <input max="10" type="text" class="form-control text-center" value="0">
+                                                                                                                <span class="input-group-btn">
+                                                                                                                    <button class="btn btn-default row-btn" data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                                                                </span>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="col-sm-4">
+                                                                                                            <div class="price-box">
+                                                                                                                <strong>10</strong>
+                                                                                                                AED / Month
+                                                                                                                <br>
+                                                                                                                <small>5% VAT Exc.</small>
+                                                                                                                
+                                                                                                            </div>
+                                                                                                            <a style="display: none;" href="javascript:void(0);" title="Modify Add-On" class="modifyBtn">
+                                                                                                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                                                                                            </a>
+                                                                                                            <a class="cart-btn-icon" href="javascript:void(0);">Add
+                                                                                                                to Cart</a>
+                                                                                                            <a style="display: none;" class="remove-btn-icon-pop" data-toggle="modal" data-target="#confModal101" href="javascript:void(0);" title="Add-On has been added to the cart">Remove</a>
+                                                                                                            <a class="expandIcon" href="javascript:void(0);"></a>
+                                                                                                            
+                                                                                                            <div class="modal" id="confModal101" tabindex="-1" role="dialog" aria-labelledby="confModalLabel">
+                                                                                                                <div class="modal-dialog" role="document">
+                                                                                                                    <div class="modal-content">
+                                                                                                                        <div class="modal-header">
+                                                                                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                                                                                                            <h4 class="modal-title" id="tcModalLabel">Warning</h4>
+                                                                                                                        </div>
+                                                                                                                        <div class="modal-body">
+                                                                                                                            <h4 class="text-center">
+                                                                                                                                <span class="success">
+                                                                                                                                 <i class="fa fa-warning" aria-hidden="true"></i>
+                                                                                                                                </span>
+                                                                                                                                Are you sure you want to delete this Add-On?
+                                                                                                                             </h4>
+                                                                                                                             <small class="red-text text-center"></small>
+                                                                                                                        </div>
+                                                                                                                        <div class="modal-footer">
+                                                                                                                            <button type="button" class="btn btn-default" data-dismiss="modal" data-scroll-to="#collapseSign" data-scroll-focus="#collapseSign">Cancel</button>
+                                                                                                                            <button type="button" class="btn btn-default confBtn" data-dismiss="modal" data-scroll-to="#collapseSign" data-scroll-focus="#collapseSign">Proceed</button>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="hidden-fields">
+                                                                                                        <div class="btn-box text-right">
+                                                                                                            <button class="cancelBtn default-btn">Cancel</button>
+                                                                                                            <button class="saveBtn default-btn">Save</button>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div> 
+                                                                                    </div>                                                              
+                                                                                </div> 
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                          
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="clearfix"></div>
+                            <!-- End SmartWizard Content -->
+                        </div>
+                        <div class="clearfix"></div>
+                    </section>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+
+    </div>
+
+    <!-- /.etisalat -->
+    <!-- /.footer -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../assets/js/jquery-2.1.3.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../assets/js/bootstrap.js"></script>
+    <script src="../assets/js/bootstrap-select.js"></script>
+    <script src="../assets/js/dcalendar.picker.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery.matchHeight-min.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery.smartWizard.js"></script>
+    <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../assets/js/slick.min.js"></script>
+    <script src="../assets/js/scripts.js"></script>
+    <script src="../assets/js/custom.js"></script>
+    <script>
+        $('.next-btn').click(function () {
+            $(this).closest('.card').find('h5').addClass('collapsed');
+            $(this).closest('.card').next('.card').find('h5').removeClass('collapsed');
+            $(this).closest('.card').next('.card').find('.collapse').addClass('in');
+            $(this).closest('.card').find('.changeBtn').show();
+            $(this).closest('.collapse').removeClass('in');            
+        });
+        $('.changeBtn').click(function () {
+            $(this).closest('h5').removeClass('collapsed');
+            $(this).closest('.card').find('.collapse').addClass('in');            
+        });
+
+        $(document).ready(function () {
+            $('#resType').change(function () {
+                if ($(this).val() == 'Yes') {
+                    $('#resilienceTab').show();
+                }
+                if ($(this).val() == 'No') {
+                    $('#resilienceTab').hide();
+                    $('#profile').removeClass('active');
+                    $('#home').addClass('active');
+                    $('#underlayTab').addClass('active');
+                    $('#resilienceTab').removeClass('active');
+                }
+                
+            });
+        });
+        $('.check-btn').click(function(){
+            $(this).toggleClass('checked');
+            $(this).closest('.tab-cont').find('.next-btn').removeAttr('disabled');
+            $('.black-field').toggle();
+            $('.filled-field').toggle();
+        });
+        
+        $('#redundant').click(function () {
+            if ($(this).find('input[type=checkbox]').is(':checked')) {
+                $('#redundantTab').show();
+            }
+            else {
+                $('#redundantTab').hide();
+            }
+        });
+        $('.number-list li').click(function () {
+            $(this).toggleClass('selected');
+            if ($(this).hasClass('selected')){
+                $(this).find('.price-box').hide();
+            }
+            
+            else{
+                $(this).find('.price-box').hide();
+            }
+        });
+        
+        $('.number-list li').click(function () {
+            if ($('.number-list li').hasClass('selected')){
+                $(this).closest('.tab-cont').find('.next-btn').removeAttr('disabled');
+            }
+            else{
+                $(this).closest('.tab-cont').find('.next-btn').attr('disabled', 'disabled'); 
+            }
+        });
+        $(function () {
+            $("input:file").change(function () {
+                var parentDiv = $(this).closest('.addon-box')
+                var fileName = $(this).val();
+                $(".filename").html(fileName);
+                parentDiv.find('.default-btn').removeClass('disabled').addClass('cart-btn');
+                parentDiv.find('.default-btn').attr('title', '');
+                addRemove();
+            });
+        });
+        $('.addonQty').change(function () {
+            var parentDiv = $(this).closest('.addon-box')
+            var currSelect = $(this)
+
+            parentDiv.find('.default-btn').removeClass('disabled').addClass('cart-btn');
+            parentDiv.find('.default-btn').attr('title', '');
+
+            addRemove();
+
+        });
+        $('.add-cart').click(function () {
+            var parentDiv = $(this).closest('.addon-box')
+            var currSelect = $(this)
+
+            parentDiv.find('.default-btn').removeClass('disabled').addClass('cart-btn');
+            parentDiv.find('.default-btn').attr('title', '');
+
+            addRemove();
+        });
+        function addRemove() {
+            $('.cart-btn').click(function () {
+                $(this).closest('.addon-box').find('.number-spinner').find('input').val('1');
+                $(this).closest('.addon-box').find('tbody tr').hide();
+                $(this).closest('.addon-box').find('tbody tr.row-01').show();
+            });
+            $('.remove-btn').click(function () {
+                $(this).parent().find('.cart-btn').show();
+                $(this).hide();
+                $(this).closest('.addon-box').find('.number-spinner').removeClass('disabled');
+                $(this).closest('.addon-box').find('.bootstrap-select').removeAttr('disabled');
+                $(this).closest('.addon-box').find('.dropdown-toggle').removeAttr('disabled');
+            });
+            $('.data .remove').click(function () {
+                $(this).parent().hide();
+            });
+        }
+        $(document).on('click', '.number-spinner button', function () {
+            var btn = $(this),
+                oldValue = btn.closest('.number-spinner').find('input').val().trim(),
+                newVal = 0;
+
+            if (btn.attr('data-dir') == 'up') {
+                newVal = parseInt(oldValue) + 1;
+            } else {
+                if (oldValue > 1) {
+                    newVal = parseInt(oldValue) - 1;
+                } else {
+                    newVal = 1;
+                }
+            }
+            btn.closest('.number-spinner').find('input').val(newVal);
+        });
+        var count = 1;
+        $('.row-btn').click(function () {
+            var position = $(this).attr('data-dir');
+            var maxRows = 10;
+
+            if (position === 'up') {
+
+                if (count <= maxRows) {
+                    $(this).closest('.addon-box').find('.number-grid tbody tr').eq(count).show();
+                    $(this).closest('.addon-box').find('.number-list li').eq(count).addClass('selected');
+                    count++
+                }
+
+            }
+            else {
+                if (count > 1) {
+                    //debugger
+                    $(this).closest('.addon-box').find('.number-grid tbody tr').eq(count - 1).hide();
+                    $(this).closest('.addon-box').find('.number-list li').eq(count).removeClass('selected');
+                    count--
+                }
+
+            }
+        });
+        $('.number-list li').click(function(){
+            var item = $(this).closest('.hidden-fields').find('li.selected').length;
+            $(this).closest('.addon-box').find('.number-spinner input[type=text]').val(item);
+        });
+        $('.cart-btn-icon').click(function(){
+            var item = $(this).closest('.addon-box').find('li.selected').length;
+            //$(this).closest('.addon-box').find('.price-box strong').html(item + '00');
+        });
+        $('.saveBtn').click(function(){
+            var item = $(this).closest('.addon-box').find('li.selected').length;
+            //$(this).closest('.addon-box').find('.price-box strong').html(item + '00');
+        });
+        $('.cart-btn').click(function () {
+            $(".item-added").show('fade');
+            setTimeout(function () { $(".item-added").hide('fade'); }, 3000);
+        });
+
+        $('.cart-btn-icon').click(function(){
+            $(this).hide();
+            $(this).closest('.addon-box').find('.remove-btn-icon').show();
+            $(this).closest('.addon-box').find('.remove-btn-icon-pop').show();
+            //$(this).closest('.addon-box').find('.added-item').show();
+            $(this).closest('.addon-box').find('.modifyBtn').show();
+            $(this).closest('.addon-box').addClass('added');
+            $(this).closest('.addon-box').find('.number-spinner').addClass('disabled');
+        });
+        $('.confirm-btn').click(function(){
+            $(this).closest('.addon-box').find('.remove-btn-icon').hide();
+            $(this).closest('.addon-box').find('.cart-btn-icon').show();
+            //$(this).closest('.addon-box').find('.added-item').hide();
+            $(this).closest('.addon-box').removeClass('added');
+            $(this).closest('.addon-box').find('.number-spinner').removeClass('disabled');
+        });
+        $('.remove-btn-icon').click(function () {
+            $(this).hide();
+            $(this).closest('.addon-box').find('.cart-btn-icon').show();
+            $(this).closest('.addon-box').find('.modifyBtn').hide();
+            //$(this).closest('.addon-box').find('.added-item').hide();
+            $(this).closest('.addon-box').removeClass('added');
+            $(this).closest('.addon-box').find('.number-spinner').removeClass('disabled');
+        });
+        $('.modifyBtn').click(function(){
+            $(this).closest('.addon-box').find('.expandIcon').addClass('open');
+            $(this).closest('.addon-box').find('.hidden-fields').show('slow');
+            $(this).closest('.addon-box').find('.hidden-fields .btn-box').show('slow');
+            $(this).closest('.addon-box').find('.number-spinner').removeClass('disabled');
+            $(this).closest('.addon-box').find('.removeBtn').removeClass('disabled');
+        });
+        $('.saveBtn, .cancelBtn').click(function(){
+            $('.expandIcon').removeClass('open');
+            $(this).closest('.addon-box').find('.hidden-fields').hide('slow');
+            $(this).closest('.addon-box').find('.hidden-fields .btn-box').hide('slow');
+            $(this).closest('.addon-box').find('.number-spinner').addClass('disabled');
+        });
+        $('.confBtn').click(function(){
+            $(this).closest('.addon-box').find('.remove-btn-icon-pop').hide();
+            $(this).closest('.addon-box').find('.modifyBtn').hide();
+            $(this).closest('.addon-box').find('.number-spinner').removeClass('disabled');
+            $(this).closest('.addon-box').find('.number-spinner').find('input[type=text]').val('1');
+            $(this).closest('.addon-box').find('.hidden-fields').find('.table').find('.row-02, .row-03, .row-04, .row-05' ).hide();
+            $(this).closest('.addon-box').find('.cart-btn-icon').show();
+            //$(this).closest('.addon-box').find('.added-item').hide();
+            $(this).closest('.addon-box').removeClass('added');
+            $(this).closest('.addon-box').find('.price-box').removeClass('withExit');
+            $(this).closest('.addon-box').find('.removeBtn').removeClass('disabled');
+        });
+        $('.reserve-btn').click(function () {
+            $(this).hide();
+            $(this).parent().find('.conf-btn').show();
+            $(this).closest('.addon-box').find('.cart-btn-icon').removeClass('disabled');
+        });
+
+        $('.mainNum li').click(function () {
+            $(this).toggleClass('selected');
+        });
+        
+        $('.expandIcon').click(function(){
+            $(this).toggleClass('open');
+            $(this).closest('.addon-box').find('.hidden-fields').toggle('slow');
+        });
+        $('.selectBtn').click(function(){
+            $(this).closest('.addon-box').find('.cart-btn-icon').removeClass('disabled');
+            $(this).closest('.addon-box').find('input.form-control').attr('value','4');
+            $(this).closest('.hidden-fields').hide('slow');
+            $(this).closest('.addon-box').find('.expandIcon').removeClass('open');
+        });
+    </script>
+</body>
+
+</html>
