@@ -54,6 +54,14 @@
                     </a>
                 </li>
                 <li>
+                    <a href="documents.html">
+                        <div class="stepIcon">
+                            <i class="icon-check"></i>
+                        </div>
+                        <span class="stepDesc">Documents</span>
+                    </a>
+                </li>
+                <li>
                     <a href="reserve-devices.html">
                         <div class="stepIcon">
                             <i class="icon-check"></i>
@@ -86,7 +94,7 @@
                     </div>
                 </div>
                 <div class="col-md-2 col-sm-4 p0">
-                    <button class="btn" id="addvalues">Apply Filter</button>
+                    <button class="btn" id="addvalues">Load</button>
                 </div>
             </div>
         </div>
@@ -121,7 +129,10 @@
                                 <label>Choose a file :</label>
                                 <input type="file" class="btn">
                             </span>
-                            <a href="images/dummy.pdf" title="Application Form"><img src="images/pdf-icon.png" class="pdficon" style="display: none;" /></a>
+                            <div class="pdficon" style="display: none;">
+                                <a href="images/dummy.pdf" title="Application Form"><img src="images/pdf-icon.png" /></a>
+                                <button class="deletepdf">X</button>
+                            </div>
                         </div>
                     </td>
                     <td>
@@ -148,7 +159,10 @@
                                 <label>Choose a file :</label>
                                 <input type="file" class="btn">
                             </span>
-                            <a href="images/dummy.pdf" title="Application Form"><img src="images/pdf-icon.png" class="pdficon" style="display: none;" /></a>
+                            <div class="pdficon" style="display: none;">
+                                <a href="images/dummy.pdf" title="Application Form"><img src="images/pdf-icon.png" /></a>
+                                <button class="deletepdf">X</button>
+                            </div>
                         </div>
                     </td>
                     <td>
@@ -175,7 +189,10 @@
                                 <label>Choose a file :</label>
                                 <input type="file" class="btn">
                             </span>
-                            <a href="images/dummy.pdf" title="Application Form"><img src="images/pdf-icon.png" class="pdficon" style="display: none;" /></a>
+                            <div class="pdficon" style="display: none;">
+                                <a href="images/dummy.pdf" title="Application Form"><img src="images/pdf-icon.png" /></a>
+                                <button class="deletepdf">X</button>
+                            </div>
                         </div>
                     </td>
                     <td>
@@ -202,7 +219,10 @@
                                 <label>Choose a file :</label>
                                 <input type="file" class="btn">
                             </span>
-                            <a href="images/dummy.pdf" title="Application Form"><img src="images/pdf-icon.png" class="pdficon" style="display: none;" /></a>
+                            <div class="pdficon" style="display: none;">
+                                <a href="images/dummy.pdf" title="Application Form"><img src="images/pdf-icon.png" /></a>
+                                <button class="deletepdf">X</button>
+                            </div>
                         </div>
                     </td>
                     <td>
@@ -229,7 +249,10 @@
                                 <label>Choose a file :</label>
                                 <input type="file" class="btn">
                             </span>
-                            <a href="images/dummy.pdf" title="Application Form"><img src="images/pdf-icon.png" class="pdficon" style="display: none;" /></a>
+                            <div class="pdficon" style="display: none;">
+                                <a href="images/dummy.pdf" title="Application Form"><img src="images/pdf-icon.png" /></a>
+                                <button class="deletepdf">X</button>
+                            </div>
                         </div>
                     </td>
                     <td>
@@ -256,7 +279,10 @@
                                 <label>Choose a file :</label>
                                 <input type="file" class="btn">
                             </span>
-                            <a href="images/dummy.pdf" title="Application Form"><img src="images/pdf-icon.png" class="pdficon" style="display: none;" /></a>
+                            <div class="pdficon" style="display: none;">
+                                <a href="images/dummy.pdf" title="Application Form"><img src="images/pdf-icon.png" /></a>
+                                <button class="deletepdf">X</button>
+                            </div>
                         </div>
                     </td>
                     <td>
@@ -283,7 +309,10 @@
                                 <label>Choose a file :</label>
                                 <input type="file" class="btn">
                             </span>
-                            <a href="images/dummy.pdf" title="Application Form"><img src="images/pdf-icon.png" class="pdficon" style="display: none;" /></a>
+                            <div class="pdficon" style="display: none;">
+                                <a href="images/dummy.pdf" title="Application Form"><img src="images/pdf-icon.png" /></a>
+                                <button class="deletepdf">X</button>
+                            </div>
                         </div>
                     </td>
                     <td>
@@ -307,7 +336,9 @@
                         <input type="text" class="form-control" readonly value="123456789">
                     </td>
                     <td>
-                        <img src="images/pdf-icon.png" class="pdficon" />
+                        <div class="pdficon">
+                            <img src="images/pdf-icon.png"  />
+                        </div>
                     </td>
                     <td>
                         <img src="images/delete.png" class="del" />
@@ -549,18 +580,19 @@
     </div>
     <div class="img-wrap-full">
         <img src="images/bottom-bar.jpg" />
-        <a href="reserve-devices.html"><img src="images/save-con.jpg" class="continue" /></a>
+        <a href="documents.html"><img src="images/save-con.jpg" class="continue" /></a>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
-            $('.btn').on('click', function() {
-                //$('.file').trigger('click');
+            $('button.deletepdf').click(function(e) {
+                $(this).closest('.d-flex').removeClass('showpdficon');
+                $(this).closest('.d-flex').append('<span class="control-fileupload"><label>Choose a file :</label><input type="file" class="btn"></span>');
             });
-            $('table input[type="file"]').change(function(e) {
-                $(this).closest('.d-flex').addClass('showpdficon');
-                $(this).closest('.control-fileupload').remove();
-            });
+        });
+        $(document).on('change', '.table input[type="file"]', function(){
+            $(this).closest('.d-flex').addClass('showpdficon');
+            $(this).closest('.control-fileupload').remove();
         });
         $("#tbUser").on('click', '.del', function () {
             $(this).closest('tr').remove();
@@ -569,7 +601,7 @@
             $('#default-rows').hide();
             $('#browse-rows').show();
             $('#tbUser').addClass('browse-rows');
-            $(this).text('Added');
+            $(this).text('Loaded');
         });
         $(function() {
             $('input[type=file]').change(function(){

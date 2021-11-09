@@ -28,6 +28,11 @@
             margin-top: -13px;
             height: 60px;
         }
+        body.new-etisalat button.proceed.btn02,
+        body.new-etisalat button.proceed.btn03,
+        body.new-etisalat button.proceed.btn04 {
+            margin-top: 0;
+        }
         .bootstrap-select.btn-group .dropdown-menu {
             z-index: 2000;
         }
@@ -79,7 +84,17 @@
                             <span class="icon-bar"></span>
                         </button>
                     </div>
-                    <div class="col-sm-9 text-right km-dropdown-area">
+                    <div class="col-sm-6">
+                        <div id="navbar" class="col-md-12 custom-container nav-container navbar-collapse collapse">
+                            <ul>
+                                <li>
+                                    <a class="retail" href="../../bcrm-retail/landing.html">BCRM For Retail</a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 text-right km-dropdown-area">
                         <div class="dropdown">
                             <a id="dLabel" data-target="#" href="http://example.com/" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                 <img src="../images/more.png" style="max-width: 17px;">
@@ -133,14 +148,14 @@
                                                     <option value="scenario04">XXX-XXXX-004</option>
                                                     <option value="scenario05">XXX-XXXX-005</option>
                                                     <option value="scenario06">XXX-XXXX-006</option>
-                                                    <option value="scenario07">XXX-XXXX-007</option>
+                                                    <!-- <option value="scenario07">XXX-XXXX-007</option> -->
                                                     <!-- <option value="scenario08">XXX-XXXX-008</option> -->
-                                                    <option value="scenario09">XXX-XXXX-009</option>
+                                                    <option value="scenario09">XXX-XXXX-007</option>
                                                     <!-- <option value="scenario10">XXX-XXXX-010</option> -->
-                                                    <option value="scenario11">XXX-XXXX-011</option>
-                                                    <option value="scenario12">XXX-XXXX-012</option>
-                                                    <option value="scenario13">XXX-XXXX-013</option>
-                                                    <option value="scenario14">XXX-XXXX-014</option>
+                                                    <option value="scenario11">XXX-XXXX-008</option>
+                                                    <option value="scenario12">XXX-XXXX-009</option>
+                                                    <option value="scenario13">XXX-XXXX-010</option>
+                                                    <option value="scenario14">XXX-XXXX-011</option>
                                                 </select>
                                             </div>
                                             <button class="scan-btn scan01 disabled">Scan</button>
@@ -177,15 +192,10 @@
                                             </h3>
                                         </div>
                                         <div style="display:none;" class="text-left scenarioMsg hiddenMsg05">
-                                            <h3>
-                                                We found that you are an authorized contact for ASTER Pharmacy customer, However you can’t place an order as your trade license is expired. To update the trade license, you can simply click on <b>Manage Customer</b>.
-                                            </h3>
+                                            <h3>We found that you are an authorized contact for <span>ASTER Pharmacy</span> customer, To place an order, you can simply select the party and click on <b>Proceed now</b>.</h3>
                                         </div>
                                         <div style="display:none;" class="text-left scenarioMsg hiddenMsg06">
-                                            <h3>
-                                                We found that you are an authorized person for <span>ASTER Pharmacy</span> customer, However you cant place an order as your LOA is expired with Etisalat on 22-SEP-2020.<br>
-                                                <p class="text-danger">Trade License is verified but still you can't proceed to create a new LOA, as the company trade license is expired in MOHRE.</p>
-                                            </h3>
+                                            <h3>We found that you are an authorized contact for <span>ASTER Pharmacy</span> customer, To place an order, you can simply select the party and click on <b>Proceed now</b>.</h3>
                                         </div>
                                         <div style="display:none;" class="text-left scenarioMsg hiddenMsg07">
                                             <h3>
@@ -823,10 +833,10 @@
                                             </div>  
                                             <div class="clearfix"></div>
                                             
-                                            <h4><span class="cusDetails">Customer Details</span></h4>
+                                            <h4 class="Hide234"><span class="cusDetails">Customer Details</span></h4>
                                             <div class="col-sm-12">
                                                 <div class="row"> 
-                                                    <div class="cusDetails">
+                                                    <div class="cusDetails Hide234">
                                                         <div class="col-sm-5">
                                                             <div class="form-group">
                                                                 <label for="">Select Party <span class="req">*</span></label>
@@ -924,7 +934,9 @@
                                                                             </div>
                                                                         </div>
                                                                         <div class="modal-footer">
-                                                                            <button type="button" data-dismiss="modal" aria-label="Close" class="add-btn btn btn-primary add-party-btn">Select</button>
+                                                                            <button type="button" data-dismiss="modal" aria-label="Close" class="add-btn btn btn-primary add-party-btn-five" style="display: none;">Select</button>
+                                                                            <button type="button" data-dismiss="modal" aria-label="Close" class="add-btn btn btn-primary add-party-btn-one">Select</button>
+                                                                            <button type="button" data-dismiss="modal" aria-label="Close" class="add-btn btn btn-primary add-party-btn-six" style="display: none;">Select</button>
                                                                         </div>
                                                                     </div>
                                                                     </div>
@@ -933,7 +945,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-3 hiddenField" style="display: block;">
-                                                        <button onclick="location.href = 'scenario1.html'" class="proceed btn01" style="display: none;">
+                                                        <button onclick="location.href = 'scenario1.html'" disabled class="proceed btn01" style="display: none;">
                                                             Proceed Now
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
                                                                 <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
@@ -969,8 +981,17 @@
                                                                 </g>
                                                             </svg>
                                                         </button>
-                                                        <button disabled onclick="location.href = 'scenario1.html'" class="proceed btn05" style="display: none;">
+                                                        <button disabled onclick="location.href = 'scenario5.html'" class="proceed btn05" style="display: none;">
                                                             Manage Customer
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
+                                                                <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
+                                                                    <path id="Path_2684" data-name="Path 2684" d="M7.5,18h21" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                    <path id="Path_2685" data-name="Path 2685" d="M18,7.5,28.5,18,18,28.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                </g>
+                                                            </svg>
+                                                        </button>
+                                                        <button disabled onclick="location.href = '../../mobile/reRegistration/account.html'" class="proceed btn06" style="display: none;">
+                                                            Re Register
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
                                                                 <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
                                                                     <path id="Path_2684" data-name="Path 2684" d="M7.5,18h21" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
@@ -1028,6 +1049,38 @@
         </div>
         <!-- /.container-fluid -->
 
+    </div>
+    <div class="modal" id="ErrorModal5" tabindex="-1" role="dialog" aria-labelledby="ErrorModal5Label">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                Warning
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-body">
+                <img src="../../assets/images/error.png" />
+                <span>You can’t place an order as the trade license of selected party is expired. To update the trade license, you can simply click Manage Customer.</span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" data-dismiss="modal" aria-label="Close" class="btn btn-primary">OK</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="ErrorModal6" tabindex="-1" role="dialog" aria-labelledby="ErrorModal6Label">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                Warning
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-body">
+                <img src="../../assets/images/error.png" />
+                <span>You can’t place an order as the Estabilishment Card / Government Decree of selected party is expired. To update the Estabilishment Card / Government Decree, you can simply click Manage Customer.</span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" data-dismiss="modal" aria-label="Close" class="btn btn-primary">OK</button>
+            </div>
+        </div>
     </div>
     <!-- /.etisalat -->
     <!-- /.footer -->
@@ -1149,6 +1202,8 @@
             $('.tabs-area').hide();
             $('.tab-content').hide();
             $('.ErrorMsg05').hide();
+            $('.HideCustomerDetails').hide();
+            $('.Hide234').hide();
         });
         $('.scan03').click(function(){
             $('.empty-form').show();
@@ -1163,6 +1218,8 @@
             $('.tabs-area').hide();
             $('.tab-content').hide();
             $('.ErrorMsg05').hide();
+            $('.HideCustomerDetails').hide();
+            $('.Hide234').hide();
         });
         $('.scan04').click(function(){
             $('.empty-form').show();
@@ -1177,33 +1234,38 @@
             $('.tabs-area').hide();
             $('.tab-content').hide();
             $('.ErrorMsg05').hide();
+            $('.Hide234').hide();
         });
         $('.scan05').click(function(){
             $('.empty-form').show();
             $('.hiddenMsg05').show();
             $('.ErrorMsg05').hide();
             $('.hiddenMsg05').siblings('.scenarioMsg').hide();
-            $('.btn05').hide();
-            $('.btn05').siblings('.proceed').hide();
+            $('.btn01').show();
+            $('.btn01').siblings('.proceed').hide();
             $('.company-list form#othersoption').show();
             $('.company-list form#thisoption').hide();
             $('#hide9111213').show();
             $('.cusDetails').show();
             $('.tabs-area').hide();
             $('.tab-content').hide();
+            $('.add-party-btn-one').hide();
+            $('.add-party-btn-five').show();
         });
         $('.scan06').click(function(){
             $('.empty-form').show();
             $('.hiddenMsg06').show();
             $('.hiddenMsg06').siblings('.scenarioMsg').hide();
-            $('.proceed').hide();
+            $('.btn01').show();
+            $('.btn01').siblings('.proceed').hide();
             $('.company-list form#othersoption').show();
             $('.company-list form#thisoption').hide();
             $('#hide9111213').show();
             $('.cusDetails').show();
             $('.tabs-area').hide();
             $('.tab-content').hide();
-            $('.ErrorMsg05').hide();
+            $('.add-party-btn-one').hide();
+            $('.add-party-btn-six').show();
         });
         $('.scan07').click(function(){
             $('.empty-form').show();
@@ -1342,12 +1404,28 @@
         $('.add-party-btn3').click(function(){
             $('.partyField3').val('F2141878');
         });
-        $('.add-party-btn').click(function(){
+        $('.add-party-btn-five').click(function(){
             $('.partyField2').val('C214187');
+            $('.proceed.btn01').hide();
             $('.proceed.btn05').removeAttr('disabled');
             $('.proceed.btn05').show();
-            $('.ErrorMsg05').show();
+            $('#ErrorModal6').modal('hide');
+            $('#customerModalAA').modal('hide');
+            $('#ErrorModal5').modal('show')
         });
+        $('.add-party-btn-six').click(function(){
+            $('.partyField2').val('C214187');
+            $('.proceed.btn01').hide();
+            $('.proceed.btn06').removeAttr('disabled');
+            $('.proceed.btn06').show();
+            $('#ErrorModal5').modal('show');
+            $('#customerModalAA').modal('hide');
+            $('#ErrorModal6').modal('show')
+        });
+        $('.add-party-btn-one').click(function(){
+            $('.proceed').removeAttr('disabled');
+        });
+        
     </script>
 </body>
 

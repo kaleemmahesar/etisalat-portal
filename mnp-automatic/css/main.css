@@ -145,7 +145,8 @@ img {
     box-shadow: none;
     font-size: 12px;
 }
-.form-area h3 {
+.form-area h3,
+h3.title-bcrm-page {
     text-align: center;
     color: #969690;
     font-family: 'neotech-regular';
@@ -155,15 +156,36 @@ img {
     border-bottom: 1px solid rgb(190, 190, 190);
     font-size: 18px;
 }
-.form-area h3 span {
+.form-area h3 span,
+h3.title-bcrm-page span {
     color: red;
 }
 .form-area img.del{
     max-width: 17px;
     cursor: pointer;
 }
-img.pdficon {
-    max-width: 21px;
+.pdficon {
+    max-width: 30px;
+    position: relative;
+}
+.deletepdf {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.45);
+    border: none;
+    left: 0;
+    color: #fff;
+    font-family: 'neotech-regular';
+    border-radius: 0 13px 0 0;
+    opacity: 0;
+    transition: all 0.25s ease;
+    pointer-events: none;
+}
+.pdficon:hover .deletepdf {
+    opacity: 1;
+    pointer-events: all;
 }
 .form-area .table {
     margin: 25px 0;
@@ -201,8 +223,7 @@ img.pdficon {
 .form-area .table.browse-rows thead tr th:nth-child(4) {
     width: auto;
 }
-.btn {
-    
+.form-area .btn {
     border-radius: 0;
     border: 1px solid #719e19;
     width: auto;
@@ -220,9 +241,9 @@ img.pdficon {
     color: #fff;
     outline: none !important;
 }
-.btn:hover,
-.btn:focus,
-.btn:active {
+.form-area .btn:hover,
+.form-area .btn:focus,
+.form-area .btn:active {
     background: none;
     border: 1px solid #719e19;
     color: #719e19;
@@ -314,6 +335,10 @@ img.pdficon {
     cursor: text;
     padding-top: 5px;
 }
-.showpdficon > a img {
+.showpdficon > .pdficon {
     display: block !important;
+}
+.swMain .custom-container {
+    padding: 0;
+    border: none;
 }

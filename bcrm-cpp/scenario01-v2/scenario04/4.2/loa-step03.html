@@ -90,24 +90,30 @@
                                     </div>
                                 </a>
                             </li>
-                            
                             <li>
                                 <a href="loa-step03.html" class="selected">
-                                    <span class="stepDesc">Company Details</span>
+                                    <span class="stepDesc">LOA Documents</span>
                                     <div class="stepIcon">
                                         <i class="icon-check"></i>2
                                     </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="loa-step04.html">
-                                    <span class="stepDesc">T & C</span>
+                                <a href="review.html">
+                                    <span class="stepDesc">Review</span>
                                     <div class="stepIcon">
                                         <i class="icon-check"></i>3
                                     </div>
                                 </a>
                             </li>
-                            
+                            <li>
+                                <a href="loa-step04.html">
+                                    <span class="stepDesc">Verification</span>
+                                    <div class="stepIcon">
+                                        <i class="icon-check"></i>4
+                                    </div>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -128,9 +134,15 @@
 
                                                         <div class="row">
                                                             <div class="col-sm-12">
-                                                                <div class="bg-info text-left info-text">
-                                                                    <p>As you are registering a new company, you need to upload at least the Trade License</p>
-                                                                    <p class="text-danger">NOTE: same note you put in red</p> 
+                                                                <div class="km-infoTexts">
+                                                                    <div class="text-left scenarioMsg">
+                                                                        <h3>As per our digital record, we find that you are the owner of selected Etisalat customer, you need to upload only following documents..
+                                                                            <ul>
+                                                                                <li>Emirates ID (Front and Back) of the owner</li>
+                                                                                <li>Trade License</li>
+                                                                                <li>Establishment Card</li>
+                                                                            </ul>
+                                                                        </h3>
                                                                 </div>
                                                             </div>
                                                             <div class="col-sm-4">
@@ -139,8 +151,8 @@
                                                                     <select id="docType" class="selectpicker">
                                                                         <option></option>
                                                                         <option value="Trade License">Trade License</option>
-                                                                        <option value="POA">POA</option>
                                                                         <option value="Estabilishment Card">Estabilishment Card</option>
+                                                                        <option value="EID">Emirates ID (Owner)</option>
                                                                     </select>
                                                                 </div>
                                                             </div>
@@ -167,6 +179,34 @@
                                                                         <li>
                                                                             <a href="javascript:void(0);" data-toggle="modal"
                                                                             data-target="#captureModal">
+                                                                                <img src="../../../images/capture.png" alt="">
+                                                                                Capture
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                    <span class="docUploaded">File01.png</span>
+                                                                </div>
+                                                                <div class="dropdown eid-btn" style="display:none;">
+                                                                    <button class="btn default-btn btn-alone" type="button" data-toggle="dropdown">EID Document
+                                                                    <span class="caret"></span></button>
+                                                                    <ul class="dropdown-menu">
+                                                                        <li>
+                                                                            <a class="upload" data-toggle="modal"
+                                                                            data-target="#uploadEIDModal" href="javascript:void(0);">
+                                                                                <img src="../../../images/upload.png" alt="">
+                                                                                Upload
+                                                                            </a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="javascript:void(0);" data-toggle="modal"
+                                                                            data-target="#scanEIDModal">
+                                                                                <img src="../../../images/scan.png" alt="">
+                                                                                Scan
+                                                                            </a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="javascript:void(0);" data-toggle="modal"
+                                                                            data-target="#captureEIDModal">
                                                                                 <img src="../../../images/capture.png" alt="">
                                                                                 Capture
                                                                             </a>
@@ -203,7 +243,7 @@
                                                                     <span class="docUploaded">File01.png</span>
                                                                 </div>
                                                                 <div class="dropdown loa-btn" style="display:none;">
-                                                                    <button class="btn default-btn btn-alone" type="button" data-toggle="dropdown">Estabilishment Card document
+                                                                    <button class="btn default-btn btn-alone" type="button" data-toggle="dropdown">LOA Document
                                                                     <span class="caret"></span></button>
                                                                     <ul class="dropdown-menu">
                                                                         <li>
@@ -236,21 +276,21 @@
                                                                     <ul class="dropdown-menu">
                                                                         <li>
                                                                             <a class="upload" data-toggle="modal"
-                                                                            data-target="#uploadLOAModal" href="javascript:void(0);">
+                                                                            data-target="#uploadEcCard" href="javascript:void(0);">
                                                                                 <img src="../../../images/upload.png" alt="">
                                                                                 Upload
                                                                             </a>
                                                                         </li>
                                                                         <li>
                                                                             <a href="javascript:void(0);" data-toggle="modal"
-                                                                            data-target="#scanLOAModal">
+                                                                            data-target="#scanEcCardModal">
                                                                                 <img src="../../../images/scan.png" alt="">
                                                                                 Scan
                                                                             </a>
                                                                         </li>
                                                                         <li>
                                                                             <a href="javascript:void(0);" data-toggle="modal"
-                                                                            data-target="#captureLOAModal">
+                                                                            data-target="#captureEcCardModal">
                                                                                 <img src="../../../images/capture.png" alt="">
                                                                                 Capture
                                                                             </a>
@@ -282,7 +322,8 @@
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-sm-4">
-                                                                                <button style="padding-left:10px;" class="white-btn upload-btn poaUploadBtn">
+                                                                                <input id="upEIDFront3" type="file" style="display:none;" />
+                                                                                <button style="padding-left:10px;" class="white-btn upload-btn poaUploadBtn" onclick="document.getElementById('upEIDFront3').click();">
                                                                                     <svg xmlns="http://www.w3.org/2000/svg" data-name="Design Convert" id="Design_Convert" viewBox="0 0 64 64"><title/><path class="cls-1" d="M50,52H14a7,7,0,0,1-7-7V41a1,1,0,0,1,2,0v4a5,5,0,0,0,5,5H50a5,5,0,0,0,5-5V41a1,1,0,0,1,2,0v4A7,7,0,0,1,50,52Z"/><path class="cls-1" d="M32,42a1,1,0,0,1-1-1V14a1,1,0,0,1,2,0V41A1,1,0,0,1,32,42Z"/><path class="cls-1" d="M42,24a1,1,0,0,1-.71-.29L32,14.41l-9.29,9.3a1,1,0,0,1-1.42-1.42l10-10a1,1,0,0,1,1.42,0l10,10a1,1,0,0,1,0,1.42A1,1,0,0,1,42,24Z"/></svg>
                                                                                     Upload POA
                                                                                 </button>
@@ -431,7 +472,7 @@
                                                                     <div class="modal-header">
                                                                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                                                                     <h4 class="modal-title">
-                                                                        Upload Estabilishment Card
+                                                                        Upload LOA
                                                                     </h4>
                                                                     </div>
                                                                     <div class="modal-body" style="overflow:visible;">
@@ -441,13 +482,14 @@
                                                                                     <img class="frontImg" style="display: none;" src="../../../images/loa-doc.jpg" alt="">
                                                                                 </div>
                                                                                 <div class="flex-box">
-                                                                                    <div class="mached">Estabilishment Card document uploaded successfully</div>
+                                                                                    <div class="mached">LOA document uploaded successfully</div>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-sm-4">
-                                                                                <button class="white-btn upload-btn ecUploadBtn">
+                                                                                <input id="upEIDFront4" type="file" style="display:none;">
+                                                                                <button class="white-btn upload-btn ecUploadBtn" onclick="document.getElementById('upEIDFront4').click();">
                                                                                     <svg xmlns="http://www.w3.org/2000/svg" data-name="Design Convert" id="Design_Convert" viewBox="0 0 64 64"><title/><path class="cls-1" d="M50,52H14a7,7,0,0,1-7-7V41a1,1,0,0,1,2,0v4a5,5,0,0,0,5,5H50a5,5,0,0,0,5-5V41a1,1,0,0,1,2,0v4A7,7,0,0,1,50,52Z"/><path class="cls-1" d="M32,42a1,1,0,0,1-1-1V14a1,1,0,0,1,2,0V41A1,1,0,0,1,32,42Z"/><path class="cls-1" d="M42,24a1,1,0,0,1-.71-.29L32,14.41l-9.29,9.3a1,1,0,0,1-1.42-1.42l10-10a1,1,0,0,1,1.42,0l10,10a1,1,0,0,1,0,1.42A1,1,0,0,1,42,24Z"/></svg>
-                                                                                    Upload Estabilishment Card
+                                                                                    Upload LOA
                                                                                 </button>
                                                                                 
                                                                                 <div class="btn-box flex-box">
@@ -481,6 +523,177 @@
                                                                 </div>
                                                             </div>
                                                             <div id="scanLOAModal" class="modal" role="dialog">
+                                                                <div class="modal-dialog">
+                                                                <!-- Modal content-->
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                                    <h4 class="modal-title">
+                                                                        Scan LOA
+                                                                    </h4>
+                                                                    </div>
+                                                                    <div class="modal-body" style="overflow:visible;">
+                                                                        <div class="row flex-box">
+                                                                            <div class="col-sm-8">
+                                                                                <div class="captureBox">
+                                                                                    <img class="frontImg" style="display: none;" src="../../../images/loa-doc.jpg" alt="">
+                                                                                </div>
+                                                                                <div class="flex-box">
+                                                                                    <div class="mached">LOA document scanned successfully</div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-4">
+                                                                                <button class="white-btn upload-btn ecUploadBtn">
+                                                                                    <svg xmlns="http://www.w3.org/2000/svg" data-name="Design Convert" id="Design_Convert" viewBox="0 0 64 64"><title/><path class="cls-1" d="M50,52H14a7,7,0,0,1-7-7V41a1,1,0,0,1,2,0v4a5,5,0,0,0,5,5H50a5,5,0,0,0,5-5V41a1,1,0,0,1,2,0v4A7,7,0,0,1,50,52Z"/><path class="cls-1" d="M32,42a1,1,0,0,1-1-1V14a1,1,0,0,1,2,0V41A1,1,0,0,1,32,42Z"/><path class="cls-1" d="M42,24a1,1,0,0,1-.71-.29L32,14.41l-9.29,9.3a1,1,0,0,1-1.42-1.42l10-10a1,1,0,0,1,1.42,0l10,10a1,1,0,0,1,0,1.42A1,1,0,0,1,42,24Z"/></svg>
+                                                                                    Scan LOA
+                                                                                </button>
+                                                                                
+                                                                                <div class="btn-box flex-box">
+                                                                                    <button style="width:100%" class="default-btn resetBtn" disabled >Reset</button>
+                                                                                </div>
+                                                                                <div class="form-group hiddenField">
+                                                                                    <label>Document No. <span class="req">*</span></label>
+                                                                                    
+                                                                                    <input value=""  type="text">
+                                                                                </div>
+                                                                                <div class="form-group hiddenField">
+                                                                                    <label>Expiry Date <span class="req">*</span></label>
+                                                                                    
+                                                                                    <input  type="text" value="" placeholder="DD/MM/YYYY" id="datepicker7">
+                                                                                </div>
+                                                                                <div class="form-group hiddenField">
+                                                                                    <label>Issue Date <span class="req">*</span></label>
+                                                                                    
+                                                                                    <input  type="text" value="" placeholder="DD/MM/YYYY" id="datepicker8">
+                                                                                </div>
+                                                                                
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-default showLOAGrid" data-dismiss="modal">Save</button>
+                                                                    </div>
+                                                                </div>
+                                                                </div>
+                                                            </div>
+                                                            <div id="captureLOAModal" class="modal" role="dialog">
+                                                                <div class="modal-dialog">
+                                                            
+                                                                <!-- Modal content-->
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                                    <h4 class="modal-title">
+                                                                        Capture LOA
+                                                                    </h4>
+                                                                    </div>
+                                                                    <div class="modal-body" style="overflow:visible;">
+                                                                        <div class="row flex-box">
+                                                                            <div class="col-sm-8">
+                                                                                <div class="captureBox">
+                                                                                    <img class="frontImg" style="display: none;" src="../../../images/loa-doc.jpg" alt="">
+                                                                                </div>
+                                                                                <div class="flex-box">
+                                                                                    <div class="mached">LOA document captured successfully</div>
+                                                                                </div>
+                                                                                
+                                                                            </div>
+                                                                            <div class="col-sm-4">
+                                                                                <button class="white-btn upload-btn ecUploadBtn">
+                                                                                    <svg xmlns="http://www.w3.org/2000/svg" data-name="Design Convert" id="Design_Convert" viewBox="0 0 64 64"><title/><path class="cls-1" d="M50,52H14a7,7,0,0,1-7-7V41a1,1,0,0,1,2,0v4a5,5,0,0,0,5,5H50a5,5,0,0,0,5-5V41a1,1,0,0,1,2,0v4A7,7,0,0,1,50,52Z"/><path class="cls-1" d="M32,42a1,1,0,0,1-1-1V14a1,1,0,0,1,2,0V41A1,1,0,0,1,32,42Z"/><path class="cls-1" d="M42,24a1,1,0,0,1-.71-.29L32,14.41l-9.29,9.3a1,1,0,0,1-1.42-1.42l10-10a1,1,0,0,1,1.42,0l10,10a1,1,0,0,1,0,1.42A1,1,0,0,1,42,24Z"/></svg>
+                                                                                    Capture LOA
+                                                                                </button>
+                                                                                
+                                                                                <div class="btn-box flex-box">
+                                                                                    <button style="width:100%" class="default-btn resetBtn" disabled >Reset</button>
+                                                                                </div>
+                                                                                <div class="form-group hiddenField">
+                                                                                    <label>Document No. <span class="req">*</span></label>
+                                                                                    
+                                                                                    <input value=""  type="text">
+                                                                                </div>
+                                                                                <div class="form-group hiddenField">
+                                                                                    <label>Expiry Date <span class="req">*</span></label>
+                                                                                    
+                                                                                    <input  type="text" value="" placeholder="DD/MM/YYYY" id="datepicker7">
+                                                                                </div>
+                                                                                <div class="form-group hiddenField">
+                                                                                    <label>Issue Date <span class="req">*</span></label>
+                                                                                    
+                                                                                    <input  type="text" value="" placeholder="DD/MM/YYYY" id="datepicker8">
+                                                                                </div>
+                                                                                
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-default showLOAGrid" data-dismiss="modal">Save</button>
+                                                                    </div>
+                                                                </div>
+                                                            
+                                                                </div>
+                                                            </div>
+
+                                                            <div id="uploadEcCard" class="modal" role="dialog">
+                                                                <div class="modal-dialog">
+                                                            
+                                                                <!-- Modal content-->
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                                    <h4 class="modal-title">
+                                                                        Upload Estabilishment Card
+                                                                    </h4>
+                                                                    </div>
+                                                                    <div class="modal-body" style="overflow:visible;">
+                                                                        <div class="row flex-box">
+                                                                            <div class="col-sm-8">
+                                                                                <div class="captureBox">
+                                                                                    <img class="frontImg" style="display: none;" src="../../../images/loa-doc.jpg" alt="">
+                                                                                </div>
+                                                                                <div class="flex-box">
+                                                                                    <div class="mached">Estabilishment Card document uploaded successfully</div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-4">
+                                                                                <input id="upEIDFront4" type="file" style="display:none;">
+                                                                                <button class="white-btn upload-btn ecUploadBtn" onclick="document.getElementById('upEIDFront4').click();">
+                                                                                    <svg xmlns="http://www.w3.org/2000/svg" data-name="Design Convert" id="Design_Convert" viewBox="0 0 64 64"><title/><path class="cls-1" d="M50,52H14a7,7,0,0,1-7-7V41a1,1,0,0,1,2,0v4a5,5,0,0,0,5,5H50a5,5,0,0,0,5-5V41a1,1,0,0,1,2,0v4A7,7,0,0,1,50,52Z"/><path class="cls-1" d="M32,42a1,1,0,0,1-1-1V14a1,1,0,0,1,2,0V41A1,1,0,0,1,32,42Z"/><path class="cls-1" d="M42,24a1,1,0,0,1-.71-.29L32,14.41l-9.29,9.3a1,1,0,0,1-1.42-1.42l10-10a1,1,0,0,1,1.42,0l10,10a1,1,0,0,1,0,1.42A1,1,0,0,1,42,24Z"/></svg>
+                                                                                    Upload Estabilishment Card
+                                                                                </button>
+                                                                                
+                                                                                <div class="btn-box flex-box">
+                                                                                    <button style="width:100%" class="default-btn resetBtn" disabled >Reset</button>
+                                                                                </div>
+                                                                                <div class="form-group hiddenField">
+                                                                                    <label>Document No. <span class="req">*</span></label>
+                                                                                    
+                                                                                    <input value=""  type="text">
+                                                                                </div>
+                                                                                <div class="form-group hiddenField">
+                                                                                    <label>Expiry Date <span class="req">*</span></label>
+                                                                                    
+                                                                                    <input  type="text" value="" placeholder="DD/MM/YYYY" id="datepicker7">
+                                                                                </div>
+                                                                                <div class="form-group hiddenField">
+                                                                                    <label>Issue Date <span class="req">*</span></label>
+                                                                                    
+                                                                                    <input  type="text" value="" placeholder="DD/MM/YYYY" id="datepicker8">
+                                                                                </div>
+                                                                                
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-default showEcardGrid" data-dismiss="modal">Save</button>
+                                                                    </div>
+                                                                </div>
+                                                            
+                                                                </div>
+                                                            </div>
+                                                            <div id="scanEcCardModal" class="modal" role="dialog">
                                                                 <div class="modal-dialog">
                                                                 <!-- Modal content-->
                                                                 <div class="modal-content">
@@ -530,12 +743,12 @@
                                                                         
                                                                     </div>
                                                                     <div class="modal-footer">
-                                                                        <button type="button" class="btn btn-default showLOAGrid" data-dismiss="modal">Save</button>
+                                                                        <button type="button" class="btn btn-default showEcardGrid" data-dismiss="modal">Save</button>
                                                                     </div>
                                                                 </div>
                                                                 </div>
                                                             </div>
-                                                            <div id="captureLOAModal" class="modal" role="dialog">
+                                                            <div id="captureEcCardModal" class="modal" role="dialog">
                                                                 <div class="modal-dialog">
                                                             
                                                                 <!-- Modal content-->
@@ -586,7 +799,7 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="modal-footer">
-                                                                    <button type="button" class="btn btn-default showLOAGrid" data-dismiss="modal">Save</button>
+                                                                    <button type="button" class="btn btn-default showEcardGrid" data-dismiss="modal">Save</button>
                                                                     </div>
                                                                 </div>
                                                             
@@ -617,7 +830,8 @@
                                                                                 
                                                                             </div>
                                                                             <div class="col-sm-4">
-                                                                                <button class="white-btn upload-btn onFile">
+                                                                                <input id="upEIDFront2" type="file" style="display:none;" />
+                                                                                <button class="white-btn upload-btn onFile" onclick="document.getElementById('upEIDFront2').click();">
                                                                                     <svg xmlns="http://www.w3.org/2000/svg" data-name="Design Convert" id="Design_Convert" viewBox="0 0 64 64"><title/><path class="cls-1" d="M50,52H14a7,7,0,0,1-7-7V41a1,1,0,0,1,2,0v4a5,5,0,0,0,5,5H50a5,5,0,0,0,5-5V41a1,1,0,0,1,2,0v4A7,7,0,0,1,50,52Z"/><path class="cls-1" d="M32,42a1,1,0,0,1-1-1V14a1,1,0,0,1,2,0V41A1,1,0,0,1,32,42Z"/><path class="cls-1" d="M42,24a1,1,0,0,1-.71-.29L32,14.41l-9.29,9.3a1,1,0,0,1-1.42-1.42l10-10a1,1,0,0,1,1.42,0l10,10a1,1,0,0,1,0,1.42A1,1,0,0,1,42,24Z"/></svg>
                                                                                     Upload Trade License
                                                                                 </button>
@@ -627,17 +841,17 @@
                                                                                 </div>
                                                                                 <div class="hiddenBox">
                                                                                     <div class="form-group">
-                                                                                        <label>EID No. <span class="req">*</span></label>
+                                                                                        <label>Trade License No. <span class="req">*</span></label>
                                                                                         <input class="" value="" type="text">
                                                                                         
                                                                                     </div>
                                                                                     <div class="form-group">
-                                                                                        <label>EID Expiry Date <span class="req">*</span></label>
+                                                                                        <label>Trade License Expiry Date <span class="req">*</span></label>
                                                                                         <input value="02/04/23" class="" type="text" placeholder="DD/MM/YYYY" id="datepicker4">
                                                                                        
                                                                                     </div>
                                                                                     <div class="form-group">
-                                                                                        <label>EID Issue Date <span class="req">*</span></label>
+                                                                                        <label>Trade License Issue Date <span class="req">*</span></label>
                                                                                         <input value="02/04/20" class="" type="text" placeholder="DD/MM/YYYY" id="datepicker4">
                                                                                         
                                                                                     </div>
@@ -687,19 +901,18 @@
                                                                                 </div>
                                                                                 <div class="hiddenBox">
                                                                                     <div class="form-group">
-                                                                                        <label>EID No. <span class="req">*</span></label>
+                                                                                        <label>Trade License No. <span class="req">*</span></label>
                                                                                         <input class="" value="" type="text">
                                                                                         
                                                                                     </div>
                                                                                     <div class="form-group">
-                                                                                        <label>EID Expiry Date <span class="req">*</span></label>
+                                                                                        <label>Trade License Expiry Date <span class="req">*</span></label>
                                                                                         <input value="02/04/23" class="" type="text" placeholder="DD/MM/YYYY" id="datepicker4">
                                                                                        
                                                                                     </div>
                                                                                     <div class="form-group">
-                                                                                        <label>EID Issue Date <span class="req">*</span></label>
+                                                                                        <label>Trade License Issue Date <span class="req">*</span></label>
                                                                                         <input value="02/04/20" class="" type="text" placeholder="DD/MM/YYYY" id="datepicker4">
-                                                                                        
                                                                                     </div>
                                                                                 </div>
                                                                                 
@@ -749,17 +962,17 @@
                                                                                 </div>
                                                                                 <div class="hiddenBox">
                                                                                     <div class="form-group">
-                                                                                        <label>EID No. <span class="req">*</span></label>
+                                                                                        <label>Trade License No. <span class="req">*</span></label>
                                                                                         <input class="" value="" type="text">
                                                                                         
                                                                                     </div>
                                                                                     <div class="form-group">
-                                                                                        <label>EID Expiry Date <span class="req">*</span></label>
+                                                                                        <label>Trade License Expiry Date <span class="req">*</span></label>
                                                                                         <input value="02/04/23" class="" type="text" placeholder="DD/MM/YYYY" id="datepicker4">
                                                                                        
                                                                                     </div>
                                                                                     <div class="form-group">
-                                                                                        <label>EID Issue Date <span class="req">*</span></label>
+                                                                                        <label>Trade License Issue Date <span class="req">*</span></label>
                                                                                         <input value="02/04/20" class="" type="text" placeholder="DD/MM/YYYY" id="datepicker4">
                                                                                         
                                                                                     </div>
@@ -775,7 +988,339 @@
                                                             
                                                                 </div>
                                                             </div>
-                                                        </div>
+                                                            <div id="uploadEIDModal" class="modal" role="dialog">
+                                                                <div class="modal-dialog">
+                                                            
+                                                                    <!-- Modal content-->
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                                        <h4 class="modal-title">
+                                                                            Upload EID
+                                                                        </h4>
+                                                                        </div>
+                                                                        <div class="modal-body" style="overflow:visible;">
+                                                                            <div class="row flex-box">
+                                                                                <div class="col-sm-8">
+                                                                                    <div class="captureBox">
+                                                                                        <img class="frontImg" style="display: none;" src="../../../../assets/images/eid-front.jpg" alt="">
+                                                                                        <div class="backImg" style="display: none;">
+                                                                                            <div id="UploadCarouse" class="carousel carousel-popupbox slide" data-ride="carousel">
+                                                                                                <div class="carousel-inner">
+                                                                                                  <div class="item active">
+                                                                                                    <img src="../../../../assets/images/eid-front.jpg" alt="EID Front">
+                                                                                                    <div class="carousel-caption">
+                                                                                                        <h3>EID Front</h3>
+                                                                                                    </div>
+                                                                                                  </div>
+                                                                                                  <div class="item">
+                                                                                                    <img src="../../../../assets/images/eid-back.png" alt="EID Back">
+                                                                                                    <div class="carousel-caption">
+                                                                                                        <h3>EID Back</h3>
+                                                                                                    </div>
+                                                                                                  </div>
+                                                                                                </div>
+                                                                                                <!-- Left and right controls -->
+                                                                                                <a class="left carousel-control" href="#UploadCarouse" data-slide="prev">
+                                                                                                  <span class="glyphicon glyphicon-chevron-left"></span>
+                                                                                                  <span class="sr-only">Previous</span>
+                                                                                                </a>
+                                                                                                <a class="right carousel-control" href="#UploadCarouse" data-slide="next">
+                                                                                                  <span class="glyphicon glyphicon-chevron-right"></span>
+                                                                                                  <span class="sr-only">Next</span>
+                                                                                                </a>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <img class="singleImg" style="display: none;" src="../../../../assets/images/front-back.jpg" alt="">
+                                                                                    </div>
+                                                                                    <!-- <div class="flex-box">
+                                                                                        <div class="frontDone">EID Front side Captured Sucessfully</div>
+                                                                                        <div class="backDone">EID back side captured Sucessfully</div>
+                                                                                        <div class="mached">EID OCR Verified and matching EID Details</div>
+                                                                                    </div> -->
+                                                                                    
+                                                                                </div>
+                                                                                <div class="col-sm-4">
+                                                                                    <form id="cat" action="cat">
+                                                                                        <label class="sameFile container col-sm-12 small-check">Use same file for EID
+                                                                                            <input id="sameFile" checked name="cat" type="checkbox">
+                                                                                            <span class="checkmark"></span>
+                                                                                        </label>
+                                                                                    </form>
+                                                                                    <input id="upEIDFront2" type="file" style="display:none;" />
+                                                                                    <button class="white-btn upload-btn frontBtn" onclick="document.getElementById('upEIDFront2').click();" style="display:none;">
+                                                                                        <svg xmlns="http://www.w3.org/2000/svg" data-name="Design Convert" id="Design_Convert" viewBox="0 0 64 64"><title/><path class="cls-1" d="M50,52H14a7,7,0,0,1-7-7V41a1,1,0,0,1,2,0v4a5,5,0,0,0,5,5H50a5,5,0,0,0,5-5V41a1,1,0,0,1,2,0v4A7,7,0,0,1,50,52Z"/><path class="cls-1" d="M32,42a1,1,0,0,1-1-1V14a1,1,0,0,1,2,0V41A1,1,0,0,1,32,42Z"/><path class="cls-1" d="M42,24a1,1,0,0,1-.71-.29L32,14.41l-9.29,9.3a1,1,0,0,1-1.42-1.42l10-10a1,1,0,0,1,1.42,0l10,10a1,1,0,0,1,0,1.42A1,1,0,0,1,42,24Z"/></svg>
+                                                                                        Upload Eid Front
+                                                                                    </button>
+                                                                                    <input id="upEIDBack2" type="file" style="display:none;" />
+                                                                                    <button class="white-btn upload-btn backBtn varifyBtn" onclick="document.getElementById('upEIDBack2').click();" style="display:none;">
+                                                                                        <svg xmlns="http://www.w3.org/2000/svg" data-name="Design Convert" id="Design_Convert" viewBox="0 0 64 64"><title/><path class="cls-1" d="M50,52H14a7,7,0,0,1-7-7V41a1,1,0,0,1,2,0v4a5,5,0,0,0,5,5H50a5,5,0,0,0,5-5V41a1,1,0,0,1,2,0v4A7,7,0,0,1,50,52Z"/><path class="cls-1" d="M32,42a1,1,0,0,1-1-1V14a1,1,0,0,1,2,0V41A1,1,0,0,1,32,42Z"/><path class="cls-1" d="M42,24a1,1,0,0,1-.71-.29L32,14.41l-9.29,9.3a1,1,0,0,1-1.42-1.42l10-10a1,1,0,0,1,1.42,0l10,10a1,1,0,0,1,0,1.42A1,1,0,0,1,42,24Z"/></svg>
+                                                                                        Upload Eid Back
+                                                                                    </button>
+                                                                                    <!-- <button class="white-btn upload-btn onFile">
+                                                                                        <svg xmlns="http://www.w3.org/2000/svg" data-name="Design Convert" id="Design_Convert" viewBox="0 0 64 64"><title/><path class="cls-1" d="M50,52H14a7,7,0,0,1-7-7V41a1,1,0,0,1,2,0v4a5,5,0,0,0,5,5H50a5,5,0,0,0,5-5V41a1,1,0,0,1,2,0v4A7,7,0,0,1,50,52Z"/><path class="cls-1" d="M32,42a1,1,0,0,1-1-1V14a1,1,0,0,1,2,0V41A1,1,0,0,1,32,42Z"/><path class="cls-1" d="M42,24a1,1,0,0,1-.71-.29L32,14.41l-9.29,9.3a1,1,0,0,1-1.42-1.42l10-10a1,1,0,0,1,1.42,0l10,10a1,1,0,0,1,0,1.42A1,1,0,0,1,42,24Z"/></svg>
+                                                                                        <input type="file" id="file"> Upload Eid
+                                                                                    </button> -->
+                                                                                    <input id="upEID2" type="file" style="display:none;" />
+                                                                                    <button class="white-btn upload-btn onFile" onclick="document.getElementById('upEID2').click();">
+                                                                                        <svg xmlns="http://www.w3.org/2000/svg" data-name="Design Convert" id="Design_Convert" viewBox="0 0 64 64"><title/><path class="cls-1" d="M50,52H14a7,7,0,0,1-7-7V41a1,1,0,0,1,2,0v4a5,5,0,0,0,5,5H50a5,5,0,0,0,5-5V41a1,1,0,0,1,2,0v4A7,7,0,0,1,50,52Z"/><path class="cls-1" d="M32,42a1,1,0,0,1-1-1V14a1,1,0,0,1,2,0V41A1,1,0,0,1,32,42Z"/><path class="cls-1" d="M42,24a1,1,0,0,1-.71-.29L32,14.41l-9.29,9.3a1,1,0,0,1-1.42-1.42l10-10a1,1,0,0,1,1.42,0l10,10a1,1,0,0,1,0,1.42A1,1,0,0,1,42,24Z"/></svg>
+                                                                                        Upload Eid
+                                                                                    </button>
+                                                                                    <div class="form-group deasonDropDown" style="display:none;">
+                                                                                        <label>Reason</label>
+                                                                                        <select id="reasonDD" class="selectpicker">
+                                                                                            <option></option>
+                                                                                            <option>Camera Not Working</option>
+                                                                                        </select>
+                                                                                    </div>
+                                                                                    
+                                                                                    <div class="btn-box flex-box">
+                                                                                        <!-- <button disabled class="default-btn varifyBtn">Varify</button> -->
+                                                                                        <button class="default-btn full-width resetBtn">Reset</button>
+                                                                                    </div>
+                                                                                    <div class="form-group">
+                                                                                        <label>EID No. <span class="req">*</span></label>
+                                                                                        <input class="visibleField" value="789-1987-3866106-0" readonly type="text">
+                                                                                        <div class="hiddenField">
+                                                                                            <input class="hiddenField" value="789-1987-3866106-0" disabled readonly type="text">
+                                                                                            <img src="../../../images/tick.png" alt="">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="form-group">
+                                                                                        <label>EID Expiry Date <span class="req">*</span></label>
+                                                                                        <input value="02/04/23" class="visibleField" readonly type="text" placeholder="DD/MM/YYYY" disabled id="datepicker4">
+                                                                                        <div class="hiddenField">
+                                                                                            <input value="02/04/23" readonly type="text" id="datepicker4">
+                                                                                            <img src="../../../images/tick.png" alt="">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="form-group">
+                                                                                        <label>EID Issue Date <span class="req">*</span></label>
+                                                                                        <input value="02/04/20" class="visibleField" readonly type="text" placeholder="DD/MM/YYYY" disabled id="datepicker4">
+                                                                                        <div class="hiddenField">
+                                                                                            <input value="02/04/20" class="" readonly type="text" id="datepicker4">
+                                                                                            <img src="../../../images/tick.png" alt="">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    </div>
+                                                                                    
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <button type="button" class="btn btn-default showEIDGrid" data-dismiss="modal">Save</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            
+                                                            </div>
+                                                            </div>
+                                                            <div id="scanEIDModal" class="modal" role="dialog">
+                                                                <div class="modal-dialog">
+                                                            
+                                                                <!-- Modal content-->
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                                    <h4 class="modal-title">
+                                                                        Scan EID
+                                                                    </h4>
+                                                                    </div>
+                                                                    <div class="modal-body" style="overflow:visible;">
+                                                                        <div class="row flex-box">
+                                                                            <div class="col-sm-8">
+                                                                                <div class="captureBox">
+                                                                                    <img class="frontImg" style="display: none;" src="../../../../assets/images/eid-front.jpg" alt="">
+                                                                                    <div class="backImg" style="display: none;">
+                                                                                        <div id="UploadCarouse1" class="carousel carousel-popupbox slide" data-ride="carousel">
+                                                                                            <div class="carousel-inner">
+                                                                                              <div class="item active">
+                                                                                                <img src="../../../../assets/images/eid-front.jpg" alt="EID Front">
+                                                                                                <div class="carousel-caption">
+                                                                                                    <h3>EID Front</h3>
+                                                                                                </div>
+                                                                                              </div>
+                                                                                              <div class="item">
+                                                                                                <img src="../../../../assets/images/eid-back.png" alt="EID Back">
+                                                                                                <div class="carousel-caption">
+                                                                                                    <h3>EID Back</h3>
+                                                                                                </div>
+                                                                                              </div>
+                                                                                            </div>
+                                                                                            <!-- Left and right controls -->
+                                                                                            <a class="left carousel-control" href="#UploadCarouse1" data-slide="prev">
+                                                                                              <span class="glyphicon glyphicon-chevron-left"></span>
+                                                                                              <span class="sr-only">Previous</span>
+                                                                                            </a>
+                                                                                            <a class="right carousel-control" href="#UploadCarouse1" data-slide="next">
+                                                                                              <span class="glyphicon glyphicon-chevron-right"></span>
+                                                                                              <span class="sr-only">Next</span>
+                                                                                            </a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <!-- <div class="flex-box">
+                                                                                    <span class="frontDone">EID front scanned successfully</span>
+                                                                                    <span class="backDone">EID back scanned successfully</span>
+                                                                                    <span class="mached">OCR Verified and matching EID Details</span>
+                                                                                </div> -->
+                                                                                
+                                                                            </div>
+                                                                            <div class="col-sm-4">
+                                                                                <button class="white-btn scan-btn frontBtn">
+                                                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink" height="32px" version="1.1" viewBox="0 0 32 32" width="32px"><title/><desc/><defs/><g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1"><g fill="#157EFB" id="icon-128-document-scan"><path d="M19,30 L17,30 L17,29 L19,29 L19,30 L19,30 Z M20,30 L22,30 L22,30 L22,29 L20,29 L20,30 L20,30 Z M13,30 L11,30 L11,30 L11,29 L13,29 L13,30 L13,30 L13,30 Z M14,30 L16,30 L16,30 L16,29 L14,29 L14,30 L14,30 L14,30 Z M10,30 L8.99742191,30 C7.89092539,30 7,29.1012878 7,27.9926701 L7,27 L7,27 L8,27 L8,28.0024554 C8,28.553384 8.45470893,29 8.9999602,29 L10,29 L10,30 L10,30 L10,30 Z M26,23 L26,21 L26,21 L25,21 L25,23 L26,23 L26,23 L26,23 Z M26,24 L26,26 L26,26 L25,26 L25,24 L26,24 L26,24 L26,24 Z M7,23 L7,21 L7,21 L8,21 L8,23 L7,23 L7,23 L7,23 Z M7,24 L7,26 L8,26 L8,24 L7,24 L7,24 Z M27,19 L27,17 L28,17 L28,22 L27,22 L27,20 L6,20 L6,22 L5,22 L5,17 L6,17 L6,19 L27,19 L27,19 Z M26,18 L26,11 L21.0059191,11 C19.8980806,11 19,10.1132936 19,9.00189865 L19,3 L9.0085302,3 C7.8992496,3 7,3.89833832 7,5.00732994 L7,18 L26,18 L26,18 L26,18 Z M26,27 L26,28.0025781 C26,29.1090746 25.1057238,30 24.0025781,30 L23,30 L23,29 L23,29 L24.0000398,29 C24.5523026,29 25,28.5536886 25,28.0024554 L25,27 L26,27 L26,27 L26,27 Z M20,3 L20,8.99707067 C20,9.55097324 20.4509752,10 20.990778,10 L26,10 L20,3 L20,3 Z" id="document-scan"/></g></g></svg>
+                                                                                    EID Scan Front
+                                                                                </button>
+                                                                                <button style="display:none;" class="white-btn scan-btn backBtn varifyBtn">
+                                                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink" height="32px" version="1.1" viewBox="0 0 32 32" width="32px"><title/><desc/><defs/><g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1"><g fill="#157EFB" id="icon-128-document-scan"><path d="M19,30 L17,30 L17,29 L19,29 L19,30 L19,30 Z M20,30 L22,30 L22,30 L22,29 L20,29 L20,30 L20,30 Z M13,30 L11,30 L11,30 L11,29 L13,29 L13,30 L13,30 L13,30 Z M14,30 L16,30 L16,30 L16,29 L14,29 L14,30 L14,30 L14,30 Z M10,30 L8.99742191,30 C7.89092539,30 7,29.1012878 7,27.9926701 L7,27 L7,27 L8,27 L8,28.0024554 C8,28.553384 8.45470893,29 8.9999602,29 L10,29 L10,30 L10,30 L10,30 Z M26,23 L26,21 L26,21 L25,21 L25,23 L26,23 L26,23 L26,23 Z M26,24 L26,26 L26,26 L25,26 L25,24 L26,24 L26,24 L26,24 Z M7,23 L7,21 L7,21 L8,21 L8,23 L7,23 L7,23 L7,23 Z M7,24 L7,26 L8,26 L8,24 L7,24 L7,24 Z M27,19 L27,17 L28,17 L28,22 L27,22 L27,20 L6,20 L6,22 L5,22 L5,17 L6,17 L6,19 L27,19 L27,19 Z M26,18 L26,11 L21.0059191,11 C19.8980806,11 19,10.1132936 19,9.00189865 L19,3 L9.0085302,3 C7.8992496,3 7,3.89833832 7,5.00732994 L7,18 L26,18 L26,18 L26,18 Z M26,27 L26,28.0025781 C26,29.1090746 25.1057238,30 24.0025781,30 L23,30 L23,29 L23,29 L24.0000398,29 C24.5523026,29 25,28.5536886 25,28.0024554 L25,27 L26,27 L26,27 L26,27 Z M20,3 L20,8.99707067 C20,9.55097324 20.4509752,10 20.990778,10 L26,10 L20,3 L20,3 Z" id="document-scan"/></g></g></svg>
+                                                                                    EID Scan Back
+                                                                                </button>
+                                                                                
+                                                                                <div class="btn-box flex-box">
+                                                                                    <!-- <button disabled class="default-btn varifyBtn">Varify</button> -->
+                                                                                    <button class="default-btn full-width resetBtn">Reset</button>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <label>EID No. <span class="req">*</span></label>
+                                                                                    <input class="visibleField" value="789-1987-3866106-0" readonly type="text">
+                                                                                    <div class="hiddenField">
+                                                                                        <input class="hiddenField" value="789-1987-3866106-0" disabled readonly type="text">
+                                                                                        <img src="../../../images/tick.png" alt="">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <label>EID Expiry Date <span class="req">*</span></label>
+                                                                                    <input value="02/04/23" class="visibleField" readonly type="text" placeholder="DD/MM/YYYY" disabled id="datepicker4">
+                                                                                    <div class="hiddenField">
+                                                                                        <input value="02/04/23" readonly type="text" id="datepicker4">
+                                                                                        <img src="../../../images/tick.png" alt="">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <label>EID Issue Date <span class="req">*</span></label>
+                                                                                    <input value="02/04/20" class="visibleField" readonly type="text" placeholder="DD/MM/YYYY" disabled id="datepicker4">
+                                                                                    <div class="hiddenField">
+                                                                                        <input value="02/04/20" class="" readonly type="text" id="datepicker4">
+                                                                                        <img src="../../../images/tick.png" alt="">
+                                                                                    </div>
+                                                                                </div>
+                                                                                
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-default showEIDGrid" data-dismiss="modal">Save</button>
+                                                                    </div>
+                                                                </div>
+                                                            
+                                                                </div>
+                                                            </div>
+                                                            <div id="captureEIDModal" class="modal" role="dialog">
+                                                                <div class="modal-dialog">
+                                                            
+                                                                <!-- Modal content-->
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                                    <h4 class="modal-title">
+                                                                        Capture EID
+                                                                    </h4>
+                                                                    </div>
+                                                                    <div class="modal-body" style="overflow:visible;">
+                                                                        <div class="row flex-box">
+                                                                            <div class="col-sm-8">
+                                                                                <div class="captureBox">
+                                                                                    <img class="frontImg" style="display: none;" src="../../../../assets/images/eid-front.jpg" alt="">
+                                                                                    <div class="backImg" style="display: none;">
+                                                                                        <div id="UploadCarouse2" class="carousel carousel-popupbox slide" data-ride="carousel">
+                                                                                            <div class="carousel-inner">
+                                                                                              <div class="item active">
+                                                                                                <img src="../../../../assets/images/eid-front.jpg" alt="EID Front">
+                                                                                                <div class="carousel-caption">
+                                                                                                    <h3>EID Front</h3>
+                                                                                                </div>
+                                                                                              </div>
+                                                                                              <div class="item">
+                                                                                                <img src="../../../../assets/images/eid-back.png" alt="EID Back">
+                                                                                                <div class="carousel-caption">
+                                                                                                    <h3>EID Back</h3>
+                                                                                                </div>
+                                                                                              </div>
+                                                                                            </div>
+                                                                                            <!-- Left and right controls -->
+                                                                                            <a class="left carousel-control" href="#UploadCarouse2" data-slide="prev">
+                                                                                              <span class="glyphicon glyphicon-chevron-left"></span>
+                                                                                              <span class="sr-only">Previous</span>
+                                                                                            </a>
+                                                                                            <a class="right carousel-control" href="#UploadCarouse2" data-slide="next">
+                                                                                              <span class="glyphicon glyphicon-chevron-right"></span>
+                                                                                              <span class="sr-only">Next</span>
+                                                                                            </a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <!-- <div class="flex-box">
+                                                                                    <div class="frontDone">EID front capture successfully</div>
+                                                                                    <div class="backDone">EID back captur successfullye</div>
+                                                                                    <div class="unMached">OCR Not matching EID Details</div>
+                                                                                </div> -->
+                                                                                
+                                                                            </div>
+                                                                            <div class="col-sm-4">
+                                                                                <button class="white-btn frontBtn">
+                                                                                    <svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="_x31_51_x2C__Twitter_x2C__Image_x2C__Picture_x2C__Camera"><g id="XMLID_5076_"><path d="M255,370c-55.14,0-100-44.859-100-100c0-55.14,44.86-100,100-100    c55.141,0,100,44.86,100,100C355,325.141,310.141,370,255,370z M255,190c-44.112,0-80,35.888-80,80s35.888,80,80,80    s80-35.888,80-80S299.112,190,255,190z" id="XMLID_8505_" style="fill:#F05026;"></path></g><g id="XMLID_5077_"><path d="M400,210c-16.542,0-30-13.458-30-30s13.458-30,30-30s30,13.458,30,30    S416.542,210,400,210z M400,170c-5.514,0-10,4.486-10,10s4.486,10,10,10s10-4.486,10-10S405.514,170,400,170z" id="XMLID_8502_" style="fill:#F05026;"></path></g><g id="XMLID_5078_"><path d="M422,428H88c-26.467,0-48-21.532-48-48V158c0-26.467,21.533-48,48-48h62V97.5    c0-20.678,16.822-37.5,37.5-37.5h135c20.678,0,37.5,16.822,37.5,37.5V110h62c26.468,0,48,21.533,48,48v222    C470,406.468,448.468,428,422,428z M88,130c-15.439,0-28,12.561-28,28v222c0,15.439,12.561,28,28,28h334c15.439,0,28-12.561,28-28    V158c0-15.439-12.561-28-28-28h-72c-5.522,0-10-4.477-10-10V97.5c0-9.649-7.851-17.5-17.5-17.5h-135    c-9.649,0-17.5,7.851-17.5,17.5V120c0,5.523-4.477,10-10,10H88z" id="XMLID_8499_" style="fill:#3E3C3C;"></path></g></g><g id="Layer_1"></g></svg>
+                                                                                    Capture Front
+                                                                                </button>
+                                                                                <button style="display:none;" class="white-btn backBtn errorBtn">
+                                                                                    <svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="_x31_51_x2C__Twitter_x2C__Image_x2C__Picture_x2C__Camera"><g id="XMLID_5076_"><path d="M255,370c-55.14,0-100-44.859-100-100c0-55.14,44.86-100,100-100    c55.141,0,100,44.86,100,100C355,325.141,310.141,370,255,370z M255,190c-44.112,0-80,35.888-80,80s35.888,80,80,80    s80-35.888,80-80S299.112,190,255,190z" id="XMLID_8505_" style="fill:#F05026;"></path></g><g id="XMLID_5077_"><path d="M400,210c-16.542,0-30-13.458-30-30s13.458-30,30-30s30,13.458,30,30    S416.542,210,400,210z M400,170c-5.514,0-10,4.486-10,10s4.486,10,10,10s10-4.486,10-10S405.514,170,400,170z" id="XMLID_8502_" style="fill:#F05026;"></path></g><g id="XMLID_5078_"><path d="M422,428H88c-26.467,0-48-21.532-48-48V158c0-26.467,21.533-48,48-48h62V97.5    c0-20.678,16.822-37.5,37.5-37.5h135c20.678,0,37.5,16.822,37.5,37.5V110h62c26.468,0,48,21.533,48,48v222    C470,406.468,448.468,428,422,428z M88,130c-15.439,0-28,12.561-28,28v222c0,15.439,12.561,28,28,28h334c15.439,0,28-12.561,28-28    V158c0-15.439-12.561-28-28-28h-72c-5.522,0-10-4.477-10-10V97.5c0-9.649-7.851-17.5-17.5-17.5h-135    c-9.649,0-17.5,7.851-17.5,17.5V120c0,5.523-4.477,10-10,10H88z" id="XMLID_8499_" style="fill:#3E3C3C;"></path></g></g><g id="Layer_1"></g></svg>
+                                                                                    Capture Back
+                                                                                </button>
+                                                                                <div class="btn-box flex-box">
+                                                                                    <!-- <button disabled class="default-btn errorBtn">Varify</button> -->
+                                                                                    <button class="default-btn full-width resetBtn">Reset</button>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <label>EID No. <span class="req">*</span></label>
+                                                                                    <input class="visibleField" value="789-1987-3866106-0" readonly type="text">
+                                                                                    <div class="hiddenField">
+                                                                                        <input class="hiddenField" value="789-1987-3866106-0" disabled readonly type="text">
+                                                                                        <img src="../../../images/tick.png" alt="">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <label>EID Expiry Date <span class="req">*</span></label>
+                                                                                    <input value="02/04/23" class="visibleField" readonly type="text" placeholder="DD/MM/YYYY" disabled id="datepicker4">
+                                                                                    <div class="hiddenField">
+                                                                                        <input value="02/04/23" readonly type="text" id="datepicker4">
+                                                                                        <img src="../../../images/tick.png" alt="">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <label>EID Issue Date <span class="req">*</span></label>
+                                                                                    <input value="02/04/20" class="visibleField" readonly type="text" placeholder="DD/MM/YYYY" disabled id="datepicker4">
+                                                                                    <div class="hiddenField">
+                                                                                        <input class="lastField" type="text" value="02/24/2020" class="hiddenField errorField" placeholder="DD/MM/YYYY" id="datepicker">
+                                                                                        <img src="../../../images/error.png" alt="">
+                                                                                    </div>
+                                                                                </div>
+                                                                            
+                                                                                <div class="form-group reasonList" style="display: none;">
+                                                                                    <label>Reason <span class="req">*</span></label>
+                                                                                    <select id="reasonDD2" class="selectpicker" title="Please select">
+                                                                                        <option>Scanner not working</option>
+                                                                                        <option>Problem with tablet camera</option>
+                                                                                        <option>Lighting is bad</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                    <button type="button" disabled class="btn btn-default showEIDGrid CaptureSaveBtn" data-dismiss="modal">Save</button>
+                                                                    </div>
+                                                                </div>
+                                                            
+                                                                </div>
+                                                            </div>
                                                        
                                                         <div style="display:none;" class="hiddenGrid custom-container table-container small-table">
                                                             <div class="data-container">
@@ -805,7 +1350,6 @@
                                                                             <td>POA</td>
                                                                             <td>
                                                                                 <input readonly type="text" value="12354">
-                                                                                
                                                                             </td>
                                                                             <td>
                                                                                 <input readonly type="text" value="02/24/2020" placeholder="DD/MM/YYYY" id="datepicker1">
@@ -817,7 +1361,7 @@
                                                                             </td>
                                                                         </tr>
                                                                         <tr class="LOAGrid" style="display:none;">
-                                                                            <td>Estabilishment Card</td>
+                                                                            <td>LOA</td>
                                                                             <td>
                                                                                 <input readonly type="text" value="12354">
                                                                                 
@@ -846,26 +1390,57 @@
                                                                                 <a class="viewBtn" href="javascript:void(0);">Remove</a>
                                                                             </td>
                                                                         </tr>
+                                                                        <tr class="EIDGrid" style="display:none;">
+                                                                            <td>EID</td>
+                                                                            <td>
+                                                                                <input readonly type="text" value="12354">
+                                                                                
+                                                                            </td>
+                                                                            <td>
+                                                                                <input readonly type="text" value="02/24/2020" placeholder="DD/MM/YYYY" id="datepicker1">
+                                                                            </td>
+                                                                            <td><input readonly type="text" value="02/24/2025" placeholder="DD/MM/YYYY" id="datepicker2"></td>
+                                                                            <td>
+                                                                                <a class="removeBtn" href="javascript:void(0);">Remove</a>
+                                                                                <a class="viewBtn" href="javascript:void(0);">Remove</a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="ECardGrid" style="display:none;">
+                                                                            <td>Estabilishment Card</td>
+                                                                            <td>
+                                                                                <input readonly type="text" value="12354">
+                                                                                
+                                                                            </td>
+                                                                            <td>
+                                                                                <input readonly type="text" value="02/24/2020" placeholder="DD/MM/YYYY" id="datepicker1">
+                                                                            </td>
+                                                                            <td><input readonly type="text" value="02/24/2025" placeholder="DD/MM/YYYY" id="datepicker2"></td>
+                                                                            <td>
+                                                                                <a class="removeBtn" href="javascript:void(0);">Remove</a>
+                                                                                <a class="viewBtn" href="javascript:void(0);">Remove</a>
+                                                                            </td>
+                                                                        </tr>
                                                                     </tbody>
                                                                 </table>
                                                                                              
                                                             </div>
                                                         </div>
-                                                        
-                                                                                                                 
+                                                        <div class="col-md-12  remove-padding-right text-right submit-button-container">
+                                                            <button onclick="location.href = 'loa-step01.html'">Previous</button>
+                                                            <button onclick="location.href = '../../../../bcrm-new-journey.html'">Save & Close</button>
+                                                            <button onclick="location.href = 'review.html'">Next</button>
+                                                        </div>
+                                                    </div>
+
                                                     </div>
                                                 </div>
-                                        </div>
-                                                                                    
+                                            </div>
+                                        </div>                          
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-12  remove-padding-right text-right submit-button-container">
-                            <button onclick="location.href = 'loa-step01.html'">Previous</button>
-                            <button onclick="location.href = '../../../retail_landing_v2.html'">Save & Close</button>
-                            <button onclick="location.href = 'loa-step04.html'">Next</button>
-                        </div>
+                        
                         <div class="clearfix"></div>
                     </section>
                 </div>
@@ -895,24 +1470,35 @@
                 $('.loa-btn').hide();
                 $('.tl-btn').hide();
                 $('.ec-btn').hide();
+                $('.eid-btn').hide();
             }
             if ($(this).val() == 'Trade License') {
                 $('.tl-btn').show();
                 $('.loa-btn').hide();
                 $('.poa-btn').hide();
                 $('.ec-btn').hide();
+                $('.eid-btn').hide();
             }
             if ($(this).val() == 'LOA') {
                 $('.loa-btn').show();
                 $('.tl-btn').hide();
                 $('.poa-btn').hide();
                 $('.ec-btn').hide();
+                $('.eid-btn').hide();
             }
             if ($(this).val() == 'Estabilishment Card') {
                 $('.loa-btn').hide();
                 $('.tl-btn').hide();
                 $('.poa-btn').hide();
                 $('.ec-btn').show();
+                $('.eid-btn').hide();
+            }
+            if ($(this).val() == 'EID') {
+                $('.loa-btn').hide();
+                $('.tl-btn').hide();
+                $('.poa-btn').hide();
+                $('.ec-btn').hide();
+                $('.eid-btn').show();
             }
         });
         $(document).ready(function () {
@@ -946,6 +1532,7 @@
             $(this).closest('.modal-body').find('.backBtn').show();
             $(this).closest('.modal-body').find('.frontImg').show();
             $(this).closest('.modal-body').find('.frontDone').show();
+            $(this).closest('.modal-body').find('.singleImg').hide();
         });
         $('.onFile').click(function(){
             $(this).attr('disabled', 'disabled');
@@ -1028,6 +1615,16 @@
             $('.LOAGrid').show();
             $('.loa-btn').addClass('disabled');
         });
+        $('.showEcardGrid').click(function(){
+            $('.hiddenGrid').show();
+            $('.ECardGrid').show();
+            $('.ec-btn').addClass('disabled');
+        });
+        $('.showEIDGrid').click(function(){
+            $('.hiddenGrid').show();
+            $('.EIDGrid').show();
+            $('.eid-btn').addClass('disabled');
+        });
         $('.removeBtn').click(function(){
             $(this).closest('tr').hide();
             $('.dropdown').removeClass('disabled');
@@ -1046,6 +1643,19 @@
         $('.lastField').focusout(function(){
             $(this).closest('.modal-body').find('.varifyBtn').removeAttr('disabled');
             $(this).closest('.modal-body').find('.errorBtn').removeAttr('disabled');
+        });
+        $("#sameFile").change(function() {
+            if(this.checked) {
+                $(this).closest('.modal-body').find('.backBtn').hide();
+                $(this).closest('.modal-body').find('.frontBtn').hide();
+                $(this).closest('.modal-body').find('.onFile').show();
+            } else {
+                $(this).closest('.modal-body').find('.frontBtn').show();
+                $(this).closest('.modal-body').find('.onFile').hide();
+            }
+        });
+        $('#reasonDD2').change(function () {
+            $('.CaptureSaveBtn').removeAttr('disabled');
         });
     </script>
 </body>

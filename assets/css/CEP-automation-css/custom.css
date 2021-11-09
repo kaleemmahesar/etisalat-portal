@@ -4102,10 +4102,13 @@ button[disabled] {
   background-color: #999 !important;
   color: #ccc !important;
   border: 1px solid #999;
+  pointer-events: none;
+  opacity: .75;
 }
 button.order-btn[disabled] {
   background-color: #ccc !important;
   color: #999 !important;
+  pointer-events: none;
 }
 .void-data{
   text-align:left;
@@ -9653,6 +9656,10 @@ select#plannames {
 .summaryinfobox h5 {
   color: #7d7d7d;
 }
+.summaryinfobox h5.medium {
+  font-family: 'neotech-medium';
+  color: #444;
+}
 .card-detail-scan h4 {
   font-size: 15px;
 }
@@ -10678,7 +10685,7 @@ body.new-etisalat button.proceed.btn09 {
 .km-infoTexts .scenarioMsg ul {
   margin: 5px 0 0;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 15px;
 }
 .km-infoTexts .km-choicesbox ul,
 .km-infoTexts .km-choicesbox p {
@@ -10876,4 +10883,23 @@ body.new-etisalat .km-customDetails#newcustom button.proceed {
 }
 .km-nopadding {
   padding: 0;
+}
+#ErrorModal5 .modal-body,
+#ErrorModal6 .modal-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#ErrorModal5 .modal-body img,
+#ErrorModal6 .modal-body img {
+  margin: 0 0 10px;
+  max-width: 50px;
+}
+#ErrorModal5 .modal-body span,
+#ErrorModal6 .modal-body span {
+  font-size: 16px;
+  line-height: 1.65;
+  text-align: center;
+  display: block;
 }
