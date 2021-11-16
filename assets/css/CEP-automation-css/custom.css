@@ -3523,6 +3523,11 @@ span.file-name label {
   font-size: 20px;
   padding: 5px 50px;
 }
+.nav-container > ul>li>a.cpp{
+  background: url(../../images/pportal1.png) no-repeat 10px 15px / 35px auto;
+  font-size: 20px;
+  padding: 5px 50px;
+}
 .nav-container > ul>li>a.retail:hover{
   color:#575757;
 }
@@ -9611,7 +9616,7 @@ select#plannames {
 }
 @media (min-width: 768px) {
   .modal-dialog {
-      width: 760px;
+      width: 805px;
       margin: 30px auto;
   }
 }
@@ -10884,22 +10889,34 @@ body.new-etisalat .km-customDetails#newcustom button.proceed {
 .km-nopadding {
   padding: 0;
 }
-#ErrorModal5 .modal-body,
+#ErrorModal5A .modal-body,
 #ErrorModal6 .modal-body {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  text-align: center;
 }
-#ErrorModal5 .modal-body img,
+#ErrorModal5A .modal-body img,
 #ErrorModal6 .modal-body img {
   margin: 0 0 10px;
   max-width: 50px;
 }
-#ErrorModal5 .modal-body span,
+#ErrorModal5A .modal-body span,
 #ErrorModal6 .modal-body span {
   font-size: 16px;
   line-height: 1.65;
-  text-align: center;
   display: block;
+  width: 100%;
+}
+#ErrorModal5A .modal-body ul,
+#ErrorModal6 .modal-body ul {
+  margin: 10px 0 10px;
+  font-size: 15px;
+  text-align: left;
+}
+#ErrorModal5A .modal-header h5,
+#ErrorModal6 .modal-header h5 {
+  font-size: 18px;
+  margin: 0;
 }

@@ -41,6 +41,16 @@
         }
         .modal { overflow: visible; }
         .modal-body { overflow-y: visible !important; }
+        #Scenario15-btn.col-sm-6 {
+            text-align: left;
+        }
+        #Scenario15-btn.col-sm-6 button.proceed {
+            display: inline-block;
+            width: 48%;
+        }
+        #Scenario15-btn button.proceed {
+            transition: none;
+        }
     </style>
 </head>
 
@@ -146,7 +156,9 @@
                                                     <option value="scenario02">XXX-XXXX-002</option>
                                                     <option value="scenario03">XXX-XXXX-003</option>
                                                     <option value="scenario04">XXX-XXXX-004</option>
-                                                    <option value="scenario05">XXX-XXXX-005</option>
+                                                    <option value="scenario05">XXX-XXXX-05A</option>
+                                                    <option value="scenario05B">XXX-XXXX-05B</option>
+                                                    <option value="scenario05C">XXX-XXXX-05C</option>
                                                     <option value="scenario06">XXX-XXXX-006</option>
                                                     <!-- <option value="scenario07">XXX-XXXX-007</option> -->
                                                     <!-- <option value="scenario08">XXX-XXXX-008</option> -->
@@ -163,6 +175,8 @@
                                             <button style="display:none;" class="scan-btn scan03 disabled">Scan</button>
                                             <button style="display:none;" class="scan-btn scan04 disabled">Scan</button>
                                             <button style="display:none;" class="scan-btn scan05 disabled">Scan</button>
+                                            <button style="display:none;" class="scan-btn scan05B disabled">Scan</button>
+                                            <button style="display:none;" class="scan-btn scan05C disabled">Scan</button>
                                             <button style="display:none;" class="scan-btn scan06 disabled">Scan</button>
                                             <button style="display:none;" class="scan-btn scan07 disabled">Scan</button>
                                             <button style="display:none;" class="scan-btn scan08 disabled">Scan</button>
@@ -935,6 +949,8 @@
                                                                         </div>
                                                                         <div class="modal-footer">
                                                                             <button type="button" data-dismiss="modal" aria-label="Close" class="add-btn btn btn-primary add-party-btn-five" style="display: none;">Select</button>
+                                                                            <button type="button" data-dismiss="modal" aria-label="Close" class="add-btn btn btn-primary add-party-btn-five-b" style="display: none;">Select</button>
+                                                                            <button type="button" data-dismiss="modal" aria-label="Close" class="add-btn btn btn-primary add-party-btn-five-c" style="display: none;">Select</button>
                                                                             <button type="button" data-dismiss="modal" aria-label="Close" class="add-btn btn btn-primary add-party-btn-one">Select</button>
                                                                             <button type="button" data-dismiss="modal" aria-label="Close" class="add-btn btn btn-primary add-party-btn-six" style="display: none;">Select</button>
                                                                         </div>
@@ -944,7 +960,25 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-sm-3 hiddenField" style="display: block;">
+                                                    <div class="col-sm-3 hiddenField" style="display: block;" id="Scenario15-btn">
+                                                        <button disabled onclick="location.href = '../../mobile/reRegistration/account.html'" class="proceed btn05C" style="display: none;">
+                                                            Proceed Now <small>(Fixed Orders Only)</small>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
+                                                                <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
+                                                                    <path id="Path_2684" data-name="Path 2684" d="M7.5,18h21" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                    <path id="Path_2685" data-name="Path 2685" d="M18,7.5,28.5,18,18,28.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                </g>
+                                                            </svg>
+                                                        </button>
+                                                        <button disabled onclick="location.href = '../../mobile/reRegistration/account.html'" class="proceed btn05A" style="display: none;">
+                                                            Re-Register
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
+                                                                <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
+                                                                    <path id="Path_2684" data-name="Path 2684" d="M7.5,18h21" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                    <path id="Path_2685" data-name="Path 2685" d="M18,7.5,28.5,18,18,28.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                </g>
+                                                            </svg>
+                                                        </button>
                                                         <button onclick="location.href = 'scenario1.html'" disabled class="proceed btn01" style="display: none;">
                                                             Proceed Now
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
@@ -1050,38 +1084,49 @@
         <!-- /.container-fluid -->
 
     </div>
-    <div class="modal" id="ErrorModal5" tabindex="-1" role="dialog" aria-labelledby="ErrorModal5Label">
+    <div class="modal" id="ErrorModal5A" tabindex="-1" role="dialog" aria-labelledby="ErrorModal5ALabel">
         <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                Warning
+                <h5>Warning</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
             </div>
             <div class="modal-body">
-                <img src="../../assets/images/error.png" />
-                <span>You can’t place an order as the trade license of selected party is expired. To update the trade license, you can simply click Manage Customer.</span>
+                <div class="ModalMsg05A" style="display: none;">
+                    <img src="../../assets/images/error.png" />
+                    <span>We found that selected party Establishment Card is expired and the Trade License does not exist.</span>
+                    <ul>
+                        <li>In order to proceed with Mobile Orders you need to Re-Register the party</li>
+                        <li>In order to proceed with Fixed Orders you need either to Re-Register the party or upload trade licsene</li>
+                    </ul>
+                </div>
+                <div class="ModalMsg05B" style="display: none;">
+                    <img src="../../assets/images/error.png" />
+                    <span>We found that the selected party Establishment Card is expired and the Trade License is expired.</span>
+                    <ul>
+                        <li>In order to proceed with Mobile Orders you need to Re-Register the party</li>
+                        <li>In order to proceed with Fixed Orders you need either to Re-Register the party or upload trade licsene</li>
+                    </ul>
+                </div>
+                <div class="ModalMsg05C" style="display: none;">
+                    <img src="../../assets/images/error.png" />
+                    <span>We found that the selected party Establishment Card is expired and the Trade License is valid and up-to-date.</span>
+                    <ul>
+                        <li>You will be able to place Fixed orders only</li>
+                        <li>In order to proceed with Mobile Orders you need to Re-Register the party</li>
+                    </ul>
+                </div>
+                <div class="ModalMsg06" style="display: none;">
+                    <img src="../../assets/images/error.png" />
+                    <span>You can’t place an order as the Estabilishment Card / Government Decree of selected party is expired. To update the Estabilishment Card / Government Decree, you can simply click Re Register.</span>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" data-dismiss="modal" aria-label="Close" class="btn btn-primary">OK</button>
             </div>
         </div>
     </div>
-    <div class="modal" id="ErrorModal6" tabindex="-1" role="dialog" aria-labelledby="ErrorModal6Label">
-        <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                Warning
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-            </div>
-            <div class="modal-body">
-                <img src="../../assets/images/error.png" />
-                <span>You can’t place an order as the Estabilishment Card / Government Decree of selected party is expired. To update the Estabilishment Card / Government Decree, you can simply click Manage Customer.</span>
-            </div>
-            <div class="modal-footer">
-                <button type="button" data-dismiss="modal" aria-label="Close" class="btn btn-primary">OK</button>
-            </div>
-        </div>
-    </div>
+    
     <!-- /.etisalat -->
     <!-- /.footer -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -1137,6 +1182,14 @@
             if($(this).val() === "scenario05"){
                 $('.scan05').show();
                 $('.scan05').siblings('.scan-btn').hide();
+            }
+            if($(this).val() === "scenario05B"){
+                $('.scan05B').show();
+                $('.scan05B').siblings('.scan-btn').hide();
+            }
+            if($(this).val() === "scenario05C"){
+                $('.scan05C').show();
+                $('.scan05C').siblings('.scan-btn').hide();
             }
             if($(this).val() === "scenario06"){
                 $('.scan06').show();
@@ -1251,6 +1304,38 @@
             $('.tab-content').hide();
             $('.add-party-btn-one').hide();
             $('.add-party-btn-five').show();
+        });
+        $('.scan05B').click(function(){
+            $('.empty-form').show();
+            $('.hiddenMsg05').show();
+            $('.ErrorMsg05').hide();
+            $('.hiddenMsg05').siblings('.scenarioMsg').hide();
+            $('.btn01').show();
+            $('.btn01').siblings('.proceed').hide();
+            $('.company-list form#othersoption').show();
+            $('.company-list form#thisoption').hide();
+            $('#hide9111213').show();
+            $('.cusDetails').show();
+            $('.tabs-area').hide();
+            $('.tab-content').hide();
+            $('.add-party-btn-one').hide();
+            $('.add-party-btn-five-b').show();
+        });
+        $('.scan05C').click(function(){
+            $('.empty-form').show();
+            $('.hiddenMsg05').show();
+            $('.ErrorMsg05').hide();
+            $('.hiddenMsg05').siblings('.scenarioMsg').hide();
+            $('.btn01').show();
+            $('.btn01').siblings('.proceed').hide();
+            $('.company-list form#othersoption').show();
+            $('.company-list form#thisoption').hide();
+            $('#hide9111213').show();
+            $('.cusDetails').show();
+            $('.tabs-area').hide();
+            $('.tab-content').hide();
+            $('.add-party-btn-one').hide();
+            $('.add-party-btn-five-c').show();
         });
         $('.scan06').click(function(){
             $('.empty-form').show();
@@ -1405,22 +1490,52 @@
             $('.partyField3').val('F2141878');
         });
         $('.add-party-btn-five').click(function(){
+            $('#customerModalAA').modal('hide');
+            $('#ErrorModal5A').modal('show');
+            $('.modal-body .ModalMsg05A').show();
             $('.partyField2').val('C214187');
             $('.proceed.btn01').hide();
+            $('.proceed.btn05A').removeAttr('disabled');
+            $('.proceed.btn05A').show('disabled');
             $('.proceed.btn05').removeAttr('disabled');
             $('.proceed.btn05').show();
-            $('#ErrorModal6').modal('hide');
+            $('#Scenario15-btn').removeClass('col-sm-3');
+            $('#Scenario15-btn').addClass('col-sm-6');
+        });
+        $('.add-party-btn-five-b').click(function(){
             $('#customerModalAA').modal('hide');
-            $('#ErrorModal5').modal('show')
+            $('#ErrorModal5A').modal('show');
+            $('.modal-body .ModalMsg05B').show();
+            $('.partyField2').val('C214187');
+            $('.proceed.btn01').hide();
+            $('.proceed.btn05A').removeAttr('disabled');
+            $('.proceed.btn05A').show('disabled');
+            $('.proceed.btn05').removeAttr('disabled');
+            $('.proceed.btn05').show();
+            $('#Scenario15-btn').removeClass('col-sm-3');
+            $('#Scenario15-btn').addClass('col-sm-6');
+        });
+        $('.add-party-btn-five-c').click(function(){
+            $('#customerModalAA').modal('hide');
+            $('#ErrorModal5A').modal('show');
+            $('.modal-body .ModalMsg05C').show();
+            $('.partyField2').val('C214187');
+            $('.proceed.btn01').hide();
+            $('.proceed.btn05C').removeAttr('disabled');
+            $('.proceed.btn05C').show('disabled');
+            $('.proceed.btn05A').removeAttr('disabled');
+            $('.proceed.btn05A').show();
+            $('#Scenario15-btn').removeClass('col-sm-3');
+            $('#Scenario15-btn').addClass('col-sm-6');
         });
         $('.add-party-btn-six').click(function(){
+            $('#customerModalAA').modal('hide');
+            $('#ErrorModal5A').modal('show');
+            $('.modal-body .ModalMsg06').show();
             $('.partyField2').val('C214187');
             $('.proceed.btn01').hide();
             $('.proceed.btn06').removeAttr('disabled');
             $('.proceed.btn06').show();
-            $('#ErrorModal5').modal('show');
-            $('#customerModalAA').modal('hide');
-            $('#ErrorModal6').modal('show')
         });
         $('.add-party-btn-one').click(function(){
             $('.proceed').removeAttr('disabled');
