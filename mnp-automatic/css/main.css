@@ -154,11 +154,13 @@ h3.title-bcrm-page {
     display: inline-block;
     padding: 0 20px 5px;
     border-bottom: 1px solid rgb(190, 190, 190);
+    text-transform: uppercase;
     font-size: 18px;
 }
 .form-area h3 span,
 h3.title-bcrm-page span {
     color: red;
+    padding-left: 5px;
 }
 .form-area img.del{
     max-width: 17px;

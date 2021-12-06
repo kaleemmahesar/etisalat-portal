@@ -30,7 +30,8 @@
         }
         body.new-etisalat button.proceed.btn02,
         body.new-etisalat button.proceed.btn03,
-        body.new-etisalat button.proceed.btn04 {
+        body.new-etisalat button.proceed.btn04,
+        body.new-etisalat button.proceed.btn06 {
             margin-top: 0;
         }
         .bootstrap-select.btn-group .dropdown-menu {
@@ -133,7 +134,13 @@
                                
                             <div class="col-md-12 custom-container corporate-accounts">
                                 <div class="row">
-
+                                    <div class="col-sm-12">
+                                        <div class="km-infoTextss">
+                                            <div class="text-left scenarioMsg">
+                                                <h3>We gona start now we start the journey by giving your Emirated ID in the machine and click on scan.</h3>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="col-sm-12">
                                         <div class="card-head">
                                             <span class="icon-box">
@@ -153,7 +160,8 @@
                                                 <select id="scenario" class="selectpicker">
                                                     <option value="Select Emirates ID">Select Emirates ID</option>
                                                     <option value="scenario01">XXX-XXXX-001</option>
-                                                    <option value="scenario02">XXX-XXXX-002</option>
+                                                    <option value="scenario02">XXX-XXXX-02A</option>
+                                                    <option value="scenario02B">XXX-XXXX-02B</option>
                                                     <option value="scenario03">XXX-XXXX-003</option>
                                                     <option value="scenario04">XXX-XXXX-004</option>
                                                     <option value="scenario05">XXX-XXXX-05A</option>
@@ -172,6 +180,7 @@
                                             </div>
                                             <button class="scan-btn scan01 disabled">Scan</button>
                                             <button style="display:none;" class="scan-btn scan02 disabled">Scan</button>
+                                            <button style="display:none;" class="scan-btn scan02B disabled">Scan</button>
                                             <button style="display:none;" class="scan-btn scan03 disabled">Scan</button>
                                             <button style="display:none;" class="scan-btn scan04 disabled">Scan</button>
                                             <button style="display:none;" class="scan-btn scan05 disabled">Scan</button>
@@ -209,7 +218,7 @@
                                             <h3>We found that you are an authorized contact for <span>ASTER Pharmacy</span> customer, To place an order, you can simply select the party and click on <b>Proceed now</b>.</h3>
                                         </div>
                                         <div style="display:none;" class="text-left scenarioMsg hiddenMsg06">
-                                            <h3>We found that you are an authorized contact for <span>ASTER Pharmacy</span> customer, To place an order, you can simply select the party and click on <b>Proceed now</b>.</h3>
+                                            <h3>We found that you are an authorized contact for ASTER Pharmacy customer, However you can’t place an order as your EID Documents / Owner EID Document is not exist in our data base. To update documents, simply click on <b>Update EID Documents</b>.</h3>
                                         </div>
                                         <div style="display:none;" class="text-left scenarioMsg hiddenMsg07">
                                             <h3>
@@ -394,7 +403,7 @@
                                                         <div class="cusDetails">
                                                             <div class="col-sm-4">
                                                                 <div class="form-group removeSce03">
-                                                                    <label for="">Select Party <span class="req">*</span></label>
+                                                                    <label for="">Select Customer <span class="req">*</span></label>
                                                                     <input class="partyField3" readonly value="" type="text">
                                                                     <a id="cusModal" data-toggle="modal" data-target="#customerModal" href="javascript:void(0)"></a>
                                                                     <div class="modal" id="customerModal" tabindex="-1" role="dialog" aria-labelledby="customerModalLabel">
@@ -418,15 +427,15 @@
                                                                                             <select class="selectpicker">
                                                                                                 <option value="01">None</option>
                                                                                                 <option value="02">Customer</option>
-                                                                                                <option value="01">Contact</option>
+                                                                                                <!-- <option value="01">Contact</option>
                                                                                                 <option value="02">Opportunity</option>
                                                                                                 <option value="01">Quote</option>
-                                                                                                <option value="02">Order</option>
+                                                                                                <option value="02">Order</option> -->
                                                                                                 <option value="01">Account</option>
                                                                                                 <option value="02">Party</option>
-                                                                                                <option value="01">Order Product Request ID</option>
+                                                                                                <!-- <option value="01">Order Product Request ID</option>
                                                                                                 <option value="02">Ticket</option>
-                                                                                                <option value="01">Agreement</option>
+                                                                                                <option value="01">Agreement</option> -->
                                                                                             </select>
                                                                                         </div>
                                                                                     </div>
@@ -481,6 +490,55 @@
                                                                                                     </td>
                                                                                                     <td>
                                                                                                     Carrefour
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                        <table class="table filled-table7 table-striped" style="display: none;">
+                                                                                            <thead>
+                                                                                                <tr>
+                                                                                                    <th width="10%" scope="col">
+                                                                                                    </th>
+                                                                                                    <th scope="col">
+                                                                                                        Customer ID
+                                                                                                    </th>
+                                                                                                    <th scope="col">
+                                                                                                        Customer Name
+                                                                                                    </th>
+                                                                                                </tr>
+                                                                                            </thead>
+                                                                                            <tbody>
+                                                                                                <tr>
+                                                                                                    <td>
+                                                                                                        <a class="selectBtn" href="javascript:void(0)"></a>
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                       123456789
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                        Minal Doongarwal
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td>
+                                                                                                        <a class="selectBtn" href="javascript:void(0)"></a>
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                        123456789
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                        Minal Doongarwal
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td>
+                                                                                                        <a class="selectBtn" href="javascript:void(0)"></a>
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                        B2141878
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                        Minal Doongarwal
                                                                                                     </td>
                                                                                                 </tr>
                                                                                             </tbody>
@@ -742,7 +800,7 @@
                                                                     </g>
                                                                 </svg>
                                                             </button>
-                                                            <button onclick="location.href = 'scenario04/4.12/customer-details.html'" class="proceed btn12">
+                                                            <button onclick="location.href = 'scenario04/4.12/loa-step01.html'" class="proceed btn12">
                                                                 Register a new customer and create a new LOA
                                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
                                                                     <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
@@ -751,7 +809,7 @@
                                                                     </g>
                                                                 </svg>
                                                             </button>
-                                                            <button onclick="location.href = 'scenario04/4.13/customer-details.html'" class="proceed btn13">
+                                                            <button onclick="location.href = 'scenario04/4.13/loa-step01.html'" class="proceed btn13">
                                                                 Register a new customer and create a new LOA
                                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
                                                                     <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
@@ -760,7 +818,7 @@
                                                                     </g>
                                                                 </svg>
                                                             </button>
-                                                            <button onclick="location.href = 'scenario04/4.13/customer-details.html'" class="proceed btn14">
+                                                            <button onclick="location.href = 'scenario04/4.13/loa-step01.html'" class="proceed btn14">
                                                                 Register a new customer and create a new LOA
                                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
                                                                     <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
@@ -877,15 +935,15 @@
                                                                                         <select class="selectpicker">
                                                                                             <option value="01">None</option>
                                                                                             <option value="02">Customer</option>
-                                                                                            <option value="01">Contact</option>
+                                                                                            <!-- <option value="01">Contact</option>
                                                                                             <option value="02">Opportunity</option>
                                                                                             <option value="01">Quote</option>
-                                                                                            <option value="02">Order</option>
+                                                                                            <option value="02">Order</option> -->
                                                                                             <option value="01">Account</option>
                                                                                             <option value="02">Party</option>
-                                                                                            <option value="01">Order Product Request ID</option>
+                                                                                            <!-- <option value="01">Order Product Request ID</option>
                                                                                             <option value="02">Ticket</option>
-                                                                                            <option value="01">Agreement</option>
+                                                                                            <option value="01">Agreement</option> -->
                                                                                         </select>
                                                                                     </div>
                                                                                 </div>
@@ -961,7 +1019,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-3 hiddenField" style="display: block;" id="Scenario15-btn">
-                                                        <button disabled onclick="location.href = '../../mobile/reRegistration/account.html'" class="proceed btn05C" style="display: none;">
+                                                        <button disabled onclick="location.href = 'scenario1.html'" class="proceed btn05C" style="display: none;">
                                                             Proceed Now <small>(Fixed Orders Only)</small>
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
                                                                 <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
@@ -997,6 +1055,15 @@
                                                                 </g>
                                                               </svg>
                                                         </button>
+                                                        <button onclick="location.href = 'scenario04/4.2b/loa-step01.html'" class="proceed btn02B" style="display: none;">
+                                                            Verify Now
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
+                                                                <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
+                                                                  <path id="Path_2684" data-name="Path 2684" d="M7.5,18h21" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                  <path id="Path_2685" data-name="Path 2685" d="M18,7.5,28.5,18,18,28.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                                                </g>
+                                                              </svg>
+                                                        </button>
                                                         <button onclick="location.href = 'scenario04/4.2/loa-step01.html'" class="proceed btn03" style="display: none;">
                                                             Create New LOA Now
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
@@ -1015,7 +1082,7 @@
                                                                 </g>
                                                             </svg>
                                                         </button>
-                                                        <button disabled onclick="location.href = 'scenario5.html'" class="proceed btn05" style="display: none;">
+                                                        <button disabled onclick="location.href = 'scenario04/4.5-a/loa-step03.html'" class="proceed btn05" style="display: none;">
                                                             Manage Customer
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
                                                                 <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
@@ -1024,8 +1091,8 @@
                                                                 </g>
                                                             </svg>
                                                         </button>
-                                                        <button disabled onclick="location.href = '../../mobile/reRegistration/account.html'" class="proceed btn06" style="display: none;">
-                                                            Re Register
+                                                        <button onclick="location.href = 'scenario04/4.6/loa-step03.html'" class="proceed btn06" style="display: none;">
+                                                            Update EID Documents
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25.243" viewBox="0 0 24 25.243">
                                                                 <g id="Group_214" data-name="Group 214" transform="translate(-6 -5.379)">
                                                                     <path id="Path_2684" data-name="Path 2684" d="M7.5,18h21" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
@@ -1164,6 +1231,11 @@
                 $('.scan02').siblings('.scan-btn').hide();
                 $('.cusDetails').hide();
             }
+            if($(this).val() === "scenario02B"){
+                $('.scan02B').show();
+                $('.scan02B').siblings('.scan-btn').hide();
+                $('.cusDetails').hide();
+            }
             else if($(this).val() !== "scenario02"){
                 $('.cusDetails').show();
             }
@@ -1258,6 +1330,22 @@
             $('.HideCustomerDetails').hide();
             $('.Hide234').hide();
         });
+        $('.scan02B').click(function(){
+            $('.empty-form').show();
+            $('.hiddenMsg02').show();
+            $('.hiddenMsg02').siblings('.scenarioMsg').hide();
+            $('.btn02B').show();
+            $('.btn02B').siblings('.proceed').hide();
+            $('.company-list form#othersoption').show();
+            $('.company-list form#thisoption').hide();
+            $('#hide9111213').show();
+            $('.cusDetails').show();
+            $('.tabs-area').hide();
+            $('.tab-content').hide();
+            $('.ErrorMsg05').hide();
+            $('.HideCustomerDetails').hide();
+            $('.Hide234').hide();
+        });
         $('.scan03').click(function(){
             $('.empty-form').show();
             $('.hiddenMsg03').show();
@@ -1341,14 +1429,17 @@
             $('.empty-form').show();
             $('.hiddenMsg06').show();
             $('.hiddenMsg06').siblings('.scenarioMsg').hide();
-            $('.btn01').show();
-            $('.btn01').siblings('.proceed').hide();
+            $('.btn06').show();
+            $('.btn06').siblings('.proceed').hide();
             $('.company-list form#othersoption').show();
             $('.company-list form#thisoption').hide();
             $('#hide9111213').show();
+            $('.HideCustomerDetails').hide();
             $('.cusDetails').show();
             $('.tabs-area').hide();
             $('.tab-content').hide();
+            $('.HideCustomerDetails').hide();
+            $('.Hide234').hide();
             $('.add-party-btn-one').hide();
             $('.add-party-btn-six').show();
         });
@@ -1484,7 +1575,7 @@
 
         });
         $('.party-search-btn3').click(function(){
-            $('.filled-table3').fadeIn();
+            $('.filled-table7').fadeIn();
         });
         $('.add-party-btn3').click(function(){
             $('.partyField3').val('F2141878');
@@ -1539,6 +1630,8 @@
         });
         $('.add-party-btn-one').click(function(){
             $('.proceed').removeAttr('disabled');
+            $('.partyField2').val('B2141878');
+            $('.partyField2').parent('.form-group').addClass('disabled-field');
         });
         
     </script>

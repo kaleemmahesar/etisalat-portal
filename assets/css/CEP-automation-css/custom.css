@@ -4626,6 +4626,7 @@ label.spacer {
   border-color: #719f18;	
   color: #919192;	
 }	
+
 /*END*/
 .card-body .account-container > ul:first-child li{
   background-color:#fff;
@@ -7261,6 +7262,7 @@ tr.hidden-row {
 button.default-btn.small-btn{
   height:30px;
   border-radius:0;
+  font-size: 12px;
 }
 .flex-box button.order-btn {
   width: 48%;
@@ -7481,13 +7483,16 @@ ul.tandc-menu ul li a {
 .login-wrap .thank-you img, .login-wrap .verify-box img{
     width:auto;
 }
-.dropdown.loa-btn ul li a img,.dropdown.poa-btn ul li a img,.dropdown.tl-btn ul li a img,.dropdown.eid-btn ul li a img{
+.dropdown.loa-btn ul li a img,.dropdown.poa-btn ul li a img,.dropdown.tl-btn ul li a img,.dropdown.eid-btn ul li a img,
+.dropdown.eid-auth-btn ul li a img{
   position: absolute;
   width: 25px;
   left: 5px;
   top:4px;
 }
-.dropdown.loa-btn ul li a,.dropdown.poa-btn ul li a,.dropdown.tl-btn ul li a,.dropdown.eid-btn ul li a{
+.dropdown.loa-btn ul li a,.dropdown.poa-btn ul li a,.dropdown.tl-btn ul li a,
+.dropdown.eid-btn ul li a,
+.dropdown.eid-auth-btn ul li a{
   padding: 8px 0 10px 35px;
   position: relative;
   display: block;
@@ -7497,16 +7502,20 @@ ul.tandc-menu ul li a {
     padding:0;
 }
 .dropdown.loa-btn ul li:last-child a img,.dropdown.poa-btn ul li:last-child a img,
-.dropdown.tl-btn ul li:last-child a img,.dropdown.eid-btn ul li:last-child a img{
+.dropdown.tl-btn ul li:last-child a img,.dropdown.eid-btn ul li:last-child a img,
+.dropdown.eid-auth-btn ul li:last-child a img{
   top: 6px;
   width: 30px;
   left: 4px;
 } 
-.dropdown.loa-btn,.dropdown.poa-btn,.dropdown.tl-btn,.dropdown.eid-btn,.dropdown.loa-btn {
+.dropdown.loa-btn,.dropdown.poa-btn,.dropdown.tl-btn,.dropdown.eid-btn,.dropdown.loa-btn,
+.dropdown.eid-auth-btn {
   float: left;
   margin-top: 10px;
 }
-.dropdown.loa-btn.disabled,.dropdown.poa-btn.disabled,.dropdown.tl-btn.disabled,.dropdown.eid-btn.disabled{
+.dropdown.loa-btn.disabled,.dropdown.poa-btn.disabled,.dropdown.tl-btn.disabled,
+.dropdown.eid-btn.disabled,
+.dropdown.eid-auth-btn.disabled{
   pointer-events:none;
 }
 .dropdown.loa-btn.disabled button,
@@ -7514,7 +7523,8 @@ ul.tandc-menu ul li a {
 .dropdown.tl-btn.disabled button,
 .dropdown.eid-btn.disabled button,
 .dropdown.ec-btn.disabled button,
-.dropdown.oeid-btn.disabled button{
+.dropdown.oeid-btn.disabled button,
+.dropdown.eid-auth-btn.disabled button{
   background-color: #ccc;
   border-color: #c2c2c2;
   color: #999;
@@ -8517,6 +8527,7 @@ button.proceed:hover svg g path{
 .submit-button-container button{
   min-width:0;
   padding: 10px 15px;
+  min-width: 115px; 
 }
 .scenario-box .small-table th{
   background-color:#fff !important;
@@ -8584,8 +8595,7 @@ input[type="text"][readonly]{margin-bottom:0;}
 }
 .company-list label.container {
   border: 1px solid #ddd;
-  padding: 15px 15px 15px 15px;
-  text-align: center;
+  padding: 15px 15px 15px 35px;
   border-radius: 8px;
   box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
   cursor: pointer;
@@ -10724,6 +10734,10 @@ body.new-etisalat button.proceed.btn09 {
 .km-customDetails#newcustom .company-list {
   padding-top: 20px;
 }
+.km-customDetails#newcustom .company-list label.container {
+  padding-left: 35px;
+  text-align: left;
+}
 .km-customDetails#newcustom .company-list label.container:last-child {
   margin-right: 0;
 }
@@ -10919,4 +10933,50 @@ body.new-etisalat .km-customDetails#newcustom button.proceed {
 #ErrorModal6 .modal-header h5 {
   font-size: 18px;
   margin: 0;
+}
+.tab-cont ol.numbers {
+  padding: 0;
+  list-style-position: inside;
+}
+.account-container ul.service-select li.cdomain img {
+  margin: -5px auto -10px;
+}
+.account-container ul.service-select li.cdomain {
+  padding-left: 18px;
+  padding-right: 18px;
+  min-height: 99px;
+}
+.account-container ul.service-select li.cdomain span {
+  position: relative;
+  top: 12px;
+  line-height: 1.35;
+}
+.packages.cdomain h5>img {
+  width: 37px;
+  top: 9px;
+}
+.swMain .custom-container .form-group.disabled-field {
+  pointer-events: none;
+  opacity: 0.85;
+}
+.swMain .custom-container .form-group.disabled-field input {
+  background: #e7e7e7;
+}
+.submit-button-container.justify-right {
+  justify-content: flex-end;
+}
+.bootstrap-select.btn-group>.disabled {
+  background: #f8f8f8;
+}
+.corporate-accounts .summary-box .transparent-fields input[type="text"] {
+  background: none;
+}
+.summary-box .transparent-fields .bootstrap-select>.btn {
+  background: none;
+}
+.tab-cont .tradelicensebox .form-group label {
+  margin-bottom: 5px;
+}
+.custom-container .tradelicensebox .form-group {
+  margin-bottom: 15px;
 }

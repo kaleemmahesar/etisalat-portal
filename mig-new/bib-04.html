@@ -569,19 +569,30 @@
                                                             <div class="account-container text-left">
                                                                 <div class="tab-cont">
                                                                     <div class="row">
-                                                                        <div class="col-sm-5 form-group">
+                                                                        <div class="col-sm-4 form-group">
                                                                             <label>User Name <span
                                                                                     class="req">*</span></label>
                                                                             <input id="reserve01" type="text">
                                                                         </div>
-                                                                        <div class="col-sm-2 btn-box-alone">
+                                                                        <div class="col-sm-4">
+                                                                            <div class="form-group">
+                                                                                <label>VCPE / Router</label>
+                                                                                <select id="" class="selectpicker">
+                                                                                    <option value="Cisco X1">Cisco X1
+                                                                                    </option>
+                                                                                    <option value="Cisco X2">Cisco X2
+                                                                                    </option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!-- <div class="col-sm-2 btn-box-alone">
                                                                             <button
                                                                                 class="default-btn reserve-btn">Reserve</button>
                                                                             <button style="display:none;"
                                                                                 class="default-btn unreserve-btn">Un-Reserve</button>
-                                                                        </div>
+                                                                        </div> -->
                                                                         <div class="col-sm-12 btn-box-alone">
-                                                                            <button disabled id="headingVoice"
+                                                                            <button id="headingVoice"
                                                                                 class="default-btn next-btn"
                                                                                 data-toggle="collapse"
                                                                                 data-target="#collapseVoice"
@@ -2735,8 +2746,8 @@
                                                     <div id="collapseEmail" class="collapse"
                                                         aria-labelledby="headingEmail" data-parent="#packages">
                                                         <div class="card-body">
-                                                            <div class="account-container text-left">
-                                                                <div class="tab-cont">
+                                                            <div class="account-container text-left bg-gry">
+                                                                <!-- <div class="tab-cont">
                                                                     <ul class="nav nav-tabs" role="tablist">
                                                                         <li role="presentation"
                                                                             class="active col-sm-4 no-gutter">
@@ -2799,12 +2810,6 @@
                                                                                             class="edit-btn">Edit</a>
                                                                                     </div>
                                                                                 </div>
-                                                                                <!-- <div class="col-sm-12 btn-box-alone text-left">
-                                                                                    <button id="headingSecurity" class="default-btn next-btn"
-                                                                                    data-toggle="collapse"
-                                                                                    data-target="#collapseSecurity" aria-expanded="false"
-                                                                                    aria-controls="collapseSecurity">Next</button>
-                                                                                </div> -->
                                                                             </div>
                                                                         </div>
                                                                         <div role="tabpanel" class="tab-pane"
@@ -2819,6 +2824,14 @@
                                                                         </div>
                                                                     </div>
 
+                                                                </div> -->
+                                                                <div class="tab-cont">
+                                                                    <p>With this bundle 2 ISV included, You need to
+                                                                        configure them in SAAS Confiuration Page</p>
+                                                                    <ol class="numbers">
+                                                                        <li>Basekit</li>
+                                                                        <li>F-Secure</li>
+                                                                    </ol>
                                                                 </div>
                                                             </div>
                                                         </div>

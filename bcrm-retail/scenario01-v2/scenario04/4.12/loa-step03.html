@@ -83,24 +83,24 @@
                     <div class="col-md-12 item custom-container progress-container">
                         <ul class="item  slickslider">
                             <li>
-                                <a href="customer-details.html" class="selected">
-                                    <span class="stepDesc">Customer Details</span>
+                                <a href="loa-step01.html" class="selected">
+                                    <span class="stepDesc">Contact Details</span>
                                     <div class="stepIcon">
                                         <i class="icon-check"></i>1
                                     </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="loa-step01.html" class="selected">
-                                    <span class="stepDesc">Contact Details</span>
+                                <a href="loa-step03.html" class="selected">
+                                    <span class="stepDesc">LOA Documents</span>
                                     <div class="stepIcon">
                                         <i class="icon-check"></i>2
                                     </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="loa-step03.html" class="selected">
-                                    <span class="stepDesc">LOA Documents</span>
+                                <a href="customer-details.html">
+                                    <span class="stepDesc">Customer Details</span>
                                     <div class="stepIcon">
                                         <i class="icon-check"></i>3
                                     </div>
@@ -144,10 +144,11 @@
                                                             <div class="col-sm-12">
                                                                 <div class="km-infoTexts">
                                                                     <div class="text-left scenarioMsg">
-                                                                        <h3>As per our digital record, you are owner of this customer and you need to upload the following documents..
+                                                                        <h3>As per our digital record, we find that you are the owner of selected Etisalat customer, you need to upload only following documents..
                                                                             <ul>
-                                                                                <li>Emirates ID</li>
-                                                                                <li>Trade License or Establishment Card</li>
+                                                                                <li>Emirates ID (Front and Back) of the owner</li>
+                                                                                <li>Trade License</li>
+                                                                                <li>Establishment Card</li>
                                                                             </ul>
                                                                         </h3>
                                                                 </div>
@@ -158,10 +159,8 @@
                                                                     <select id="docType" class="selectpicker">
                                                                         <option></option>
                                                                         <option value="Trade License">Trade License</option>
-                                                                        <option value="POA">POA</option>
-                                                                        <option value="LOA">LOA</option>
-                                                                        <option value="EID">EID</option>
                                                                         <option value="Estabilishment Card">Estabilishment Card</option>
+                                                                        <option value="EID">Emirates ID (Owner)</option>
                                                                     </select>
                                                                 </div>
                                                             </div>
@@ -848,21 +847,22 @@
                                                                                     <button style="display:none;" disabled class="default-btn varifyBtn">Varify</button>
                                                                                     <button style="width:100%" class="default-btn resetBtn" disabled >Reset</button>
                                                                                 </div>
-                                                                                <div class="hiddenBox">
+                                                                                <div class="hiddenBox tradelicensebox">
                                                                                     <div class="form-group">
                                                                                         <label>Trade License No. <span class="req">*</span></label>
                                                                                         <input class="" value="" type="text">
-                                                                                        
                                                                                     </div>
                                                                                     <div class="form-group">
                                                                                         <label>Trade License Expiry Date <span class="req">*</span></label>
                                                                                         <input value="02/04/23" class="" type="text" placeholder="DD/MM/YYYY" id="datepicker4">
-                                                                                       
                                                                                     </div>
                                                                                     <div class="form-group">
                                                                                         <label>Trade License Issue Date <span class="req">*</span></label>
                                                                                         <input value="02/04/20" class="" type="text" placeholder="DD/MM/YYYY" id="datepicker4">
-                                                                                        
+                                                                                    </div>
+                                                                                    <div class="form-group">
+                                                                                        <label>Issuing Authority <span class="req">*</span></label>
+                                                                                        <input value="Authority Name" class="" type="text" placeholder="Authority Name">
                                                                                     </div>
                                                                                 </div>
                                                                                 
@@ -908,20 +908,22 @@
                                                                                     <button style="display:none;" disabled class="default-btn errorBtn">Varify</button>
                                                                                     <button style="width:100%" class="default-btn resetBtn" disabled >Reset</button>
                                                                                 </div>
-                                                                                <div class="hiddenBox">
+                                                                                <div class="hiddenBox tradelicensebox">
                                                                                     <div class="form-group">
                                                                                         <label>Trade License No. <span class="req">*</span></label>
                                                                                         <input class="" value="" type="text">
-                                                                                        
                                                                                     </div>
                                                                                     <div class="form-group">
                                                                                         <label>Trade License Expiry Date <span class="req">*</span></label>
                                                                                         <input value="02/04/23" class="" type="text" placeholder="DD/MM/YYYY" id="datepicker4">
-                                                                                       
                                                                                     </div>
                                                                                     <div class="form-group">
                                                                                         <label>Trade License Issue Date <span class="req">*</span></label>
                                                                                         <input value="02/04/20" class="" type="text" placeholder="DD/MM/YYYY" id="datepicker4">
+                                                                                    </div>
+                                                                                    <div class="form-group">
+                                                                                        <label>Issuing Authority <span class="req">*</span></label>
+                                                                                        <input value="Authority Name" class="" type="text" placeholder="Authority Name">
                                                                                     </div>
                                                                                 </div>
                                                                                 
@@ -969,21 +971,22 @@
                                                                                     <button style="display:none;" disabled class="default-btn varifyBtn">Varify</button>
                                                                                     <button style="width:100%" class="default-btn resetBtn">Reset</button>
                                                                                 </div>
-                                                                                <div class="hiddenBox">
+                                                                                <div class="hiddenBox tradelicensebox">
                                                                                     <div class="form-group">
                                                                                         <label>Trade License No. <span class="req">*</span></label>
                                                                                         <input class="" value="" type="text">
-                                                                                        
                                                                                     </div>
                                                                                     <div class="form-group">
                                                                                         <label>Trade License Expiry Date <span class="req">*</span></label>
                                                                                         <input value="02/04/23" class="" type="text" placeholder="DD/MM/YYYY" id="datepicker4">
-                                                                                       
                                                                                     </div>
                                                                                     <div class="form-group">
                                                                                         <label>Trade License Issue Date <span class="req">*</span></label>
                                                                                         <input value="02/04/20" class="" type="text" placeholder="DD/MM/YYYY" id="datepicker4">
-                                                                                        
+                                                                                    </div>
+                                                                                    <div class="form-group">
+                                                                                        <label>Issuing Authority <span class="req">*</span></label>
+                                                                                        <input value="Authority Name" class="" type="text" placeholder="Authority Name">
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -1331,8 +1334,8 @@
                                                                 </div>
                                                             </div>
                                                        
-                                                        <div style="display:none;" class="hiddenGrid custom-container table-container small-table">
-                                                            <div class="data-container">
+                                                        <div style="display:none;" class="col-sm-12 hiddenGrid custom-container table-container small-table">
+                                                            <div class="data-container col-sm-12">
                                                                 <table class="table table-striped">
                                                                     <thead>
                                                                         <tr>
@@ -1436,8 +1439,7 @@
                                                         </div>
                                                         <div class="col-md-12  remove-padding-right text-right submit-button-container">
                                                             <button onclick="location.href = 'loa-step01.html'">Previous</button>
-                                                            <button onclick="location.href = '../../../../bcrm-new-journey.html'">Save & Close</button>
-                                                            <button onclick="location.href = 'review.html'">Next</button>
+                                                            <button onclick="location.href = 'customer-details.html'">Next</button>
                                                         </div>
                                                     </div>
 
