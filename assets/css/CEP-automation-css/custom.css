@@ -10980,3 +10980,43 @@ body.new-etisalat .km-customDetails#newcustom button.proceed {
 .custom-container .tradelicensebox .form-group {
   margin-bottom: 15px;
 }
+.km-custom-radiobox {
+  padding-top: 25px;
+}
+.km-custom-radiobox label [type=radio] { 
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.km-custom-radiobox label [type=radio] + span {
+  cursor: pointer;
+}
+.km-custom-radiobox label {
+  margin: 0 10px 0 0;
+}
+.km-custom-radiobox label:last-child {
+  margin-right: 0;
+}
+.km-custom-radiobox label span {
+  color: #909090;
+  font-size: 15px;
+  line-height: 25px;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 5px 10px 0 rgb(0, 0, 0, .05);
+  position: relative;
+  padding: 25px;
+  overflow: hidden;
+  flex-flow: column;
+  height: 100%;
+  transition: all 0.3s;
+  border: 1px solid transparent;
+  width: 100%;
+  border: 1px solid #c2c2c2;
+}
+.km-custom-radiobox label [type=radio]:checked + span {
+  border: 1px solid #719e19;
+  color: #353738;
+  box-shadow: 0 5px 10px 0 rgb(0, 0, 0, .15);
+}
