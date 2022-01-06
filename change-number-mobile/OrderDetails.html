@@ -27,6 +27,58 @@
             max-width: 100%;
             width: 100%;
         }
+        .data-container .row {
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+        .data-container .col-md-3 {
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+        .data-container {
+            padding-top: 20px;
+        }
+        .data-container label {
+            display: block;
+            width: 100%;
+            font-weight: normal;
+            color: #666;
+            font-size: 13px;
+        }
+        .data-container select {
+            display: block;
+            width: 100%;
+            height: 40px;
+            border: none;
+            border: 1px solid #ddd !important;
+            outline: none;
+        }
+        .data-container table select {
+            height: 30px;
+            border: 1px solid #ddd !important;
+            font-size: 12px !important;
+        }
+        .data-container .green-btn {
+            display: block;
+            width: 100%;
+            height: auto;
+            height: 40px;
+            margin-top: 23.5px;
+            border: 2px solid #888888;
+            background: none;
+            color: #888888;
+            text-transform: uppercase;
+            border-radius: 3px;
+        }
+        .data-container .green-btn:hover,
+        .data-container .green-btn:focus {
+            background: #719e19;
+            color: #fff;
+            border-color: #719e19;
+        }
+        .swMain .custom-container.table-container tr td input[type="text"] {
+            color: #888;
+        }
     </style>
 </head>
 
@@ -168,8 +220,32 @@
                                         <div class="col-sm-10 col-sm-offset-1">
                                             <div class="custom-container table-container small-table offer-detail">
                                                 <div class="data-container">
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                            <label>Store</label>
+                                                            <select class="">
+                                                                <option>Please Select</option>
+                                                                <option>Dubai</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <label>Category</label>
+                                                            <select class="">
+                                                                <option>Please Select</option>
+                                                                <option>Standard</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-md-3" style="padding-right: 8px;">
+                                                            <button class="green-btn" id="auto-reserve">Auto Reserve</button>
+                                                        </div>
+                                                        <div class="col-md-3" style="padding-left: 8px;">
+                                                            <button class="green-btn" id="manual-reserve">Manual Reserve</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="data-container">
 
-                                                    <div class="child-grid-05">
+                                                    <div class="default-reserve">
                                                         <table class="table table-bordered myTable table-striped">
                                                             <thead>
                                                                 <tr>
@@ -230,6 +306,169 @@
                                                             </tbody>
                                                         </table>
                                                     </div>
+                                                    <div class="auto-reserve" style="display: none;">
+                                                        <table class="table table-bordered myTable table-striped">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col">
+                                                                        Account Number
+                                                                    </th>
+                                                                    <th scope="col">
+                                                                        New Account Number
+                                                                    </th>
+                                                                    <th scope="col">
+                                                                        Service Charge
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>0566369735</td>
+                                                                    <td>
+                                                                        <input type="text" value="0501110812" readonly />
+                                                                    </td>
+                                                                    <td>200 AED</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>0501110812</td>
+                                                                    <td>
+                                                                        <input type="text" value="0501110812" readonly />
+                                                                    </td>
+                                                                    <td>400 AED</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>0506369735</td>
+                                                                    <td>
+                                                                        <input type="text" value="0501110812" readonly />
+                                                                    </td>
+                                                                    <td>600 AED</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>0501110812</td>
+                                                                    <td>
+                                                                        <input type="text" value="0501110812" readonly />
+                                                                    </td>
+                                                                    <td>800 AED</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>0506369735</td>
+                                                                    <td>
+                                                                        <input type="text" value="0501110812" readonly />
+                                                                    </td>
+                                                                    <td>200 AED</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>0501110812</td>
+                                                                    <td>
+                                                                        <input type="text" value="0501110812" readonly />
+                                                                    </td>
+                                                                    <td>400 AED</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div class="manual-reserve" style="display: none;">
+                                                        <table class="table table-bordered myTable table-striped">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col">
+                                                                        Account Number
+                                                                    </th>
+                                                                    <th scope="col">
+                                                                        New Account Number
+                                                                    </th>
+                                                                    <th scope="col">
+                                                                        Service Charge
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>0566369735</td>
+                                                                    <td>
+                                                                        <select class="">
+                                                                            <option>Please Select</option>
+                                                                            <option>0566369735</option>
+                                                                            <option>0566369735</option>
+                                                                            <option>0566369735</option>
+                                                                            <option>0566369735</option>
+                                                                            <option>0566369735</option>
+                                                                        </select>
+                                                                    </td>
+                                                                    <td>200 AED</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>0501110812</td>
+                                                                    <td>
+                                                                        <select class="">
+                                                                            <option>Please Select</option>
+                                                                            <option>0566369735</option>
+                                                                            <option>0566369735</option>
+                                                                            <option>0566369735</option>
+                                                                            <option>0566369735</option>
+                                                                            <option>0566369735</option>
+                                                                        </select>
+                                                                    </td>
+                                                                    <td>400 AED</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>0506369735</td>
+                                                                    <td>
+                                                                        <select class="">
+                                                                            <option>Please Select</option>                                                                            <option>0566369735</option>
+                                                                            <option>0566369735</option>
+                                                                            <option>0566369735</option>
+                                                                            <option>0566369735</option>
+                                                                            <option>0566369735</option>
+                                                                        </select>
+                                                                    </td>
+                                                                    <td>600 AED</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>0501110812</td>
+                                                                    <td>
+                                                                        <select class="">
+                                                                            <option>Please Select</option>
+                                                                            <option>0566369735</option>
+                                                                            <option>0566369735</option>
+                                                                            <option>0566369735</option>
+                                                                            <option>0566369735</option>
+                                                                            <option>0566369735</option>
+                                                                        </select>
+                                                                    </td>
+                                                                    <td>800 AED</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>0506369735</td>
+                                                                    <td>
+                                                                        <select class="">
+                                                                            <option>Please Select</option>
+                                                                            <option>0566369735</option>
+                                                                            <option>0566369735</option>
+                                                                            <option>0566369735</option>
+                                                                            <option>0566369735</option>
+                                                                            <option>0566369735</option>
+                                                                        </select>
+                                                                    </td>
+                                                                    <td>200 AED</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>0501110812</td>
+                                                                    <td>
+                                                                        <select class="">
+                                                                            <option>Please Select</option>
+                                                                            <option>0566369735</option>
+                                                                            <option>0566369735</option>
+                                                                            <option>0566369735</option>
+                                                                            <option>0566369735</option>
+                                                                            <option>0566369735</option>
+                                                                        </select>
+                                                                    </td>
+                                                                    <td>400 AED</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -271,6 +510,16 @@
         $('.account-select li').click(function(){
             $(this).toggleClass('selected');            
         });
+        $('#auto-reserve').click(function(){
+            $('.default-reserve').hide();
+            $('.auto-reserve').fadeIn();
+            $('.manual-reserve').hide();
+        })
+        $('#manual-reserve').click(function(){
+            $('.default-reserve').hide();
+            $('.auto-reserve').hide();
+            $('.manual-reserve').fadeIn();
+        })
     </script>
 </body>
 

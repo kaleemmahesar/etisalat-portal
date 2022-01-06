@@ -2280,6 +2280,10 @@ tr.highlight td {
   border: none;
   padding:0;
 }
+.summary-box .packages h5 i {
+  font-size: 75%;
+  font-style: normal;
+}
 .summary-box .packages h5 span.icon img {
   max-height: 100%;
   max-width: 100%;
