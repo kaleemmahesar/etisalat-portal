@@ -3047,6 +3047,9 @@ label.top-level {
 .summary-box .addon-box h4{
   display:block;
 }
+.del-addons .addon-box h4.km-mt-10 {
+  margin-top: 7px !important;
+}
 .summary-box .addon-box h4 span {
   display: block;
   background: #fff;
@@ -3556,9 +3559,29 @@ a.cart-btn-icon:before,
 a.cart-btn-icons:before {
   content: "\f218";
 }
+a.cart-btn-icon.plussign:before,
+a.cart-btn-icons.plussign:before {
+  content: "\f096";
+  font-size: 20px;
+  opacity: 0;
+}
+a.cart-btn-icons.plussign,
+a.cart-btn-icon.plussign {
+  font-size: 1px;
+  outline: none;
+}
 .addon-box.no-price a.cart-btn-icon,
 .addon-box.no-price a.cart-btn-icons{
   top: 0;
+}
+a.cart-btn-icon.plussign.active:before,
+a.cart-btn-icons.plussign.active:before {
+  content: "\f046";
+}
+.added a.cart-btn-icon.plussign:before,
+.added a.cart-btn-icons.plussign:before {
+  content: "\f046";
+  opacity: 1;
 }
 a.remove-btn-icon,a.remove-btn-icon-pop {
   display:none !important;
@@ -3571,6 +3594,9 @@ a.remove-btn-icon,a.remove-btn-icon-pop {
   overflow: hidden;
 }
 .added a.remove-btn-icon, .added a.remove-btn-icon-pop{
+  display:inline-block !important;
+}
+.updated a.remove-btn-icon, .updated a.remove-btn-icon-pop{
   display:inline-block !important;
 }
 a.remove-btn-icon:before,a.remove-btn-icon-pop:before {
@@ -3596,6 +3622,11 @@ a.supply-iconBtn {
 a.supply-iconBtn {
   right: 60px;
 }
+.updated a.cart-btn-icon,
+.updated a.cart-btn-icons {
+  right: 40px;
+}
+
 @media (min-width: 768px) {
   .selector .price-slider {
       padding-top:8px
@@ -4379,6 +4410,12 @@ svg#disIcon g{
   fill: #719e19;
 }
 .collapsed svg#disIcon g {
+  fill:rgb(131, 135, 137);
+}
+.km-ct-configuration .card svg g {
+  fill: #719e19;
+}
+.km-ct-configuration .card .collapsed svg g {
   fill:rgb(131, 135, 137);
 }
 .changeBtn{
@@ -6608,6 +6645,9 @@ a.confBtn {
   height: 35px;
   top: 5px;
 }
+.km-ct-configuration .packages.noTagLine h5 svg {
+  top: 6px;
+}
 .packages.noTagLine h5.documentHeading svg line,
 .packages.noTagLine h5.documentHeading svg path,
 .packages.noTagLine h5.documentHeading svg polyline{
@@ -8256,6 +8296,11 @@ small.red-text.text-center {
   /* top: 17px; */
   display:none !important;
 }
+.addon-box.added a.cart-btn-icon,
+.addon-box.added a.cart-btn-icon.active {
+  /* top: 17px; */
+  display:block !important;
+}
 .addon-box.added a.remove-btn-icon-pop,
 .addon-box.added .remove-btn-icon,
 .addon-box.added a.expandIcon {
@@ -9464,7 +9509,7 @@ select#plannames {
   list-style: none;
   padding: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 .case-detailsbox ul li b {
   color: #f44336;
@@ -9475,6 +9520,7 @@ select#plannames {
   flex-direction: column;
   position: relative;
   padding-left: 10px;
+  margin-left: 25px;
 }
 .case-detailsbox ul.upperinfo li:before {
   position: absolute;
@@ -9521,6 +9567,28 @@ select#plannames {
 }
 .case-detailsbox ul.suminfo li.dropdownli .form-group .bootstrap-select {
   font-family: 'neotech-medium', Arial;
+}
+.tick-title {
+  position: relative;
+  font-size: 22px !important;
+}
+.tick-title img {
+  position: relative;
+  top: -3px;
+  margin: 0 7px 0 0;
+}
+.case-detailsbox .table {
+  font-size: 13px;
+}
+.case-detailsbox .table>thead>tr>th {
+  font-weight: normal;
+}
+.case-detailsbox .table th,
+.case-detailsbox .table td {
+  border-right: 1px solid #ddd;
+}
+.case-detailsbox .table td {
+  color: #666;
 }
 .cases-wrap,
 .case-detailsbox {
@@ -11023,4 +11091,226 @@ body.new-etisalat .km-customDetails#newcustom button.proceed {
   border: 1px solid #719e19;
   color: #353738;
   box-shadow: 0 5px 10px 0 rgb(0, 0, 0, .15);
+}
+.km-ct-configuration .km-mt25 {
+  margin-top: 24px;
+}
+.km-ct-configuration .btn.add-new img {
+  max-width: 32px;
+}
+.km-ct-configuration .btn.add-new:hover {
+  transform: scale(1.02);
+  border-color: #719e19;
+}
+.km-ct-configuration .add-contact-new .default-btn {
+  margin-top: 24px;
+}
+.km-ct-configuration .modal .custom-container {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.km-ct-configuration .modal .modal-body h6 {
+  margin: 0 0 20px;
+  font-size: 12px;
+  color: #666;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.km-ct-configuration .modal .modal-body .km-mt25 {
+  margin-top: 26px;
+  background: none;
+  color: #719e19;
+  min-width: 100px;
+  width: auto;
+}
+.sites-grid tr td input[type="text"] {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+.sites-grid thead th {
+  padding: 10px 15px !important;
+  font-family: 'neotech-medium', Arial;
+  color: #333;
+}
+.km-ct-configuration .card-body .modal-body .account-container {
+  margin: 0;
+  padding: 0;
+}
+.km-ct-configuration .card-body .modal-body .account-container ul {
+  padding: 0;
+}
+.km-ct-configuration .modal-body .tab-content {
+  padding: 20px 10px 0;
+}
+.km-ct-configuration .modal-body .tab-contents {
+  min-height: 275px;
+}
+.km-ct-configuration .delete-row {
+  background: none;
+  padding: 0;
+  border: none;
+}
+.km-ct-configuration .delete-row img {
+  max-width: 22px;
+}
+.km-ct-configuration .view-row {
+  background: none;
+  padding: 0;
+  border: none;
+}
+.km-ct-configuration .view-row img {
+  max-width: 28px;
+  margin-right: 5px;
+}
+.km-ct-configuration .packages.noTagLine h5 i.fa {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  font-size: 25px;
+}
+.discount-custom-box {
+  text-align: left;
+  padding: 0 10px;
+}
+.discount-custom-box .titleb0x {
+  position: relative;
+  display: inline-block;
+  padding-right: 60px;
+  margin: 0 0 10px;
+}
+.discount-custom-box .titleb0x h4 {
+  margin: 0;
+}
+.discount-custom-box .titleb0x i {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 23px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.discount-custom-box .titleb0x i::before {
+  transition: all 0.25s ease;
+}
+.discount-custom-box .titleb0x i:hover {
+  color: #719e19;
+}
+.discount-custom-box .titleb0x i.active::before{
+  content: "\f205";
+  color: #719e19;
+}
+.discount-custom-box .titleb0x i.deactive::before{
+  content: "\f204";
+  color: #919192;
+}
+.discount-custom-box #hidediscount {
+  display: none;
+}
+.discount-custom-box #hidediscount.active {
+  display: block;
+}
+.discount-custom-box.projects-box #hideprojects {
+  display: none;
+}
+.discount-custom-box.projects-box #hideprojects.active {
+  display: block;
+}
+.discount-custom-box .titleb0x i.fa-toggle-on {
+  color: #719e19;
+}
+.km-grandtotal .price-box>strong {
+  display: block;
+  margin: 0;
+  float: none;
+}
+.km-grandtotal .price-box>.pricet {
+  margin: 12px 0 6px;
+  color: #686868;
+}
+.km-grandtotal .price-box>.priceinfo {
+  line-height: 18px;
+}
+.del-addons .supplymentary-addon.added a.cart-btn-icon {
+  display: none !important;
+}
+.del-addons .supplymentary-addon a.supply-iconBtn {
+  right: 40px;
+}
+.total h5.price strong {
+  font-size: 16px;
+  display: block;
+}
+.total h5.price small {
+  display: block;
+  margin: 5px 0 0;
+}
+.total h5.price i {
+  font-size: 10px;
+  margin: 5px 0;
+  display: block;
+  font-weight: normal;
+  font-style: normal;
+}
+.del-dropdown span#breakDown {
+  padding: 23px 0;
+}
+.del-dropdown h4 {
+  margin-top: 25px;
+}
+.case9-pdetails .nav-tabs>li>a {
+  padding: 25px 40px;
+  text-decoration: none;
+  font-family: 'neotech-medium', Arial;
+  text-transform: uppercase;
+  
+}
+.case9-pdetails .nav-tabs>li a:before {
+  background-color: #2d81e0;
+}
+.case9-pdetails .nav-tabs>li.active>a {
+  color: #2d81e0;
+}
+.case9-pdetails .tab-content {
+  padding: 30px 0;
+}
+.case9-pdetails .table {
+  max-width: 45%;
+}
+.case9-pdetails .table td {
+  vertical-align: middle;
+}
+.case9-pdetails .table td button{
+  width: 100px;
+  font-size: 13px;
+  height: auto;
+}
+.case9-pdetails .table td button:first-child img {
+  width: 26px;
+}
+.case9-pdetails #domain .default-btn {
+  background: #2d81e0;
+  border-color: #2d81e0;
+  margin-top: 17px;
+}
+.case9-pdetails #domain .default-btn:hover {
+  background: #1b61b1;
+  color: white;
+}
+#ViewEditModal .btn-box-alone {
+  padding-top: 19px;
+}
+#ViewEditModal .btn-box-alone .default-btn {
+  width: auto;
+  min-width: 90px;
+}
+#ViewEditModal ul.number-list li {
+  flex: 0 0 24%;
+  max-width: 24%;
+  margin-right: 1%;
+}
+#ViewEditModal ul.number-list li:nth-child(4n+4) {
+  margin-right: 0;
+}
+#ViewEditModal ul.number-list li.selected span {
+  background: #2d81e0;
 }
