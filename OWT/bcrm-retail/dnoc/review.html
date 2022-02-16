@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sales Order Request :: Etisalat</title>
     <!-- Bootstrap -->
-    <link href="../../../assets//css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../../assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../../assets//css/bootstrap-select.min.css" />
-    <link rel="stylesheet" href="../../../assets//css/font-awesome.min.css" />
-    <link href="../../../assets//css/CEP-automation-css/custom.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../../../assets/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="../../../assets/css/font-awesome.min.css" />
+    <link href="../../../assets/css/CEP-automation-css/custom.css" rel="stylesheet" type="text/css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.0/rangeslider.min.css" rel="stylesheet"
         type="text/css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -313,7 +313,7 @@
                             <!-- Tabs -->
                             <div class="swMain">
                                 <div class="col-md-12 item custom-container progress-container">
-                                    <ul class="item  slickslider">
+                                    <ul class="item  slickslider owt">
                                         <li>
                                             <a href="configuration-main.html" class="selected">
                                                 <span class="stepDesc">Account Selection</span>
@@ -332,7 +332,7 @@
                                         </li>
                                         <li>
                                             <a href="review.html" class="selected">
-                                                <span class="stepDesc">Review</span>
+                                                <span class="stepDesc">Request Summary</span>
                                                 <div class="stepIcon">
                                                     <i class="icon-check"></i>3
                                                 </div>
@@ -340,7 +340,7 @@
                                         </li>
                                         <li>
                                             <a href="verification.html">
-                                                <span class="stepDesc">Customer Verification</span>
+                                                <span class="stepDesc">Customer / Agent Verification</span>
                                                 <div class="stepIcon">
                                                     <i class="icon-check"></i>4
                                                 </div>
@@ -359,7 +359,7 @@
                                                                 <span class="icon">
                                                                     <img src="../../../assets/images/icon-green/opt02.png" alt="">
                                                                 </span>
-                                                                Service Information <i><b>(Type of Request: </b>New Connection)</i>
+                                                                Service Information
                                                                 <span>
                                                                     <img src="../../../assets/images/down-arrow.png" alt="">
                                                                 </span>
@@ -373,6 +373,7 @@
                                                                             <thead>
                                                                                 <tr>
                                                                                     <th>Service Description</th>
+                                                                                    <th>Service Type</th>
                                                                                     <th>Rental</th>
                                                                                     <th>Prepayment</th>
                                                                                     <th>Action</th>
@@ -382,6 +383,7 @@
                                                                             <tbody>
                                                                                 <tr>
                                                                                     <td>Mobile Internet 250 MB + 250 MB Social</td>
+                                                                                    <td>Ownership Transfer</td>
                                                                                     <td>29.0</td>
                                                                                     <td>0.0</td>
                                                                                     <td>-</td>
@@ -425,6 +427,33 @@
                                                                                     <td>-</td>
                                                                                     <td>-</td>
                                                                                     <td>-</td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-header" id="headingAccounts45">
+                                                            <h5 class="mb-0 internet" data-toggle="collapse" data-target="#collapseAccounts45" aria-expanded="false" aria-controls="collapseAccounts45">
+                                                                <span class="icon">
+                                                                    <img src="../../../assets/images/icon-green/opt02.png" alt="">
+                                                                </span>
+                                                                Service Charges Information
+                                                                <span>
+                                                                    <img src="../../../assets/images/down-arrow.png" alt="">
+                                                                </span>
+                                                            </h5>
+                                                        </div>
+                                                        <div id="collapseAccounts45" class="collapse in" aria-labelledby="headingAccounts45" data-parent="#packages" aria-expanded="false">
+                                                            <div class="card-body">
+                                                                <div class="BandD-box">
+                                                                    <div class="contact-fields">
+                                                                        <table class="table table-striped">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td style="width: 25%;font-family: 'neotech-medium', Arial;color: #719e19; width: 40%;"> Ownership Transfer Service Charge (OTC)</td>
+                                                                                    <td>50 AED</td>
                                                                                 </tr>
                                                                             </tbody>
                                                                         </table>
@@ -503,24 +532,80 @@
                                                                 <div class="BandD-box">
                                                                     <div class="contact-fields">
                                                                         <table class="table table-striped">
-                                                                            <thead>
-                                                                                <tr>
-                                                                                    <th>Early Termination Charges</th>
-                                                                                    <th>Penalty Free Service</th>
-                                                                                    <th>Any Special Restriction</th>
-                                                                                    <th>Fair Usage Policy</th>
-                                                                                </tr>
-                                                                            </thead>
                                                                             <tbody>
                                                                                 <tr>
-                                                                                    <td>-</td>
+                                                                                    <td style="width: 25%;font-family: 'neotech-medium', Arial;color: #719e19;">Early Termination Charges</td>
                                                                                     <td>Customer can exit the service contract within a maximum period of 5 days from activation without penalty charges (i.e. exit charges) if the service contract was miss sold or the provided
                                                                                         service did not comply with the service terms and conditions.</td>
                                                                                     <td>-</td>
                                                                                     <td>-</td>
+                                                                                </tr> 
+                                                                                <tr>
+                                                                                    <td style="width: 25%;font-family: 'neotech-medium', Arial;color: #719e19;">Penalty Free Service</td>
+                                                                                    <td>-</td>
+                                                                                    <td></td>
+                                                                                    <td></td>
+                                                                                </tr>  
+                                                                                <tr>
+                                                                                    <td style="width: 25%;font-family: 'neotech-medium', Arial;color: #719e19;">Any Special Restriction</td>
+                                                                                    <td>-</td>
+                                                                                    <td></td>
+                                                                                    <td></td>
+                                                                                </tr>  
+                                                                                <tr>
+                                                                                    <td style="width: 25%;font-family: 'neotech-medium', Arial;color: #719e19;">Fair Usage Policy</td>
+                                                                                    <td>-</td>
+                                                                                    <td></td>
+                                                                                    <td></td>
                                                                                 </tr>                                             
                                                                             </tbody>
                                                                         </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-header" id="headingSecs">
+                                                            <h5 class="mb-0 internet" data-toggle="collapse" data-target="#collapseSecs" aria-expanded="false" aria-controls="collapseSecs">
+                                                                <span class="icon">
+                                                                    <img src="../../../assets/images/icon-green/contact-icon.png">
+                                                                </span>
+                                                                E-bill Details
+                                                                <span>
+                                                                    <img src="../../../assets/images/down-arrow.png" alt="">
+                                                                </span>
+                                                            </h5>
+                                                        </div>
+                                                        <div id="collapseSecs" class="collapse in" aria-labelledby="headingSecs" data-parent="#packages" aria-expanded="false">
+                                                            <div class="card-body">
+                                                                <div class="BandD-box">
+                                                                    <div class="contact-fields">
+                                                                        <div class=" row">
+                                                                            <div class="col-sm-3">
+                                                                                <div class="form-group">
+                                                                                    <label for="">First Name</label>
+                                                                                    <input readonly="" value="Tarun" class="form-field" type="text">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-3">
+                                                                                <div class="form-group">
+                                                                                    <label for="">Last Name</label>
+                                                                                    <input readonly="" value="Sandra" class="form-field" type="text">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-3">
+                                                                                <div class="form-group">
+                                                                                    <label for="">Email Address</label>
+                                                                                    <input readonly="" value="0509878796" class="form-field" type="text">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-3">
+                                                                                <div class="form-group">
+                                                                                    <label for="">Mobile Number</label>
+                                                                                    <input readonly="" value="tarun@Hotmail.com" class="form-field" type="text">
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -664,19 +749,27 @@
                                                                     <div class="contact-fields">
                                                                         <table class="table table-striped">
                                                                             <thead>
-                                                                                <tr><th>Account Number</th>
-                                                                                <th></th>
-                                                                                <th></th>
-                                                                                <th></th>
-                                                                                <th></th>
-                                                                            </tr></thead>
+                                                                                <tr>
+                                                                                    <th>Account Number</th>
+                                                                                    <th>Exit Charges</th>
+                                                                                </tr>
+                                                                            </thead>
                                                                             <tbody>
                                                                                 <tr>
                                                                                     <td>0508686879</td>
-                                                                                    <td>0575659253</td>
-                                                                                    <td>0867682072</td>
-                                                                                    <td>0575659253</td>
-                                                                                    <td>0867682072</td>                                                    
+                                                                                    <td>250 AED</td>
+                                                                                </tr> 
+                                                                                <tr>
+                                                                                    <td>0508686879</td>
+                                                                                    <td>250 AED</td>
+                                                                                </tr> 
+                                                                                <tr>
+                                                                                    <td>0508686879</td>
+                                                                                    <td>250 AED</td>
+                                                                                </tr> 
+                                                                                <tr>
+                                                                                    <td>0508686879</td>
+                                                                                    <td>250 AED</td>
                                                                                 </tr>                                                                                              
                                                                             </tbody>
                                                                         </table>
@@ -1031,405 +1124,127 @@
                                 <nav class="col-sm-3" id="myScrollspy">
                                     <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="15">
                                         <li><a href="#section1">INTRODUCTION</a></li>
-                                        <li><a href="#section2">THE SERVICE PROVIDED</a></li>
-                                        <li><a href="#section3">INTRODUCTION</a></li>
-                                        <li><a href="#section4">THE SERVICE PROVIDED</a></li>
-                                        <li><a href="#section5">NETWORK INTERRUPTIONS</a></li>
-                                        <li><a href="#section6">BILLING</a></li>
-                                        <li><a href="#section7">NETWORK INTERRUPTIONS</a></li>
-                                        <li><a href="#section8">BILLING</a></li>
+                                        <li><a href="#section2">DEFINITIONS</a></li>
+                                        <li><a href="#section3">SERVICE DESCRIPTION</a></li>
+                                        <li><a href="#section4">COMMENCEMENT & DURATION</a></li>
+                                        <li><a href="#section5">CUSTOMER RESTRICTIONS</a></li>
+                                        <li><a href="#section6">ETISALAT’S OBLIGATIONS</a></li>
+                                        <li><a href="#section7">CHARGES, BILLING & PAYMENT</a></li>
+                                        <li><a href="#section8">SUSPENSION, DISCONNECTION</a></li>
+                                        <li><a href="#section9">TERMINATION BY THE CUSTOMER</a></li>
+                                        <li><a href="#section10">CONTACTING ETISALAT</a></li>
+                                        <li><a href="#section11">VAT</a></li>
                                     </ul>
                                 </nav>
                                 <div class="col-sm-9">
                                     <div class="sections-area">
                                         <div id="section1">
-                                            <h4>Introduction</h4>
-                                            <ul class="tc-content">
-                                                <li>These Terms and Condetions
-                                                    shall govern of supply of
-                                                    all of supply the govern
-                                                    shall Conditions and Terms
-                                                    These. a
-                                                    “offer Promotion “the under
-                                                    services and products
-                                                    telecommunications
-                                                    Telecommunications Emirates
-                                                    between and by”) Service
-                                                    “the (product
-                                                    .(“Customer “the (Service
-                                                    the using party any and”)
-                                                    Etisalat (“Corporation
-                                                    Etisalat between agreement
-                                                    an constitute Conditions and
-                                                    Terms These
-                                                    Customer the, Service the of
-                                                    use commencing Upon.
-                                                    Customer the and
-                                                    and Terms these accepted and
-                                                    understood, read have to
-                                                    deemed is
-                                                    .Conditions
-                                                </li>
-                                                <li>
-                                                    This agreement is subject to
-                                                    Etisalat's General Terms and
-                                                    Conditions,
-                                                    published at etisalat.ae
-                                                    (the "Website"). In the
-                                                    event of any discrepancy
-                                                    between the terms of this
-                                                    agreement, and the
-                                                    General Terms and
-                                                    Conditions, the terms of
-                                                    this agreement shall
-                                                    prevail.
-                                                </li>
-                                            </ul>
+                                            <h4>1. INTRODUCTION</h4>
+                                            <div class="content">
+                                                <p>These specific terms and conditions (“Service Specific Terms”) apply in relation to the provision of the Service by Etisalat to the Customer, in addition to the other constituent parts of the Agreement between Etisalat and the Customer.</p>
+                                            </div>
                                         </div>
                                         <div id="section2">
-                                            <h4>The Service provided</h4>
+                                            <h4>2. DEFINITIONS</h4>
                                             <ul class="tc-content">
                                                 <li>
-                                                    Etisalat will provide the
-                                                    Service subject to this
-                                                    agreement.
+                                                    <b>“Agreement”</b> means the entire contractual agreement between Etisalat and the Customer in relation to the Service, comprising of those constituent parts listed in Clause 2.1 of the General T&Cs (Business).
                                                 </li>
                                                 <li>
-                                                    The Customer acknowledges
-                                                    they have taken the effort
-                                                    to familiarise
-                                                    themselves with all the
-                                                    Terms and Conditions of the
-                                                    Service being purchased,
-                                                    This includes details of the
-                                                    prices and the benefits
-                                                    provided under the Service
-                                                    as stipulated on the
-                                                    Website. In particular, the
-                                                    Customer is aware of the
-                                                    cost of
-                                                    any additional benefits
-                                                    and/or services over and
-                                                    above those allocated under
-                                                    the Service.
+                                                    <b>“Customer”</b> means the person / entity who purchases or subscribes to the Service.
                                                 </li>
                                                 <li>
-                                                    The Customer any have not
-                                                    does and use to right the
-                                                    has only Customer The. c
-                                                    reserves Etisalat. Etisalat
-                                                    by allocated number phone
-                                                    mobile a to rights
-                                                    ,technical for number
-                                                    Customer allocated an change
-                                                    to right the
-                                                    the with provided card SIM
-                                                    The. reasons other or legal,
-                                                    operational
-                                                    the remain shall Customer
-                                                    the of possession the in
-                                                    already or Service
-                                                    card SIM the use to entitled
-                                                    only is Customer the and
-                                                    Etisalat of property
-                                                    Services other any or/and
-                                                    Service the utilising of
-                                                    purpose the for provided
-                                                    .Etisalat by provided
+                                                    <b>“Etisalat”</b> means Emirates Telecommunications Group Company PJSC
                                                 </li>
+                                                <li><b>“General T&Cs (Business)”</b> means Etisalat’s general terms and conditions for business products and services which are published on Etisalat’s website and are available through the other communications channels referred to in Clause 35 of the General T&Cs (Business).</li>
+                                                <li><b>“Minimum Term”</b> has the meaning given to it in Clause 4(b).</li>
+                                                <li><b>“Service”</b> means the Business Mobile Postpaid Plan, as described in more details in Clause 3</li>
                                             </ul>
                                         </div>
                                         <div id="section3">
-                                            <h4>3. Introduction</h4>
+                                            <h4>3. SERVICE DESCRIPTION</h4>
                                             <ul class="tc-content">
-                                                <li>These Terms and Condetions
-                                                    shall govern of supply of
-                                                    all of supply the govern
-                                                    shall Conditions and Terms
-                                                    These. a
-                                                    “offer Promotion “the under
-                                                    services and products
-                                                    telecommunications
-                                                    Telecommunications Emirates
-                                                    between and by”) Service
-                                                    “the (product
-                                                    .(“Customer “the (Service
-                                                    the using party any and”)
-                                                    Etisalat (“Corporation
-                                                    Etisalat between agreement
-                                                    an constitute Conditions and
-                                                    Terms These
-                                                    Customer the, Service the of
-                                                    use commencing Upon.
-                                                    Customer the and
-                                                    and Terms these accepted and
-                                                    understood, read have to
-                                                    deemed is
-                                                    .Conditions
+                                                <li>The Business Mobile Postpaid Plan is a mobile post-paid service with optional value add-on services. The Customer has the flexibility to customize their post-paid service package by opting for cost effective add-on services which can give them extra SMS, international talk time, data, incoming roaming and/or business group calling, within the limits set by Etisalat
                                                 </li>
                                                 <li>
-                                                    This agreement is subject to
-                                                    Etisalat's General Terms and
-                                                    Conditions,
-                                                    published at etisalat.ae
-                                                    (the "Website"). In the
-                                                    event of any discrepancy
-                                                    between the terms of this
-                                                    agreement, and the
-                                                    General Terms and
-                                                    Conditions, the terms of
-                                                    this agreement shall
-                                                    prevail.
+                                                    In addition to the benefits stated in Clause 3(a) above, the Service may be bundled with smart phone devices with instalment plans extending over twelve (12), eighteen (18) or twenty-four (24) months. The smart phone devices with these instalment plans may also be provided as add-ons to the Service.
                                                 </li>
                                             </ul>
                                         </div>
                                         <div id="section4">
-                                            <h4>4. The Service provided</h4>
+                                            <h4>4. COMMENCEMENT & DURATION</h4>
                                             <ul class="tc-content">
-                                                <li>
-                                                    Etisalat will provide the
-                                                    Service subject to this
-                                                    agreement.
-                                                </li>
-                                                <li>
-                                                    The Customer acknowledges
-                                                    they have taken the effort
-                                                    to familiarise
-                                                    themselves with all the
-                                                    Terms and Conditions of the
-                                                    Service being purchased,
-                                                    This includes details of the
-                                                    prices and the benefits
-                                                    provided under the Service
-                                                    as stipulated on the
-                                                    Website. In particular, the
-                                                    Customer is aware of the
-                                                    cost of
-                                                    any additional benefits
-                                                    and/or services over and
-                                                    above those allocated under
-                                                    the Service.
-                                                </li>
-                                                <li>
-                                                    The Customer any have not
-                                                    does and use to right the
-                                                    has only Customer The. c
-                                                    reserves Etisalat. Etisalat
-                                                    by allocated number phone
-                                                    mobile a to rights
-                                                    ,technical for number
-                                                    Customer allocated an change
-                                                    to right the
-                                                    the with provided card SIM
-                                                    The. reasons other or legal,
-                                                    operational
-                                                    the remain shall Customer
-                                                    the of possession the in
-                                                    already or Service
-                                                    card SIM the use to entitled
-                                                    only is Customer the and
-                                                    Etisalat of property
-                                                    Services other any or/and
-                                                    Service the utilising of
-                                                    purpose the for provided
-                                                    .Etisalat by provided
-                                                </li>
+                                                <li>The Agreement is valid and binding on and from the date on which it is submitted to and accepted by Etisalat (the <b>“Effective Date”</b>).</li>
+                                                <li>The Agreement has a minimum term of either twelve (12), eighteen (18) or twenty four (24) months <b>(“Minimum Term”)</b> depending on the plan selected by the Customer, which starts on the date on which Etisalat makes the Service available to the Customer <b>(“Activation Date”)</b>.</li>
                                             </ul>
                                         </div>
                                         <div id="section5">
-                                            <h4>5. Network interruptions</h4>
-                                            <ul class="tc-content">
-                                                <li>These Terms and Condetions
-                                                    shall govern of supply of
-                                                    all of supply the govern
-                                                    shall Conditions and Terms
-                                                    These. a
-                                                    “offer Promotion “the under
-                                                    services and products
-                                                    telecommunications
-                                                    Telecommunications Emirates
-                                                    between and by”) Service
-                                                    “the (product
-                                                    .(“Customer “the (Service
-                                                    the using party any and”)
-                                                    Etisalat (“Corporation
-                                                    Etisalat between agreement
-                                                    an constitute Conditions and
-                                                    Terms These
-                                                    Customer the, Service the of
-                                                    use commencing Upon.
-                                                    Customer the and
-                                                    and Terms these accepted and
-                                                    understood, read have to
-                                                    deemed is
-                                                    .Conditions
-                                                </li>
-                                                <li>
-                                                    This agreement is subject to
-                                                    Etisalat's General Terms and
-                                                    Conditions,
-                                                    published at etisalat.ae
-                                                    (the "Website"). In the
-                                                    event of any discrepancy
-                                                    between the terms of this
-                                                    agreement, and the
-                                                    General Terms and
-                                                    Conditions, the terms of
-                                                    this agreement shall
-                                                    prevail.
-                                                </li>
-                                            </ul>
+                                            <h4>5. CUSTOMER OBLIGATIONS & RESTRICTIONS</h4>
+                                            <div class="tc-content">
+                                                <p>Please see Clause 6 of the General T&Cs (Business) for the provisions governing the Customer obligations and restrictions that apply to the Service.</p>
+                                            </div>
                                         </div>
                                         <div id="section6">
-                                            <h4>6. Billing</h4>
-                                            <ul class="tc-content">
-                                                <li>
-                                                    Etisalat will provide the
-                                                    Service subject to this
-                                                    agreement.
-                                                </li>
-                                                <li>
-                                                    The Customer acknowledges
-                                                    they have taken the effort
-                                                    to familiarise
-                                                    themselves with all the
-                                                    Terms and Conditions of the
-                                                    Service being purchased,
-                                                    This includes details of the
-                                                    prices and the benefits
-                                                    provided under the Service
-                                                    as stipulated on the
-                                                    Website. In particular, the
-                                                    Customer is aware of the
-                                                    cost of
-                                                    any additional benefits
-                                                    and/or services over and
-                                                    above those allocated under
-                                                    the Service.
-                                                </li>
-                                                <li>
-                                                    The Customer any have not
-                                                    does and use to right the
-                                                    has only Customer The. c
-                                                    reserves Etisalat. Etisalat
-                                                    by allocated number phone
-                                                    mobile a to rights
-                                                    ,technical for number
-                                                    Customer allocated an change
-                                                    to right the
-                                                    the with provided card SIM
-                                                    The. reasons other or legal,
-                                                    operational
-                                                    the remain shall Customer
-                                                    the of possession the in
-                                                    already or Service
-                                                    card SIM the use to entitled
-                                                    only is Customer the and
-                                                    Etisalat of property
-                                                    Services other any or/and
-                                                    Service the utilising of
-                                                    purpose the for provided
-                                                    .Etisalat by provided
-                                                </li>
-                                            </ul>
+                                            <h4>6. ETISALAT’S OBLIGATIONS</h4>
+                                            <div class="tc-content">
+                                                <p>Etisalat will provide the Service to the Customer based on these Service Specific Terms together with the other constituent parts of the Agreement, and in accordance with the applicable laws and regulations.</p>
+                                            </div>
                                         </div>
                                         <div id="section7">
-                                            <h4>7. Network interruptions</h4>
+                                            <h4>7. CHARGES, BILLING & PAYMENT</h4>
+                                            <div class="content">
+                                                <p>In addition to the provisions at Clause 12 of the General T&Cs (Business), the following provisions regarding the charges, billing and payment apply to the Service:</p>
+                                            </div>
                                             <ul class="tc-content">
-                                                <li>These Terms and Condetions
-                                                    shall govern of supply of
-                                                    all of supply the govern
-                                                    shall Conditions and Terms
-                                                    These. a
-                                                    “offer Promotion “the under
-                                                    services and products
-                                                    telecommunications
-                                                    Telecommunications Emirates
-                                                    between and by”) Service
-                                                    “the (product
-                                                    .(“Customer “the (Service
-                                                    the using party any and”)
-                                                    Etisalat (“Corporation
-                                                    Etisalat between agreement
-                                                    an constitute Conditions and
-                                                    Terms These
-                                                    Customer the, Service the of
-                                                    use commencing Upon.
-                                                    Customer the and
-                                                    and Terms these accepted and
-                                                    understood, read have to
-                                                    deemed is
-                                                    .Conditions
-                                                </li>
-                                                <li>
-                                                    This agreement is subject to
-                                                    Etisalat's General Terms and
-                                                    Conditions,
-                                                    published at etisalat.ae
-                                                    (the "Website"). In the
-                                                    event of any discrepancy
-                                                    between the terms of this
-                                                    agreement, and the
-                                                    General Terms and
-                                                    Conditions, the terms of
-                                                    this agreement shall
-                                                    prevail.
+                                                <li>In-bundle minutes are consumed on a per minute basis, and any out-of-bundle usage is charged on a per second basis
                                                 </li>
                                             </ul>
                                         </div>
                                         <div id="section8">
-                                            <h4>8. Billing</h4>
+                                            <h4>8. SUSPENSION, DISCONNECTION OR TERMINATION BY ETISALAT</h4>
+                                            <div class="tc-content">
+                                                <p>Please see Clause 18 of the General T&Cs (Business) for the provisions governing the suspension, disconnection and termination of the Service or the Agreement by Etisalat.</p>
+                                            </div>
+                                            <!-- <div style="min-height: 275px;"></div> -->
+                                        </div>
+                                        <div id="section9">
+                                            <h4>9. TERMINATION BY THE CUSTOMER</h4>
                                             <ul class="tc-content">
-                                                <li>
-                                                    Etisalat will provide the
-                                                    Service subject to this
-                                                    agreement.
+                                                <li>If the Customer wishes to terminate the Service, the Customer must give Etisalat thirty (30) days’ prior written notice.</li>
+                                                <li>The Customer acknowledges that, upon receipt of the Customer’s termination notice, it may take up to thirty (30) days to terminate the Customer’s account. The Customer shall pay all outstanding Charges for the Service rendered until the Customer account is terminated. Any usage in relation to the Service after the termination of the Agreement shall be billed at standard undiscounted rates.</li>
+                                                <li>If the Customer elects to terminate the Service before the end of the Minimum Term or before the end of the instalment plan (i.e. twelve (12), eighteen (18) or twenty-four (24) months’ period), the Customer shall be obliged to pay early termination Charges to Etisalat. Early termination Charge are calculated as follows:
+                                                    <ul>
+                                                        <li>
+                                                            <p>For Base plan</p>
+                                                            <p>The equivalent of one (1) month in monthly rental Charges for the basic Service or AED 1000 whichever is lower;</p>
+                                                        </li>
+                                                        <li>
+                                                            <p>For Base plan with bundled smart phone devices (if applicable)</p>
+                                                            <p>Device monthly instalment Charges x (number of remaining months – 1) of the Minimum Term + Base plan exit Charges (the equivalent of one (1) month in monthly rental Charges for the basic Service or AED 1000 whichever is lower);</p>
+                                                        </li>
+                                                        <li>
+                                                            <p>For Base plan with add on smart phone devices (if applicable)</p>
+                                                            <p>In the case of termination before the end of the Minimum Term: Device monthly instalment Charges x number of months remaining until the end of the instalment plan + Base plan exit Charges (the equivalent of one (1) month in monthly rental Charges for the basic Service or AED 1000 whichever is lower);</p>
+                                                            <p>In the case of termination after the end of the base plan Minimum Term but before the end of the device instalment plan term: Device monthly instalment Charges x number of months remaining until the end of the instalment plan</p>
+                                                        </li>
+                                                    </ul>
                                                 </li>
-                                                <li>
-                                                    The Customer acknowledges
-                                                    they have taken the effort
-                                                    to familiarise
-                                                    themselves with all the
-                                                    Terms and Conditions of the
-                                                    Service being purchased,
-                                                    This includes details of the
-                                                    prices and the benefits
-                                                    provided under the Service
-                                                    as stipulated on the
-                                                    Website. In particular, the
-                                                    Customer is aware of the
-                                                    cost of
-                                                    any additional benefits
-                                                    and/or services over and
-                                                    above those allocated under
-                                                    the Service.
-                                                </li>
-                                                <li>
-                                                    The Customer any have not
-                                                    does and use to right the
-                                                    has only Customer The. c
-                                                    reserves Etisalat. Etisalat
-                                                    by allocated number phone
-                                                    mobile a to rights
-                                                    ,technical for number
-                                                    Customer allocated an change
-                                                    to right the
-                                                    the with provided card SIM
-                                                    The. reasons other or legal,
-                                                    operational
-                                                    the remain shall Customer
-                                                    the of possession the in
-                                                    already or Service
-                                                    card SIM the use to entitled
-                                                    only is Customer the and
-                                                    Etisalat of property
-                                                    Services other any or/and
-                                                    Service the utilising of
-                                                    purpose the for provided
-                                                    .Etisalat by provided
-                                                </li>
+                                                <li>In addition, Etisalat is entitled to recover early termination Charges as set out in Clause 9(c) above where Etisalat terminates the Agreement as a result of a breach by the Customer.</li>
                                             </ul>
-                                            <div style="min-height: 275px;"></div>
+                                            <!-- <div style="min-height: 275px;"></div> -->
+                                        </div>
+                                        <div id="section10">
+                                            <h4>10. CONTACTING ETISALAT</h4>
+                                            <div class="tc-content">
+                                                <p>The Customer may contact Etisalat to discuss the Service (including these Service Specific Terms and the General T&Cs (Business)), or any other product or service offered by Etisalat, by using any of the communications channels stated in Clause 35 of the General T&Cs (Business).</p>
+                                            </div>
+                                        </div>
+                                        <div id="section11">
+                                            <h4>11. VAT</h4>
+                                            <div class="tc-content">
+                                                <p>Please see Clause 14 of the General T&Cs (Business) for the provisions governing VAT Value Added Tax that apply to the Service.</p>
+                                            </div>
+                                            <div style="min-height: 420px;"></div>
                                         </div>
                                     </div>
                                 </div>

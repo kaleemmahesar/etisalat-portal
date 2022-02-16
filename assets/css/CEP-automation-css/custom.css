@@ -10162,10 +10162,14 @@ h4.radiosheading {
 .termsbigger .sections-area ul li ul {
   padding-left: 25px;
   margin-top: 10px;
-  list-style-type: square;
+  list-style-type: disclosure-closed;
 }
 .termsbigger .sections-area ul li ul li {
   margin-bottom: 3px;
+  text-align: left;
+}
+.termsbigger .sections-area ul li ul li p {
+  display: inline-block;
 }
 .termsbigger .sections-area h6 strong {
   display: block;
@@ -11313,4 +11317,85 @@ body.new-etisalat .km-customDetails#newcustom button.proceed {
 }
 #ViewEditModal ul.number-list li.selected span {
   background: #2d81e0;
+}
+.bg-cards.km-del-packges .plan-card.tile-table .tile-card .tiles-box-title h2 {
+  margin-top: 12px;
+  font-family: 'neotech-medium', Arial;
+}
+.bg-cards.km-del-packges .plan-card.tile-table .tile-card .tiles-box-title p {
+  margin: 10px 0 0;
+}
+.bg-cards.km-del-packges .togglebtn-card {
+  position: absolute;
+  width: 15px;
+  right: 25px;
+  top: 22px;
+  z-index: 99;
+  height: 15px;
+  border: solid #719e19;
+  border-width: 0px 0px 2px 2px;
+  padding: 3.5px;
+  transform: translateY(-50%) rotate(-45deg);
+  padding: 10px;
+}
+.bg-cards.km-del-packges .togglebtn-card.active {
+  transform: rotate(135deg);
+}
+.bg-cards.km-del-packges .tiles-box-title:after {
+  display: none;
+}
+.km-fnp-checkbox .form-group {
+  margin: 0;
+  position: relative;
+  left: -110px;
+}
+.km-fnp-checkbox {
+  padding-top: 36px;
+}
+.km-fnp-checkbox .form-group input {
+  width: auto;
+  margin: 0 3px 0 0;
+  display: inline-block;
+  position: relative;
+  top: 2px;
+  width: 15px;
+  height: 15px;
+}
+.km-fnp-checkbox .form-group label {
+  margin: 0 !important;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 13px !important;
+}
+.voice-grid .form-group.fnpbox {
+  margin: 0;
+  min-width: 85px;
+}
+.voice-grid .form-group.fnpbox input{
+  width: auto;
+  margin: 0 3px 0 0;
+  display: inline-block;
+  position: relative;
+  top: 2px;
+  width: 15px;
+  height: 15px;
+}
+.voice-grid .form-group.fnpbox label {
+  margin: 0 !important;
+  display: inline-block;
+  cursor: pointer;
+}
+.card-body .account-container.disabled ul.mainNum {
+  opacity: 0.65;
+  pointer-events: none;
+}
+.packages .account-container.disabled ul.mainNum li {
+  color: #b7b7b7;
+}
+.swMain .progress-container .owt li {
+  width: 175px;
+}
+.swMain .progress-container .owt li:after {
+  width: 100px;
+  right: -55px;
 }

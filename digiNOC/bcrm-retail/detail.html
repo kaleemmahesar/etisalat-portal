@@ -39,6 +39,41 @@
             border-bottom: 1px solid #ddd;
             font-family: 'neotech-medium', Arial;
         }
+        .packages.noTagLine h5.contactDetails svg g {
+            fill: #719e19;
+        }
+        .packages.noTagLine h5.contactDetails svg {
+            top: 5px;
+        }
+        .grid-head-wrap.mb30 {
+            margin-bottom: 30px;
+        }
+        .grid-head-wrap.mb30 table {
+            min-height: 230px;
+        }
+        .grid-head-wrap.mb30 .btn-group.bootstrap-select {
+            width: 100% !important;
+        }
+        .grid-head-wrap.mb30 .table td .bootstrap-select>.btn {
+            max-width: 100%;
+            font-size: 12px;
+        }
+        .swMain .custom-container.table-container.small-table {
+            padding: 15px 25px;
+            margin: 0;
+            border: 1px solid #e1e1e1;
+            border-top: none;
+        }
+        .swMain .modal-body .custom-container.table-container.small-table {
+            border: none;
+            padding: 0;
+        }
+        .card-body .account-container {
+            padding-top: 0;
+        }
+        .table>tbody>tr>td {
+            vertical-align: middle;
+        }
     </style>
 </head>
 
@@ -77,6 +112,70 @@
                         </ul>
                     </div>
                 </div>
+                <div class="col-sm-2">
+                    <div class="navbar-right">
+                        <div class="dropdown">
+                            <a id="oSummary" class="summary-btn" data-target="#" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">
+                                Request Summary
+                                <span class="caret"></span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="oSummary">
+                                <div class="item-list">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Order ID</th>
+                                                <th>Customer Name</th>
+                                                <th>Party ID</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>ORD-212-2323</td>
+                                                <td>Aster Pharmacy</td>
+                                                <td>17567</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Order Status</th>
+                                                <th>Service Type</th>
+                                                <th>Sales Manager</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Draft</td>
+                                                <td>COCP Digital NOC</td>
+                                                <td>Jordan</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Authorized Contact Name</th>
+                                                <th>Authorized Contact Email</th>
+                                                <th>Authorized Contact Mobile</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Minal Doongarwal</td>
+                                                <td>mdoongarwal@etisalat.ae</td>
+                                                <td>971569629141</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
                 <!--/.nav-collapse -->
             </div>
         </nav>
@@ -106,19 +205,19 @@
                                                 </div>
                                             </a>
                                         </li>
-                                        <li>
+                                        <!-- <li>
                                             <a href="docs.html">
                                                 <span class="stepDesc">NOC Document</span>
                                                 <div class="stepIcon">
                                                     <i class="icon-check"></i>3
                                                 </div>
                                             </a>
-                                        </li>
+                                        </li> -->
                                         <li>
                                             <a href="review.html">
                                                 <span class="stepDesc">Review</span>
                                                 <div class="stepIcon">
-                                                    <i class="icon-check"></i>4
+                                                    <i class="icon-check"></i>3
                                                 </div>
                                             </a>
                                         </li>
@@ -126,13 +225,13 @@
                                             <a href="tandc-1.html" class="">
                                                 <span class="stepDesc">Verification</span>
                                                 <div class="stepIcon">
-                                                    <i class="icon-check"></i>5
+                                                    <i class="icon-check"></i>4
                                                 </div>
                                             </a>
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="col-md-12 custom-container corporate-accounts">
+                                <div class="col-md-12 custom-container corporate-accounts small-table">
                                     <div class="row">
                                         <div class="col-sm-10 col-sm-offset-1">
                                             <div id="packages" class="packages noTagLine">
@@ -141,8 +240,45 @@
                                                         <h5 class="mb-0 contactDetails" data-toggle="collapse"
                                                             data-target="#collapseNumber" aria-expanded="true"
                                                             aria-controls="collapseNumber">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 512 512" id="Layer_1" version="1.1" viewBox="0 0 512 512" xml:space="preserve"><g id="XMLID_512_"><g id="XMLID_15_"><polyline fill="none" id="XMLID_45_" points="    358,130.6 496,130.6 496,466.1 16,466.1 16,130.6 154,130.6   " stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="10"/><g id="XMLID_40_"><rect fill="none" height="171.7" id="XMLID_38_" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="10" width="171.7" x="63.7" y="184.9"/><line fill="none" id="XMLID_39_" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="10" x1="281.8" x2="448.3" y1="216.4" y2="216.4"/><line fill="none" id="XMLID_41_" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="10" x1="281.8" x2="448.3" y1="279.5" y2="279.5"/><line fill="none" id="XMLID_42_" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="10" x1="281.8" x2="448.3" y1="342.6" y2="342.6"/><line fill="none" id="XMLID_43_" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="10" x1="281.8" x2="448.3" y1="405.6" y2="405.6"/><line fill="none" id="XMLID_44_" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="10" x1="63.7" x2="235.4" y1="405.6" y2="405.6"/></g><path d="    M296.2,86.1c0-22.2-18-40.2-40.2-40.2s-40.2,18-40.2,40.2H154V151h204V86.1H296.2z" fill="none" id="XMLID_46_" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="10"/></g><g id="XMLID_406_"><path clip-rule="evenodd" d="    M83.6,356.6c0-36.5,29.6-66,66-66s66,29.6,66,66" fill="none" fill-rule="evenodd" id="XMLID_388_" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="10"/><circle clip-rule="evenodd" cx="149.6" cy="251.4" fill="none" fill-rule="evenodd" id="XMLID_372_" r="39.1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="10"/></g></g></svg>
-                                                            Contact Details
+                                                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                                viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+                                                            <g id="Certificate">
+                                                                <path d="M58.3496017,4.1445498H5.6494002C2.5342,4.1445498,0,6.6786499,0,9.7939501v36.5263023
+                                                                    c0,3.1152992,2.5342,5.6493988,5.6494002,5.6493988h18.1132984c0.5528011,0,1-0.4472008,1-1c0-0.5527-0.4471989-1-1-1H5.6494002
+                                                                    C3.6368001,49.9696503,2,48.3329506,2,46.3202515V9.7939501C2,7.78125,3.6368001,6.1445498,5.6494002,6.1445498h52.7002029
+                                                                    C60.3623009,6.1445498,62,7.78125,62,9.7939501v36.5263023c0,2.0126991-1.6376991,3.6493988-3.6503983,3.6493988
+                                                                    c-0.5527,0-1,0.4473-1,1c0,0.5527992,0.4473,1,1,1C61.464901,51.9696503,64,49.4355507,64,46.3202515V9.7939501
+                                                                    C64,6.6786499,61.464901,4.1445498,58.3496017,4.1445498z"/>
+                                                                <path d="M22,32.1445503H10c-0.5527,0-1,0.4472008-1,1c0,0.5527,0.4473,1,1,1h12c0.5527992,0,1-0.4473,1-1
+                                                                    C23,32.5917511,22.5527992,32.1445503,22,32.1445503z"/>
+                                                                <path d="M22,38.6943512H10c-0.5527,0-1,0.447197-1,1c0,0.5527,0.4473,1,1,1h12c0.5527992,0,1-0.4473,1-1
+                                                                    C23,39.1415482,22.5527992,38.6943512,22,38.6943512z"/>
+                                                                <path d="M51.7373009,42.0009499c-0.0184021-0.0629997-0.0586014-0.1109009-0.0876007-0.167099
+                                                                    C53.7256012,39.5299492,55,36.4897499,55,33.1445503c0-7.1797009-5.8203011-13-13-13s-13,5.8202991-13,13
+                                                                    c0,3.3083992,1.2462006,6.3186989,3.2815018,8.6133995c-0.0209999,0.0455017-0.054203,0.0820999-0.0686035,0.1316986
+                                                                    l-4.2069988,14.4238014c-0.1103992,0.3788986,0.0116997,0.7860985,0.3115005,1.0419998
+                                                                    c0.2998009,0.2558022,0.7217007,0.3096008,1.0771999,0.1416016l4.4160004-2.097702l2.7743988,4.0235023
+                                                                    c0.1884995,0.2733994,0.4980011,0.4325981,0.8232002,0.4325981c0.0567017,0,0.1133003-0.0048981,0.170002-0.014698
+                                                                    c0.384697-0.0664024,0.6952972-0.3496017,0.7958984-0.7265015l3.476799-12.9772987
+                                                                    C41.9011002,46.1375504,41.9496994,46.1445503,42,46.1445503c0.0237999,0,0.0467987-0.0035019,0.0705986-0.0036011
+                                                                    l3.4773026,12.9733009c0.1005974,0.3759995,0.410099,0.6591988,0.7938995,0.7265015
+                                                                    c0.0575981,0.0098,0.1152992,0.014698,0.1718979,0.014698c0.3241997,0,0.6318016-0.1571999,0.8213005-0.4286995
+                                                                    l2.7831993-4.0038986l4.4111023,2.0760994c0.3544998,0.1660995,0.7753983,0.1103973,1.0761986-0.1455002
+                                                                    c0.2988014-0.2558022,0.419899-0.6621017,0.3096008-1.0400009L51.7373009,42.0009499z M42,22.1445503
+                                                                    c6.0654984,0,11,4.9344997,11,11c0,6.0653992-4.9345016,11-11,11c-6.0653992,0-11-4.9346008-11-11
+                                                                    C31,27.0790501,35.9346008,22.1445503,42,22.1445503z M37.0029984,56.5058517l-2.0292969-2.9424019
+                                                                    c-0.2784004-0.4033012-0.8067017-0.5479012-1.2520027-0.3358994l-3.1718979,1.5067978l3.3372993-11.441597
+                                                                    c1.6879005,1.3512001,3.7200012,2.2819977,5.9437981,2.6563988L37.0029984,56.5058517z M50.205101,53.2529488
+                                                                    c-0.4424019-0.2050972-0.9687004-0.0664978-1.2471008,0.3339005l-2.0360985,2.9296989L44.092701,45.9608498
+                                                                    c2.2247009-0.3610001,4.2586975-1.2793007,5.9528999-2.6175995l3.3274994,11.400898L50.205101,53.2529488z"/>
+                                                                <path d="M23,15.1445503c0-1.1046-0.8953991-2-2-2H11c-1.1044998,0-2,0.8954-2,2v10c0,1.1044998,0.8955002,2,2,2h10
+                                                                    c1.1046009,0,2-0.8955002,2-2V15.1445503z M21,25.1445503H11v-10h10V25.1445503z"/>
+                                                                <path d="M42,39.1445503c3.3138008,0,6-2.6863022,6-6c0-3.3138008-2.6861992-6-6-6c-3.3137016,0-6,2.6861992-6,6
+                                                                    C36,36.4582481,38.6862984,39.1445503,42,39.1445503z M42,29.1445503c2.2056999,0,4,1.7943001,4,4c0,2.2056007-1.7943001,4-4,4
+                                                                    c-2.2056007,0-4-1.7943993-4-4C38,30.9388504,39.7943993,29.1445503,42,29.1445503z"/>
+                                                            </g>
+                                                            </svg>
+                                                            NOC Details
                                                             <small></small>    
                                                             <a class="changeBtn" href="javascript:void(0);" style="display: none;">Change</a>                                                    
                                                         </h5>
@@ -163,7 +299,6 @@
                                                                                             <option>Ownership Transfer</option>
                                                                                         </select>
                                                                                     </div>
-                                                                                    
                                                                                 </div>
                                                                                 <div class="col-md-4">
                                                                                     <div class="form-group">
@@ -226,7 +361,7 @@
                                                                                 </div>
                                                                                 <div class="col-md-4">
                                                                                     <div class="form-group">
-                                                                                        <label for="">Mobile <span class="req red">*</span></label>
+                                                                                        <label for="">Mobile <small>(Alternate Number)</small></label>
                                                                                         <input type="text" />
                                                                                     </div>
                                                                                 </div>
@@ -238,18 +373,100 @@
                                                                 </div>
                                                                 
                                                             </div>
-                                                            
+                                                            <div class="btn-box-alone text-right" style="padding-top: 0;">
+                                                                <button class="default-btn next-btn">Next</button>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                                                
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h5 class="mb-0 charges collapsed">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64px" height="64px" viewBox="0 0 64 64" version="1.1" class="replaced-svg">
+                                                                <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+                                                                <title>Icon/Outline 1pt/Billing &amp; Payment/Billing &amp; Payment_Business green</title>
+                                                                <desc>Created with Sketch.</desc>
+                                                                <g id="Icon/Outline-1pt/Billing-&amp;-Payment/Billing-&amp;-Payment_Business-green" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
+                                                                    <g id="Group-15" transform="translate(11.000000, 5.000000)" stroke="#616B1E">
+                                                                        <polyline id="Stroke-1" points="40.5 19.1718 40.5 12.4998 28.5 0.4998 0.5 0.4998 0.5 52.4998 25.718 52.4998 40.5 52.4998 40.5 46.7998"></polyline>
+                                                                        <polyline id="Stroke-3" stroke-linecap="round" points="28.5 0.5 28.5 12.5 40.5 12.5"></polyline>
+                                                                        <path d="M49.5029,40.298 C49.5029,41.873 48.2509,43.124 46.6769,43.124 L19.5489,43.124 C17.9749,43.124 16.7229,41.873 16.7229,40.298 L16.7229,25.604 C16.7229,24.03 17.9749,22.778 19.5489,22.778 L46.6769,22.778 C48.2509,22.778 49.5029,24.03 49.5029,25.604 L49.5029,40.298 Z" id="Stroke-5" stroke-linecap="round"></path>
+                                                                        <path d="M16.7227,28.4294 L49.5027,28.4294" id="Stroke-7" stroke-linecap="round"></path>
+                                                                        <path d="M44.9814,32.9508 L39.3294,32.9508" id="Stroke-9" stroke-linecap="round"></path>
+                                                                        <path d="M32.5479,32.9508 L21.2439,32.9508" id="Stroke-11" stroke-linecap="round"></path>
+                                                                        <path d="M25.7656,36.3418 L21.2446,36.3418" id="Stroke-13" stroke-linecap="round"></path>
+                                                                    </g>
+                                                                    <path d="M18,21 L31.5,21" id="Line" stroke="#616B1E" stroke-linecap="round"></path>
+                                                                    <path d="M18,15 L34.5051,15" id="Line" stroke="#616B1E" stroke-linecap="round"></path>
+                                                                </g>
+                                                            </svg>
+                                                            Ownership Transfer Details
+                                                            <small></small>
+                                                            <a class="changeBtn" href="javascript:void(0);" style="display: none;">Change</a>
+                                                        </h5>
+                                                    </div>
+                                                    <div class="collapse" data-parent="#packages">
+                                                        <div class="tab-cont">
+                                                            <div class="grid-head-wrap mb30">
+                                                                <table id="accountGrid" class="table table-striped table-bordered">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Account Number</th>
+                                                                            <th>Bill Outstanding Due Amount</th>
+                                                                            <th>Exit Charges</th>
+                                                                            <th>Ownership Transfer By</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>0508456212</td>
+                                                                            <td>200 AED</td>
+                                                                            <td>250 AED</td>
+                                                                            <td>
+                                                                                <select class="selectpicker disabled" disabled>
+                                                                                    <option value="select">Ownership Transfer By Split</option>
+                                                                                    <option value="select">Ownership Transfer By Name</option>
+                                                                                    <option value="select">Ownership Transfer By Name</option>            
+                                                                                </select>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>0508456212</td>
+                                                                            <td>200 AED</td>
+                                                                            <td>250 AED</td>
+                                                                            <td>
+                                                                                <select class="selectpicker">
+                                                                                    <option value="select">Ownership Transfer By Split</option>
+                                                                                    <option value="select">Ownership Transfer By Name</option>
+                                                                                    <option value="select">Ownership Transfer By Name</option>            
+                                                                                </select>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>0508456212</td>
+                                                                            <td>200 AED</td>
+                                                                            <td>250 AED</td>
+                                                                            <td>
+                                                                                <select class="selectpicker">
+                                                                                    <option value="select">Ownership Transfer By Name</option>
+                                                                                    <option value="select">Ownership Transfer By Split</option>
+                                                                                    <option value="select">Ownership Transfer By Name</option>            
+                                                                                </select>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>                         
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-12  remove-padding-right text-right submit-button-container">
                                     <button onclick="location.href = '../index.html'">Save & Close</button>
-                                    <button onclick="location.href = 'docs.html'">Next</button>
+                                    <button onclick="location.href = 'review.html'">Next</button>
                                 </div>
                             </div>
                             <div class="clearfix"></div>

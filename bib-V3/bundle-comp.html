@@ -441,21 +441,39 @@
                                                             <div class="account-container text-left">
                                                                 <div class="tab-cont">
                                                                     <div class="row">
-                                                                        <div class="col-sm-5">
+                                                                        <div class="col-sm-5 addnums" style="display: none;">
+                                                                            <div class="form-group">
+                                                                                <label>Add Number</label>
+                                                                                <input id="filter02" type="text">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-5 btn-box-alone addnums" style="display: none;">
+                                                                            <button class="default-btn add-btn-num">Add</button>
+                                                                        </div>
+                                                                        <div class="col-sm-5 searchnums">
                                                                             <div class="form-group">
                                                                                 <label>Search Number</label>
                                                                                 <input id="filter01" type="text">
                                                                             </div>
                                                                         </div>
-                                                                        <div class="col-sm-5 btn-box-alone">
+                                                                        <div class="col-sm-5 btn-box-alone searchnums">
                                                                             <button class="default-btn">Search</button>
                                                                             <button
                                                                                 class="default-btn refreshBtn">Refresh</button>
                                                                         </div>
+                                                                        <div class="col-sm-2 km-fnp-checkbox">
+                                                                            <div class="form-group">
+                                                                                <input type="checkbox" id="fnpcheck" />
+                                                                                <label for="fnpcheck">FNP</label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row ">
+                                                                        
                                                                     </div>
                                                                     <div class="row search-grid">
                                                                         <div class="col-sm-12">
-                                                                            <div class="account-container">
+                                                                            <div class="account-container searchnumberlist">
                                                                                 <ul class="mainNum">
                                                                                     <li>
                                                                                         044564821
@@ -500,6 +518,7 @@
                                                                                     <li>044590821</li>
                                                                                 </ul>
                                                                             </div>
+                                                                            
                                                                         </div>
                                                                         <div class="col-sm-12 btn-box-alone">
                                                                             <button disabled id="headingInternet"
@@ -786,6 +805,9 @@
                                                                                 <th scope="col">
                                                                                     Devices
                                                                                 </th>
+                                                                                <th scope="col">
+                                                                                    
+                                                                                </th>
                                                                                 <!-- <th scope="col">
                                                                                     Price
                                                                                 </th> -->
@@ -802,7 +824,10 @@
                                                                         </thead>
                                                                         <tbody>
                                                                             <tr class="row-01">
-                                                                                <td>044564822</td>
+                                                                                <td>
+                                                                                    <span class="shownum">044564821</span>
+                                                                                    <input type="text" class="hidefield" placeholder="Type Account Number" />
+                                                                                </td>
                                                                                 <td>
                                                                                     <input type="text"
                                                                                         value="Communicate">
@@ -830,6 +855,12 @@
                                                                                     <button data-target="#detailModal"
                                                                                         data-toggle="modal"
                                                                                         class="default-btn small-btn">Details</button>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <div class="form-group fnpbox">
+                                                                                        <input type="checkbox" id="fnpcheck2" />
+                                                                                        <label for="fnpcheck2">FNP</label>
+                                                                                    </div>
                                                                                 </td>
                                                                                 <!-- <td class="price-cell">Free</td> -->
                                                                                 <td>OTC</td>
@@ -837,7 +868,10 @@
                                                                                 <td>12 Months</td>
                                                                             </tr>
                                                                             <tr class="row-02">
-                                                                                <td>044564823</td>
+                                                                                <td>
+                                                                                    <span class="shownum">044564822</span>
+                                                                                    <input type="text" class="hidefield" placeholder="Type Account Number" />
+                                                                                </td>
                                                                                 <td>
                                                                                     <input type="text"
                                                                                         value="Communicate">
@@ -865,6 +899,12 @@
                                                                                     <button data-target="#detailModal"
                                                                                         data-toggle="modal"
                                                                                         class="default-btn small-btn">Details</button>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <div class="form-group fnpbox">
+                                                                                        <input type="checkbox" id="fnpcheck3" />
+                                                                                        <label for="fnpcheck3">FNP</label>
+                                                                                    </div>
                                                                                 </td>
                                                                                 <!-- <td class="price-cell">Free</td> -->
                                                                                 <td>OTC</td>
@@ -872,7 +912,10 @@
                                                                                 <td>12 Months</td>
                                                                             </tr>
                                                                             <tr class="row-03">
-                                                                                <td>044564824</td>
+                                                                                <td>
+                                                                                    <span class="shownum">044564823</span>
+                                                                                    <input type="text" class="hidefield" placeholder="Type Account Number" />
+                                                                                </td>
                                                                                 <td>
                                                                                     <input type="text"
                                                                                         value="Communicate">
@@ -900,6 +943,12 @@
                                                                                     <button data-target="#detailModal"
                                                                                         data-toggle="modal"
                                                                                         class="default-btn small-btn">Details</button>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <div class="form-group fnpbox">
+                                                                                        <input type="checkbox" id="fnpcheck4" />
+                                                                                        <label for="fnpcheck4">FNP</label>
+                                                                                    </div>
                                                                                 </td>
                                                                                 <!-- <td class="price-cell">Free</td> -->
                                                                                 <td>OTC</td>
@@ -2157,6 +2206,45 @@
             }
             if ($(this).val() == "conference phone") {
                 $(this).closest('tr').find('.price-cell').html('+95 AED');
+            }
+        });
+        $("#fnpcheck").change(function() {
+            if(this.checked) {
+                $(".searchnumberlist").addClass('disabled');
+                $("input#filter01").attr('readonly',true);
+                $('.searchnums').hide();
+                $('.addnums').fadeIn();
+            } else {
+                $(".searchnumberlist").removeClass('disabled');
+                $("input#filter01").attr('readonly',false);
+                $('.addnums').hide();
+                $('.searchnums').fadeIn();
+            }
+        });
+        $('.add-num-btn').click(function(){
+            var addfield = $('#filter02').val();
+            $(this).closest('.tab-cont').find('.next-btn').removeAttr('disabled');
+            $('.addnumber-btnshow').fadeIn();
+            $('.addnumber-btnshow #addnumval').html(addfield);
+            $(this).closest('.card').find('h5 small').html(addfield);
+        });
+        $('.add-btn-num').click(function(){
+            var addfield = $('#filter02').val();
+            $(this).closest('.tab-cont').find('.next-btn').removeAttr('disabled');
+            $('.addnumber-btnshow').fadeIn();
+            $('.addnumber-btnshow #addnumval').html(addfield);
+            $(this).closest('.card').find('h5 small').html(addfield);
+        });
+        
+        $('.hidefield').hide();
+        $("#fnpcheck2,#fnpcheck3,#fnpcheck4").change(function() {
+            if(this.checked) {
+                $(this).closest('tr').find('.shownum').hide();
+                $(this).closest('tr').find('.hidefield').show();
+
+            } else {
+                $(this).closest('tr').find('.shownum').show();
+                $(this).closest('tr').find('.hidefield').hide();
             }
         });
     </script>

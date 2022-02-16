@@ -351,6 +351,7 @@
                                     </ul>
                                 </div>
                                 <div class="col-md-12 custom-container corporate-accounts">
+                                    
                                     <h3>Select Account(s)</h3>
                                     <div class="package-selection-container">
                                         <div class="row">
@@ -369,11 +370,11 @@
                                     <br><br>
                                     <div class="account-container">
                                         <ul class="account-select">
-                                            <li class="clt">0466369735</li>
-                                            <li class="sdwan">0411110812</li>
-                                            <li class="clt">0466369735</li>
-                                            <li class="clt">0411110812</li>
-                                            <li class="clt">0466369735</li>
+                                            <li class="clt one">0466369735</li>
+                                            <li class="sdwan two">0411110812</li>
+                                            <li class="clt three">0466369735</li>
+                                            <li class="clt four">0411110812</li>
+                                            <li class="clt five">0466369735</li>
                                             <li class="sdwan">0466369735</li>
                                             <li class="clt">0466369735</li>
                                             <li class="clt">0411110812</li>
@@ -412,7 +413,14 @@
                                             <li>0566369735 <a class="remove" href="javascript:void(0);"><img src="../assets/images/cross.png" alt=""></a></li>
                                             <li>6411110812 <a class="remove" href="javascript:void(0);"><img src="../assets/images/cross.png" alt=""></a></li>
                                         </ul>
-                                    </div>                                    
+                                    </div>     
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="alert alert-info" id="num-alert" style="margin:20px 0 25px; display: none; padding:10px;text-align: left;">
+                                                <b id="numbers">0</b> of 10 Accounts is selected 
+                                            </div>
+                                        </div>
+                                    </div>                               
                                 </div>
                                 <div class="col-md-12  remove-padding-right text-right submit-button-container">
                                     <button onclick="location.href = 'bib-03.3.html'">Previous</button>
@@ -448,10 +456,13 @@
     <script src="../assets/js/scripts.js"></script>
     <script src="../assets/js/custom.js"></script>
     <script>
+        
         $('.account-select li').click(function () {
             $(this).siblings('li').removeClass('selected');
             $(this).toggleClass('selected');
             $('.next-btn').removeAttr('disabled');
+            $('#num-alert').fadeIn();
+            $('#numbers').text( parseInt($('#numbers').text()) + 1 );
         });
         $('.sdwan').click(function () {
             $('.submit-button-container .next-btn').attr('onclick', 'location.href = "new-screen-03-sdwan.html"');
