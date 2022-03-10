@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sales Order Request :: Etisalat</title>
+    <!-- Bootstrap -->
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="../../assets/css/font-awesome.min.css" />
+    <link href="../../assets/css/CEP-automation-css/custom.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="loading">
+    <div id="loaderM"></div>
+    <div class="etisalat">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header col-sm-2">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="col-sm-8">
+                    <div id="navbar" class="col-md-12 custom-container nav-container navbar-collapse collapse">
+                        <ul>
+                            <li>
+                                <a class="show-mobile-content" href="../../bcrm-new.html">Mobile</a>
+                            </li>
+                            <li>
+                                <a class="show-fixed-content" href="../../bcrm-new.html">Fixed</a>
+                            </li>
+                            <li>
+                                <a class="show-digital-content" href="../../bcrm-new.html">Digital</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="page-container">
+                    <section class="page-content inner-page">
+                        <div class="clearfix"></div>
+                        <div class="smart-wizard">
+                            <!-- Tabs -->
+                            <div class="swMain">
+                                <div class="col-md-12 item custom-container progress-container">
+                                    <ul class="item  slickslider">
+                                        <li>
+                                            <a href="step1.html" class="selected">
+                                                <span class="stepDesc">Sites</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>1
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="step2.html" class="selected">
+                                                <span class="stepDesc">User Addons</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>2
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="step3.html" class="selected">
+                                                <span class="stepDesc">Site Addons</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>3
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="step4.html" class="selected">
+                                                <span class="stepDesc">OTC Charges</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>4
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="step5.html" class="selected">
+                                                <span class="stepDesc">Summary</span>
+                                                <div class="stepIcon">
+                                                    <i class="icon-check"></i>5
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-12 custom-container corporate-accounts">
+                                    <div class="row">
+                                        <div class="col-sm-9">
+                                            <div class="summary-box">
+                                                <h3>Summary</h3>
+                                                <div id="packages" class="packages">
+                                                    <div class="card">
+                                                        <div class="card-header" id="headingAccount">
+                                                            <h5 class="mb-0 internet" data-toggle="collapse"
+                                                                data-target="#collapseAccount" aria-expanded="false"
+                                                                aria-controls="collapseAccount">
+                                                                <span class="icon">
+                                                                    <img src="../images/site.svg" />
+                                                                </span>
+                                                                Site Details
+                                                                <span>
+                                                                    <img src="../../assets/images/down-arrow.png" alt="">
+                                                                </span>
+                                                            </h5>
+                                                        </div>
+                                                        <div id="collapseAccount" class="collapse in"
+                                                            aria-labelledby="headingAccount" data-parent="#packages"
+                                                            aria-expanded="false">
+                                                            <div class="card-body">
+                                                                <table class="table table-striped">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Site Name</th>
+                                                                            <th>Contact Name</th>
+                                                                            <th>Mobile</th>
+                                                                            <th>Email</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>Site ABC</td>
+                                                                            <td>Minal Doongarwal</td>
+                                                                            <td>0401856396</td>
+                                                                            <td>minal@etisalat.ae</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Site DEF</td>
+                                                                            <td>Minal Doongarwal</td>
+                                                                            <td>0401856396</td>
+                                                                            <td>minal@etisalat.ae</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Site GHI</td>
+                                                                            <td>Minal Doongarwal</td>
+                                                                            <td>0401856396</td>
+                                                                            <td>minal@etisalat.ae</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="card-header" id="headingSec">
+                                                            <h5 class="mb-0 internet" data-toggle="collapse"
+                                                                data-target="#collapseSec" aria-expanded="false"
+                                                                aria-controls="collapseSec">
+                                                                <span class="icon">
+                                                                    <img src="../images/blocks.svg" />
+                                                                </span>
+                                                                DID Blocks Details
+                                                                <span>
+                                                                    <img src="../../assets/images/down-arrow.png" alt="">
+                                                                </span>
+                                                            </h5>
+                                                        </div>
+                                                        <div id="collapseSec" class="collapse in"
+                                                            aria-labelledby="headingSec" data-parent="#packages"
+                                                            aria-expanded="false">
+                                                            <div class="card-body">
+                                                                <table class="table table-striped">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Block Numbers</th>
+                                                                            <th>Quantity</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>Block of 50 Numbers</td>
+                                                                            <td>05</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Block of 100 Numbers</td>
+                                                                            <td>10</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-header" id="headingAccount02">
+                                                            <h5 class="mb-0 internet" data-toggle="collapse"
+                                                                data-target="#collapseAccount02" aria-expanded="false"
+                                                                aria-controls="collapseAccount02">
+                                                                <span class="icon">
+                                                                    <img src="../images/users.svg" />
+                                                                </span>
+                                                                Users Details
+                                                                <span>
+                                                                    <img src="../../assets/images/down-arrow.png" alt="">
+                                                                </span>
+                                                            </h5>
+                                                        </div>
+                                                        <div id="collapseAccount02" class="collapse in"
+                                                            aria-labelledby="headingAccount02" data-parent="#packages"
+                                                            aria-expanded="false">
+                                                            <div class="card-body">
+                                                                <table class="table table-striped">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>No: of Users</th>
+                                                                            <th>Action Charge Per User</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>15</td>
+                                                                            <td>60 AED</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-header" id="headingVoice">
+                                                            <h5 class="mb-0 internet" data-toggle="collapse"
+                                                                data-target="#collapseVoice" aria-expanded="false"
+                                                                aria-controls="collapseVoice">
+                                                                <span class="icon">
+                                                                    <img src="../images/discount.svg" />
+                                                                </span>
+                                                                Discount Details
+                                                                <span>
+                                                                    <img src="../../assets/images/down-arrow.png" alt="">
+                                                                </span>
+                                                            </h5>
+                                                        </div>
+                                                        <div id="collapseVoice" class="collapse in"
+                                                            aria-labelledby="headingVoice" data-parent="#packages"
+                                                            aria-expanded="false">
+                                                            <div class="card-body">
+                                                                <table class="table table-striped">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Discount</th>
+                                                                            <th>Percentage</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>Discount</td>
+                                                                            <td>15%</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-header" id="headingVoice2">
+                                                            <h5 class="mb-0" data-toggle="collapse"
+                                                                data-target="#collapseVoice2" aria-expanded="false"
+                                                                aria-controls="collapseVoice2">
+                                                                <span class="icon">
+                                                                    <img src="../images/project.svg" />
+                                                                </span>
+                                                                Project Details
+                                                                <span>
+                                                                    <img src="../../assets/images/down-arrow.png" alt="">
+                                                                </span>
+                                                            </h5>
+                                                        </div>
+                                                        <div id="collapseVoice2" class="collapse in"
+                                                            aria-labelledby="headingVoice2" data-parent="#packages"
+                                                            aria-expanded="false">
+                                                            <div class="card-body">
+                                                                <table class="table table-striped">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Assigned / Not Assigned</th>
+                                                                            <th>Details</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>Assigned to Manager</td>
+                                                                            <td>This proposal will require a project Manager to be assigned by PMO</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-header" id="headingPackage">
+                                                            <h5 class="mb-0 internet" data-toggle="collapse"
+                                                                data-target="#collapsePackage" aria-expanded="false"
+                                                                aria-controls="collapsePackage">
+                                                                <span class="icon">
+                                                                    <img src="../images/userad.svg" />
+                                                                </span>
+                                                                User Addons Details
+                                                                <span>
+                                                                    <img src="../../assets/images/down-arrow.png" alt="">
+                                                                </span>
+                                                            </h5>
+                                                        </div>
+                                                        <div id="collapsePackage" class="collapse in"
+                                                            aria-labelledby="headingPackage" data-parent="#packages"
+                                                            aria-expanded="false">
+                                                            <div class="card-body">
+                                                                <table class="table table-striped">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Addon Name</th>
+                                                                            <th>Quantity</th>
+                                                                            <th>Rate</th>
+                                                                            <th>Total</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>Cloud Talk Enterprise Conference 100</td>
+                                                                            <td>4</td>
+                                                                            <td>10 AED</td>
+                                                                            <td>40 AED</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Cloud Talk Enterprise Basic</td>
+                                                                            <td>5</td>
+                                                                            <td>10 AED</td>
+                                                                            <td>50 AED</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Cloud Talk Enterprise Communicate</td>
+                                                                            <td>10</td>
+                                                                            <td>10 AED</td>
+                                                                            <td>100 AED</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Unlimited National Calls to Mobile</td>
+                                                                            <td>10</td>
+                                                                            <td>10 AED</td>
+                                                                            <td>100 AED</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-header" id="headingPackage3">
+                                                            <h5 class="mb-0 internet" data-toggle="collapse"
+                                                                data-target="#collapsePackage3" aria-expanded="false"
+                                                                aria-controls="collapsePackage3">
+                                                                <span class="icon">
+                                                                    <img src="../images/site.svg" />
+                                                                </span>
+                                                                Site Addons Details
+                                                                <span>
+                                                                    <img src="../../assets/images/down-arrow.png" alt="">
+                                                                </span>
+                                                            </h5>
+                                                        </div>
+                                                        <div id="collapsePackage3" class="collapse in"
+                                                            aria-labelledby="headingPackage3" data-parent="#packages"
+                                                            aria-expanded="false">
+                                                            <div class="card-body">
+                                                                <table class="table table-striped">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Addon Name</th>
+                                                                            <th>Quantity</th>
+                                                                            <th>Rate</th>
+                                                                            <th>Total</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>Cloud Talk Enterprise Conference 100</td>
+                                                                            <td>4</td>
+                                                                            <td>10 AED</td>
+                                                                            <td>40 AED</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Cloud Talk Enterprise Basic</td>
+                                                                            <td>5</td>
+                                                                            <td>10 AED</td>
+                                                                            <td>50 AED</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Cloud Talk Enterprise Communicate</td>
+                                                                            <td>10</td>
+                                                                            <td>10 AED</td>
+                                                                            <td>100 AED</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Unlimited National Calls to Mobile</td>
+                                                                            <td>10</td>
+                                                                            <td>10 AED</td>
+                                                                            <td>100 AED</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-header" id="headingPackage03">
+                                                            <h5 class="mb-0 internet" data-toggle="collapse"
+                                                                data-target="#collapsePackage03" aria-expanded="false"
+                                                                aria-controls="collapsePackage03">
+                                                                <span class="icon">
+                                                                    <img src="../images/otc.svg" />
+                                                                </span>
+                                                                One Time Charges Details
+                                                                <span>
+                                                                    <img src="../../assets/images/down-arrow.png" alt="">
+                                                                </span>
+                                                            </h5>
+                                                        </div>
+                                                        <div id="collapsePackage03" class="collapse in"
+                                                            aria-labelledby="headingPackage03" data-parent="#packages"
+                                                            aria-expanded="false">
+                                                            <div class="card-body">
+                                                                <table class="table table-striped">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Addon Name</th>
+                                                                            <th>Total</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>Cost of work (like Cabling)</td>
+                                                                            <td>150 AED OTC</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Professional Services</td>
+                                                                            <td>250 AED OTC</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="summary-box withplus km-grandtotal">
+                                                <h3>Configuration Summary</h3>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="price-box verifypage">
+                                                            <h5>Grand Total</h5>
+                                                            <strong>3,241 AED</strong>
+                                                            <div class="pricet">INCL. VAT</div>
+                                                            <div class="priceinfo">(2691 AED/MRC + 750 AED OTC)</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="order-btn text-right submit-button-container">
+                                                    <button class="order-btn"
+                                                        onclick="location.href = ''">Save Configuration</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="clearfix"></div>
+                            <!-- End SmartWizard Content -->
+                        </div>
+                        <div class="clearfix"></div>
+                    </section>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+
+    </div>
+
+    <!-- /.etisalat -->
+    <!-- /.footer -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../../assets/js/jquery-2.1.3.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../../assets/js/bootstrap.js"></script>
+    <script src="../../assets/js/bootstrap-select.js"></script>
+    <script src="../../assets/js/dcalendar.picker.js"></script>
+    <script type="text/javascript" src="../../assets/js/jquery.matchHeight-min.js"></script>
+    <script type="text/javascript" src="../../assets/js/jquery.smartWizard.js"></script>
+    <script src="../../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../../assets/js/slick.min.js"></script>
+    <script src="../../assets/js/scripts.js"></script>
+    <script src="../../assets/js/custom.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('input[name=tandc]').change(function () {
+                if ($(this).prop('checked') == true) {
+                    $('.order-btn button').removeAttr('disabled');
+                }
+                else {
+                    $('.order-btn button').attr('disabled', 'disabled');
+                }
+            });
+        });
+        $('.expandIcon').click(function () {
+            $(this).toggleClass('open');
+            $(this).closest('.addon-box').find('.hidden-fields').toggle('slow');
+        });
+    </script>
+</body>
+
+</html>

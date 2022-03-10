@@ -11399,3 +11399,7 @@ body.new-etisalat .km-customDetails#newcustom button.proceed {
   width: 100px;
   right: -55px;
 }
+.swMain .progress-container .mnp-nav li:last-child,
+.swMain .progress-container .mnp-nav li.custagent {
+  width: 180px;
+}

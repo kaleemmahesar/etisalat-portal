@@ -18,6 +18,42 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+        @media (max-width: 1180px) {
+            .modal-dialog {
+                width: 90%;
+                margin: 30px 5% !important;
+                top: auto !important;
+                left: 0 !important;
+                transform: none !important;
+            }
+
+            .termsbigger .nav {
+                width: 200px;
+            }
+
+            .termsbigger .nav>li>a {
+                font-size: 11px;
+            }
+
+            .termsbigger .nav {
+                position: static;
+                width: auto;
+                margin: 0 0 25px 10px;
+            }
+
+            .termsbigger .modal-header .modal-title {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .modal-dialog {
+                width: 94%;
+                margin: 20px 4% !important;
+            }
+        }
+    </style>
 </head>
 
 <body class="loading">
@@ -31,7 +67,7 @@
                 </div>
                 <div class="modal-body" data-spy="scroll">
                     <div class="row" data-target="#myScrollspy" data-offset="15">
-                        <nav class="col-sm-3" id="myScrollspy">
+                        <nav class="col-md-3" id="myScrollspy">
                             <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="15">
                                 <li><a href="#section1">INTRODUCTION</a></li>
                                 <li><a href="#section2">DEFINITIONS</a></li>
@@ -44,7 +80,7 @@
                                 <li><a href="#section9">OTHER PROVISIONS</a></li>
                             </ul>
                         </nav>
-                        <div class="col-sm-9">
+                        <div class="col-md-9">
                             <div class="sections-area">
                                 <div id="section1">
                                     <h3 class="mt0">Introduction</h3>
@@ -1254,16 +1290,14 @@
             $('input[name=tandc]').change(function () {
                 if ($(this).prop('checked') == true) {
                     $('.order-btn buttons').removeAttr('disabled');
-                }
-                else {
+                } else {
                     $('.order-btn button').attr('disabled', 'disabled');
                 }
             });
             $('input.termscon').change(function () {
                 if ($(this).prop('checked') == true) {
                     $('#TermsConditions').modal();
-                }
-                else {
+                } else {
                     $('.order-btn.bold').attr('disabled', 'disabled');
                 }
             });

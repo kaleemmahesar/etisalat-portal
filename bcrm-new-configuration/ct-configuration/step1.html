@@ -45,6 +45,27 @@
             padding: 0;
             margin-top: 25px;
         }
+        
+
+        #ViewEditModal2 .custom-heading > small {
+            padding: 0;
+            margin: 0 0 10px;
+        }
+        #ViewEditModal2 .package-selection-container .party-search {
+            padding: 0 0 10px;
+            background: #f3f4f9;
+        }
+        #ViewEditModal2 .selection-container.sim-serial-container.btm-container .party-search {
+            background: none;
+            padding: 0;
+        }
+        #ViewEditModal2 .selection-container.sim-serial-container.btm-container .col-md-12 {
+            background: none;
+        }
+        #ViewEditModal2 .selection-container.sim-serial-container.btm-container {
+            padding: 0;
+            margin-top: 25px;
+        }
         .search-criteria {
             position: relative !important;
             width: 97.15% !important;
@@ -82,6 +103,12 @@
         }
         .km-ct-configuration .packages.noTagLine h5.contacts svg {
             top: 8px;
+        }
+        .modal-body .discount-custom-box .titleb0x i {
+            top: 8px;
+        }
+        .modal-body .discount-custom-box .titleb0x {
+            margin: 28px 0 0;
         }
     </style>
 </head>
@@ -1048,8 +1075,13 @@
                             <input value="Site A" type="text">
                         </div>                                                                            
                     </div>
-                    
-                    
+                    <div class="discount-custom-box field-box col-md-4">
+                        <div class="titleb0x">
+                            <h4 id="gfield">Green Field</h4>
+                            <h4 id="bfield" style="display: none;">Brown Field</h4>
+                            <i class="fa fa-toggle-on active" aria-hidden="true"></i>
+                        </div> 
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12 custom-container package-selection-container flex-box">
@@ -1376,7 +1408,7 @@
     </div>
 
     <!-- Create New site 2-->
-    <div class="modal" id="ViewEditModal2" tabindex="-1" role="dialog" aria-labelledby="ViewEditModal2Label">
+    <div class="modal" id="ViewEditModal2" tabindex="-1" role="dialog" aria-labelledby="ViewEditModalLabel2">
         <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -1391,103 +1423,12 @@
                             <input value="Site A" type="text">
                         </div>                                                                            
                     </div>
-                    
-                    <div class="col-sm-4">
-                        <div class="form-group">
-                            <label>Select Technical Site Contact</label>
-                            <input id="cusField3" type="text" value="">
-                            <a id="cusModal" data-toggle="modal" data-target="#customerModal" href="javascript:void(0)"></a>
-                            <div class="modal" id="customerModal" tabindex="-1" role="dialog" aria-labelledby="customerModalLabel">
-                                <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        Manager Look Up
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <div class="form-group">
-                                                    <label>Search</label>
-                                                    <input class="search-field" type="text">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="custom-container table-container small-table cusSelectGrid">
-                                            <div class="data-container">
-                                                <table class="table table-striped">
-                                                    <thead>
-                                                        <tr>
-                                                            <th width="10%" scope="col">
-                                                                
-                                                            </th>
-                                                            <th scope="col">
-                                                                Contact Name
-                                                            </th>
-                                                            <th scope="col">
-                                                                Mobile Number
-                                                            </th>
-                                                            <th>
-                                                                Email
-                                                            </th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>
-                                                                <a class="selectBtn" href="javascript:void(0)"></a>
-                                                            </td>
-                                                            <td>
-                                                                Ahmed Al Amiri
-                                                            </td>
-                                                            <td>
-                                                                0401856396
-                                                            </td>
-                                                            <td>
-                                                                minal@etisalat.ae
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <a class="selectBtn" href="javascript:void(0)"></a>
-                                                            </td>
-                                                            <td>
-                                                                Ahmed Al Amiri
-                                                            </td>
-                                                            <td>
-                                                                0501856396
-                                                            </td>
-                                                            <td>
-                                                                ahmed@etisalat.ae
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <a class="selectBtn" href="javascript:void(0)"></a>
-                                                            </td>
-                                                            <td>
-                                                                Mustafa Kamal
-                                                            </td>
-                                                            <td>
-                                                                0501856396
-                                                            </td>
-                                                            <td>
-                                                                mkamal@etisalat.ae
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>                                
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="add-contact-btn btn btn-primary">Select</button>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>                                                                         
-                    
-                        </div>
+                    <div class="discount-custom-box field-box col-md-4">
+                        <div class="titleb0x">
+                            <h4 id="gfield2">Green Field</h4>
+                            <h4 id="bfield2" style="display: none;">Brown Field</h4>
+                            <i class="fa fa-toggle-on active" aria-hidden="true"></i>
+                        </div> 
                     </div>
                 </div>
                 <div class="row">
@@ -1503,36 +1444,41 @@
                             <div class="row">
                                 <div class="party-search">
                                     <div class="env-img-box">
-                                        <div class="search-criteria">
-                                            <div class="col-sm-3">
-                                                <select id="cond-select" class="selectpicker">
-                                                    <option value="EID">Search by EID</option>
-                                                    <option value="Account Number">Search by Account Number
-                                                    </option>
-                                                    <option value="Address">Search by Address</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-sm-3">
-                                                <input id="cond-number" type="text"
-                                                    placeholder="Enter EID Number">
-                                            </div>
-                                            <div class="col-sm-3">
+                                        <div class="row search-criteria">
+                                            <div class="col-sm-4">
                                                 <select id="cond-select2" class="selectpicker">
                                                     <option value="exsite">Existing Site
                                                     </option>
                                                     <option value="newsite">New Site</option>
                                                 </select>
                                             </div>
-                                            <div class="col-sm-3">
+                                            <div class="col-sm-6" id="hidesearchfield">
                                                 <select id="cond-select3" class="selectpicker" title="Select Site">
                                                     <option value="alkifaf">Al-Kifaf Building Floor 13 
                                                     </option>
                                                     <option value="dictower">DIC Tower 2 Office 4</option>
                                                 </select>
                                             </div>
-                                            <div class="col-sm-12 text-right">
+                                            <div class="col-sm-6" id="searcheidfields" style="display: none;">
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <select id="cond-select" class="selectpicker">
+                                                            <option value="EID">Search by EID</option>
+                                                            <option value="Account Number">Search by Account Number
+                                                            </option>
+                                                            <option value="Address">Search by Address</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <input id="cond-number" type="text"
+                                                            placeholder="Enter EID Number">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2 text-right">
                                                 <button id="cond-field" class="default-btn">Search</button>
                                             </div>
+                                            
                                         </div>
                                         <img class="img-responsive" src="../../assets/images/map1.jpg" alt="">
                                     </div>
@@ -1540,7 +1486,7 @@
                             </div>
                             <div
                                 class="row black-field custom-container selection-container sim-serial-container btm-container">
-                                <div class="col-md-12">
+                                <div class="col-md-12s">
                                     <div class="party-search">
                                         <div class="row">
                                             <div class="col-sm-3">
@@ -1672,7 +1618,7 @@
                             </div>
                             <div style="display:none;"
                                 class="col-md-12 filled-field custom-container selection-container sim-serial-container btm-container">
-                                <div class="col-md-12">
+                                <div class="col-md-12s">
                                     <div class="party-search">
                                         <div class="row">
                                             <div class="col-sm-3">
@@ -1803,7 +1749,7 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" data-dismiss="modal" class="add-btn clonerows btn btn-primary">Save Changes</button>
+                <button type="button" data-dismiss="modal" class="add-btn save-add-btn2 btn btn-primary">Save Changes</button>
             </div>
         </div>
         </div>
@@ -1934,7 +1880,7 @@
             //$('.clonerows').show();
             $('#site-next-btn').removeAttr('disabled');
         });
-        $('.clonerows').click(function() {
+        $('.save-add-btn2').click(function() {
             var $tr    = $('#hidden-box table tbody tr:first-child');
             var $clone = $tr.clone();
             $clone.find(':text').val('');
@@ -1964,6 +1910,8 @@
             $(this).toggleClass('deactive');
             $('#gfield').toggle();
             $('#bfield').toggle();
+            $('#gfield2').toggle();
+            $('#bfield2').toggle();
             
         })
         $(".add-contact-btn").click(function(){
